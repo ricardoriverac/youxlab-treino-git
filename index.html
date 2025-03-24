@@ -60,7 +60,15 @@
     <!-- Rodapé da página -->
     <footer>
         <p>Desenvolvido para o YouxLab 2025</p>
-    </footer>
+        <button id="segredo">Segredo</button>
+    <audio id="rickroll" src="https://www.myinstants.com/media/sounds/rickroll.mp3"></audio>
+</footer>
+
+<script>
+    document.getElementById("segredo").addEventListener("click", function() {
+        document.getElementById("rickroll").play();
+    });
+</script>
 </body>
 
 </html>
