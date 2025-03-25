@@ -12,4 +12,4 @@ COMANDOS IMPORTANTES:
 
 -git push --set-upstream origin laber-seu-nome (manda as mudanças feitas para o git dentro de uma branch recém criada lá dentro)
 
--git push origin <branch-que-voce-deseja-mandar-suas-alteracoes>
+-git push origin branch-que-voce-deseja-mandar-suas-alteracoes
