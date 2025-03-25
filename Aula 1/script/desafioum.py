@@ -1,6 +1,6 @@
 nome = input('Qual é o seu nome? ')
 #print('Opa, {}! Aceita um cafézin?'.format(nome))
-print(f'Opa, {nome}! Aceita um cafézin?')
+print(f'Opa, {nome}! Aceita um cafézin? :D')
 
 print('Ei, se importa de falar seu aniversário? é pro meu TCC')
 
