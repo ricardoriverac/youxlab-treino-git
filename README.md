@@ -11,3 +11,5 @@ COMANDOS IMPORTANTES:
 -git pull origin main (atualiza a branch atual com a main)
 
 -git push --set-upstream origin laber-seu-nome (manda as mudanças feitas para o git dentro de uma branch recém criada lá dentro)
+
+-git push origin <branch-que-voce-deseja-mandar-suas-alteracoes>
