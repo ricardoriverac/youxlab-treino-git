@@ -1,2 +1,4 @@
-nome=input('Qual é o seu nome?')
-print('Olá',nome,'! Prazer em te conhecer !')
+print("Hello world")
+nome =input('Qual o seu nome?')
+idade =input('Qual sua idade?')
+print (nome,idade)
