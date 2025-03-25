@@ -9,7 +9,7 @@ mes = input('Mês: ')
 ano = input('Ano: ')
 print(f'Então o seu dia do bolo é dia {data} de {mes} de {ano}, certo?')
 
-print('Beleza, vamos fazer um negócio bacana aqui')
+print('Belezseguinte meu querido, vamos fazer um negócio bacana aqui')
 #int() converte uma string para um número inteiro
 a = int(input ('Escolhe um número: '))
 b = int(input ('Ótimo! Agora escolhe outro: '))
