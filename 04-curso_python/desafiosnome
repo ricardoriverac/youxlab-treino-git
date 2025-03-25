@@ -1,0 +1,5 @@
+print ('DESAFIO 1')
+nome = input ('Qual seu nome?')
+print ('Olá' + nome  + '! Seja bem vindo!') 
+qr = input ('Quer continuar os desafios?')
+print ('Você não tem escolha MUAHAHAHA') 
