@@ -1,7 +1,7 @@
 n1=str(input('Digite algo:'))
 
 print('Qual seu tipo? ', type (n1))
-print(n1.isalnum) 
+print( 'É um numero?', n1.isalnum()) 
 print(n1.isalpha)
 print(n1.isascii)
 print(n1.isdecimal)
