@@ -1,4 +1,4 @@
-n1=int(input('Primeiro número'))
-n2=int(input('Segundo número'))
-s= n1+n2
-print('A soma é',s)
+print("Hello world")
+nome =input('Qual o seu nome?')
+idade =input('Qual sua idade?')
+print (nome,idade)
