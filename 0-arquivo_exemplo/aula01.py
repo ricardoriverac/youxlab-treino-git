@@ -1,4 +1,4 @@
-dia=input('Dia=')
-mes=input('Mês=')
-ano=input('Ano=')
-print('Você nasceu no dia',dia, 'de', mes,'de', ano,'. Correto?')
+n1=int(input('Primeiro número'))
+n2=int(input('Segundo número'))
+s= n1+n2
+print('A soma é',s)
