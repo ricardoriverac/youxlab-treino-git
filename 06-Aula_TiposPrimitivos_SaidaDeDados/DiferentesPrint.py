@@ -1,1 +1,1 @@
-print('A soma {}').format()
+print('A soma:: {}').format()
