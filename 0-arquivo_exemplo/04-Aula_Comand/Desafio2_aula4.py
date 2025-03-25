@@ -1,0 +1,8 @@
+dia=input("em qual dia voce nasceu? ")
+mes=input("em qual mes voce nasceu? ")
+ano=input("em qual ano voce nasceu? ")
+voce=("voce nasceu no dia ")
+no=("no mes")
+e=("e no ano ")
+es=("estou certo?!")
+print(voce ,dia ,no ,mes ,e ,ano ,es)
