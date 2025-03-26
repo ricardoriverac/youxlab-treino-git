@@ -1,7 +1,9 @@
 #Dissecando uma Variável
 
 a = input("digite algo: ")
+
 print("o tipo primitivo e: ", type(a))
+
 print("So tem espaços? ", a.isspace())
 print("E um número? ", a.isnumeric())
 print("E alfabetico? ", a.isalpha())
