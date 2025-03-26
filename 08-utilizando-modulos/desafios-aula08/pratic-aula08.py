@@ -1,5 +1,5 @@
 import math 
-n = float(input('Digite um número'))
+n = float(input('Digite um número: '))
 #arrendonda para baixo
 print(n.__ceil__())
 #valor boleano
