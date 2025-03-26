@@ -6,7 +6,7 @@ COMANDOS IMPORTANTES:
 
 -git add . (preparar as mudanças)
 
--git commit -m "comentario" (empacota as mudanças com um comentário)
+-git comgmit -m "comentario" (empacota as mudanças com um comentário)
 
 -git pull origin main (atualiza a branch atual com a main)
 
