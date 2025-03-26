@@ -1,2 +1,2 @@
-n=int(input('Me fale um valor '))
-print('A tabuada desse valor é',n*1,n*2,n*3,n*4,n*5,n*6,n*7,n*8,n*9,n*10)
+n1=int(input('Fale um valor '))
+print('Este valor em centímetros é ',n1*100,' e em milímetros é ',n1*1000)

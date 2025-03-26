@@ -1,2 +1,3 @@
-n1=int(input('Fale um valor '))
-print('Este valor em centímetros é ',n1*100,' e em milímetros é ',n1*1000)
+n1=int(input('Qual foi a primeira nota?'))
+n2=int(input('Qual foi a segunda nota?'))
+print('A média dessas notas é {} ',(n1+n2)/2)
