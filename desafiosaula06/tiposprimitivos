@@ -5,3 +5,8 @@ print ('A soma é' , número1 + número2)
 n1 = float(input ('Primeiro número'))
 n2 = float(input('Segundo número'))
 print ('A soma é' , n1 + n2)
+
+
+n1 = int(input ('Digite um valor:'))
+print(type(n1 ))
+
