@@ -12,3 +12,4 @@ if media >= 6:
 elif media >= 4:
     print("Aluno em recuperação")
 else: print("Aluno reprovado")
+
