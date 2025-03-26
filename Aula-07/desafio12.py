@@ -20,6 +20,6 @@ elif decisao in ["feijao", "feijão"]:
 elif decisao in ["macarrao", "macarrão"]:
     precoFinal = valorMacarrao - (valorMacarrao * desconto)
     print("O preço do macarrão era R${}, com desconto de 5%, agora custa R${}.".format(valorMacarrao, precoFinal))
-    
+
 else:
     print("Esté produto, não existe. ou está indisponível")
