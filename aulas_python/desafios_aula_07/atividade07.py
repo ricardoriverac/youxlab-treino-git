@@ -5,3 +5,8 @@ s = n1 - n2
 
 ((n1-n2, s))
 print('Seu antecessor: ', s)
+
+n2=1 
+s = n1 + n2 
+((n1 + n2))
+print('Seu sucessor é: ', s)
