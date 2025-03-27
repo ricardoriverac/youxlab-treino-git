@@ -16,3 +16,13 @@ print(type(n4))
 
 n = bool(input('Digite um valor'))
 print(n)
+
+n = input('Digit algo: ')
+print(n.isnumeric())
+
+n = input('Digit algo: ')
+print(n.isalpha())
+
+n = input('Digit algo: ')
+print(n.isalnum())
+print(n. islower())
