@@ -7,7 +7,7 @@ sorteio = random.randint(1, 4)
 
 nomeDoAluno01 = str(input("Qual é o nome do primeiro aluno? "))
 nomeDoAluno02 = str(input("Qual é o nome do segundo aluno? "))
-nomeDoAluno03 = str(input("Qual é o nome do terceiro aluno?" ))
+nomeDoAluno03 = str(input("Qual é o nome do terceiro aluno? " ))
 nomeDoAluno04 = str(input("Qual é o nome do quarto aluno? "))
 
 aluno01 = nomeDoAluno01
