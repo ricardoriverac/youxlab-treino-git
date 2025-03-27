@@ -1,0 +1,6 @@
+l = float(input('Escreva a largura de uma parede em metros:'))
+a = float(input('Escreva a altura de uma parede em metros:'))
+ar = (l*a)
+print('A aréa dessa parede é:{:.2f}m*2'.format(ar))
+tn = (ar/2)
+print('A quantidade de tinta necessária é {:.2f} litros'.format(tn))
