@@ -1,3 +1,3 @@
-real = float(input('Quanto vc tem na carteira? R$'))
+real = float(input('Quanto você tem na carteira? R$'))
 dolar = real*5.73
-print(f'Vc teria US${dolar}')
+print(f'Você teria US${dolar}')
