@@ -1,0 +1,1 @@
+#operadores aritméticos
