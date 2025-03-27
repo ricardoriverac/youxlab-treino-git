@@ -7,7 +7,6 @@ media = (nota + nota2) / 2
 
 print("Sua média de {} é {} é de {}.".format(nota, nota2, media))
 
-#Fiz extra, se a pessoa tiver uma nota mair ou igual a 6, ela e aprovada. caso seja maior ou igual a 4, ele fica de recuperação. caso nenhuma ou menos ela e reprovada
 if media >= 6:
     print("Aluno Aprovado")
 elif media >= 4:

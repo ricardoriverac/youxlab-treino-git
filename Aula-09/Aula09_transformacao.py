@@ -25,5 +25,7 @@ frase = "Aprendendo a programar em python."
 #frase.rstrip()
 #remove apenas os espaços inuteis do lado direito
 
+
+
 #frase.lstrip()
 #remove apenas os espaços inuteis do lado esquerdo

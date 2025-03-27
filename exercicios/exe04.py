@@ -11,3 +11,4 @@ print("É alfanumerico?", a.isalnum())
 print("Esta em maiuscula?", a.isupper())
 print("Esta minuscula?", a.islower())
 print("Esta centralizada?", a.istitle())
+

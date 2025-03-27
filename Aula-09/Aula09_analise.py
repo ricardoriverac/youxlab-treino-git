@@ -7,7 +7,7 @@ frase = "Aprendendo a programar em python."
 #len igual a comprimento
 
 #frase.count("a")
-#frase.count("o",0,13)
+#frase.count("",0,13)
 #count igual a contar
 
 #frase.find("python") 
