@@ -1,0 +1,7 @@
+n = input('Escreva algo')
+print(n, 'é do tipo primitivo?', type(n))
+print(n, 'possui apenas números?', n.isnumeric())
+print(n, 'Possui apenas letras?',  n.isalpha(), '!')
+print(n, 'Possui letra ou número?', n.isalnum())
+print(n, 'Possuia apenas letras maiúsculas?', n.isupper())
+print(n, 'Possui apenas letras minúsculas?', n.islower())
