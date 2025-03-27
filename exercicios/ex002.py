@@ -1,2 +1,3 @@
 nome=input("Digite seu nome:")
-print(nome, "seja bem vindo(a!")
+print('É um prazer te conhecer {}!'.format(nome))
+
