@@ -9,4 +9,4 @@ area = largura * altura
 litrosDeTinta = area / 2
 
 print("A parede tem uma area de {:.2f}m².".format(area))
-print("A quantidade de tinta necessária para, pintar a parede e de {:.2f} litros de tinta.".format(litrosDeTinta))
+print("A quantidade de tinta necessária para, pintar a parede e de {:.2f} litros de tinta.".format(litrosDeTinta))      
