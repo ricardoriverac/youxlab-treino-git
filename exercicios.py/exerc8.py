@@ -1,0 +1,5 @@
+m = float(input('Me dê um tamanho em metros:'))
+c = (m*100)
+ml = (m*1000)
+print('{} em centimetros fica {}'.format(m, c))
+print('{} em milímetros é {}'.format(m, ml))
