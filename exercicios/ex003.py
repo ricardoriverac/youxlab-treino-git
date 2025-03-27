@@ -8,7 +8,7 @@
 a1 =int(input('Digite um número:'))
 a2 =float(input('Agora um número real:'))
 soma = a1+a2
-print('A soma entre {} e {} é igual a {}'.format(a1,a2,soma))
+print('A soma entre  {} e {} é igual a {}'.format(a1,a2,soma))
 
 
 
