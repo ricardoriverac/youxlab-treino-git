@@ -1,0 +1,14 @@
+OPERADORES ARITMÉTICOS
+Adição: +
+Subtração: -
+Multiplicação: *
+Divisão: /
+Potência: **
+Divisão inteira: //
+Resto da divisão: %
+
+ORDEM DE PRECEDÊNCIA
+1- ()
+2- **
+3- * / // %
+4- + -
