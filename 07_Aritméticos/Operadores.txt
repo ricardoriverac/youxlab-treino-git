@@ -1,0 +1,15 @@
++ = Adição                             5+2=7
+- = Subtração                          5-2=3
+* = Multiplição                        5*2=10
+/ = divisão                            5/2=2,5
+** = Potencia                          5**2=25
+// = Divisão inteira                   5//2=2
+% = Resto de divisão                   5%2=1
+
+Ordem de Preferencia
+1 ()
+2 **
+3 *,/,//,%
+4 + -
+
+
