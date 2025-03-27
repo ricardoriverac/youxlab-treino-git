@@ -1,0 +1,12 @@
+a1 = int(input('Digitr um valor para a tabuada '))
+
+print('esse valor vezes 1 , {}'.format(a1*1))
+print('esse valor vezes 2, {}'.format(a1*2))
+print('esse valor vezes 3 , {}'.format(a1*3))
+print('esse valor vezes 4, {}'.format(a1*4))
+print('esse valor vezes 5, {}'.format(a1*5))
+print('esse valor vezes 6 , {}'.format(a1*6))
+print('esse valor vezes 7 , {}'.format(a1*7))
+print('esse valor vezes 8 , {}'.format(a1*8))
+print('esse valor vezes 9 , {}'.format(a1*9))
+print('esse valor vezes 10 , {}'.format(a1*10))
