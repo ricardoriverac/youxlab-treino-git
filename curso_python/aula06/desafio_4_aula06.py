@@ -1,5 +1,5 @@
-# Para verificar se o valor é númerico
-n = input(str('Digite algo: '))
+# Para verificar se o valor é númerico; 
+n = input('Digite algo: ')
 print (n.isnumeric())
 print (n.isalpha())
 print (n.isupper())
