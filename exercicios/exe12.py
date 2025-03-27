@@ -11,7 +11,7 @@ desconto = 5 / 100
 
 if decisao == "arroz":
     precoFinal = valorArroz - (valorArroz * desconto)
-    print("O preço do arroz era R${}, com desconto de 5%, agora custa R${}.".format(valorArroz, precoFinal))
+    print("O preço do arroz era R${}, com desconto de 5%, agora custa R${:.2f}.".format(valorArroz, precoFinal))
 
 elif decisao in ["feijao", "feijão"]:
     precoFinal = valorFeijao - (valorFeijao * desconto)
