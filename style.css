@@ -8,7 +8,7 @@
 
 /* Estilo geral da página */
 body {
-    background-color: #f4f4f4;
+    background-color: #a0b5f8;
     padding: 20px;
     color: #333;
 }
@@ -30,19 +30,19 @@ table {
     max-width: 600px;
     margin: 0 auto;
     border-collapse: collapse;
-    background-color: #fff;
+    background-color: #c0d0f1;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
     padding: 12px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid #4c5eff;
 }
 
-/* Cabeçalho da tabela com cor Marsala */
+/* Cabeçalho da tabela com cor Azul */
 thead {
-    background-color: #800000; /* Marsala */
+    background-color: #4a69f1; /* Azul*/
     color: #fff;
 }
 
@@ -56,5 +56,5 @@ footer {
     text-align: center;
     margin-top: 20px;
     font-size: 0.9em;
-    color: #555;
+    color: #207bf3;
 }

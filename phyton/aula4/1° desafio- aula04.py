@@ -1,0 +1,2 @@
+nome= input ('Qual seu nome?') #com a var. input pesso para colocar o seu nome 
+print ('Bem vindo',nome) #ponho o print para aparecer a mensagem na tela e coloco a "," para que a mensagem se junte com a variável

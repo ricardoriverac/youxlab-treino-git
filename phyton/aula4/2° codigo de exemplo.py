@@ -1,0 +1,5 @@
+nome= input ('Qual seu nome?')
+idade= input ('Quando anos você tem?')
+altura= input ('Quanto você mede?')
+peso= input ('Quanto você pesa?')
+print (nome,idade,altura,peso)
