@@ -7,14 +7,9 @@
 #exercício 3 da aula 006
 a1 =int(input('Digite um número:'))
 a2 =float(input('Agora um número real:'))
-s = a1+a2
-print('A soma entre {} e {} é igual a {}'.format(a1,a2,s))
+soma = a1+a2
+print('A soma entre {} e {} é igual a {}'.format(a1,a2,soma))
 
-#exercício 4 da aula 006
-b1 = (input('Digite qualquer coisa'))
-print(b1.isnumeric())
-print(b1.isalpha())
-print(b1.isalnum())
 
 
 
