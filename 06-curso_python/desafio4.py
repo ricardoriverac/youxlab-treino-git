@@ -1,5 +1,6 @@
-n1 = int(input ('Escolha um número:'))
-n2 = int(input ('Escolha outro número:'))
-s = n1+n2
-
-print ('A soma entre {} e {} vale {}'.format(n1, n2, s))
+n3 = input ('Escolha algo:')
+print(type(n3))
+print(n3.isnumeric())
+print(n3.isalpha())
+print(n3.isalnum())
+print(n3.isupper())
