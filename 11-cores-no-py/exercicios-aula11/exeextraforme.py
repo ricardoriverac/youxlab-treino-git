@@ -15,13 +15,13 @@ listadeCores = ['\033[1;30mBranco\033[m \033[40m.\033[m' , '\033[1;31mVermelho\0
 
 # \033[m = Comando para colocar cores. 
 
-# "0 = o estilo da letra" 
+# "0 = O estilo da letra" 
 
-# "30 = a cor dos textos "
+# "30 = A cor dos textos "
 
-# "40 = a cor das letras "
+# "40 = A cor das letras "
 
-# "m" entre os conchetes você deve sempre colocar a letra "m"
+# "m" Entre os conchetes você deve sempre colocar a letra "m"
    
 #Troca os números pela as cores
 print(listadeCores[computador])
