@@ -21,7 +21,7 @@ listadeCores = ['\033[1;30mBranco\033[m \033[40m.\033[m' , '\033[1;31mVermelho\0
 
 # "40 = A cor das letras "
 
-# "m" Entre os conchetes você deve sempre colocar a letra "m"
+# "m" Entre os [] você deve sempre colocar a letra "m"
    
 #Troca os números pela as cores
 print(listadeCores[computador])
