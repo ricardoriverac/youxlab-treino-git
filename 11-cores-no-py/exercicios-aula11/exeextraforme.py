@@ -6,7 +6,7 @@ from random import randint
 computador = randint(0,7)
 #Randozima entre 0 a 7 
 
-#lista das cores
+#Lista das cores
 listadeCores = ['\033[1;30mBranco\033[m \033[40m.\033[m' , '\033[1;31mVermelho\033[m \033[41m.\033[m' , '\033[1;32mVerde\033[m \033[42m.\033[m' , '\033[1;33mAmarelo\033[m \033[43m.\033[m ' , '\033[1;34mAzul\033[m \033[44m.\033[m ' , '\033[1;35mRoxo\033[m \033[45m.\033[m ' , '\033[1;36mCiano\033[m \033[1;46m.\033[m ' , '\033[1;37mCinza\033[m \033[1;47m.\033[m ']
 
 #Colocando cores no python.
