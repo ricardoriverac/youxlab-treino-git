@@ -2,7 +2,7 @@ from random import randint
 import time
 jogadas = ["PEDRA" ,"PAPEL" ,"TESOURA"]
 computador = randint(0,2)
-print("""'EESCOLHA SUA JOGADA'
+print("""'ESCOLHA SUA JOGADA'
 [0] PEDRA
 [1] PAPEL
 [2] TESOURA""")
