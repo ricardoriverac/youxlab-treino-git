@@ -32,15 +32,8 @@ elif opcao == 2 :
 elif opcao == 3 :
     num = int(input('Digite o número: '))
     multiplicacao = float(input('Digite o valor da multiplicação: '))
-    resultadodaMultiplicacao = num*multiplicacao
-
+    
     #Multiplicou o número digitado pelo o valor digitado
-    #print(f'Você multiplicou o número {num} pelo {multiplicacao} e deu {resultadodaMultiplicacao}')
-    if resultadodaMultiplicacao == num.__int__ :
-        print(f'Você multiplicou o número {num} pelo {multiplicacao} e deu {resultadodaMultiplicacao}')
-    elif resultadodaMultiplicacao == float :
-        print(f'Você multiplicou o número {num} pelo {multiplicacao} e deu {resultadodaMultiplicacao}')
-
-
+    print(f'Você multiplicou o número {num} pelo {multiplicacao} e deu {num*multiplicacao}')
 else:
     print('\033[31mOPÇÃO ERRADA!!!!\033[m')
