@@ -1,4 +1,8 @@
 
+nome = str(input('Nome:'))
+a = nome.strip()
+n = a.find('silva')
+print(n)
 
 #devo_levantar = bool(input('deseja levantar hoje?'))
 
