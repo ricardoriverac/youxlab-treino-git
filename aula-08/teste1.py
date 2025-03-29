@@ -27,12 +27,6 @@
     #print('esta na média')
 #else:
     #print('REPROVADO!')
-import random
-n = int(input('Acerte o número'))
-n2 = random.random
 
-if n <= n2:
-    print('você acertou')
-else:
-    print('você errou!, tente de novo')
+
 
