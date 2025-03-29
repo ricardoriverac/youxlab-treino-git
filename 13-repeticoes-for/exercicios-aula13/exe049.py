@@ -9,10 +9,12 @@ print(""""OPÇÕES DE TABUADA"
 [1] Digitar um número 
 [2] Computador Randozimar um número qualquer entre 0 a 10.
 [3] Digitar um número e qual número quer que multiplique""")
+#Um timer
 time.sleep(0.8)
 opcao = int(input('Digite as opçoẽs: '))
 if opcao == 1 :
-    print('\033[36m_\033[m'*18)
+    time.sleep(0.2)
+    print('\033[30m_\033[m'*18)
     num = int(input('Digite o número: '))
     print('-'*20)
 
@@ -21,18 +23,22 @@ if opcao == 1 :
         print(num , 'X' , c , '=' , num*c)
     print('-'*20)
 elif opcao == 2 :
+
     #Randomizar um número entre 0 a 10
     computador = randint(0,10)
     print('-'*16)
 
     #Contador de 0 a 10
     for c in range(0,11):
+        time.sleep(0.2)
         print(computador , 'X' , c , '=' , computador*c)
     print('-'*16)
 elif opcao == 3 :
+    time.sleep(0.2)
+    print('\033[30m_\033[m'*17)
     num = int(input('Digite o número: '))
     multiplicacao = float(input('Digite o valor da multiplicação: '))
-    
+
     #Multiplicou o número digitado pelo o valor digitado
     print(f'Você multiplicou o número {num} pelo {multiplicacao} e deu {num*multiplicacao}')
 else:
