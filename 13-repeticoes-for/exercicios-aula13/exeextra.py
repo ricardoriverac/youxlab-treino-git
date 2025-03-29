@@ -15,5 +15,5 @@ pygame.mixer.init()
 pygame.mixer.music.load("explosion-312361.mp3")
 pygame.mixer.music.play()
 
-input('\033[36mpressione enter para sair\033[m')
+input('\033[36mpressione enter para sair:\033[m')
 
