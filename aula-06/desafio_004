@@ -1,0 +1,11 @@
+valor = input("Digite algo: ")
+
+# Exibe o tipo primitivo e diversas informações sobre o valor
+print(f"Tipo primitivo: {type(valor)}")
+print(f"Só tem espaços? {valor.isspace()}")
+print(f"É um número? {valor.isnumeric()}")
+print(f"É alfabético? {valor.isalpha()}")
+print(f"É alfanumérico? {valor.isalnum()}")
+print(f"Está em maiúsculas? {valor.isupper()}")
+print(f"Está em minúsculas? {valor.islower()}")
+print(f"Está capitalizado (primeira maiúscula, restante minúscula)? {valor.istitle()}")
