@@ -18,3 +18,4 @@ elif 5.0 <= media <= 6.9:
     print("Aluno de recuperação.")
 else:
     print("Aluno aprovado.")
+    
