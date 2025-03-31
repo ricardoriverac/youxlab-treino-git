@@ -1,3 +1,4 @@
+
 print('Bem vindo ao Goblin Atack!')
 enter = str(input('Aperte enter para iniciar'))
 esco = int(input('escolha seu personagem: \n 1.Mago \n 2.Bruxa \n 3.Elfo \n 4.Anão \n:'))
@@ -21,7 +22,7 @@ else:
     input('Aperte enter para continuar:')
     input('você sai de uma caverna e se depara com uma espada')
     espada = int(input('1: pegar a espada \n 2: Não pegar a espada'))
-    while espada != 1:
+    if espada != 1:
         input('Você zerou o jogo 👍')
     else:
         input('Você pegou a espada, Aperte enter para seguir em frente')

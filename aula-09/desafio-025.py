@@ -6,4 +6,3 @@ if b != -1:
     print('Sim tem "Silva"')
 else:
     print('Não tem "silva"')    
-
