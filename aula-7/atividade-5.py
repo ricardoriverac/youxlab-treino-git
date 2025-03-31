@@ -10,3 +10,11 @@ x8 = n1 * 8
 x9 = n1 * 9
 x10 = n1 * 10
 print(f'A tabuada é:{x1},{x2},{x3},{x4},{x5},{x6},{x7},{x8},{x9},{x10}')
+# fiz uma pesqisa e tem uma forma mais facil de se fazer
+# Solicita um número inteiro ao usuário
+# num = int(input("Digite um número inteiro: "))
+
+# Exibe a tabuada do número informado
+# print(f"\nTabuada do {num}:")
+# for i in range(1, 20):
+#  print(f"{num} x {i} = {num * i}")
