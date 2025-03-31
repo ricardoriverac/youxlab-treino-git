@@ -1,3 +1,18 @@
-frase = 'curso em vídeo python'
-frase[9]
-len(frase)
+frase = 'Curso em Vídeo Python'
+print(frase[3:10])
+print(frase)
+print(len(frase))
+print(frase.count('o'))
+print(frase.upper())
+print(frase.replace(  'Python', 'android'  ))
+print(frase.lower())
+print(frase.capitalize())
+print(frase.title())
+frase2 = '   Aprendendo python'
+print(frase2)
+print(frase2.strip())
+print(frase2.rstrip())
+print(frase2.lstrip())
+print(frase2.split())
+print('-'.join(frase2))
+print("""O Senhor, pois, é aquele que vai adiante de ti; ele será contigo, não te deixará, nem te desamparará; não temas, nem te espantes""")
