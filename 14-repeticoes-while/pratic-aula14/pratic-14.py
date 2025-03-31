@@ -7,5 +7,5 @@ while n != 0:
             par += 1
         else:
             impar += 1
-print(f'voce digitou {par} numeros pares e {impar} numeros impares!')
+print(f'voce digitou {par} numeros pares e {impar} numeros impares!.')
 
