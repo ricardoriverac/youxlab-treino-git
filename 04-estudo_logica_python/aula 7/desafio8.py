@@ -1,3 +1,4 @@
 metro= int(input('Digite um numero metros :'))
 centimetro= metro *100
-print('analisando seu valor em {} m,em centimetros é {}'. format(metro, centimetro))
+milimetro= metro *1000
+print('analisando seu valor em {} m,em centimetros é {}, e em milimetro {}'. format(metro, centimetro, milimetro))
