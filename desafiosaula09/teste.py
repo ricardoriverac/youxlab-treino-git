@@ -1,0 +1,11 @@
+frase = 'Curso em Vídeo Python'
+#print(frase.replace('Python', 'Android'))
+#print('Curso' in frase)
+#print(frase.lower().find('vídeo'))
+#print("""Meu amado é o mais belo entre milhares e milhares """)
+print(frase.find('deo'))
+print(frase.upper())
+print('Curso' in frase)
+#print('-'.join(frase))
+dividido = frase.split()
+print(dividido[2] [3])
