@@ -1,0 +1,7 @@
+primeiroNumero = int(input('Digite o primeiro número: '))
+segundoNumero = int(input('Digite o segundo número: '))
+terceiroNumero = int(input('Digite o terceiro número: '))
+escolha = (primeiroNumero, segundoNumero, terceiroNumero)
+menorNumero = min(escolha)
+maiorNumero = max(escolha)
+print('O menor número é {} e o maior é {}'.format(menorNumero, maiorNumero))
