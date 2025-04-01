@@ -7,5 +7,5 @@ elif nome == 'Pedro' or nome == 'Maria' or  nome == 'João':
 elif nome in 'Ana Cláudia Jéssica Juliana':
     print('Belo nome feminino')
 else:
-    print('Seu nome é bem normal')
-print(f'Tenha um bom dia {nome}')
+    print('Seu nome é bem normal ')
+print(f'Tenha um bom dia {nome} ')
