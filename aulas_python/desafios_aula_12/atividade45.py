@@ -12,6 +12,3 @@ escolha = e = random.choice(numeros)
 
 if jogada == 0:
     print('-=-=-=-=-=-=-=-=-=-=-=\nComputador jogou {}\nJogador jogou Pedra\n-=-=-=-=-=-=-=-=-=-=-='.format(escolha))
-    
-    
-    #USA CHOICE

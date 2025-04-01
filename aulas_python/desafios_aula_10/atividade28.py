@@ -11,4 +11,4 @@ if y == (e):
     print('Você acertou, parabens!')
 
 else:
-    print('Você errou, tente novamente..')
+    print('Você errou, tente novamente..\n(O número que o computador estava pensando é {})'.format(e))
