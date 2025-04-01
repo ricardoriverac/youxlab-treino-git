@@ -1,0 +1,5 @@
+frase = str (input ("Digite seu nome comleto: ")).strip()
+nome = frase.split()
+print ("Muito prazer em te conhecer!!")
+print ("seu primeiro nome é : {}".format(nome[0]))
+print ("seu último nome é : {}".format(nome [len (nome) -1 ]))
