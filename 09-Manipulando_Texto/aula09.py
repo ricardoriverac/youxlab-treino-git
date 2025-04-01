@@ -15,7 +15,7 @@
 #frase.lower- deixa todas as letras de uma frase minúsculas
 
 #Divisão:
-#frase.split- ele pega onde tem espaços e cria splits, (rafaz os indices)
+#frase.split- ele pega onde tem espaços e cria splits, (refaz os indices)
 
 #Junção:
 #'-'.join(frase)- coloca um tracinho na frase no lugar dos espaços
