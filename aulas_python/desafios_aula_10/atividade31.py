@@ -3,7 +3,7 @@ km = float(input('Qual a distancia da sua viagem? Acima de 200km terá um descon
 
 if km <= 200:
     q = km*0.50
-    print('O preço é: R4{:.2f}'.format(q))
+    print('O preço é: R${:.2f}'.format(q))
     
 else:
     w = km*0.45
