@@ -27,7 +27,7 @@ if computador == 1:
     if jogador == 2:
          print('\033[1;32mVocê venceu!\033[m')
     elif jogador == 0:
-        print('\033[1;31mVocê perdeu!\033')
+        print('\033[1;31mVocê perdeu!\033m')
     else:
         print('\033[1;36mDeu empate\033[m')
 
