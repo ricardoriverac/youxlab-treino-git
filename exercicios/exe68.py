@@ -3,6 +3,8 @@
 
 import random
 
+vitorias = 0
+
 while True:
     pergunta = input("Você deseja par ou impar? ").lower()
     jogador = int(input("Digite um número: "))
@@ -20,19 +22,16 @@ while True:
 
     if (soma % 2 == 0 and pergunta == "par") or (soma % 2 != 0 and pergunta == "impar"):
         print("Você venceu.\n")
+        vitorias += 1
         perguntaFinal = input("Voce deseja continuar jogando: [S/N] ").upper()
 
         if perguntaFinal == "N":
             print("Voce encerrou o jogo.")
+            print(f"Você finalizou o jogo com {vitorias} vitória(s).")
             break
         else:
             print("Voce continuou o jogo.")
     else:
-        print("Você perdeu.\n")
-        perguntaFinal = input("Voce deseja continuar jogando: [S/N] ").upper()
-
-        if perguntaFinal == "N":
-            print("Voce encerrou o jogo.\n")
-            break
-        else:
-            print("Voce continuou o jogo.\n")
+        print("Você perdeu!\n")
+        print(f"Você finalizou o jogo com {vitorias} vitória(s).")
+        break
