@@ -15,24 +15,24 @@ print('\033[1;36m-=\033[m' * 12)
 
 if computador == 0:
     if jogador == 1:
-        print('Você venceu!')
+        print('\033[1;32mVocê venceu!\033[m')
     elif jogador == 2:
-        print('Você perdeu!')
+        print('\033[1;31mVocê perdeu!\033[m')
     else:
         print('Deu empate')
 
 if computador == 1:
     if jogador == 2:
-        print('Você venceu!')
+        print('\033[1;32mVocê venceu!\033[m')
     elif jogador == 0:
-        print('Você perdeu!')
+        print('\033[1;31mVocê perdeu!\033[m')
     else:
         print('Deu empate')
 
 if computador == 2:
     if jogador == 0:
-        print('Você venceu!')
+        print('\033[1;32mVocê venceu!\033[m')
     elif jogador == 1:
-        print('Você perdeu!')
+        print('\033[1;31mVocê perdeu!\033[m')
     else:
         print('Deu empate')
