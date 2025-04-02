@@ -1,13 +1,11 @@
-_ = ('-='*30)
-brasileirao = ('Fortaleza' , 'Juventude' , 'Vasco da Gama' , 'Cruzeiro', 'Grêmio' , 'Bragantino' , 'Ceará SC' , 'Corinthians' , 'Flamengo' , 'Internacional' , 'Bahia' , 'São Paulo' , 'Sport Recife' , 'Botafogo' , 'Palmeiras' , 'Altético-MG' , 'Santos' , 'Mirassol' , 'Fluminense' , 'Chapecoense')
-print(f'\033[32m{_}\033[m')
-print(f'\033[33mLISTA DE TIMES DO BRASILEIRÃO:\033[m \n{brasileirao}')
-print(f'\033[32m{_}\033[m')
-print(f'OS PRIMEIROS \033[32m5°\033[m COLOCADOS DO BRASILEIRÃO: \n{brasileirao[0:5]}')
-print(f'\033[36m{_}\033[m')
-print(f' OS ULTIMOS \033[31m4°\033[m COLOCADOS DO BRASILEIRÃO: \n{brasileirao[16:]}')
-print(f'\033[33m{_}\033[m')
-print(f'LISTA EM ORDEM ALFABÉTICA: \n{sorted(brasileirao)}')
-chapecoens = brasileirao.index('Chapecoense')
-print(f'\033[32m{_}\033[m')
-print(f'O Chapecoense está na posição {chapecoens+1}°')
+
+from random import choice , randint
+maior = 0
+menor = 0
+computador = ((randint(0,10) , randint(0,10) , randint(0,10) , randint(0,10) , randint(0,10) ))
+print(choice(computador) , choice(computador) , choice(computador) , choice(computador) , choice(computador))
+
+# #print(sorted(computador))
+
+print(f'O menor foi o {min(computador)} ')
+print(f'O maior foi o {max(computador)} ')
