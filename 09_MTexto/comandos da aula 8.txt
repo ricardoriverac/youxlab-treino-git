@@ -1,0 +1,27 @@
+FATIAMENTO
+Curso em video python
+frase[9]: frase o nome da variavel entre [] nove, o simbolo de [] e o indentificador de uma estrutura do python chamado lista, basicamente identifica na cadeia de caracter somente o caracter da posição indicada, lembrando que na cadeia de caracter os indicadores começam pelo numero 0
+frase[9:13] seleciona os caracteres entre os numeros indicados ou seja uma casa antes do 13, 9 13 significa que vai do nove a 13 incluindo o 9 e removendo o 13 pois e uma casa antes 
+frase[9:21:2] começa no nove e vai ate o 21, mas o :2 significa que vai pular de dois em dois
+frase[:5] antes do : significa onde vai começa e depois dos : e onde ele vai terminar entao neste exemplo ele vai começar do 0 e terminar no 5
+frase[15:] seguindo a mesma linha de raciocinio vai comerçar na linha 15, n informando o final depois dos : vai ser a mesma coisa que ate final
+frase[9::3] vai começar no nove ate o final pois no meio dos dois : n foi informado ate onde vai portanto ate o final, :3 vai ir pulando de 3 em 3
+ANALISE
+len(frase) len vem de comprimento ou seja este comando esta pedindo o comprimento da frase
+frase.count("o") vai contar quantas vezes tem a letra "o o numero" tem que ser entre aspas pois caso contrario vai dar como variavel
+frase.find("exemplo") find de encontrar, ou seja este comando vai encontrar a palavra que foi mencionada caso nao tiver a palavra vai dar como -1
+TRANSFORMAÇÃO
+frase.replace("Python,"android") replace de trocar/reposicionar, este comando vai trocar as palavras com a que fo mencionada na frase, ou seja onde tiver Python ele va substituir por android
+frase.upper() upper significa pra cima ou seja vai ficar maiusculo,
+frase.lower() ao contrario de upper vai deixa minusculo 
+frase.capitalize() vai deixar todos minusculo entretando vai deixa somente o primeiro caracter maiusculo
+frase.title() ele vai analizar cada palavra que tem na string, ou seja ele vai medir por meio de cada espaço, fazendo assim cada primeira letra de cada palavra maiusculo
+frase.strip() vai remover todos espaços inuteis no inicio e o final da string, mais o espaço do meio vai ser mantido.
+frase.rstrip() esta variação vai tirar somente o espaço da direita.
+DIVISÃO
+frase.split() onde tiver espaço ele vai criar uma divisao 
+JUNÇÃO
+.join(frase) vai juntao as palavras
+
+
+ 
