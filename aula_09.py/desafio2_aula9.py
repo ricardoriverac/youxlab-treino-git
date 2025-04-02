@@ -1,0 +1,7 @@
+num = int(input('Escreva um número: '))
+n = str(num)
+print('Verificando o número {}'.format(num))
+print('A unidade do número é: {}'.format(n [3]))
+print('A dezena do número é: {}'.format(n [2]))
+print('A centena do número é: {}'.format(n[1]))
+print('O milhar do número é: {}'.format(n[0]))
