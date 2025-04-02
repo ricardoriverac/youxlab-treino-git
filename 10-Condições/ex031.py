@@ -5,7 +5,7 @@ if distancia < 200:
     print(f'Voce irá pagar: {pago}')
 
 else: 
-    w = distancia * 0.245
+    w = distancia * 0.45
     print(f'O preço a pagar será:{w}')
 
 
