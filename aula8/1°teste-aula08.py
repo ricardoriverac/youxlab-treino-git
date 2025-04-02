@@ -3,6 +3,8 @@ import math
 n=int(input('Digite um número:'))
 raiz=math.sqrt(n)
 print(f'a raiz quadrada de {n} é {raiz}!')
+
+
 #Pode ser feito assim também se quiser apenas uma função da biblioteca
 from math import sqrt
 n=int(input('Digite um número:'))
