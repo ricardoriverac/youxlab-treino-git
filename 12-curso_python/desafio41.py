@@ -1,5 +1,5 @@
 from time import sleep
-print('Olá, seja bem vindo a aula de natação!')
+print('Olá, seja bem vindo a Confederação Nacional de Natação!')
 sleep(1)
 print('Para sabermos qual será sua categoria, devemos saber sua idade.')
 sleep(1)
