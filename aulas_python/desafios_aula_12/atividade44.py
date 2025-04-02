@@ -14,16 +14,16 @@ xcartao = preco/2
 
 
 if opcao == 1:
-    print('Você terá que pagar {}'.format(subtracao1))
+    print('Você terá que pagar R${}'.format(subtracao1))
     
 elif opcao == 2:
-    print('Você terá que pagar {}'.format(subtracao2))
+    print('Você terá que pagar R${}'.format(subtracao2))
     
 elif opcao == 3:
-    print('Você terá que pagar {}'.format(xcartao))
+    print('Você terá que pagar R${} durante 2 meses'.format(xcartao))
     
 elif opcao == 4:
     vezes= int(input('Em quantas vezes quer dividir sua compra? '))
     xtcartao = preco*1.20/vezes
-    print('Sua compra ficará {} durante {} meses'.format(xtcartao, vezes))
+    print('Sua compra ficará R${} durante {} meses'.format(xtcartao, vezes))
 print('========== OBRIGADO PELA PREFERÊNCIA ==========\n========== VOLTE SEMPRE! ==========')
