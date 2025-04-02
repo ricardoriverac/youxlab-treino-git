@@ -1,7 +1,13 @@
-extensos = ('zero ' , 'um' , 'dois' , 'três' , 'quatro' , 'cinco' , 'seis' , 'sete' , 'oito' , 'nove' , 'dez' , 'onze' , 'doze' , 'treze' , 'quartoze' , 'quinze' , 'dezesseis' , 'dezessete' , 'dezoito' , 'dezenove' , 'vinte' )
-num = int(input('Digite um número entre 0 a 20: '))
-while num > 20 or num < 0 : 
-    num = int(input('Tente novamente. Digite um número Entre 0 e 20: '))
-for cont in range(0 , len(extensos)):
-    if num == cont :
-        print(f'Digitou o número  {extensos[num]}')
+_ = ('-='*30)
+brasileirao = ('Fortaleza' , 'Juventude' , 'Vasco da Gama' , 'Cruzeiro', 'Grêmio' , 'Bragantino' , 'Ceará SC' , 'Corinthians' , 'Flamengo' , 'Internacional' , 'Bahia' , 'São Paulo' , 'Sport Recife' , 'Botafogo' , 'Palmeiras' , 'Altético-MG' , 'Santos' , 'Mirassol' , 'Fluminense' , 'Chapecoense')
+print(f'\033[32m{_}\033[m')
+print(f'\033[33mLISTA DE TIMES DO BRASILEIRÃO:\033[m \n{brasileirao}')
+print(f'\033[32m{_}\033[m')
+print(f'OS PRIMEIROS \033[32m5°\033[m COLOCADOS DO BRASILEIRÃO: \n{brasileirao[0:5]}')
+print(f'\033[36m{_}\033[m')
+print(f' OS ULTIMOS \033[31m4°\033[m COLOCADOS DO BRASILEIRÃO: \n{brasileirao[16:]}')
+print(f'\033[33m{_}\033[m')
+print(f'LISTA EM ORDEM ALFABÉTICA: \n{sorted(brasileirao)}')
+chapecoens = brasileirao.index('Chapecoense')
+print(f'\033[32m{_}\033[m')
+print(f'O Chapecoense está na posição {chapecoens+1}°')
