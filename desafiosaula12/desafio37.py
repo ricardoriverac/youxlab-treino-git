@@ -12,4 +12,6 @@ elif escolha == 2:
     print('O número que você escolheu convertido para {}OCTAL {}é {}'.format('\033[35m', '\033[m', octal))
 elif escolha == 3:
     print('O número que você escolheu convertido para {}HEXADECIMAL {}é {}'.format('\033[35m', '\033[m', hexadecimal))
+else:
+    print('É pra você escolher umas das opções! Tente novamente!')
     
