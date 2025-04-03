@@ -25,5 +25,5 @@ elif opcao == 3:
 elif opcao == 4:
     vezes= int(input('Em quantas vezes quer dividir sua compra? '))
     xtcartao = preco*1.20/vezes
-    print('Sua compra ficará R${} durante {} meses'.format(xtcartao, vezes))
+    print('Sua compra ficará R${:.2f} durante {} meses'.format(xtcartao, vezes))
 print('========== OBRIGADO PELA PREFERÊNCIA ==========\n========== VOLTE SEMPRE! ==========')
