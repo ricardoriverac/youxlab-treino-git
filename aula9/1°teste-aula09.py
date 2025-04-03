@@ -26,12 +26,6 @@ print(frase.find('Santo'))#Da a posição de palavra "Santo"  na frase neste cas
 
 print(frase.lower().find('Santo'))#.lower() --> letras minúsculas (neste caso NÃO existi a palavra "Santo" com letras minúsculas então aparecerá -1)
 
-dividido= frase.split()
-print(dividido[0])
-
-
-
-
 #Para inserir um texto de uma vez só basta usar 3 aspas
 print('''Python é uma linguagem de programação de alto 
 nível, orientada a objetos, que pode ser usada 
