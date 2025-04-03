@@ -1,4 +1,4 @@
-numero1 = int(input('Escolha um número'))
+numero1 = int(input('Escolha um número:'))
 
 numero2 = int(input('Escolha outro número:'))
 
