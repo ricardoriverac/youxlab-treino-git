@@ -7,4 +7,4 @@ if media < 5:
 elif media > 5 or media < 6.9:
       print ("Média entre 5.0 e 6.9, \033[33mRECUPERAÇÃO")
 elif media >= 7:
-      print ("Média acima de 7, \033[32APROVADO")
+      print ("Média acima de 7, \033[32mAPROVADO")
