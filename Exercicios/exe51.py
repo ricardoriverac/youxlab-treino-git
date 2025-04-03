@@ -9,5 +9,5 @@ razao = int(input("Digite a razão da PA: "))
 
 print("Os 10 primeiros termos da PA são:")
 for i in range(10):
-    termo = primeiroTermo + i * razão
+    termo = primeiroTermo + i * razao
     print(termo, end=' ')
