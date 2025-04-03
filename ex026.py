@@ -1,0 +1,5 @@
+frase= str(input('Digite uma frase: '))
+letra= frase.count ('A')
+print('A letra A aparece {} vez(es)'.format(letra))
+posicao1= frase.split(), frase.count('A' [0])
+print('Posição em que aparece pela primeira vez {}'.format(posicao1))
