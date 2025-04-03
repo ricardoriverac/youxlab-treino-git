@@ -15,7 +15,7 @@ while True:
     pergunta = input("Você deseja continuar digitando? [S/N] ").upper()
     if pergunta == "N":
         break
-    
+
 print("\nVocê encerrou o programa.")
 print(f"Esta é sua tabela em ordem crescente: {sorted(lista)}")
 
