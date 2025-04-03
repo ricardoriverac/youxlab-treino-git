@@ -14,6 +14,8 @@ for pos in range(0, len(tabelaDeProdutos)):
         print(f"R${tabelaDeProdutos[pos]:>7.2f}")
 print("-" * 40)
 
+# se fosse pra fazer manual a lista, mais não era este o desafio
+
 # for p in range(5):
 #     nomeProduto = input("Digite o nome de um produto: ")
 
