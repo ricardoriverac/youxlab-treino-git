@@ -1,7 +1,7 @@
 print('<=>'*20)
-emprestimo=float(input('Diga o valor do emprestimo para a compra de sua casa: '))
+emprestimo=float(input('Diga o valor do emprestimo para a compra de sua casaR$: '))
 tempo=int(input('Em quantas parcelas pretende pagar?: '))
-sal=float(input('Nos informe sua renda  mensal: '))
+sal=float(input('Nos informe sua renda  mensalR$: '))
 parcela=emprestimo/tempo
 parcelaAprovada=parcela*30/100 + parcela
 

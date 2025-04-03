@@ -1,5 +1,6 @@
+from datetime import date
+anoAtual=date.today().year
 anoNasc=int(input('Digite o ano que nasceu: '))
-anoAtual=int(input('Digite o ano atual: '))
 idade =anoAtual - anoNasc
 
 if idade <= 10:

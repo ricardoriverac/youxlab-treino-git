@@ -1,0 +1,2 @@
+nome= int(input('Me diga seu nome: '))
+print('\033[1;35;40mOlá {}{}{} como você está!!! '.format('\033[7;36[m',nome,'\033[m'))

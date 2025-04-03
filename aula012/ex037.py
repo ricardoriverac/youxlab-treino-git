@@ -1,8 +1,8 @@
 num = int(input('Me diga um numero: '))
 escolha =int (input(''' Escolha uma das três opções abaixo:'
-[1] = binário '
-[2] = octal'
-[3] = hexadecimal '''))
+(1) = binário 
+(2) = octal'
+(3) = hexadecimal '''))
 
 if escolha ==1:
     print('O seu valor {} em binário e {} '.format(num,bin(num)))
