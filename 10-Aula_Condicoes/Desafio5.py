@@ -1,4 +1,4 @@
-ano = int(input('Diite o Ano'))
+ano = int(input('Diite o Ano '))
 if ano % 4 == 0:
     print('O ano {} BISSXESTO'. format (ano))
 else:
