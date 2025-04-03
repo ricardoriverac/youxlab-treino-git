@@ -24,6 +24,9 @@ while True:
         homensCadastrados += 1
     elif sexo == "F" and idade < 20:
         mulheresMenos20 += 1
+
+    if idade >= 18:
+        pessoasMais18 += 1
     
     pergunta = input("Você quer cadastrar mais pessoas? [S/N] ").upper()
 
@@ -32,5 +35,6 @@ while True:
 
         print(f"Pessoas cadastradas: {pessoasCadastradas}.")
         print(f"Homens cadastrados: {homensCadastrados}.")
+        print(f"Pessoas com +18: {pessoasMais18}")
         print(f"Mulheres com menos de 20 anos: {mulheresMenos20}.")
         break
