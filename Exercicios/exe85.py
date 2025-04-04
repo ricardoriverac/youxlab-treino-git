@@ -11,7 +11,7 @@ for n in range(7):
         valores[0].append(num)
     else:
         valores[1].append(num)
-        
+
 print(f"\nSua lista completa: {valores}")
 print(f"A lista de números pares são: {sorted(valores[0])}")
 print(f"A lista de números impares são: {sorted(valores[1])}")

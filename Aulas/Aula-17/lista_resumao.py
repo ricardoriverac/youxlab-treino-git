@@ -83,3 +83,13 @@ lista_copia = lista_original[:]  # Faz uma cópia verdadeira da lista
 lista_original.append(4)
 print("Lista original:", lista_original)
 print("Lista cópia:", lista_copia)
+
+# ---
+# 9. Listas aninhadas
+
+lista_aninhada = [[], [], []]
+
+lista_aninhada[0].append("Maçã")
+lista_aninhada[1].append("Laranja")
+lista_aninhada[2].append("Banana")
+print(f"Lista aninhada completa: {lista_aninhada}")
