@@ -1,6 +1,6 @@
 print('-=-=-=-=-Digite dois números inteiros para serem comparados-=-=-=-=-')
-numero1 = int(input('Seu primeiro número? '))
-numero2 = int(input('Seu segundo número? '))
+numero1 = float(input('Seu primeiro número? '))
+numero2 = float(input('Seu segundo número? '))
 
 max = max(numero1, numero2)
 min = min(numero1, numero2)
