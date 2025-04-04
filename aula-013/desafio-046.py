@@ -1,4 +1,5 @@
-from time import sleep
-import random
-for c in range (10, -1 , -1):
+import time
+
+for c in range(10, -1, -1):
+    time.sleep(1)
     print(c)
