@@ -2,8 +2,8 @@ from datetime import date
 menor=0
 maior=0
 anoAtual=date.today().year
-for pes in range(1,4):
-    ano=int(input('Em que ano você nasceu ? '))
+for pessoa in range(1,4):
+    ano=int(input('Em que ano a {pessoa} você nasceu ? '.format(pessoa)))
     idade = anoAtual - ano
 
     if idade <=17:
