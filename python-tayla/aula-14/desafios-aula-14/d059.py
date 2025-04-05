@@ -35,5 +35,5 @@ while escolha != 5:
         n1 = int(input('Digite o primeiro número: '))
         n2 = int(input('Digite o segundo número: '))
 
-#mensagem se apretar o 5
+#mensagem se apertar o 5
 print('Fim do programa')
