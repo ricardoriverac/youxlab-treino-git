@@ -11,7 +11,7 @@ print('JO')
 sleep(1)
 print('KEN')
 sleep(1)
-print('PÔ')
+print('PO')
 sleep(1)
 print('JOGADOR jogou {} '.format(itens[jogador]))
 print('COMPUTADOR jogou {}'.format(itens[computador]))
@@ -36,3 +36,4 @@ if computador==2:
         print('COMPUTADOR VENCEU! ')
     elif jogador==2:
         print('EMPATE! ')
+        
