@@ -1,3 +1,4 @@
+#Aumento salarial
 salario=float(input('Qual o seu sálario?: '))
 if salario>1250.00:
     aumento1= salario*1.10
