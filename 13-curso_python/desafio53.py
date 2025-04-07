@@ -1,4 +1,4 @@
-frase = (input('Escreva uma frase: ')).strip()
+frase = (input('Escreva uma frase: ')).upper()
 palavras = frase.split()
 junto = ' '.join(frase)
 inverso = junto[::-1]
