@@ -1,3 +1,4 @@
+#Valor das viajens 
 km=int(input('Sua viajem tem qunantos km?:'))
 if km<=200:
     valor1= km*0.50
