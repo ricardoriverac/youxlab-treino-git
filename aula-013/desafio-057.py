@@ -1,9 +1,10 @@
 nome = input('Digite o nome de uma pessoa:')
-sexo = int(input(f'Fale o sexo de {nome} 1.F/2.M:'))
-while sexo != 1 and 2:
+sexo = input('Fale o sexo dessa pessoa F/M:').lower().strip()[0]
+while sexo != 'm' and sexo != 'f':
     print('Tente de novo:')
-    sexo = int(input((f'Fale o sexo de {nome} F/M:')))
+    sexo = input('Fale o sexo dessa pessoa F/M:').lower()
 else:
-    Print('ok')
+    print('ok')
+
 
 
