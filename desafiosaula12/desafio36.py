@@ -12,3 +12,4 @@ if parcela>=min:
     print('Seu empréstimo foi {}NEGADO!'.format('\033[31m'))
 else:
     print('Seu empréstimo foi {}ACEITO! '.format('\033[32m'))
+    
