@@ -10,6 +10,6 @@ while mais != 0:
         print('{} ->'.format(termo), end =' ')
         termo +=raz
         cont += 1
-        print('PAUSA') 
-        mais=int(input('Quantos numeros quer mostrar a mais ?  '))
+    print('PAUSA') 
+    mais=int(input('Quantos numeros quer mostrar a mais ?  '))
 print('FIM')
