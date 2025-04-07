@@ -30,23 +30,23 @@
 #print("FIM")
 
 #---------------------------------------------------
-#i = int(input('Inicio:'))
+i = int(input('Inicio:'))
 
-#f = int(input('Fim:'))
+f = int(input('Fim:'))
 
-#p = int(input('Passo:'))
+p = int(input('Passo:'))
 
-#for c in range (i,f+1, p):
-#    print(c)   
-#print('FIM')
+for c in range (i,f+1, p):
+    print(c)   
+print('FIM')
 
 #----------------------------------------------------
 #for c in range(0, 5):
 #    n = int(input('Digite um valor: '))
 #print('Fim')
 
-s = 0
-for c in range(0, 4):
-    n = int(input('Digite um valor: '))
-    s += n
-print(f'O somatório de todos os valores foi {s}. ')
+#s = 0
+#for c in range(0, 4):
+#    n = int(input('Digite um valor: '))
+#    s += n
+#print(f'O somatório de todos os valores foi {s}. ')
