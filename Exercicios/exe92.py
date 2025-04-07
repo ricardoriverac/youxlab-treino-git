@@ -20,7 +20,7 @@ dados["ctps"] = resposta
 
 if resposta == "N":
     print(f"\nPrograma finalizado {dados['nome']}.\n")
-    exit()
+    exit() 
 
 if resposta == "S":
     dados["ctps"] = "Sim"

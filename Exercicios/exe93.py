@@ -22,4 +22,5 @@ print(f"\nO Jogador {caixaDeIfo['nome']} jogou {caixaDeIfo['partidas']} partidas
 for p in range(caixaDeIfo["partidas"]):
     print(f"Na partida {p+1}, fez {caixaDeGols[p]} gols.")
 print(f"Foi um total de {somaDosGols} gols.\n")
+
     
