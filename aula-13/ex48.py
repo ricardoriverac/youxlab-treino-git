@@ -1,5 +1,7 @@
-s = 0
-for n in range(3, 501, 3):
-    print(n, end= ' ')
-    s = s + n
-print(' A soma entre todos esses números dá: {}'.format(s))
+soma = 0
+cont = 0
+for c in range(1, 501, 2):
+    if c % 3 == 0:
+        soma += c
+        cont += 1
+print('\n A soma entre todos os {} números, dá : {}'.format(cont, soma))
