@@ -12,4 +12,4 @@ print ("A sua média foi {:.1f}".format(m))
 if media >= 6:
     print ("Sua média foi boa, PARABÉNS!")
 else:
-    print ("Sua média foi ruim, ESTUDE MAIS!")
+    print ("Sua média foi ruim, ESTUDE MAISS!")
