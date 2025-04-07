@@ -14,7 +14,7 @@ else:
     ("VALENDOOOO")
     print ("\t_=_" * 20)
     print ("Compuador jogou: \033[33m{}\033[m ".format(itens[computador]))
-    print ("Jogador jogou: \033[33m{}\033[m ".format(itens[jogador]))
+    print ("Jogador jogou: \033[34m{}\033[m ".format(itens[jogador]))
     if computador == 0:
         if jogador == 0:
             print ("Empate")
