@@ -1,3 +1,4 @@
+#Achando o A
 frase=str(input('Digite uma frase:')).lower().strip()
 repeticao=frase.count('a')
 primeiroA=frase.find('a')+1
