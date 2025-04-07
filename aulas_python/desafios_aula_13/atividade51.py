@@ -10,6 +10,6 @@ pos = int(input('Termo final: '))
 raz = int(input('Razão: '))
 
 for c in range(a1, pos, raz):
-    print(F'✦{c}✦')
+    print(F'✦{c}✦', end= ' ' )
     
 print('\033[1;34m-=-=-=-=-= FIM! =-=-=-=-=-\033[m')
