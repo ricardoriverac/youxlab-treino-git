@@ -1,7 +1,18 @@
-# Para verificar se o valor é númerico; 
-n = str (input('Digite algo: '))
-print(n.isnumeric())
-print(n.isalpha())
-print(n.isupper())
-print(n.islower())
-print(n.isdecimal())
+# Para verificar valores numéricos, alfabéticos, etc; 
+# n = str (input('Digite algo: '))
+#print(n.isnumeric())
+#print(n.isalpha())
+#print(n.isupper())
+#print(n.islower())
+#print(n.isdecimal())
+#print(n.isalnum())
+
+a = input ('Digite algo: ')
+print ('O tipo primitivo desse valor é',type(a))
+print ('Só tem espaços?', a.isspace()) # detecta se tem somente espaços
+print ('É um número?', a.isnumeric())
+print ('É alfabético?', a.isalpha())
+print ('É alfanumérico?', a.isalnum())
+print ('Está em maiúsculas?', a.isupper())
+print ('Está em minúsculas?', a.islower())
+print ('Está capitalizada?', a.istitle())
