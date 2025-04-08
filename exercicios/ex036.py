@@ -2,7 +2,7 @@ casa= float(input('Valor da casa: '))
 salario= float(input('Valor do salário: '))
 anos= int(input('Anos de pagamento: '))
 prestacao= casa / (anos * 12)
-mensalidade= salario % 30
+mensalidade= salario * (30/100)
 if prestacao > mensalidade:
   print(mensalidade)
   print(f'EMPRÉSTIMO RECUSADO! Valor da prestação mensal: R${prestacao :.2f}')
