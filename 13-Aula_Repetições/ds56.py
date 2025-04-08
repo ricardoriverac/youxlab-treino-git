@@ -11,6 +11,7 @@ for p in range (1 , 5):
     gen=str(input('Qual seu gênero: ')).strip()
     sidade += idade
     if p == 1 and gen in 'Mm':
+        
         maiorid = idade
         nvelho =nome
     if gen in 'Mm' and idade > maiorid:
@@ -18,6 +19,7 @@ for p in range (1 , 5):
         nvelho = nome
     if gen in 'Ff' and  idade <20:
         mulher20 += 1
+    break
 midadee  =sidade/4 
 print('A media de idade do grupo e {}'.format(midadee))
 print('O homem mais velho é {} é seu nome {}'.format(maiorid , nvelho))
