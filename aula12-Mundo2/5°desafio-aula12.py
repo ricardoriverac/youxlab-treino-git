@@ -1,3 +1,4 @@
+# Calculando média 
 nota1=float(input('Sua nota do 1° semestre:'))
 nota2=float(input('Sua nota do 2° semestre:'))
 media=(nota1+nota2)/2
