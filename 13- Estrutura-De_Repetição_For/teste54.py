@@ -6,7 +6,7 @@ for c in range(1, 8):
     if c >= 18:    
         priumero = c - c + 1    
         contador += priumero 
-    elif cou <= 18:
+    elif c <= 18:
         segnNumero = c - c + 1 
         contador2 += segnNumero
 print('{} JÁ SAO MAIORES DE IDADE'.format(contador))
