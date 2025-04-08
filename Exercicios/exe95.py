@@ -8,6 +8,9 @@ somaDosGols = 0
 while True: 
     caixaDeIfo.clear()
     caixaDeGols = list()
+    caixaDeIfo["cartaoAmarelo"] = 0
+    caixaDeIfo["cartaoVermelho"] = 0
+
     caixaDeIfo["nome"] = input("\nDigite o nome do jogador: ")
     caixaDeIfo["partidas"] = int(input("Digite a quantidade de partidas jogadas: "))
 
@@ -16,11 +19,21 @@ while True:
         caixaDeGols.append(gols)
         
     caixaDeIfo["golsNasPartidas"] = caixaDeGols
-    time.append(caixaDeIfo.copy())
 
     for toGols in caixaDeGols:
         somaDosGols += toGols
+    
+    tomouCartao = input("Tomou cartão? [S/N] ").strip().upper()
 
+    if tomouCartao == "S":
+        qualCartao = input("\nQual cartão você tomou? [Vermelho/Amarelo] ").strip().upper()
+        quantCartao = int(input(f"Quantos cartoes {qualCartao}, você tomou? "))
+        if qualCartao == "VERMELHO":
+            caixaDeIfo["cartaoVermelho"] = quantCartao
+        elif qualCartao == "AMARELO":
+            caixaDeIfo["cartaoAmarelo"] = quantCartao
+    
+    time.append(caixaDeIfo.copy())
     pergunta = input("Você deseja continuar cadastrando? [S/N] ").strip().upper()
 
     if pergunta == "N":
@@ -32,17 +45,16 @@ while True:
         print("Programa encerrado.\n")
         break
 
-print("cod ", end='')
-for i in caixaDeIfo.keys():
-    print(f"{i:<15}", end='')
-print()
+print(f"{'cod':<5}{'nome':<15}{'partidas':<12}{'golsNasPartidas':<20}{'cartaoAmarelo':<15}{'cartaoVermelho'}")
 print("-" * 40)
 
 for k, v in enumerate(time):
-    print(f"{k:>3} ", end='')
-    for d in v.values():
-        print(f"{str(d):<15}", end='')
-    print()
+    print(f"{k:<5}", end='')
+    print(f"{v['nome']:<15}", end='')
+    print(f"{v['partidas']:<12}", end='')
+    print(f"{str(v['golsNasPartidas']):<20}", end='')
+    print(f"{str(v['cartaoAmarelo']):<15}", end='')
+    print(f"{str(v['cartaoVermelho'])}")
 print("-" * 40)
 
 while True:
@@ -61,8 +73,14 @@ while True:
     if busca >= len(time):
         print(f"ERRO! Não existe jogador com código {busca}!")
     else:
-        print(f"\n-- Dados do jogador {time[busca]['nome']}:")
-        for i, g in enumerate(time[busca]["golsNasPartidas"]):
-            print(f"  No jogo {i+1}, {time[busca]['nome']} fez {g} gols.")
+        jogador = time[busca]
+        print(f"\n-- Dados do jogador {jogador['nome']}:")
+    
+        for i, g in enumerate(jogador["golsNasPartidas"]):
+            print(f"  No jogo {i+1}, {jogador['nome']} fez {g} gols.")
+
+        print(f"  Cartões amarelos: {jogador['cartaoAmarelo']}")
+        print(f"  Cartões vermelhos: {jogador['cartaoVermelho']}")
         print("-" * 40)
+
 print("Volte sempre.")
