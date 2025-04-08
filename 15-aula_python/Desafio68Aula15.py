@@ -21,7 +21,7 @@ while True:
             sleep(1)
             print('voce perdeu')
             print('-' * 20)
-            print(f'seu número vitorias de vitorias é {cont}')
+            print(f'seu número de vitorias de vitorias é {cont}')
             print('-' * 20)
             break
     elif escolha in 'Ii':
