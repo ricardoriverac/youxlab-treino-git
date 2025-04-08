@@ -1,8 +1,13 @@
-num = int(input('Digite um número: '))
-cont = fib = 0
-fib1 = 1
-while cont < num:
-    print('{} {} '.format(fib,fib1),end='')
-    fib += fib1
-    fib1 += fib
-    cont += 1
+print('Gerador de PA')
+print('-=' * 10)
+
+primeiro = int(input('Primeiro termo: '))
+razão = int(input('Razão: '))
+
+i = 0
+
+while i < 10:
+    i += 1
+    termo = primeiro + (i - 1) * razão
+    print('{}'.format(termo), end=' - ')
+print('Fim')
