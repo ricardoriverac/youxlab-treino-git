@@ -1,11 +1,19 @@
-lista = list()
-for c in range(5):
-    n = int(input("Digite o numero: "))
-    if c == 0 or n > lista[-1]:
-        lista.append(n)
+numeros = []
+while True:
+    numero = int(input('Digite um valor: '))
+    if numero in numeros:
+        print('valor duplicado! Não vou adicionar...')
     else:
-        for pos, x in enumerate(lista):
-            if n <= x:
-                lista.insert(pos, n)
-                break
-print(lista)
+        print('valor adicionado com sucesso...')
+        numeros.append(numero)
+
+    while True:
+        continuar = str(input('Quer continuar? [S/N]: ')).strip().upper()
+        if continuar != 'S' and continuar != 'N':
+            print('Opção Inválida!')
+        else:
+            break
+    if continuar == 'N':
+        break
+
+print(f'valores digitados (ordem crescente): {sorted(numeros)}')
