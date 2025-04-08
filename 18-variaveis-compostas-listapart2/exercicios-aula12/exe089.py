@@ -24,3 +24,5 @@ while True:
     for p in range(len(dados)):
         if numero == p :
             print(f'A nota do aluno escolhido foi {dados[p][1] , dados[p][2]}')
+    if numero == 999:
+        break
