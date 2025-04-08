@@ -1,3 +1,4 @@
+#consertar
 numero1= int(input('Digite um número: '))
 numero2= int(input('Digite um novo número: '))
 if numero1 > numero2:
