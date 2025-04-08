@@ -1,3 +1,4 @@
+#Caracterizando Triângulos
 segmento1=float(input('Digite o valor do primeiro segmento:'))
 segmento2=float(input('Digite o valor do segundo segmento:'))
 segmento3=float(input('Digite o valor do terceiro segmento:'))
