@@ -22,7 +22,9 @@ while isRodando != False:
     print('Pausa ')
     mais =str(input('Você quer rodar denovo? [S/N] '.upper()))
     if mais == 'N':
+
         isRodando = False
+        
     else:
         repeticao =int(input('Quantos termos deseja mostrar a mais? '))
         c = 1
