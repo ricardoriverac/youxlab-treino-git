@@ -1,3 +1,4 @@
+#Verificando empéstimos 
 valor=float(input('Qual o preço da sua casa?:'))
 salario=float(input('Quanto é o seu sálario?:'))
 pagamento=int(input('Em quantos anos você pretende financiar?:'))

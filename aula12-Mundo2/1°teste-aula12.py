@@ -1,3 +1,4 @@
+#Estrutura cindicional aninhada
 nome=str(input('Digite seu nome:'))
 if nome=="Sophia":
     print('Que nome bonito!')
