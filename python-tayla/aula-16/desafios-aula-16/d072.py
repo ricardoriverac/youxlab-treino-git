@@ -4,6 +4,6 @@ numeros = ('zero', 'um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oi
 escolha = int(input('Digite um número entre 0 e 20: '))
 
 while escolha > 20 or escolha < 0:
-        errado = int(input('Tente novamente! Digite um número entre 0 e 20: '))
+    escolha = int(input('Tente novamente! Digite um número entre 0 e 20: '))
     
-print(f'Você digitou o número \033[1m{numeros[escolha]}\033[m')
+print(f'Você digitou o número \033[1;31m{numeros[escolha]}\033[m') 
