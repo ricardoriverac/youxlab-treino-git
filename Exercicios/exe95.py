@@ -46,7 +46,7 @@ while True:
         break
 
 print(f"{'cod':<5}{'nome':<15}{'partidas':<12}{'golsNasPartidas':<20}{'cartaoAmarelo':<15}{'cartaoVermelho'}")
-print("-" * 40)
+print("-" * 80)
 
 for k, v in enumerate(time):
     print(f"{k:<5}", end='')
@@ -55,7 +55,7 @@ for k, v in enumerate(time):
     print(f"{str(v['golsNasPartidas']):<20}", end='')
     print(f"{str(v['cartaoAmarelo']):<15}", end='')
     print(f"{str(v['cartaoVermelho'])}")
-print("-" * 40)
+print("-" * 80)
 
 while True:
     busca = input("Você quer buscar os dados de qual jogador? [Digite: Parar, para encerrar.] ").strip().upper()

@@ -57,6 +57,14 @@ def cabecalho(texto):
 cabecalho("Menu Principal")
 cabecalho("Opções")
 
+def cabecalhoMelhor(texto):
+    lin()
+    print(texto.center(20))
+    lin()
+
+qualTextoTeste = input("Qual é o titulo do seu cabeçalho: ")
+cabecalhoMelhor(qualTextoTeste)
+
 # 9. Vantagens de usar funções:
 # - Organiza o código
 # - Reutiliza trechos de código
