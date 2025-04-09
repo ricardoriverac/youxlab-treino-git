@@ -29,8 +29,8 @@
     #time.sleep(1)
     #print(c)
 
-import random
-num = random.randint(1, 10)
+# import random
+# num = random.randint(1, 10)
 #jogador = int(input('Advinhe um número:'))
 #while jogador != num:
     #print('Errou, tente de novo')
@@ -38,9 +38,27 @@ num = random.randint(1, 10)
 #else:
     #print('Você acertou')
 
-for c in range(1, 11):
-    while num != c:
-        print('Errou tente de novo')
-        print (num)
-    else:
-        print('Você acertou!')
+# for c in range(1, 11):
+#     while num != c:
+#         print('Errou tente de novo')
+#         print (num)
+#     else:
+#         print('Você acertou!')
+
+homens = []
+
+while True:
+    nome = input("Digite o nome: ")
+    idade = input("Digite a idade: ")
+    sexo = input("Digite o sexo (M/F): ").strip().upper()
+
+    if sexo == 'M':
+        homens.append({'nome': nome, 'idade': idade})
+
+    continuar = input("Deseja adicionar outra pessoa? (S/N): ").strip().upper()
+    if continuar != 'S':
+        break
+
+print("\nLista de homens cadastrados:")
+for homem in homens:
+    print(f"{homem['nome']} - {homem['idade']} anos")
