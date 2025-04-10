@@ -1,27 +1,15 @@
+exp = str(input('Digite uma expressão: '))
 lista = []
-exp = input('Digite uma expressão: ')
-lista.append(exp)
-contagem_parenteses = 0
-while lista.count('(') > 0 and lista.count(')') > 0:
-    contagem_parenteses = len('()')
-    contagem_parenteses += 1
-if contagem_parenteses % 2 == 0:
-    print('Válido')
+for simb in exp:
+    if simb == '(':
+        lista.append('(')
+    elif simb == ')':
+        if len(lista) > 0:
+            lista.pop()
+    else:
+        lista.append(')')
+        break
+if len(lista) == 0:
+    print('Sua expressão é válida')
 else:
-    print('Inválido')
-
-
-
-# exp = input('Digite uma expressão: ')
-# contagem_parenteses = 0
-# while True:
-#     if '(' in exp:
-#         contagem_parenteses += 1
-#     if ')' in exp:
-#         contagem_parenteses -= 1
-#     if contagem_parenteses % 2 == 0:
-#         print('Válido')
-#         break
-#     else:
-#         print('Inválido')
-#         break
+    print('Sua expressão é inválida.')
