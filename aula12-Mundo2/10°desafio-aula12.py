@@ -1,4 +1,5 @@
 from random import randint
+from time import sleep
 opcoes=('Pedra','Papel','Tesoura')
 computador=randint(0,2)
 print('VAMOS JOGAR JOKENPÔ?')
