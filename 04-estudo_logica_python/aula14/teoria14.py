@@ -25,8 +25,6 @@ while r == 'S':
 print('fim')
 
 
-
-
 n=1
 par=impar=0
 while n!=0:
