@@ -8,11 +8,12 @@ cont = 0
 termos = int(input('Quantos termos você quer mostrar? '))
 
 while cont < termos:
-   print(primeiroNum)
+   print(primeiroNum, end=' ➜ ')
    soma = primeiroNum + segundoNum
    primeiroNum = segundoNum
    segundoNum = soma 
    
    cont += 1
    
-print('\033[1;34m-=-=-=-=-= Execute novamente para mais! =-=-=-=-=-\033[m')
+print('Acabou :(')
+print('\n\033[1;34m-=-=-=-=-= Execute novamente para mais! =-=-=-=-=-\033[m')
