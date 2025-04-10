@@ -2,6 +2,8 @@ a1 = int(input('Digite o primeiro termo da PA: '))
 
 r = int(input('Digite a razão: '))
 
+p = int(input('Digite o passo: '))
+
 an = 0
 
 termo = a1
