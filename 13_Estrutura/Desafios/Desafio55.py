@@ -6,5 +6,5 @@ for pesos in range(0,5):
         pesomaior = peso
     if peso < pesomenor:
         pesomenor = peso
-print(f"\nMaior peso e {pesomaior}")
+print(f"Maior peso e {pesomaior}")
 print(f"Menor peso e {pesomenor}")
