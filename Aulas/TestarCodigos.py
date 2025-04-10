@@ -11,33 +11,49 @@
 # dobra(valores)
 # print(f"Valores dobrados:", valores)
 
-def soma1(* valores):
-    s = 0
-    for numero in valores:
-        s += numero
-    print(f"\nSomando os valores {valores} temos {s}.\n")
+# def soma1(* valores):
+#     s = 0
+#     for numero in valores:
+#         s += numero
+#     print(f"\nSomando os valores {valores} temos {s}.\n")
 
-soma1(5, 2)
-soma1(2, 4)
+# soma1(5, 2)
+# soma1(2, 4)
 
-def lin():
-    print("-=-" * 10)
+# def lin():
+#     print("-=-" * 10)
 
-def soma(texto, a, b):
-    lin()
-    print(texto.center(25))
-    lin()
-    print(f"\nValor A = {a}")
-    print(f"Valro B = {b}")
-    s = a + b
-    print(f"A soma de A + B = {s}\n")
+# def soma(texto, a, b):
+#     lin()
+#     print(texto.center(25))
+#     lin()
+#     print(f"\nValor A = {a}")
+#     print(f"Valro B = {b}")
+#     s = a + b
+#     print(f"A soma de A + B = {s}\n")
 
-soma("Continha1", 1, 5)
-soma("Continha2", 2, 3)
+# soma("Continha1", 1, 5)
+# soma("Continha2", 2, 3)
 
-def contador(* numero):
-    for valor in numero:
-        print("Valor do contador:", valor)
+# def contador(* numero):
+#     for valor in numero:
+#         print("Valor do contador:", valor)
 
-contador(4, 5, 6)
-contador(2, 1, 1)
+# contador(4, 5, 6)
+# contador(2, 1, 1)
+
+# def ql():
+#     print("\n")
+
+
+# def cabecalho(texto):
+#     largura = len(texto) + 15
+#     print("~" * largura)
+#     print(f"{texto.center(largura)}")
+#     print("~" * largura)
+
+# cabecalho("Teste de Titulo")
+
+# ql()
+# cabecalho("JOAO TESTES")
+# ql()
