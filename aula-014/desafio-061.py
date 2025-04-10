@@ -9,6 +9,7 @@ while cont <= limite:
     termo += razao
     cont += 1
 
+
 #n = 11
 #an = primeiroTermo + (n - 1) * razao
 #for i in range (primeiroTermo, an, razao):
