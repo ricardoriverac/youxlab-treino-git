@@ -11,10 +11,10 @@ while usuarioQuerContinuar !='N' or usuarioQuerContinuar == 'S':
         maior = numero
     if numero<menor:
         menor = numero
-
     if usuarioQuerContinuar == 'N':
         print('ACABOU')
 media = soma/contador
 print('A {}SOMA{} dos números é {} e a {}MÉDIA{} é {:.2f} '.format('\033[35m', '\033[m',soma, '\033[35m', '\033[m', media))
 print('O {}MAIOR{} número é {} e o {}MENOR{} {} '.format('\033[35m', '\033[m', maior, '\033[35m', '\033[m', menor))
+
 
