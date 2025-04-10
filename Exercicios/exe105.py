@@ -9,7 +9,7 @@
 
 # Adicione tambem as docstring
 
-def notas(*numero, sit=False):
+def notas(*numero, situacao=False):
     """
     -> Função para analisar notas e situações de vários alunos.
     """
@@ -20,7 +20,7 @@ def notas(*numero, sit=False):
     registro["menor"] = min(numero)
     registro["média"] = sum(numero) / len(numero)
 
-    if sit:
+    if situacao:
         if registro["média"] >= 7:
             registro["situação"] = "Boa"
         elif registro["média"] >= 5:
@@ -35,5 +35,5 @@ nota3 = int(input("Digite a terceira nota: "))
 nota4 = int(input("Digite a quarta nota: "))
 print("\nNotas cadastradas.\n")
 
-resultado = notas(nota1, nota2, nota3, nota4, sit=True)
+resultado = notas(nota1, nota2, nota3, nota4, situacao=True)
 print(resultado)
