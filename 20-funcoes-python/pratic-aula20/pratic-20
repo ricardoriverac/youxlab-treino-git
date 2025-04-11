@@ -1,0 +1,11 @@
+#parámetro vazio ()
+def lin():
+    print('--'*30)
+
+
+#programa principal
+lin()
+print('Rodrigao')
+lin()
+print('Curso em video')
+lin()
