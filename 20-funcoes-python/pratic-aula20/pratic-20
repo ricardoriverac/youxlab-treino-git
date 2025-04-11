@@ -1,4 +1,4 @@
-#parámetro vazio ()
+#parámetro 'valor' vazio () 
 def lin():
     print('--'*30)
 
