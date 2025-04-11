@@ -7,6 +7,5 @@ def dobro(lst):
 
 #programa principal
 valores = [7,2,3,5,8,1]
+dobro(valores)
 print(valores)
-print(f'Os valores {valores} dividos foram {dobro(valores)}')
-
