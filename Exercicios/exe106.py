@@ -2,6 +2,8 @@
 # O usuario vai digitar o comando e o manual vai aparecer. Quando o usuario
 # Digitar a palavra "FIM", o programa se encerrará
 
+#Nao entendi, copiei do guanabara.
+
 from time import sleep
 c = ("\033[m",           # 0 - sem cores
        "\033[0;30;41m]",   # 1 - vermelho
