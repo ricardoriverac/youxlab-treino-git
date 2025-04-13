@@ -57,3 +57,35 @@
 # ql()
 # cabecalho("JOAO TESTES")
 # ql()
+
+# lst = [2,4,1]
+# print(lst[1]) # Acessando o valor 1 da lista, referente ao número 4
+
+# Tratamento de Erros e Exceções
+
+from random import randint
+from time import sleep
+
+try: # Tentar
+    sorteador = randint(1, 2)
+    print("\nSorteando de 1 a 2:")
+    sleep(2)
+    print("1 = Código correto.",
+          "2 = Código errado.")
+    sleep(3)
+    print(f"\nO valor sorteado foi {sorteador}.")
+
+    if sorteador == 1:
+        for q in range(6):
+            a = 0
+            a += 1
+            print(f"O Valor A, resulta em: {q}.")
+    else:
+        v += 1
+except Exception as erro: # Exceto, caso der problema | Excepetion(exeções) as(como) erro(variavel)
+    print(f"Problema encontrado foi {erro.__class__}") #erro(variavel).__class__ mostra a class de erro da excessão
+else: # Outro, Se o try deu certo
+    print("Deu certo")
+finally: #Finalização ou fechamento
+    print("Volte sempre! Muito obrigado!")
+

@@ -38,29 +38,6 @@ else:
 finally:
     print("Encerrando...")
 
-# --------------------------------------------
-# PRINCIPAIS EXCEÇÕES EM PYTHON
-# (Retirado da documentação oficial e exemplos práticos)
-
-# ZeroDivisionError: Divisão por zero
-# ValueError: Valor inválido (ex: ao converter string para int)
-# TypeError: Operações com tipos incompatíveis
-# IndexError: Índice fora do alcance em listas/tuplas
-# KeyError: Chave inexistente em dicionário
-# NameError: Variável não definida
-# FileNotFoundError: Arquivo não encontrado
-# ImportError: Módulo não encontrado ou erro ao importar
-# AttributeError: Objeto não possui determinado atributo
-# OverflowError: Número muito grande para ser representado
-# MemoryError: Falta de memória
-# IndentationError: Erro de indentação (tabulação)
-# SyntaxError: Erro de sintaxe
-# RuntimeError: Erro genérico em tempo de execução
-# Exception: Classe base para todas as exceções padrão
-
-# DICA: Você pode capturar todas as exceções com "except Exception as erro"
-# e usar "erro.__class__" ou "type(erro)" para identificar qual foi o erro
-
 # EXEMPLO PRÁTICO MAIS COMPLETO
 try:
     n = int(input("Digite um número inteiro: "))
@@ -76,4 +53,31 @@ else:
 finally:
     print("Operação finalizada.")
 
-# FIM DO RESUMO
+# --------------------------------------------
+
+from random import randint
+from time import sleep
+
+try: # Tentar
+    sorteador = randint(1, 2)
+    print("\nSorteando de 1 a 2:")
+    sleep(2)
+    print("1 = Código correto.",
+          "2 = Código errado.")
+    sleep(3)
+    print(f"\nO valor sorteado foi {sorteador}.")
+
+    if sorteador == 1:
+        for q in range(6):
+            a = 0
+            a += 1
+            print(f"O Valor A, resulta em: {q}.")
+    else:
+        v += 1
+except Exception as erro: # Exceto, caso der problema | Excepetion(exeções) as(como) erro(variavel)
+    print(f"Problema encontrado foi {erro.__class__}") #erro(variavel).__class__ mostra a class de erro da excessão
+else: # Outro, Se o try deu certo
+    print("Deu certo")
+finally: #Finalização ou fechamento
+    print("Volte sempre! Muito obrigado!")
+
