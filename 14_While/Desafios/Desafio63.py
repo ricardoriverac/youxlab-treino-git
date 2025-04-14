@@ -11,4 +11,4 @@ while c< n +1:
     f1 = f2
     f2 = f3
     c += 1
-    print("FIM")
+print("FIM")
