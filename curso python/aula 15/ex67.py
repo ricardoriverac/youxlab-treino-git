@@ -6,7 +6,7 @@ while True:
     print ("\t__" * 10)
     while  contador < 10:
             contador += 1
-            print (f"\033[34m{numero}\033[m x \033[34m{contador}\033[m = \033[32m{contador*numero}\033[m")
+            print (f"\033[33m{numero}\033[m x \033[34m{contador}\033[m = \033[32m{contador*numero}\033[m")
     if numero < 0: 
         print ("Você digitou um número negativo, bye")
         break
