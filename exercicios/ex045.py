@@ -1,13 +1,11 @@
 #fazer
 from random import randint
-jokenpo= int (input('Pedra, Papel, Tesoura'))
+itens= ('Pedra, Papel, Tesoura')
+print('''Suas opções: 
+      [1] PEDRA
+      [2] PAPEL
+      [3] TESOURA ''')
 computador= randint(1 , 3)
-print('O computador escolheu {}'.format(computador))
-if computador == 1:
-    computador = 'Pedra'
-elif computador == 2:
-    computador = 'Papel'
-elif computador == 3:
-    computador = 'Tesoura'
-if jokenpo == 1 and computador == 2 or 3:
-    print('')
+jogador= int(input('Qual é sua jogada? '))
+print('Computador jogou {}'.itens[computador])
+print('Jogador jogou {}'.itens[jogador])
