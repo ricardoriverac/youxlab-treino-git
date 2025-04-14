@@ -2,6 +2,10 @@ usuarioQuerContinuar = ''
 pessoasComMaisDe18 = 0
 quantosHomens = 0
 mulheresComMenosDe20 = 0
+print('-='*20)
+print('CADASTRE UMA PESSOA')
+print('-='*20)
+
 
 while True:
     nome = input('Qual seu {}NOME{}?: '.format('\033[36m', '\033[m'))
