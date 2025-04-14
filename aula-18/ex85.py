@@ -1,7 +1,7 @@
 par = []
 impar = []
 for n in range(0,7):
-    valor = int(input(f'Digite o {n+1}º valor'))
+    valor = int(input(f'Digite o {n+1}º valor '))
     if valor % 2 == 0:
         par.append(valor)
     else:
