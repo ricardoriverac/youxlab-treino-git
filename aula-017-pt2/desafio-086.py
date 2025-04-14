@@ -6,5 +6,5 @@ for c in range(3):
         linhas.append(num)
     matriz.append(linhas)
 for l in matriz:
-    print(linhas)
+    print(l)
 

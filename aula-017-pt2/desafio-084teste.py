@@ -1,33 +1,40 @@
-Pessoas = []
-total = []
-maiorPeso = menorPeso = 0
-cont = 0
+
+
+pesoPessoas = []
+pesoPessoasPesadas = []
+maiorPeso = 0
+pessoaMaisPesada = ''
+pessoaMaisLevePeso = 9999999999
+nomePessoaLeve = ''
 pessoasPesadas = []
+pessoasLeves = []
+pesoPessoasLeves = []
 while True:
-    nome = str(input('Digite o nome da pessoal: '))
+    nome = str(input("Digite o nome da pessoa: "))
+    pesoPessoas.append(nome)
     peso = float(input(f'Digite o peso de {nome}: '))
-    Pessoas.append(nome)
-    Pessoas.append(peso)
-    if len(total) == 0:
-        maiorPeso = menorPeso = Pessoas[1]
-        cont += 1
+    pesoPessoas.append(peso)
+    if peso > maiorPeso:
+        maiorPeso = peso
+        pessoasPesadas.append(nome)
+        pessoasPesadas.append(peso)
     else:
-        if Pessoas[1] > maiorPeso:
-            maiorPeso = Pessoas[1]
-            pessoasPesadas.append(nome)
-        if Pessoas[1] < menorPeso:
-            menorPeso = Pessoas[1]
-    total.append(Pessoas[:])
-    Pessoas.clear()
-    continuar = str(input('Quer continuar? S/N: ')).upper()
-    if continuar == 'N':
+        if peso < pessoaMaisLevePeso:
+            pessoaMaisLevePeso = peso
+            pessoasLeves.append(nome)
+            pessoasLeves.append(peso)
+
+
+    if nome == 'pare':
         break
-print(f'Foram cadastradas {cont}')
-print(f'O maior peso foi de {maiorPeso}kg ', end= '')
-for p in total:
-    if p[1] == maiorPeso:
-        print(f'{p[0]} ', end= '')
-print(f'O menor peso foi de {menorPeso}kg ', end='')
-for p in total:
-    if p[1] == menorPeso:
-        print(f'{p[0]}', end='')
+        # pessoaMaisPesada = nome
+    # if peso < pessoaMaisLevePeso:
+    #     pessoaMaisLevePeso = peso
+    #     pessoasLeves.append(nome)
+    #     pesoPessoasLeves.append(peso)
+
+        # nomePessoaLeve = nome
+print(f'As pessoas mais pesadas são {pessoasPesadas}')
+print(f"{len(pesoPessoas)} foram cadastradas")
+# print(f'A pessoa mais pesada é {pessoaMaisPesada} com {maiorPeso}kg')
+print(f'A pessoa mais leve é {pessoasLeves}')
