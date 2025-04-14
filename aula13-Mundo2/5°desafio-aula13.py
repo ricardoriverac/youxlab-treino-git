@@ -1,3 +1,4 @@
+#SOMANDO SOMENTE OS PARES
 soma=0
 cont=0
 for contador in range(1,7):
