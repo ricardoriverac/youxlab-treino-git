@@ -2,8 +2,8 @@ nomeT = 0
 SaldoI = 0
 Limit =0
 op=0
-Dep=list()
-Ret=list()
+Dep=list
+Ret=list
 
 
 print('>>>>>>>Bem-Vindo ao seu Banco Digital<<<<<<<')
