@@ -42,7 +42,6 @@ while True:
             saldoatualizado = saldo - valorsaque
             saldo = saldoatualizado
             list.append(f" Saque: {valorsaque}")
-            list.append(f" Saldo Atualizado: {saldoatualizado}")
             print (f"você sacou  \033[36m{valorsaque}\033[m , seu saldo agora é de \033[36m{saldoatualizado}\033[m")
     elif opcao == 4:
         print ("\033[32mTchauu, volte sempre!!!\033[m")
@@ -52,5 +51,6 @@ while True:
         print ("<<<<<<< EXTRATO >>>>>>>")
         for l in list:
             print(l)
+        list.append(f" Saldo Atualizado: {saldoatualizado}")
     else:
         print ("\033[34mOpção inválida, digite novamente!\033[m")
