@@ -1,3 +1,4 @@
+#terminar de fazer:
 frase= str(input('Digite uma frase: '))
 invertida= frase.split()
 juntar= "".join(frase)

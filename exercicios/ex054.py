@@ -1,3 +1,4 @@
+#terminar de fazer:
 numMaiorIdade= 0
 numMenorIdade= 0
 for pessoa in range(1, 7+1):
