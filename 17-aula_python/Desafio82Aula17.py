@@ -7,7 +7,7 @@ numero = list()
 pares = list()
 impares = list()
 while True:
-    numero.append(int(input('Digite um número ' )))
+    numero.append(int(input('Digite um número: ' )))
     responda = ' '
     while responda not in 'SN':
         
