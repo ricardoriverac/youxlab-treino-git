@@ -11,19 +11,20 @@ limite = float(input('\033[1mQual o limite de saque permitido por operação?\03
 opcao = 0
 print ('-' *40)
 
-while opcao!=4:
+while opcao!=5:
         print('\033[1mVeja as seguintes opçoẽs:\033[m')
         print('\033[1;35m[1]\033[m Consultar saldo. ')
         print('\033[1;35m[2]\033[m Depositar valor. ')
         print('\033[1;35m[3]\033[m Sacar valor. ')
-        print('\033[1;35m[4]\033[m Sair. ')
+        print('\033[1;35m[4]\033[m Ver extrato.')
+        print('\033[1;35m[5]\033[m Sair. ')
         print ('-' * 40)
         opcao = int(input('Digite o número que corresponde a sua escolha: '))
         if opcao ==2:
             deposito= float(input('Digite o valor que deseja depositar: '))
             sleep(1)
             lista.append(f'depósito: {deposito}')
-            saldo = saldo + deposito
+            saldoNovo = saldo + deposito
             print('\033[1;45mDEPOSITADO.\033[m')
             sleep(0.5)
             print('-' * 40)
@@ -35,20 +36,27 @@ while opcao!=4:
             print('\033[1;31mPassou do limite.\033[m')
             sleep(1)
          else:
-            saldo = saldo - sacado
+            saldoNovo = saldoNovo - sacado
             lista.append(f'saque: {sacado}')
         if opcao ==1:
             sleep(2)
             print(f'\033[1mSeu saldo é de R${saldo}\033[m ')
             sleep(2)
             print('-' * 40)
-        if opcao ==4:
+        if opcao ==5:
             print('\033[1;31mSAINDO...\033[m')
             sleep (2)
+        if opcao ==4:
+            print('\033[1;35mEXTRATO...\033[m')
+            sleep(2)
+            print(f'Saldo inicial: {saldo}')
+            for extrato in lista:
+                print(extrato)
+            print(f'Saldo final {saldoNovo}')
+            sleep(0.5)
+            
+
 print('\033[1;45mCarregando...\033[m ')
 sleep (2)
 print ('-' * 40)
-print('\033[1;35mEXTRATO...\033[m')
 sleep(2)
-for extrato in lista:
-    print(extrato)
