@@ -39,13 +39,16 @@ while True:
             Ret.append(Sacar)
             print('==' * 20)
             SaldoI= SaldoI - Sacar
+            if Sacar > SaldoI:
+                   print('Pobre')
             if Sacar > Limit:
                 print('Seu limit e menor que o saque')
                 SaldoI= SaldoI - Sacar
+            
     if op == 5:
            print('==' * 20)
            print(f'O valor depositado foi {Dep}')
            print('==' * 20)
            print(f'Seu valor retirado foi {Ret}')
-           
+           print('==' * 20)
         
