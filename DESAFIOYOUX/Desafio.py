@@ -59,7 +59,7 @@ while True:
 
     if opçao == 4:
         print('='*50)
-        print(f'O seu saldo de início era {saldoi}')
+        print(f'O seu saldo de início era R${saldoi}')
         print('='*50)
         print(f'Você sacou R${sacar} ')
         print('='*50)
