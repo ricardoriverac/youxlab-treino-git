@@ -11,7 +11,7 @@ while True:
     escolha = str(input('Qual opção deseja? : '))
     if escolha != '1' and escolha != '2' and escolha != '3' and escolha != '4' and escolha != '5':
         while escolha != '1' and escolha != '2' and escolha != '3' and escolha != '4' and escolha != '5':
-            escolha = int(input(f'\nErro, digite novamente! : '))
+            escolha = str(input(f'\nErro, digite novamente! : '))
         
     if escolha == '1':    
         print(f'Seu saldo é R${saldo}')
@@ -23,11 +23,14 @@ while True:
         
     if escolha == '3':
         saque = float(input('Valor do saque: R$'))
+        saldo = saldo - saque
         valorS.append(saque)
+        
         if saque > saldo:
             saque = float(input('Você não tem tanto dinheiro assim..\nDigite novamente: R$'))
+            saldo = saldo - saque
             valorS.append(saque)
-        
+            
         if saque > limite:
             print(f'Seu limite de saque é: R${limite}')
             saque = float(input('Valor do saque: R$'))
