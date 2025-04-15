@@ -1,7 +1,14 @@
-def fatorial(n):
-    f = 1
-    for c in range(n, 0, -1): 
-        f = c
-    return f
-    
-    print(fatorial(5))
+def fatorial(a, b=True):
+    c = 1
+    for i in range(a, 0, -1):
+        c *=i 
+        if b == True:
+            print(i, end=' ')
+            if i != 1:
+                print('x', end=' ')
+            else:
+                print('=', end=' ')
+    return c
+
+a = int(input(('Digite um número para o calculo da fatorial: ')))
+print(fatorial(a))
