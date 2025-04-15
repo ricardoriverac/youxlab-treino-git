@@ -5,6 +5,7 @@ while True:
     valores. sort(reverse=True)
     responda = ' '
     while responda not in 'SN':
+        
         responda = input('Você quer continuar? [S/N] ').strip().upper()[0]
 
     if responda == 'N':
