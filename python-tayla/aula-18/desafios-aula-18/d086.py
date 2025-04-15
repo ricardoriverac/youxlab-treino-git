@@ -1,13 +1,10 @@
-matriz = []
+matriz = [[0,0,0], [0,0,0], [0,0,0]]
 
-for n in range(0, 3):
-    numero = int(input(f'Digite um valor para [0, {n}]: '))
+for l in range(3):
+    for c in range(3):
+        numero = int(input('Digite um valor: '))
+        matriz[l][c] = numero
 
-for n in range(0, 3):
-    numero = int(input(f'Digite um valor para [1, {n}]: '))
-    
-for n in range(0, 3):
-    numero = int(input(f'Digite um valor para [2, {n}]: '))
-
-matriz.append(numero)
-print(matriz) 
+print('-=' * 20)
+for o in range(3):
+    print(matriz[o])
