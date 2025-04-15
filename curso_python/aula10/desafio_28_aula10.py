@@ -5,4 +5,4 @@ if pergunta == numeroComputador:
     print ('Você venceu! ')
 else:
     print ('Você perdeu! ')    
-print (f'O computador escolheu {numeroComputador} ') 
+print (f'O computador escolheu {numeroComputador}')
