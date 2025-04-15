@@ -1,16 +1,12 @@
-inserir = 'S'
-soma = contador = maior = menor = 0
-while inserir == 'S':
-    número = int(input('Insira um número: '))
-    if maior == 0 and menor == 0:
-        maior = menor = número
-    if número > maior:
-        maior = número
-    if número < menor:
-        menor = número
-    contador += 1
-    soma += número
-    inserir = input('Deseja inserir mais números? [S/N]: ').upper().strip()
-média = soma / contador
-print('Você inseriu {} números. A média deles é {:.2f}.'.format(contador, média))
-print('O maior número inserido foi {} e o menor foi {}.'.format(maior, menor))
+flag = False
+somador = 0
+contador = 0
+while flag == False:
+    numero = int(input('Digite um número... [Digite 999 para quebrar a soma]: \n'))
+    if numero ==999:
+        flag = True
+    else:
+        somador += numero
+        contador += 1
+        print('soma: {}.'.format(somador))
+    print('numeros digitados: {}.'.format(contador))
