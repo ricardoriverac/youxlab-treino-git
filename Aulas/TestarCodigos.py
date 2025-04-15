@@ -63,29 +63,39 @@
 
 # Tratamento de Erros e Exceções
 
+# from random import randint
+# from time import sleep
+
+# try: # Tentar
+#     sorteador = randint(1, 2)
+#     print("\nSorteando de 1 a 2:")
+#     sleep(2)
+#     print("1 = Código correto.",
+#           "2 = Código errado.")
+#     sleep(3)
+#     print(f"\nO valor sorteado foi {sorteador}.")
+
+#     if sorteador == 1:
+#         for q in range(6):
+#             a = 0
+#             a += 1
+#             print(f"O Valor A, resulta em: {q}.")
+#     else:
+#         v += 1
+# except Exception as erro: # Exceto, caso der problema | Excepetion(exeções) as(como) erro(variavel)
+#     print(f"Problema encontrado foi {erro.__class__}") #erro(variavel).__class__ mostra a class de erro da excessão
+# else: # Outro, Se o try deu certo
+#     print("Deu certo")
+# finally: #Finalização ou fechamento
+#     print("Volte sempre! Muito obrigado!")
+
 from random import randint
-from time import sleep
 
-try: # Tentar
-    sorteador = randint(1, 2)
-    print("\nSorteando de 1 a 2:")
-    sleep(2)
-    print("1 = Código correto.",
-          "2 = Código errado.")
-    sleep(3)
-    print(f"\nO valor sorteado foi {sorteador}.")
+numPar = [2,4,6,8,10]
+numIpar = [1,3,5,7,9]
 
-    if sorteador == 1:
-        for q in range(6):
-            a = 0
-            a += 1
-            print(f"O Valor A, resulta em: {q}.")
-    else:
-        v += 1
-except Exception as erro: # Exceto, caso der problema | Excepetion(exeções) as(como) erro(variavel)
-    print(f"Problema encontrado foi {erro.__class__}") #erro(variavel).__class__ mostra a class de erro da excessão
-else: # Outro, Se o try deu certo
-    print("Deu certo")
-finally: #Finalização ou fechamento
-    print("Volte sempre! Muito obrigado!")
+computador = randint(numPar, numIpar)
 
+
+
+print(f"O computador escolheu: {computador}")

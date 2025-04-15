@@ -35,3 +35,5 @@ while True:
         print("Você perdeu!\n")
         print(f"Você finalizou o jogo com {vitorias} vitória(s).")
         break
+
+

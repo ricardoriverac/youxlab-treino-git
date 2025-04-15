@@ -31,7 +31,7 @@ def titulo(mensagem, cor=0):
     sleep(2)
 
 comando = ""
-while    True:
+while True:
     titulo("SISTEMA DE AJUDA PyHELP", 2)
     comando = input("Função ou Biblioteca -> ")
     if comando.upper() == "FIM":
