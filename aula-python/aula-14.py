@@ -1,0 +1,1 @@
+#preparando território: ESTRUTURA DE REPETIÇÃO WHILE
