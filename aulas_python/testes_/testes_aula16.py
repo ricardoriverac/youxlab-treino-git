@@ -2,7 +2,7 @@
 
 
 lanche = ('Hamburger', 'Suco', 'Pizza', 'Pudim')
-print(lanche[-3:])
+print(lanche[-2:])
 
 
 #DESSE JEITO ABAIXO N FUNCIONA, NEM TENTA
