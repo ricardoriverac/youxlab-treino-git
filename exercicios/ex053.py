@@ -1,3 +1,4 @@
 frase= str(input('Digite uma frase: '))
-invertida= reversed(frase)
-print()
+invertida= frase.split()
+juntar= invertida.join()
+print(juntar)
