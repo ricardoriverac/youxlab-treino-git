@@ -19,7 +19,8 @@ while True:
 [ 3 ] SACAR VALOR
 [ 4 ] SAIR
 [ 5 ] EXTRATO
-    OPÇÃO: '''))
+                      
+OPÇÃO: '''))
     
     if opcao == 1:
         print('--'*35)
