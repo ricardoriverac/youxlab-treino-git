@@ -1,5 +1,4 @@
 
-
 pesoPessoas = []
 pesoPessoasPesadas = []
 maiorPeso = 0
