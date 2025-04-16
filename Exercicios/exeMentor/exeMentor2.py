@@ -28,13 +28,13 @@ else:
         uteis.cabecalho2("Menu", "1 - Ver saldo", "2 - Ver limite", "3 - Depositar", "4 - Sacar", "5 - Retirar Extrato", "6 - Sair")
         uteis.linha()
         
-        pergunta = int(input("Digite a opção desejada: [1 / 2 / 3 / 4 / 5 / 6] "))
+        pergunta = int(input("Digite a opção desejada: "))
 
         if pergunta == 1:
-            print(f"Saldo: {cadSaldo}")
+            print(f"Saldo disponivel: {cadSaldo}")
 
         elif pergunta == 2:
-            print(f"Limite: {cadLimite}")
+            print(f"Limite de saque: {cadLimite}")
 
         elif pergunta == 3:
             addSaldo = float(input("Digite a quantidade do deposito: "))
@@ -70,6 +70,3 @@ else:
             uteis.cabecalho1("Obrigado pela preferencia, volte sempre.")
             uteis.linha()
             break
-
-        
-
