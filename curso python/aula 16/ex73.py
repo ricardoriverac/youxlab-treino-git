@@ -2,7 +2,7 @@ tabelaBrasileirao = ('Flamengo', 'Palmeiras', 'Ceará', 'Juventude', 'Fluminense
 print("Todos os times e posições")
 print ("\t-----" * 10)
 for colocacao, nome in enumerate(tabelaBrasileirao):
-    print (f"{colocacao} --> \033[34mTIME\033[m {nome} ")
+    print (f"{colocacao+1} --> \033[34mTIME\033[m {nome} ")
 print ("\fOs 5 primeiros colocados")
 print ("\t-----" * 10)
 print (tabelaBrasileirao[0:5]) 
