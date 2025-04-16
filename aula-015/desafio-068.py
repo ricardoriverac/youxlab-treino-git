@@ -2,7 +2,6 @@ import random
 vitorias = 0
 par = ''
 impar = ''
-lista = ['par', 'impar']
 maquinaEsc = ''
 isRodando = True
 while isRodando:
