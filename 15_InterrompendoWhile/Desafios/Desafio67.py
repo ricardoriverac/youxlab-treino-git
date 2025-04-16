@@ -31,6 +31,6 @@ while True:
             print("...")
             time.sleep(1)
             print("Programa encerrado com sucesso!")
-            break
+            exit()
         else:
             print("Dados inválidos. Tente novamente.")
