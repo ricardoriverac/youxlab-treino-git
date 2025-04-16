@@ -1,63 +1,34 @@
 import time
 
-def interface():
-    cadastro = []
-    transacoes = []
+nota1 = nota2 = media = 0
+dados = []
 
-    info = dict()
-    info['nome'] = input('Nome do titular: ').title().strip()
-    info['saldo'] = float(input('Insira seu saldo inicial: '))
-    info['limite_saque'] = float(input('Insira seu limite de saque: '))
-    cadastro.append(info)
+while True:
+    nomes = input('Nome: ')
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
+    media = (nota1 + nota2) / 2
+    dados.append([nomes, [nota1, nota2], media])  
+    resp = input('\nQuer continuar? [S/N] ').strip().lower()[0]
+    if resp == 'n':
+        break
 
-    print('-' * 30)
-    print(f'Olá, {info["nome"]}')
-    print('-' * 30)
+print('\033[m', 30*'-')
+print('\033[1;37mNº----- Nome ------------ Média \033[m')
+print(20*'-')
+for pos, valor in enumerate(dados):
+    print(f'{pos:<5} {valor[0]:<15} {valor[2]:>6.1f}')
+print(20*'-')
 
-    while True:
-        try:
-            resp = int(input('''Escolha como prosseguir: 
-[1] Consultar Saldo
-[2] Depositar valor
-[3] Sacar valor
-[4] Extrato
-[5] Sair
-Escolha: '''))
-            print('-' * 30)
-
-            if resp == 1:
-                print(f'Seu saldo atual é: R$ {info["saldo"]:.2f}')
-            elif resp == 2:
-                valor = float(input('Digite o valor a depositar: R$ '))
-                info['saldo'] += valor
-                transacoes.append(f'Depósito: R$ {valor:.2f}')
-                time.sleep(1)
-                print(f'Depósito realizado. Novo saldo: R$ {info["saldo"]:.2f}')
-            elif resp == 3:
-                valor = float(input('Digite o valor a sacar: R$ '))
-                if valor <= info['saldo'] and valor <= info['limite_saque']:
-                    info['saldo'] -= valor
-                    transacoes.append(f'Saque: R$ {valor:.2f}')
-                    time.sleep(1)
-                    print(f'Saque realizado. Novo saldo: R$ {info["saldo"]:.2f}')
-                else:
-                    print('Saque não permitido. Verifique o saldo e o limite de saque.')
-            elif resp == 4:
-                print('EXTRATO DE TRANSAÇÕES'.center(40, '='))
-                if transacoes:
-                    for i, t in enumerate(transacoes, 1):
-                        print(f'{i}. {t}')
-                else:
-                    print('Nenhuma transação realizada ainda.')
-                print('=' * 40)
-            elif resp == 5:
-                print('Saindo da conta...')
-                time.sleep(1)
-                print(10 * '=', 'VOLTE SEMPRE', 10 * '=')
-                break
-            else:
-                print('Opção inválida. Tente novamente.')
-            print('-' * 30)
-        except ValueError:
-            print("Por favor, insira um número válido.")
-
+while True:
+    resp = int(input('Deseja mostrar notas de qual aluno: \033[1;33m(999 Interrompe)\033[m '))
+    if resp == 999:
+        print('\033[m')
+        break
+    if resp >= len(dados) or resp < 0:
+        print(f'\033[1;31mOps... Tente novamente. Não há essa opção\033[m')
+    else:
+        print(f'As notas de \033[1;36m{dados[resp][0]}\033[m são: {dados[resp][1]}')
+print('FINALIZANDO...')
+time.sleep(1)
+print('='*10, 'VOLTE SEMPRE', '='*10)
