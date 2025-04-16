@@ -1,23 +1,24 @@
-extratos = []
-
-nome = input('Digite o nome do titular da conta: ')
-saldo = float(input('Qual seu saldo: '))
-saldoInicial = saldo
-limiteSaque = float(input('Qual o limite de saque: '))
-
-escolha =  deposito = saque = 0
-
 print('\033[1m-=\033[m' * 20)
 print('\033[1;33m               BANCO LAB       \033[m')
 print('\033[1m-=\033[m' * 20)
-while escolha != 5:
-    print("""
+
+extratos = []
+
+nome = input('Digite o nome do titular da conta: ')
+saldo = float(input('Qual seu saldo: R$'))
+saldoInicial = saldo
+limiteSaque = float(input('Qual o limite de saque: R$'))
+
+escolha =  deposito = saque = 0
+
+while True:
+    print('')
+    print(""" \033[1m-=-=-=-=-= MENU -=-=-=-=-=\033[m
 [1] Consultar saldo
 [2] Depositar valor
 [3] Sacar valor
 [4] Extrato
-[5] Sair
-""")
+[5] Sair""")
     print('\033[1m-=\033[m' * 13)
     escolha = int(input('Qual é sua escolha? '))
     print('\033[1m-=\033[m' * 13)
@@ -56,3 +57,7 @@ while escolha != 5:
             print(extrato)
 
         print(f'Saldo atualizado: R${saldo}\033[m')
+
+    if escolha == 5:
+        print('\033[1;36mVolte sempre ao BANCO LAB!\033[m')
+        break
