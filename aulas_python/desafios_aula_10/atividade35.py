@@ -1,9 +1,9 @@
 print('-=-=-=-Será que os números que digitará formam um triângulo?-=-=-=-')
-numero = float(input('Primeiro segmento: '))
+numero1 = float(input('Primeiro segmento: '))
 numero2 = float(input('Segundo segmento: '))
 numero3 = float(input('Terceiro segmento: '))
 
-if numero3 < (numero + numero2):
+if numero1 < numero2 + numero3 and numero2 < numero1 + numero3 and numero3 < numero2 + numero1 :
     print('Ele forma um triângulo :)')
     
 else:
