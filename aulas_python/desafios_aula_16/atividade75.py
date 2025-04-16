@@ -18,4 +18,3 @@ print(f'O número 3 foi digitado pela primeira vez na {numero.index(3)+1} posiç
 print('Os valores pares são:', {n for n in numero if n % 2 == 0}, end=' ')
 
 print('\n\033[1;34m-=-=-=-=-= Encerrado.. =-=-=-=-=-\033[m')
-
