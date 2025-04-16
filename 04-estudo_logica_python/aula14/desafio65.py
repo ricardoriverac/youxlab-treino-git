@@ -6,13 +6,19 @@ r = 's'
 while r in 'Ss':
     numero = int(input('Digite um número: '))
     if menor == 0:
-        menor = numero
+        menor = numeros
     if menor > numero:
         menor = numero
     if maior < numero:
         maior = numero
     numeros += 1
     soma += numero
+    
     r = str(input('Deseja continuar? [S/N]: ')).upper()
+
+    while r not in 'SN':
+        print('Resposta inválida digite apenas[N/s]')
+        r = input('Deseja continuar? [S/N]: ').upper()
+
 print(f'A média entre os {numeros} números digitados é {soma/numeros}')
 print(f'o maior valor digitado é {maior} e o menor valor digitado é {menor}.')
