@@ -1,3 +1,4 @@
+from time import sleep
 print('-='*20)
 print('\033[1;35mLOJA DA IZINHA\033[m')
 print('-='*20)
@@ -7,7 +8,7 @@ menorP = float('inf')
 while True:
     produto = input('O que você deseja comprar?: ')
     preco = float(input('Qual é o preço?: '))
-    maisProdutos = input('Deseja comprar mais produtos?[S/N]: ').upper()
+    maisProdutos = input('Deseja comprar mais produtos?\033[33m[S/N]:\033[m ').upper()
     soma+=preco
     
     if preco < menorP:
@@ -16,6 +17,9 @@ while True:
                
     if preco>1000:
         produtosMaisDeMil+=1
+        
+    if maisProdutos != 'N' and maisProdutos !='S':
+        print('\033[31mErro na digitação!\033[m Tente novamente ')
         
     if maisProdutos=='N':
         print('Affs, pobre! Volte sempre! ')

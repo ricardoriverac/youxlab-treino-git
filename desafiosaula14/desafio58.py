@@ -9,4 +9,3 @@ while numero != computador:
     palpites+=1
     numero=numeroAposta
 print('{}PARABÉNS!{} Você acertou depois de {} tentativas!!! '.format('\033[35m', '\033[m', palpites))
-
