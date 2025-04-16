@@ -87,7 +87,7 @@ while True:
         placar(vitorias, derrotas)
         break
 
-    if pergunta2 == "N":
+    if pergunta2 == "N":    
         print("\nPrograma encerrado.\n")
         placar(vitorias, derrotas)
         break
