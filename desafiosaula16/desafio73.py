@@ -7,7 +7,9 @@ posiçãoCruzeiro = tabela.index('Cruzeiro')
 
 print('-='*20)
 print('{:^30}'.format('\033[32mCAMPEONATO\033[m \033[33mBRASILEIRO\033[m \033[36mDE FUTEBOL\033[m'))
+sleep(1)
 print('-='*20)
+print(tabela)
 sleep(1)
 
 print(f'''Os \033[36m5 PRIMEIROS\033[m colocados são: 
@@ -27,5 +29,4 @@ sleep (1)
 
 print(f'''O \033[34mCRUZEIRO\033[m está na posição 
       {posiçãoCruzeiro+1}''')
-
 
