@@ -9,4 +9,4 @@ while True:
         for contagem in range(0, 10):
             contagem+=1
             print(f'{numero} x {contagem} = {numero*contagem}')
-            
+                     
