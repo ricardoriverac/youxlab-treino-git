@@ -12,11 +12,15 @@ for l in range(3):
 
         if c == 2:
             numeroTerceiraColuna += matriz[l][c]
+
 maior = max(matriz[1])
 
 print('-=' * 20)
-for o in range(3):
-    print(matriz[o])
+for l in range(3):
+    print('\n')
+    for c in range(3):
+        print(f'[{matriz[l][c]:^3}]', end='')
+print()
 print('-=' * 20)
 
 print(f'A soma dos números pares é {sum(par)}')
