@@ -1,7 +1,9 @@
 def ficha(nome,gol):
     if nome == '':
         nome = '<desconhecido>'
-    if gol == "":
+    if gol.isnumeric():
+        gol = int(gols)
+    else:
         gol = 0
     print(f'O jogador {nome} fez {gol} gol(s) no campeonato')
 
