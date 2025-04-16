@@ -9,7 +9,7 @@ print('--'*35)
 nome = str(input('Nome do titular da conta: '))
 saldo = float(input('Saldo inicial da conta: R$'))
 limiteDeSaque = float(input('Qual será o limite de saque por operação? R$'))
-extrato.append([f'Saldo inicial: {saldo}'])
+extrato.append([f'Saldo inicial: {saldo:.2f}'])
 
 while True:
     print('--'*35)
@@ -52,7 +52,7 @@ OPÇÃO: '''))
         print('--'*35)
         for i in extrato:
             print(i)
-        print(f'Saldo atual: {saldo}')
+        print(f'Saldo atual: R${saldo:.2f}')
            
     else:
         print('Opção indisponível, tente novamente.')
