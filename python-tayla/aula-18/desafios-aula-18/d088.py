@@ -16,7 +16,7 @@ for c in range(quantidade):
     valores.append(numeros)
 
 for n, v in enumerate(valores):
-    print(f'Jogo {n+1}: {v} ')
+    print(f'Jogo {n+1}: {sorted(v)} ')
     sleep(1)
 
 print('-=-=-=-=-= < BOA SORTE! > -=-=-=-=-=')
