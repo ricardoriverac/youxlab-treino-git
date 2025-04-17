@@ -28,7 +28,7 @@ while True:
     else:
         codigo = int(busca)
         jogador = time[codigo]
-        print(f"\n🔍 Detalhamento do jogador: {jogador['nome']}")
+        print(f"Detalhamento do jogador: {jogador['nome']}")
         for i, g in enumerate(jogador['gols']):
             print(f"  => No jogo {i + 1}, fez {g} gol(s).")
         print("=" * 50)
