@@ -12,6 +12,8 @@ while True:
 
     
     escolha = str(input('Quer continuar? [S/N]: ')).upper()
+    while escolha != 'S' and escolha != 'N':
+        escolha = str(input(f'Não temos a opçao : {escolha}\nQuer continuar? [S/N]: ')).upper()
     if escolha == 'N':    
             print('=-'*30)
             break
