@@ -1,5 +1,5 @@
 from time import sleep
-ficha= list()
+ficha= {}
 while True:
     nome=str(input('Nome do Aluno: '))
     nota1=float(input('Nota 1: '))
