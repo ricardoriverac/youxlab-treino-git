@@ -18,4 +18,5 @@ while True:
         print('FINALIZANDO...')
         break  
 print('-' * 40)
-print(f'A lista ficou: {numeros}')
+ordemCrescente = sorted(numeros)
+print(f'A lista ficou: {ordemCrescente}')
