@@ -16,11 +16,21 @@
 #     num = int(input("Digite um numero: "))
 #     contador += 1
 
-numero = soma = 0
-while True:
-    numero= int(input("Digite um numero"))
-    if numero == 999:
-       break
-    soma += numero
-print(f"[A soma  vale {soma}]")
+# numero = soma = 0
+# while True:
+#     numero= int(input("Digite um numero"))
+#     if numero == 999:
+#        break
+#     soma += numero
+# print(f"[A soma  vale {soma}]")
+
+#carrgamento animaçao
+# import time
+
+# print("Carregando", end="")
+# for _ in range(5):
+#     time.sleep(0.5)
+#     print(".", end="", flush=True)
+# print("\nPronto!")
+
         
