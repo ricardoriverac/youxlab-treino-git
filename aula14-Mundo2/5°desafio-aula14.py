@@ -8,5 +8,3 @@ while contador<=10:
     termo+=razao
     contador+=1
 print('FIM')
-
-
