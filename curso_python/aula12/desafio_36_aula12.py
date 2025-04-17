@@ -5,4 +5,4 @@ prestacaoMensal = valorCasa / quantosAnos * 12
 if prestacaoMensal <= valorSalario * 0.30:
     print ('Parábens! Seu empréstimo foi aceito. ')
 else:
-    print ('Empréstimo não autorizado. ')
+    print ('Você não pode financiar esta casa. ')
