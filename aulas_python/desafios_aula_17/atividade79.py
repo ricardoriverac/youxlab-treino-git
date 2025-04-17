@@ -5,9 +5,9 @@ lista = []
 while True:
     numero = int(input('Digite um valor: '))
     if numero in lista:
-        print('Valor duplicado, não irei adicionar...')
+        print('\033[1;31mValor duplicado, não irei adicionar...\033[m')
     else:
-        print('Número cadastrado com sucesso!')
+        print('\033[1;32mNúmero cadastrado com sucesso!\033[m')
         lista.append(numero)
 
     
