@@ -1,4 +1,4 @@
-#P.A COM WHILE
+#P.A COM WHILE COM ADIÇÕES
 termo1=int(input('Digite o 1° termo:'))
 razao=int(input('Digite sua razão:'))
 termo=termo1
