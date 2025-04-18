@@ -1,3 +1,4 @@
+#SEQUÊNCIA DE FIBONACCI
 print('SEQUÊNCIA DE FIBONACCI')
 numero=int(input('Digite os termos que você deseja mostrar: '))
 termo1=0  
