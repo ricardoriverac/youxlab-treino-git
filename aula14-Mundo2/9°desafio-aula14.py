@@ -1,4 +1,5 @@
 
+#MÉDIA, MAIOR E MENOR VALORES 
 resposta='S'
 soma= quantidade= media=maior= menor=0
 while resposta in 'Ss':
