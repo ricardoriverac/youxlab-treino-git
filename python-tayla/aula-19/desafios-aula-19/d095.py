@@ -6,7 +6,7 @@ partidas = int(input(f'Quantas partidas {nome} jogou? '))
 dados['nome'] = nome
 
 for c in range(partidas):
-    gols = int(input(f'Quantos gols na partida {c+1}: '))
+    gols = int(input(f'Quantos gols na paartida {c+1}: '))
     gol.append(gols)
     dados['gols'] = gol
     dados['total'] = sum(gol)
