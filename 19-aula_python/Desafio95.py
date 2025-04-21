@@ -1,46 +1,43 @@
-dados = list()
-jogadores = dict()
-
+time = list()
+jogador = dict()
 gols = list()
-total_gols = 0
-
 
 while True:
-    jogadores['nome'] = str(input('Nome do jogador: '))
-    jogadores['partidas jogadas'] = int(input(f'Quantas partidas {jogadores["nome"]} jogou? '))
-    for c in range(0, jogadores['partidas jogadas']):
-        gols.append(int(input(f'Quantos gols na partida {c+1}? ')))
-        total_gols += gols[c]
-    jogadores['gols'] = gols.copy()
+    jogador["nome"] = str(input("Informe o nome do Jogador! "))
+    jogador["partidas"] = int(input("Informe o numero de partidas! "))
+    
+    for c in range(0, jogador["partidas"]):
+        gols.append(int(input("Quantos gols {} fez na partida {}? ".format(jogador["nome"], c))))
+    
+    jogador["gols"] = gols[:]
+    jogador['totgols'] = sum(gols)
     gols.clear()
-    jogadores['total'] = total_gols
-    total_gols = 0
-    dados.append(jogadores.copy())
 
-    while True:
-        print('\033[1;97m-\033[m' * 35)
-        continuar = str(
-            input('Quer continuar?').strip().upper())
-        print('\033[1;97m-\033[m' * 35)
-        if continuar[0] in 'SN':
-            break
-        else:
-            print(f'\033[;31mComando Inválido!\033[m')
-    if continuar == 'N':
+    time.append(jogador.copy())
+
+    flag = str(input("Deseja continuar? S/N ")).strip().upper()[0]
+    while flag not in "SN":
+        flag = str(input("INVALIDO! Deseja continuar? S/N ")).strip().upper()[0]
+
+    if flag == 'N':
         break
 
-print()
+print("="*50)
+print("COD Nome            Gols               Total")
+for i, v in enumerate(time):
+    print("{: >3} {: <16}{: <18} {: >5}".format(i, v["nome"], str(v["gols"]), v["totgols"]))
+print("="*50)
+
 while True:
-    from time import sleep
-    print('\033[1;34m-\033[m' * 40)
-    pergunta = int(input('\033[;97mMostrar dados de qual jogador? [Cod]:\033[m '))
-    if pergunta == 999:
-        print('\033[1;33msaindo...\033[m')
-        sleep(1.5)
+    flag = int(input("Mostrar dados de quel Jogador? (999 Para!) "))
+    while flag >= len(time):
+        if flag == 999:
+            break
+        flag = int(input("Jogador INVALIDO! (999 Para!) "))
+
+    if flag == 999:
         break
-    #Poderia colocar a tabela...
-    print(f'\033[;97mO jogador \033[;32m{dados[pergunta]["nome"]}\033[;97m jogou \033[;32m{dados[pergunta]["partidas jogadas"]}\033[;97m partidas.\033[m')
-    for k, v in enumerate(dados[pergunta]["gols"]):
-        print(f'   \033[1;31m=> \033[;97mNa partida \033[;30m{k+1}\033[;97m, fez \033[;32m{v}\033[;97m gols.\033[m')
-    print(f'\033[;97mFoi um total de \033[;32m{dados[pergunta]["total"]}\033[;97m gols.\033[m')
-    print('\033[1;35m-\033[m' * 40)
+    else:
+        print("{:-^50}".format("Levantamento do Jogador {}".format(time[flag]["nome"])))
+        for c, v in enumerate(time[flag]["gols"]):
+            print("No jogo {} {} fez {} gols!".format(c, time[flag]["nome"], v))
