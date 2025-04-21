@@ -1,42 +1,43 @@
-galera = list()
-
-pessoa = dict()
-
-soma = média = 0
+time = list()
+jogador = dict()
+gols = list()
 
 while True:
-    pessoa.clear()
-    pessoa['nome'] = str(input('Nome: '))
-    while True:
-        pessoa ['sex'] = str(input('Sexo: [M/F]')).upper()[0]
-        if pessoa['sex'] in 'MF':
-            break
-        print('ERRO! Por favor, digite apenas M ou F.')
-    pessoa ['idade'] = int(input('Idade: '))
-    soma += pessoa['idade']
-    galera.append(pessoa.copy())
-    while True:
-        resp = str(input('Quer continuar? [S/N]')).upper()[0]
-        if resp in 'SN':
-            break   
-        print('ERRO! Responda apenas Sou N.')
-    if resp == 'N':
+    jogador["nome"] = str(input("Informe o nome do Jogador! "))
+    jogador["partidas"] = int(input("Informe o numero de partidas! "))
+    
+    for c in range(0, jogador["partidas"]):
+        gols.append(int(input("Quantos gols {} fez na partida {}? ".format(jogador["nome"], c))))
+    
+    jogador["gols"] = gols[:]
+    jogador['totgols'] = sum(gols)
+    gols.clear()
+
+    time.append(jogador.copy())
+
+    flag = str(input("Deseja continuar? S/N ")).strip().upper()[0]
+    while flag not in "SN":
+        flag = str(input("INVALIDO! Deseja continuar? S/N ")).strip().upper()[0]
+
+    if flag == 'N':
         break
 
-print('=' * 30)
-print(f'A) Ao todo temos {len(galera)} pessoas cadastradas.')
-média = soma / len(galera)
-print(f'B) A média de idade é de {média:5.2f} anos.')
-print('C) As mulheres cadastradas foram ', end='')
-for p in galera:
-    if p['sex'] in 'Ff':
-        print(f'{p["nome"]}', end='')
-print()
-print('D) Lista das pessoas que esrão acima da média: ')
-for p in galera:
-    if p ['idade'] >= média:
-        print(' ', end='')
-        for k, v in p.items():
-            print(f'{k} = {v}; ', end='')
-        print()
-print('Finalmente acabou slk')
+print("="*50)
+print("COD Nome            Gols               Total")
+for i, v in enumerate(time):
+    print("{: >3} {: <16}{: <18} {: >5}".format(i, v["nome"], str(v["gols"]), v["totgols"]))
+print("="*50)
+
+while True:
+    flag = int(input("Mostrar dados de qual Jogador? (999 Para!) "))
+    while flag >= len(time):
+        if flag == 999:
+            break
+        flag = int(input("Jogador INVALIDO! (999 Para!) "))
+
+    if flag == 999:
+        break
+    else:
+        print("{:-^50}".format("Levantamento do Jogador {}".format(time[flag]["nome"])))
+        for c, v in enumerate(time[flag]["gols"]):
+            print("No jogo {} {} fez {} gols!".format(c, time[flag]["nome"], v))
