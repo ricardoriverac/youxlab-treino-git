@@ -1,6 +1,5 @@
 from random import randint
 import time
-
 number00 = randint(0,5)
 print('diga um número de 0 a 5 ')
 jogador = int(input('qual o número?: '))

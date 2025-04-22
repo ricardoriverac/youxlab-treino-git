@@ -6,7 +6,6 @@ while True:
         print("Valor adicionado com sucesso!")
     else:
         print("Valor duplicado! Não vou adicionar.")
-    
     continuar = input("Quer continuar? [S/N] ").strip().upper()
     if continuar != 'S':
         break

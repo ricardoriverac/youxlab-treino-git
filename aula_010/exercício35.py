@@ -1,7 +1,6 @@
 print('-='*20)
 print('analisador de triângulos')
 print('-='*20)
-
 r1 = float(input('primeiro segmento : '))
 r2 = float(input('segundo segmento : '))
 r3 = float(input('terceiro segmento:'))

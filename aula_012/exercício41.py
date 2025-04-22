@@ -1,5 +1,4 @@
 from datetime import date
-
 at = date.today().year
 ns = int(input('ano de nascimento: '))
 idade = at - ns

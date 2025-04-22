@@ -4,8 +4,6 @@ lista_de_precos = [
     ("Macarrão", 9),
     ("Óleo", 7.),
     ("Açúcar", 5)]
-
-# Exibindo os itens formatados
 print("LISTA DE PREÇOS")
 print("=" * 30)
 for item, preco in lista_de_precos:

@@ -1,12 +1,9 @@
 import random
-
 num=random.randint(1, 4)
-
 aluno01 = "Marcos"
 aluno02 = "Yago"
 aluno03 = "Felipe"
 aluno04 = "Breno"
-
 if num == 1:
  print("Aluno {}, foi sorteado.".format(aluno01))
 elif num == 2:

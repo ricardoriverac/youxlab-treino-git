@@ -6,7 +6,6 @@ times = ('Cruzeiro', 'flamengo','são paulo',
 'grêmio','bahia','vitória',
 'internacional','patético-mg','santos',
 'mirassol')
-
 print('<->' * 15)
 print(f'os times são : {times}')
 print ('<->' * 15)
