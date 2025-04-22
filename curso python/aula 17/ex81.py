@@ -1,7 +1,7 @@
 continuacao = 'S'
 lista = []
 while continuacao == "S":
-    numero = int (input ("Digite um número \033[34m\033[m : "))
+    numero = int (input ("Digite um número: "))
     lista.append(numero)
     continuacao = str (input ("Quer continuar [S/N] ? ")).strip().upper()
     lista.sort(reverse = True)
