@@ -4,7 +4,7 @@ contador= 0
 soma= 0
 nomeHomemMaisVelho= ''
 idadeHomemMaisVelho= 0
-mulheres= ''
+mulheresMenosDeVinte= 0
 for a in range(1, 5):
     nome= input('Informe o seu nome: ')
     idade= int(input('Agora a sua idade: '))
@@ -16,4 +16,10 @@ for a in range(1, 5):
         nomeHomemMaisVelho= nome
         idadeHomemMaisVelho= idade
     else:
-        if a == 
+        if idade > idadeHomemMaisVelho and sexo == 'M':
+            nomeHomemMaisVelho= nome
+            idadeHomemMaisVelho= idade
+    if sexo == 'F' and idade < 20:
+        mulheresMenosDeVinte += 1
+
+
