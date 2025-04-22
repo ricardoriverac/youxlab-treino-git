@@ -7,6 +7,9 @@
 # print(pessoa)
 # del pessoa['idade'] #remove o elemento
 # print(pessoa)
+#from operator import itemgetter
+#ranking = sorted(jogadore.items(), key =itemgetter(1), reverse= True) #Faz os numero dentro de um diciionário ficar em ordem 
+
 def valores_Filmes():
     filme = {
         "titulo": "Star Wars",
@@ -66,7 +69,3 @@ for estado in brasil:
 # def calcular_Area():
 #     area = base*altura
 #     print(f'A area do quadrado é {area}')
-
-    
-
-    
