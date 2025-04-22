@@ -1,6 +1,7 @@
 dic = dict()
 lista = list()
 cont = mediaIdade = soma = 0
+
 while True:
     nome = str(input('Nome: '))
     dic["nome"] = nome
@@ -14,9 +15,9 @@ while True:
     continuar = str(input('Deseja continuar [S/N]? ')).strip().upper()[0]
     
     cont += 1
-    lista = dic
+    lista.append(dic)
     soma += idade
-    mediaIdade = soma / cont
+    mediaIdade = soma / len(lista)
 
     if idade > mediaIdade:
         dic["acimaDaMedia"] = nome
