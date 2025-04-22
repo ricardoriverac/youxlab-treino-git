@@ -7,6 +7,6 @@ def escreva(txt):
 escreva('Ola, Mundo')
 escreva('Youx')
 escreva('BOOOOOOOOOOOOOO')
-escreva('Cruzeiro e ruim')
+
 
 
