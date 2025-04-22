@@ -42,7 +42,7 @@ for c in range(0, 3):
     brasil.append(estado.copy())
 for estado in brasil:
     for k, i in estado.items():
-        print(f'O campo {k} tem valor {i}')
+        print(f' O campo {k} tem valor {i}')
 
     print(estado)
 # filme['Personagem'] = "Darth Vader"
