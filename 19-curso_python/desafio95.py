@@ -27,6 +27,9 @@ while True:
     if resposta == 'N':
         break
 
+print('-' * 40)
+print('cod  nome               gols            total')
+print('-' *40)
 for i, j in enumerate(jogadores):
     print(f'{i:<4} {j["nome"]:<15} {str(j["gols"]):<20} {j["total"]}')
 print('-' * 40)
@@ -37,7 +40,7 @@ while True:
     if escolha >= len(jogadores):
         print('Código inválido!')
     else:
-        print(f'-- LEVANTAMENTO DO JOGADOR {jogadores[escolha]["nome"]} --')
+        print(f'-- LEVANTAMENTO DO JOGADOR {jogadores[escolha]["nome"].upper()} --')
         for i, g in enumerate(jogadores[escolha]['gols']):
-            print(f'   No jogo {i+1} fez {g} gols')
+            print(f'No {i+1}° jogo, {jogador["nome"]} fez {g} gols')
         print('-' * 40)
