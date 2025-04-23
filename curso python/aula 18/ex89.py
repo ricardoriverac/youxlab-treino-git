@@ -3,8 +3,8 @@ media = 0
 boletim = list ()
 while continuacao == "S":
     nome = str (input('Digite o nome do aluno: '))
-    primeiraNota = int(input('Digite a primeira nota: '))
-    segundaNota = int(input('Digite a segunda nota: '))
+    primeiraNota = float (input('Digite a primeira nota: '))
+    segundaNota = float (input('Digite a segunda nota: '))
     media = (primeiraNota + segundaNota) / 2
     boletim.append([nome, [primeiraNota, segundaNota], media])
     continuacao = str (input ("Quer continuar [S/N] ? ")).strip().upper()
