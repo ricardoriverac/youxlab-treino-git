@@ -1,4 +1,7 @@
 from ex112.utilidadesCeV.dados import dado, moedas
+
+
+
 try:
     num = dado.leia_dinheiro()
     porcent1 = int(input('Por quanto você quer aumentar o valor? '))
@@ -10,7 +13,7 @@ except ValueError as erro:
 
 
 
-
+import re
 
 # def ler_valor_monetario():
 #     while True:
@@ -30,45 +33,3 @@ except ValueError as erro:
 # # Exemplo de uso
 # valor = ler_valor_monetario()
 # print(f"Valor lido: R$ {valor:.2f}")
-
-
-# def resumo(num, porcent1, porcent2):
-#     dobro = num * 2
-#     metade = num / 2
-#     taxa = (porcent1/100) + 1
-#     aumento = num * taxa
-#     dimi = 1 - (porcent2/100)
-#     diminui = num * dimi
-#     print('-=' *30)
-#     print('        RESUMO DO VALOR          ')
-#     print('-=' *30)
-#     print(f'A metade de {num} é {metade}')
-#     print(f'O dobro de {num} é {dobro}')
-#     print(f'O aumento em {porcent1} de {num} é {aumento}')
-#     print(f'O valor reduzido em {porcent2} de num é {diminui}')
-#     print('-=' *30)
-
-# def leia_dinheiro(num):
-#     isRodando = False
-#     while not isRodando:
-#         entrada = num.replace(',', '.').strip()
-#         if entrada.isnumeric():
-#             entrada = float(entrada)
-#         if entrada.isalpha() or entrada == '':
-#             raise ValueError (f'O valor {num} não é válido')
-#         else:
-#             isRodando = True
-#             return print(f'O valor {num} é válido')
-
-
-
-# try:
-#     num = dado.leia_dinheiro(str(input('Digite um número: ')))
-
-# except ValueError as erro:
-#     print(f'Erro {erro}')
-
-
-# porcent1 = int(input('Por quanto você quer aumentar o valor? '))
-# porcent2 = int(input('Por quanto você quer diminuir o valor? '))
-# moedas.resumo(num, porcent1, porcent2)

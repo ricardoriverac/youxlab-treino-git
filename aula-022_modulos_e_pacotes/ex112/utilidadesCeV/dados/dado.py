@@ -89,39 +89,10 @@ import re
 
 def leia_dinheiro():
     while True:
-        num = input('Digite um valor: R$').replace(',', '.').strip()
-        if re.fullmatch(r'(R\$ )?\d{1,3}(\.\d{3})*(,\d{2})?', num):
-            num = float(num)
-
-        if num == '' or num == str:
-            print(f'Erro: "{num}" não é um valor válido. Tente novamente. ')
+        num = input('Digite um valor: R$ ').strip().replace(',', '.')
+        if re.fullmatch(r'\d+(\.\d{1,2})?', num):
+            return float(num)
         else:
-            return num
+            print(f'Erro: "{num}" não é um valor monetário válido. Tente novamente.')
 
-
-
-
-
-# def leia_dinheiro():
-#     while True:
-#         num = input('Digite um valor monetário: ').strip().replace(',', '.')
-        
-#         # Verifica se é um número no formato correto
-#         if re.fullmatch(r'\d+(\.\d{1,2})?', num):
-#             return float(num)
-#         else:
-#             print(f'Erro: "{num}" não é um valor monetário válido. Tente novamente.')
-
-
-# def leia_dinheiro(num):
-#     isRodando = False
-#     while not isRodando:
-#         entrada = num.replace(',', '.').strip()
-#         if entrada.isnumeric():
-#             entrada = float(entrada)
-#         if entrada.isalpha() or entrada == '':
-#             raise ValueError (f'O valor {num} não é válido')
-#         else:
-#             isRodando = True
-#             return print(f'O valor {num} é válido')
 
