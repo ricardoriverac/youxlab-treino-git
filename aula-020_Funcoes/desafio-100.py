@@ -1,24 +1,22 @@
 import random
-def sorteio():
+numeros = []
+valorPar = []
+def sorteia():
     for c in range (5):
         sort = random.randint(1, 60)
-        lista.append(sort)
-    print(lista)
+        numeros.append(sort)
+    print(f'Os números sorteados foram {numeros}')
 
 
-lista = []
-numPar = []
+sorteia()
 
 def somaPar():
-    for numero in lista:
-        if numero % 2 == 0:
-            numPar.append(numero)
-    soma = sum(numPar)
-    print(f'A soma dos numeros pares é {soma} os numeros pares são {numPar}')
-
+    for valor in numeros:
+        if valor % 2 == 0:
+            valorPar.append(valor)
+    somaP = sum(valorPar)
+    print(f'A soma dos pares de {numeros} é {somaP}')
+    print(f'Os valores pares são {valorPar}')
 
 
 somaPar()
-
-
-sorteio()
