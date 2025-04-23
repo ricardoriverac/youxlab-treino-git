@@ -1,4 +1,8 @@
 from time import sleep
+print('-='*20)
+print('\033[36mCADASTRO \033[32mDE JOGADOR\033[m \033[33mDE FUTEBOL\033[m')
+print('-='*20)
+
 jogador = {}
 lista = []
 soma = 0
@@ -23,6 +27,7 @@ for i, v in enumerate(jogador['gol']):
     print(f'   → Na partida {i}, fez {v} gols ')
     sleep(1)
 print(f'Foram um total de \033[1;36m{soma} GOLS!\033[m ')
+
 
 
     
