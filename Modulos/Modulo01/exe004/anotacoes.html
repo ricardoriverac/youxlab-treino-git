@@ -1,38 +1,48 @@
 <!--
 
-Favicon
+Você tem o direito de usar qualquer imagem no seu site?
 
-O que é?
+O vídeo explica sobre direitos autorais das imagens na web, destacando a importância de verificar a licença e obter permissão para usá-las. Usar imagens sem autorização pode gerar consequências legais.
 
-O favicon é o pequeno ícone que aparece ao lado do título da aba do navegador, na barra de favoritos ou quando um site é salvo como atalho. Ele ajuda a identificar visualmente o site e melhorar a aparência profissional da página.
+Sugestões de sites:
+- unsplash.com
+- pexels.com
+- freepik.com
+- rawpixel.com
+- pixabay.com
+- libreshot.com
+- wikimedia.org
 
-Como usar?
+Formatos de imagens:
+- JPEG (JPG): Ideal para fotos.
+- PNG: Alta qualidade, com transparência.
+- GIF: Imagens animadas.
+- SVG: Formato vetorial, sem perda de qualidade.
+- WebP: Compressão eficiente.
 
-Para adicionar um favicon ao seu site, basta inserir a seguinte tag dentro da seção <head> do HTML:
+O tamanho das imagens importa para um site?
 
-<link rel="icon" href="caminho-do-favicon.ico" type="image/x-icon">
+Sim, o tamanho afeta o carregamento e desempenho do site. Imagens grandes aumentam o tempo de carregamento, prejudicando o SEO e a experiência do usuário. Recomenda-se usar imagens compactadas e responsivas.
 
-O arquivo pode ser nos formatos .ico, .png ou .svg, sendo o .ico o mais tradicional para compatibilidade.
+Tag <img>:
 
-Exemplo:
-<link rel="icon" href="favicon.ico" type="image/x-icon">
+A tag <img> é usada para exibir imagens. Deve conter o atributo src (caminho da imagem) e alt (descrição alternativa).
 
-Tamanhos comuns:
-- 16x16 (mais comum)
-- 32x32
-- 48x48
-- 64x64 (para alta resolução)
+Caminhos de imagens:
 
-Dicas:
-- O nome padrão "favicon.ico" é automaticamente buscado pelo navegador na raiz do site, mas pode ser personalizado com a tag acima.
-- Manter o tamanho pequeno garante carregamento mais rápido.
-
-Sites úteis para gerar, desenhar ou editar favicons:
-
-- [favicon.io](https://favicon.io) – Gerador de favicon com texto, emojis ou imagens.
-- [realfavicongenerator.net](https://realfavicongenerator.net) – Gera favicons em diversos tamanhos e para diferentes plataformas.
-- [favicon.cc](https://www.favicon.cc) – Editor online para desenhar ícones pixel a pixel.
-- [x-icon-editor](https://www.xiconeditor.com) – Ferramenta de criação e edição de ícones .ico.
-- [canva.com](https://www.canva.com) – Editor gráfico geral, útil para criar o design do ícone antes de converter.
+1. **Caminho relativo**: Usado quando a imagem está dentro da mesma estrutura de pastas do projeto.
+   - Exemplo: <img src="imagens/foto.jpg" alt="Foto">
+   
+2. **Caminho absoluto**: Usado quando a imagem está em outro servidor ou link externo.
+   - Exemplo: <img src="https://www.exemplo.com/imagens/foto.jpg" alt="Foto">
+   
+3. **Caminho local**: Usado para imagens em um sistema de arquivos local (não recomendado para sites em produção).
+   - Exemplo: <img src="file:///C:/imagens/foto.jpg" alt="Foto">
+   
+4. **Imagem dentro de pastas**: Imagens podem ser organizadas dentro de pastas na estrutura do projeto.
+   - Exemplo: <img src="assets/imagens/foto.jpg" alt="Foto">
+   
+5. **Imagem de servidor externo**: Usando imagens hospedadas em servidores externos.
+   - Exemplo: <img src="https://www.example.com/imagem.jpg" alt="Imagem Externa">
 
 -->
