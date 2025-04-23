@@ -1,8 +1,15 @@
-def ficha(nome = '', gols=0):
-    if nome == False:
-        return print(f'Jogador <desconhecido>')
+def ficha(nome='', gols=0):
+    if nome == '':
+        nome = 'desconhecido'
+    if gols == True:
+        gols = gol
+    return print(f'O jogador {nome} marcou {gols} gols')
 
+    
+    
 
-nome = str(input("Digite o nome do jogador: "))
-gols = int(input(f"Número de gols de {nome}"))
-print(f'O jogador ')
+nome = str(input('Digite o nome do jogador: '))
+gol = input('Quantos gols ele fez? ')
+if gol == '':
+    gol = 0
+ficha(nome, gol)
