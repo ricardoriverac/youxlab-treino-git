@@ -1,3 +1,7 @@
+import unicodedata
+
+def remover_acentos(texto):
+    return unicodedata.normalize('NFKD', texto).encode('ASCII', 'ignore').decode('ASCII')
 times = ('Palmeiras',"Flamengo","Fluminense",
 "Bragantino","Ceara","Corinthians","Cruzeiro",
 "Vasco","Juventude","São Paulo","Mirassol",
@@ -21,4 +25,17 @@ while True:
         break
     else:
         break
-    
+times_normalizados = [remover_acentos(time).lower() for time in times]
+
+while True:
+    timeop = input("Digite algum time para saber sua classificação: ").strip()
+    timeop_normalizado = remover_acentos(timeop).lower()
+
+    if timeop_normalizado in times_normalizados:
+        posicao = times_normalizados.index(timeop_normalizado) + 1
+        time_real = times[posicao - 1]
+        print(f"Time encontrado: {time_real}")
+        print(f'Posição na classificação: {posicao}º lugar')
+        break
+    else:
+        print("Time não encontrado na classificação. Tente novamente.")
