@@ -1,17 +1,17 @@
-from ex107 import moedas
+from ex109 import moedas
 from time import sleep
 num = float(input('Digite um numero: '))
 porcent = int(input('Digite um número: '))
-esco = str(input('Quer mostrar os resultados formatados? (S/N): '))
-# if esco == 'S':
-#     esco = bool(True)
-# elif esco == 'N':
-#     esco = bool(False)
-print(f'O dobro de {num} é {moedas.dobro(num)}')
+esco = str(input('Quer mostrar os resultados formatados? (S/N): ')).upper()
+if esco == 'S':
+    esco = bool(True)
+elif esco == 'N':
+    esco = bool(False)
+print(moedas.dobro(num, esco))
 print(moedas.metade(num, esco))
-print(f'O aumento de {num} em {porcent}% é {moedas.aumentar(num, porcent)}')
-print(f'A redução em {num} em {porcent}% é {moedas.diminuir(num, porcent)}')
-print(moedas.outraMoeda(num, porcent))
+print(moedas.aumentar(num, porcent, esco))
+print(moedas.diminuir(num, porcent, esco))
+# print(moedas.outraMoeda(num, porcent))
 # while True:
 #     print('-=' * 30)
 #     print('Tabela:')
