@@ -1,33 +1,21 @@
-pessoas = list()
-dados = list()
+pessoas = []
+dados = []
 continuacao = "S"
+maior = 0
+menor = 0
 while continuacao == "S":
     dados.append(str(input("Nome: ")))
     dados.append(int(input("Peso: ")))
     pessoas.append(dados[:])
-    dados.clear()
+    print(dados)
     continuacao = str (input ("Quer continuar [S/N] ? ")).strip().upper()
+    if dados[1] > maior:
+        maior = dados [1]
+    if dados[1] < menor:
+        menor = dados[1]
+    #pessoas.append(dados[:])
+    dados.clear ()
 print (f"Quantas pessoas foram cadastradas {len(pessoas)}")
 print (pessoas)
-pesoPesado = 0
-count = 0
-pesoLeve = 0
-maisPesados = list()
-maisLeves = list()
-for p in pessoas:
-    if p[1] > pesoPesado and count != 0:
-        print(f'{p[1]} if')
-        pesoPesado = p[1]
-        maisPesados = [p[0]]
-    elif p[1] == pesoPesado and count != 0:
-        print(f'{p[1]} elif')
-        pesoPesado = p[1]
-        maisPesados.append(p[0])
-    else:
-        print(f'{p[1]} else')
-        pesoLeve = p[1]
-        maisLeves = [p[0]]
-    count+=1
-        
-print (f"{maisLeves} tem o peso igual há: {pesoLeve} e é o menor de peso!!!")    
-print (f"{maisPesados} tem o peso igual há: {pesoPesado} e é o maior de peso!!!")    
+print (f" O maior peso foi de : {maior}kg.")   
+print (f" O menor peso foi de : {menor}kg.")   
