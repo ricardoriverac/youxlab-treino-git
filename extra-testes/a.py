@@ -19,4 +19,4 @@ for var in variaveis:
     plt.xlabel('Tempo')
     plt.ylabel(var)
     plt.tight_layout()
-    plt.show()
+    plt.show()   

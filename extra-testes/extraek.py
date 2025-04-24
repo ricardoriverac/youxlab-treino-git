@@ -10,3 +10,4 @@ def media(soma, qtd_numeros):
 
 
 media(soma=soma, qtd_numeros=4)
+  
