@@ -2,11 +2,11 @@ from time import sleep
 import defs as d
 
 cadastro = {}
-
+cont = 0 
 d.titulo('CADASTRO DE CONTA DO LAB')
 while True:
     cadastro.clear()
-
+    cadastro['nome'] = input('Nome de usuário: ')
     cadastro['gmail'] = input('Registre seu e-mail: ')
     cadastro['senha'] = int(input('Registre sua senha de 4 dígitos: '))    
     d.lin()
@@ -20,7 +20,8 @@ while True:
             print('Registrando senha...')
             sleep(3)
             d.lin()
-            print('SENHA REGISTRADA!!')
+            print('Conta cadastrada!')
+            cont += 1
             d.lin()
             sleep(2)
            
@@ -39,7 +40,7 @@ if logar == 's':
             loginSenha = int(input('Senha (Esqueceu a senha? Se sim digite 999.): '))
             if loginSenha == cadastro['senha']:
                 d.lin()
-                print('CONTA LOGADA, AGORA VOCÊ PODE DESFRUTAR DE TODOS NOSSOS RECURSOS, APROVEITE!!')
+                print('Agora que você tem uma conta, pode usar todos nossos recursos!')
                 print()
                 break
             elif loginSenha == 999:
@@ -70,6 +71,17 @@ if logar == 's':
             print(f'E-mail: {cadastro["gmail"]}')
             print(f'Senha: {cadastro["senha"]}')
             d.lin()
+        elif opcao == 2:
+            if len(cadastro['nome']) == 0:
+                while True:
+                    print(f'''    [ 1 ] Trocar conta
+    [ 2 ] Criar conta
+    [ 3 ] Sair
+    
+    Conta atual : {cadastro['nome'(0)]}                      
+
+''')
+                    
         elif opcao == 3:
             print('Finalizando menu...')
             break
