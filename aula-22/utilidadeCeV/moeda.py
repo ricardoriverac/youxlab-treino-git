@@ -26,12 +26,13 @@ def formata(n):
     return n
 
 def resumo(n):
-   
-    print(f'{"Preço analisado:":<20}{formata(n):>20}')
-    print(f'{"Dobro do preço:":<20}{formata(dobro(n)):>20}')
-    print(f'{"Metade do preço:":<20}{formata(metade(n)):>20}')
-    print(f'{"10%"" de aumento:":<20}{formata(aumentar(n)):>20}')
-    print(f'{"15%"" de redução:":<20}{formata(diminuir(n)):>20}')
+    print()
+    print('--'*20)
+    print(f'{"Preço analisado:":<25}{formata(n):>15}')
+    print(f'{"Dobro do preço:":<25}{formata(dobro(n)):>15}')
+    print(f'{"Metade do preço:":<25}{formata(metade(n)):>15}')
+    print(f'{"10%"" de aumento:":<25}{formata(aumentar(n)):>15}')
+    print(f'{"15%"" de redução:":<25}{formata(diminuir(n)):>15}')
     print('--'*20)
     
 
