@@ -1,0 +1,6 @@
+{
+    "workbench.externalBrowser": "chrome",
+    "debug.autoExpandLazyVariables": "off",
+    "debug.hideLauncherWhileDebugging": true,
+    "testing.automaticallyOpenTestResults": "neverOpen"
+}
