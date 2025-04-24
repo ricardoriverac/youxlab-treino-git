@@ -1,7 +1,0 @@
-n = input('Digite algo: ')
-print('É numerico?', n.isnumeric())
-print('É minusculo(a)?',n.islower())
-print('Está em maiusculo?',n.isupper())
-print('É alfanumérico?',n.isalpha())
-print('Todos são digitos? ',n.isdigit())
-print('Eles são alfanumericos?',n.isalnum())
