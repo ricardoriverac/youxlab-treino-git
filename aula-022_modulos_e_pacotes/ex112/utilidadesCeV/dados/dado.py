@@ -89,7 +89,7 @@ import re
 
 def leia_dinheiro():
     while True:
-        num = input('Digite um valor: R$ ').strip().replace(',', '.')
+        num = input('Digite um valor: R$').strip().replace(',', '.')
         if re.fullmatch(r'\d+(\.\d{1,2})?', num):
             return float(num)
         else:
