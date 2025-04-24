@@ -11,6 +11,6 @@ for c in range(0,5):
                 lista.insert(pos,n)
                 print(f"Adicionado na posiçao {pos}")
                 break
-            pos = + 1
+            pos += 1
 print("======"*8)
 print(f"os valores digitados em ordem foram {lista}")
