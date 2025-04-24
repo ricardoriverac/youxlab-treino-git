@@ -35,3 +35,31 @@ ordenada = sorted(lista, key=lambda x: x[1])
 print('\n\033[36mPessoas da mais leve para a mais pesada:\033[0m')
 for pessoa in ordenada:
     print(f'{pessoa[0]} - {pessoa[1]} Kg')
+ista = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+par = maior =linha = 0
+
+for l in range(3):
+    for c in range(3):
+        lista[l][c] = int(input(f'Digite o valor para [{l},{c}]: '))
+        if lista[l][c] % 2 == 0:
+            par += lista[l][c]
+
+for l in range(3):
+    maior += lista[l][2]
+
+for col in range(3):
+    if linha == 0:
+        linha = lista[1][col]
+    elif linha < lista[1][col]:
+        linha = lista[1][col]
+print(lista)
+
+
+for l in range(3):
+    for c in range(3):
+        print(f'[{lista[l][c]:^5}]', end='  ')
+    print()
+print('-=' * 30)
+print(f'A soma de todos os valores pares é {par}')
+print(f'A soma dos valores da terceira coluna totaliza {maior}')
+print(f'O maior valor da segunda linha é {linha}')
