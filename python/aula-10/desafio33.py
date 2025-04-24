@@ -1,0 +1,5 @@
+num1 = int(input('Digite um número: '))
+num2 = int(input('Digite outro número: '))
+num3 = int(input('Digite outro número: '))
+print(f'O maior é {max(num1, num2, num3)}')
+print(f'O menor é {min(num1, num2, num3)}')
