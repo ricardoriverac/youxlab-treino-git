@@ -13,7 +13,3 @@ print(f'{"No.":<4}{"NOME":<10}{"MEDIA":>8}')
 print('-'*30)
 for i, (nome, dados) in enumerate(ficha.items()):
     print(f'{i:<4}{nome:<10}{dados["media"]:>8.1f}')
-    if media > 7:
-        print('Aprovado')
-    elif media < 7:
-        print('Reprovado')
