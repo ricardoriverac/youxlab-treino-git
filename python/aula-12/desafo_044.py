@@ -57,25 +57,14 @@ if valor[c1]:
     elif a1 == 2:
 
         print(f'Sua compra de {valor[c1]} reais ficará por {valor[c1] - ((valor[c1] * 5) / 100)} reais à vista no cartão com 5% de desconto!!')
-
     elif a1 == 3:
-
         print(f'Sua compra de {valor[c1]} reais parcelada em 2x no cartão sem juros ficará por {valor[c1] / 2} reais!!')
-
     elif a1 == 4:
-
         p2 = int(input('Em quantas parcelas vai ser sua compra? '))
-
         if p2 >= 3:
-
             print(f'Sua compra de {valor[c1]} reais parcelada em {p2}x ficará por {(((valor[c1] / p2) * 20) / 100) + (valor[c1] / p2):.2f} reais\n'
-
                   f'com 20% de juros!!')
-
         else:
-
             print(f'{paleta["vermelho"]}Seu pagamento não pode ser efetuado!! Tente novamente.')
-
 else:
-
     print(f'{paleta["vermelho"]}Seu pagamento não pode ser efetuado!! Tente novamente.{paleta["padrao"]}')

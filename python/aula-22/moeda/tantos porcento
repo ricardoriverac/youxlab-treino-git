@@ -1,0 +1,18 @@
+def moeda(valor, formato=False):
+    return f'R${valor:.2f}'.replace('.', ',') if formato else valor
+
+def metade(valor, formato=False):
+    resultado = valor / 2
+    return moeda(resultado, True) if formato else resultado
+
+def dobro(valor, formato=False):
+    resultado = valor * 2
+    return moeda(resultado, True) if formato else resultado
+
+def aumentar(valor, percentual, formato=False):
+    resultado = valor + (valor * percentual / 100)
+    return moeda(resultado, True) if formato else resultado
+
+def reduzir(valor, percentual, formato=False):
+    resultado = valor - (valor * percentual / 100)
+    return moeda(resultado, True) if formato else resultado

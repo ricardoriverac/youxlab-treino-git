@@ -1,0 +1,61 @@
+def metade(valor, formatar=False):
+    resultado = valor / 2
+    return moeda(resultado) if formatar else resultado
+
+def dobro(valor, formatar=False):
+    resultado = valor * 2
+    return moeda(resultado) if formatar else resultado
+
+def aumentar(valor, porcentagem, formatar=False):
+    resultado = valor + (valor * porcentagem / 100)
+    return moeda(resultado) if formatar else resultado
+
+def reduzir(valor, porcentagem, formatar=False):
+    resultado = valor - (valor * porcentagem / 100)
+    return moeda(resultado) if formatar else resultado
+
+def moeda(valor):
+    return f'R$ {valor:,.2f}'.replace(',', 'v').replace('.', ',').replace('v', '.')
+
+def menu_interativo():
+    print("=== CALCULADORA INTERATIVA ===")
+    try:
+        cotacao = float(input("Informe a cotação do dólar (ex: 5.25): "))
+        valor_dolar = float(input("Digite um valor em dólares: US$ "))
+        valor_reais = valor_dolar * cotacao
+    except ValueError:
+        print("Valor inválido! Por favor, insira um número.")
+        return
+
+    print(f"\nValor convertido: R$ {valor_reais:,.2f}".replace(',', 'v').replace('.', ',').replace('v', '.'))
+
+    print("\nO que deseja fazer?")
+    print("[1] Dobro")
+    print("[2] Metade")
+    print("[3] Aumentar valor")
+    print("[4] Reduzir valor")
+
+    escolha = input("Escolha uma opção: ")
+
+    formatar = input("Deseja formatar o valor como moeda? (s/n): ").lower() == 's'
+
+    if escolha == '1':
+        print("Dobro:", dobro(valor_reais, formatar))
+    elif escolha == '2':
+        print("Metade:", metade(valor_reais, formatar))
+    elif escolha == '3':
+        try:
+            porcentagem = float(input("Digite a porcentagem de aumento: "))
+            print("Aumentado:", aumentar(valor_reais, porcentagem, formatar))
+        except ValueError:
+            print("Porcentagem inválida!")
+    elif escolha == '4':
+        try:
+            porcentagem = float(input("Digite a porcentagem de redução: "))
+            print("Reduzido:", reduzir(valor_reais, porcentagem, formatar))
+        except ValueError:
+            print("Porcentagem inválida!")
+    else:
+        print("Opção inválida!")
+
+menu_interativo()

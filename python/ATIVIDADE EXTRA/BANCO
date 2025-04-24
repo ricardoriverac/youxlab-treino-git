@@ -1,0 +1,47 @@
+
+print("=== Bem-vindo ao Banco da Leleca ===")
+
+nome = input("Digite o nome do titular da conta: ")
+saldo = float(input("Digite o saldo inicial da conta: R$ "))
+limite_saque = float(input("Digite o limite de saque por operação: R$ "))
+
+while True:
+    print("\n=== Opções ===")
+    print("1 - Consultar saldo")
+    print("2 - Depositar valor")
+    print("3 - Sacar valor")
+    print("4 - Sair")
+
+    opcao = input("Escolha uma opção: ")
+
+    if opcao == "1":
+        print(f"\nSaldo atual de {nome}: R$ {saldo:.2f}")
+
+    elif opcao == "2":
+        valor_deposito = float(input("Digite o valor a depositar: R$ "))
+        if valor_deposito > 0:
+            saldo += valor_deposito
+            print(f"Depósito de R$ {valor_deposito:.2f} realizado com sucesso.")
+        else:
+            print("Valor inválido para depósito.")
+
+    elif opcao == "3":
+        valor_saque = float(input("Digite o valor a sacar: R$ "))
+        if valor_saque > limite_saque:
+            print(f"Erro: O valor excede o limite de saque por operação (R$ {limite_saque:.2f}).")
+        elif valor_saque > saldo:
+            print("Erro: Saldo insuficiente para realizar o saque.")
+        elif valor_saque <= 0:
+            print("Valor de saque deve ser maior que zero.")
+        else:
+            saldo -= valor_saque
+            print(f"Saque de R$ {valor_saque:.2f} realizado com sucesso.")
+
+    elif opcao == "4":
+        print(f"\nObrigado por usar o sistema bancário, {nome}. Até mais!")
+        break
+
+    else:
+        print("Opção inválida. Por favor, escolha uma opção do menu.")
+
+        
