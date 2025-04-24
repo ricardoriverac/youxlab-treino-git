@@ -59,29 +59,29 @@ if logar == 's':
                 print('Senha incorreta! Tente novamente.')
     sleep(3)
     print()
-    d.titulo('MENU')
-    print('''    [ 1 ] Consultar dados
+    while True:
+        d.titulo('MENU')
+        print('''    [ 1 ] Consultar dados
     [ 2 ] Trocar de conta
     [ 3 ] Sair
 ''')
-    opcao = int(input('Opção: '))
-    while True:
+        opcao = int(input('Opção: '))
         if opcao == 1:
             d.lin()
-            print(f'E-mail: {cadastro["gmail"]}')
-            print(f'Senha: {cadastro["senha"]}')
+            print(f''' Dados:
+E-mail: {cadastro["gmail"]}')
+Senha: {cadastro["senha"]}''')
             d.lin()
-        elif opcao == 2:
-            if len(cadastro['nome']) == 0:
-                while True:
-                    print(f'''    [ 1 ] Trocar conta
-    [ 2 ] Criar conta
-    [ 3 ] Sair
-    
-    Conta atual : {cadastro['nome'(0)]}                      
+        elif opcao == 2:   
+            while True:
+                print(f'''    [ 1 ] Trocar conta
+        [ 2 ] Criar conta
+        [ 3 ] Sair
+        
+        Conta atual : {cadastro['nome'[0]]}                      
 
 ''')   
-                    
+                        
         elif opcao == 3:
             print('Finalizando menu...')
             break
