@@ -1,7 +1,7 @@
 from colorama import init, Fore, Back, Style
 import time
 
-# Inicializa o colorama
+
 init(autoreset=True)
 
 def mostrar_titulo(msg, cor=Fore.WHITE):
