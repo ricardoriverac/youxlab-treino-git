@@ -1,0 +1,11 @@
+#TUPLAS COM TIME DE FUTEBOL
+print('TABELA DO CAMPEONATO BRASILEIRO')
+times= ("Atlético Mineiro", "Bahia", "Botafogo", "Ceará", "Corinthians", "Cruzeiro", "Flamengo", "Fluminense", "Fortaleza", "Grêmio", "Internacional", "Juventude", "Mirassol", "Palmeiras", "Red Bull Bragantino", "Santos", "Sport", "São Paulo", "Vitória", "Vasco da Gama")
+print('Quais os 5 primeiros colocados da tabela?')
+print(f'Os 5 primeiros colocados são: {times[0:5]}')
+print('Quais os 4 últimos colocados da tabela?')
+print(f'Os 4 últimos colocados são: {times[16:20]}')
+print('Os times em ordem alfabética')
+print(f'Em ordem alfabética: {sorted(times)}')
+print('O Flamengo está em que posição?')
+print(f'O time do Flamengo está na {times.index("Flamengo")+ 1}')

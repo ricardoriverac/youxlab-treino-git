@@ -1,3 +1,4 @@
+#NÚMEROS POR EXTENSO
 numeros=("zero","um", "dois", "três", "quatro", "cinco", "seis", "sete", "oito", "nove", "dez","onze",
         "doze","treze", "quatorze", "quinze","dezesseis", "dezessete", "dezoito", "dezenove", "vinte")
 escolha=int(input('Digite um n° de 1 à 20 para ser escrito por extenso:'))
