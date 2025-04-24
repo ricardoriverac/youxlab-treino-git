@@ -80,7 +80,7 @@ if logar == 's':
     
     Conta atual : {cadastro['nome'(0)]}                      
 
-''')
+''')   
                     
         elif opcao == 3:
             print('Finalizando menu...')
@@ -152,3 +152,4 @@ else:
 #             print(f'Senha: {k}')
 # else:
 #     print('Obrigado por se cadastrar no nosso site! Quando quiser você pode fazer o login para aproveitar nossos recursos.')
+# a
