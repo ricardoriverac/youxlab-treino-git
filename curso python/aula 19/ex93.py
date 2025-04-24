@@ -7,13 +7,20 @@ for c in range(partidas):
     totalGols.append(golsPartida)
 pessoa['gols'] = totalGols
 soma = sum(totalGols)
+pessoa['total gols'] = soma
 print ()
-print ('-=' * 4, f'\033[35mDADOS\033[m','-=' * 4 )
-print('\n' + '-'*40)
+print ('\033[35m-=\033[m' * 4, f'\033[35mDADOS\033[m','\033[35m-=\033[m' * 4 )
+print ()
+print (pessoa)
+print('\n' + '\033[35m-\033[m'*40)
+for campo, valor in pessoa.items():
+    print()
+    print(f'O campo {campo} tem o valor = {valor}') # pega a posição 0,0 depois 1,1 ....
+print('\n' + '\033[35m-\033[m'*40)
 print(f'Desempenho do(a) jogador(a): {pessoa["nome"]}')
-print('-'*40)
+print('\n' + '\033[35m-\033[m'*40)
 for i, gols in enumerate(pessoa['gols']):
     print(f' {i+1}ª partida: {gols} gol(s)')
-print('-'*40)
+print('\n' + '\033[35m-\033[m'*40)
 print(f' Soma total dos gols: {soma}')
-print('-'*40)
+print('\n' + '\033[35m-\033[m'*40)
