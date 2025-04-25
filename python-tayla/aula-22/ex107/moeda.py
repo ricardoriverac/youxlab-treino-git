@@ -1,9 +1,9 @@
 def aumentar(numero, x):
-    numero += (numero * (x/100))
+    numero += (numero * (x / 100))
     return numero
 
 def diminuir(numero, x):
-    numero -= (numero * (x/100))
+    numero -= (numero * (x / 100))
     return numero
 
 def metade(numero):
