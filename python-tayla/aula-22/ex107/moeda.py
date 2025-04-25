@@ -15,4 +15,4 @@ def dobro(numero):
     return numero
 
 def linha():
-    print('-=' * 15)
+    print('-='* 15)
