@@ -4,7 +4,7 @@ def contador(i, f, p):
     if p < 0:
         p *= -1
     if p == 0:
-        p - 1
+        p = 1
     print('-=-'*15)
     print(f'Contagem de {i} até {f} de {p} em {p}')
     sleep(0.5)
