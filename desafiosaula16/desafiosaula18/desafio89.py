@@ -30,7 +30,3 @@ while True:
         break
     else:
         print(f'Notas de {lista[notas][0]} são {lista[notas][1]} ')
-        
-        
-
-    

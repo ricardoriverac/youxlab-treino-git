@@ -27,8 +27,3 @@ for i, v in enumerate(jogador['gol']):
     print(f'   → Na partida {i}, fez {v} gols ')
     sleep(1)
 print(f'Foram um total de \033[1;36m{soma} GOLS!\033[m ')
-
-
-
-    
-
