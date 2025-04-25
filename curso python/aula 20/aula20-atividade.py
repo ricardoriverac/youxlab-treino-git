@@ -20,6 +20,6 @@ lin()'''''
     print('-' * 30)
     titulo(txt)
     print('-' * 30)
-titulo ('   CURSO EM VÍDEO  ')''''
+titulo ('   CURSO EM VÍDEO  ')'''
 
 
