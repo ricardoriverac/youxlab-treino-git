@@ -14,4 +14,4 @@ def linha():
     print('-=' * 15)
 
 def moeda(numero = 0, moeda = 'R$'):
-    return f'{moeda}{numero:.2f}'.replace('.', ',')
+    return f'{moeda}{numero:.2f}'.replace('.', ',') 
