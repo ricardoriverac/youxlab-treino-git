@@ -1,3 +1,4 @@
+#MENOR E MAIOR VALORES EM LISTA
 numeros=[]
 for contador in range(0,5):
     numeros.append(int(input('Digite um número: ')))
