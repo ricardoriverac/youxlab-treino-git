@@ -15,7 +15,7 @@ for i, n in enumerate(lista):
 
 while True:
     print('--'*40)
-    escolha = input('Você ver a nota de qual aluno? (digite "sair" para encerrar): ').strip().lower()
+    escolha = input('Você ver a nota de qual aluno? (digite "sair" para encerrar):').strip().lower()
     if escolha == 'sair':
         print('\nSistema encerrado!!')
         break
