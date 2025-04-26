@@ -1,4 +1,4 @@
-def moeda(preco=0, moeda='R$'):
+def moeda(preco=0, moeda='R$', format = False):
     return f'{moeda}{preco:.2f}'.replace('.', ',')
 
 def metade(preco=0, format = False):
