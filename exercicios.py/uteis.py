@@ -1,20 +1,18 @@
-def fatorial(n):
-    f=1
-    for c in range(1,n+1):
-        f*=c
-    return f
+def moeda(preco=0, moeda='R$'):
+    return f'{moeda}{preco:.2f}'.replace('.', ',')
 
-def dobro(n):
-    return n*2
+def metade(preco=0, format = False):
+    r = preco / 2
+    return r if format is False else moeda(r)
 
-def triplo(n):
-    return n*3
+def dobro(preco=0, format = False):
+    r= preco * 2
+    return r if format is False else moeda(r)
 
-def metade(n):
-    return n/2
-
-def maiorPreco(n):
-    return 110/100*n
-
-def menorPreco(n):
-   return 90/100*n
+def maiorPreco(preco=0, taxa=10, format = False):
+    r= preco + (preco * taxa / 100)
+    return r if format is False else moeda(r)
+    
+def menorPreco(preco=0, taxa=10, format= False):
+    r= preco - (preco * taxa / 100)
+    return r if format is False else moeda(r)
