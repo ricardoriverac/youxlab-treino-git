@@ -1,9 +1,7 @@
-#pratica 1
-def soma(a, b):
-    s = a + b
-    print(s)
-soma(4, 5)
-soma(8, 9)
-soma(2, 1)
 
-#pratica 2
+fatorial = 1
+
+for i in range(1, numero + 1):
+    fatorial *= i
+
+print(f'O fatorial de {numero} é: {fatorial}')
