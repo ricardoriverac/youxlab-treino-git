@@ -1,18 +1,19 @@
-def metade(n):
-    return n /2
+def moeda(n, formatar=True):
+        return f'R${n:.2f}'.replace('.', ',') if formatar else n
+    
+def metade(n, formatar=True):
+    res = n /2
+    return moeda(res, True) if formatar else res
 
-def dobro(n):
-    return n * 2
+def dobro(n, formatar=True):
+    res = n * 2
+    return moeda(res, True) if formatar else res
 
-def aumentar(preco, porcentagem):
-    aumento = preco * (porcentagem / 100)
-    novo_preco = preco + aumento
-    return novo_preco
+def aumentar(preco, porcentagem, formatar=True):
+    res = preco + (preco * porcentagem / 100)
+    return moeda(res, True) if formatar else res
 
-def diminuir(preco, porcentagem):
-    diminuicao = preco * (porcentagem / 100)
-    novo_precoS = preco - diminuicao
-    return novo_precoS
+def diminuir(preco, porcentagem, formatar=True):
+   res = preco - (preco * porcentagem / 100)
+   return moeda(res, True) if formatar else res
 
-def moeda(n):
-    return f'R${n:.2f}'
