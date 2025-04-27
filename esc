@@ -1,7 +1,0 @@
-Help on function notas in module __main__:
-
-nnoottaass(*n, sit=False)
-    -> Funçao para analisar notas e situações de vários alunos.
-    :param n: Uma ou várias notas dos alunos.
-    :param sit: (opcional) opção para ver a situção dos alunos
-    :return: Dicionário com informações da turma.
