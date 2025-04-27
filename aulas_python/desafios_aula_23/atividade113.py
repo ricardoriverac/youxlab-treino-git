@@ -21,5 +21,4 @@ def leiIntFlo():
     print('-'*20)
     print(f'Número iteiro {numero1} | Número real {numero2}')
     
-
 leiIntFlo()
