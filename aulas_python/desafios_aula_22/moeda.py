@@ -14,3 +14,5 @@ def diminuir(preco, porcentagem):
     novo_precoS = preco - diminuicao
     return novo_precoS
 
+def moeda(n):
+    return f'R${n:.2f}'
