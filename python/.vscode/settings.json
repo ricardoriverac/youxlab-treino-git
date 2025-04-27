@@ -1,6 +1,7 @@
 {
     "python.analysis.extraPaths": [
         "./modulos",
-        "./aula-22/desafio110.py"
+        "./aula-22/desafio110.py",
+        "./aula-22/desafio109.py"
     ]
 }
