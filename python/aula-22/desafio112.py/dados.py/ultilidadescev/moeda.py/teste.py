@@ -1,5 +1,3 @@
-from _init_ import moeda
-
-p = float(input('Digite um preço: R$ '))
+from ultilidadescev import dados, moeda
+p = dados.leiaDinheiro('Digite o preço: R$ ')
 moeda.resumo(p, 35, 22)
-z
