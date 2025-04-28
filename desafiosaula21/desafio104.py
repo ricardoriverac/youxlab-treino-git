@@ -1,31 +1,12 @@
 def leiaInt(msg):
-    while True:
-        try:
-            n = int(input(msg))
-        except (ValueError, TypeError):
-            print('\033[31mERRO! Por favor, digite um número inteiro!\033[m ')
-            continue
-        except (KeyboardInterrupt):
-            print('O usuário preferiu não digitar os dados! ')
-            return 0
+    valido = False
+    if not valido:
+        numero = input(msg)
+        if numero.isalpha():
+            print(f'\033[31mERRO! \"{numero}\" é um preço inválido!\033[m ')
         else:
-            return n
+            valido = True
+            return float(numero)
 
-def leiafloat (msg):
-    while True:
-        try:
-            n = float(input(msg))
-        except (ValueError, TypeError):
-            print('\033[31mERRO! Por favor, digite um número real!\033[m ')
-            continue
-        except (KeyboardInterrupt):
-            print('O usuário preferiu não digitar os dados! ')
-            return 0
-        else:
-            return n
-     
-numeroUm = leiaInt('Digite um número inteiro: ')
-numeroDois = leiafloat('Digite um número real: ')
-print(f'O número inteiro digitado foi {numeroUm} e o número real digitado foi {numeroDois}')
-
-    
+n = leiaInt('Digite um número: ')
+print(f'O valor digitado foi {n} ')
