@@ -35,6 +35,9 @@ except ZeroDivisionError:
 except KeyboardInterrupt:
     print('O usuário preferiu não informar os dados!')
 
+except Exception as erro:
+    print(f'O erro encontraddo foi {erro.__cause__}')
+
 else:
     print(f'O resultado é {r}')
 
