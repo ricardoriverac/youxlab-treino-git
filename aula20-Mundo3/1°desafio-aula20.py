@@ -1,3 +1,4 @@
+#CALCULANDO ÁREA COM FUNÇÃO
 print('    CONTROLE DE TERRENOS    ')
 def valores(largura, comprimento):
     area=largura*comprimento
