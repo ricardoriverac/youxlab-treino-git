@@ -10,19 +10,40 @@
     <h1>
         sigla utf-8? código multibyte
         <hr>
+        <input id="num1" type="number" placeholder="Digite um número">
+        <input id="num2" type="number" placeholder="Digite outro número">
+        <button type="button" onclick="somar()">clique aqui para somar </button>
+        <p id="resultado"></p>
+
         <img src="/home/youx/Imagens/gbra,6x6,1000x1000-c,0,0,675,900.jpg" alt="exemplo de foto">
         
     </h1>
 
 
-    <SCRipt>
+    <script>
+
+        const num1 = document.getElementById("num1")
+        const num2 = document.getElementById('num2')
+        const resultado = document.getElementById("resultado")
+
+        function somar(){
+            // console.log(Number(num1.value) + Number(num2.value))
+            // console.log(resultado)
+            resultado.innerText = `resultado: ${Number(num1.value) + Number(num2.value)}`
+        }
+
+
+
         // window.prompt('Digite seu nome: ')
         // num1 = window.prompt('Digite um numero:')
-        // num2 = window.prompt('Digite outro num')
+        // num2 = Number(window.prompt('Digite outro num'))
+
+
+        // console.log(typeof(num1))
         // soma = (num1 + num2)
         // console.log(`consolee>>>>>${soma}`);
 
 
-    </SCRipt>
+    </script>
 </body>
 </html>

@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+    <title>exercício 004</title>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <h1>
+        somador de números
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <hr>
+        <input id="num1" type="number" placeholder="Digite um número">
+        <input id="num2" type="number" placeholder="Digite outro número">
+        <button type="button" onclick="somar()">clique aqui para somar</button>
+        <p id="resultado"></p>
+        <hr>
+
+    </h1>
 </head>
 <body>
-    
+    <script>
+        function somar(){
+            const num1 = document.getElementById('num1')
+            const num2 = document.getElementById('num2')
+            const resultado = document.getElementById('resultado')
+            resultado.innerText `Resultado da soma é: ${Number(num1.value)} + ${Number(num2.value)}`
+
+        }
+
+    </script>
 </body>
 </html>
