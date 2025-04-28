@@ -6,3 +6,4 @@ while cont <= 10:
     print('{}'.format(termo))
     termo +=raz
     cont += 1
+print('fiiim')

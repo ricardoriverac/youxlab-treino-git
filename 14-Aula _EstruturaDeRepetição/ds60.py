@@ -14,5 +14,5 @@ while c  > 0:
     print(' x ' if  c >1  else '=', end = ' ')
     f *= c
     c -= 1
-sleep(2)    
+  
 print('{}'.format(f))    

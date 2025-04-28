@@ -29,7 +29,7 @@ def notas():
     for i, (nome, dados) in enumerate(ficha.items()):
         print(f'{i:<4}{nome:<10}{dados["media"]:>8.1f}')
 
-    # Estatísticas da turma
+   
     maior_nota = max(todas_as_notas)
     menor_nota = min(todas_as_notas)
     media_turma = sum(todas_as_notas) / len(todas_as_notas)

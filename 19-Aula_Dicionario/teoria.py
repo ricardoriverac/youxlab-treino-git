@@ -1,5 +1,6 @@
 pessoas={'Nome':'Gustavo','Sexo':'M', 'Idade': '17'}
-pessoas['Nome'] = 'VITORIA'
+pessoas['Nome'] = 'VITORIA'#alterar
+pessoas['Peso'] = 98.7#Adiconar
 print(f'O {pessoas["Nome"]} tem {pessoas["Idade"]} anos')
 print(pessoas.keys())
 print(pessoas.values())

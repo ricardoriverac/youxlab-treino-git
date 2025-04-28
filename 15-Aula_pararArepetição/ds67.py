@@ -5,7 +5,7 @@ while True:
     if n<0:
         break
     for c in range(1 , 10):
-        sleep(1000)
+        sleep(1)
         print(f'{n}x{c}={n*c}')
         sleep(1)
     print('~'*10)
