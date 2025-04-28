@@ -27,7 +27,7 @@ def metade(preco=0, formato=False):
         return res
 
 def moeda(preco=0, moeda='R$'):
-    return f'{moeda}{preco:>.2f}'.replace('.', ',')
+    return f'{moeda}{preco:>.2f}'.replace('.', ',') 
 
 def resumo(preco=0, aumento=10, reducao=5):
     print('\n' + '\033[35m-\033[m'*40)
