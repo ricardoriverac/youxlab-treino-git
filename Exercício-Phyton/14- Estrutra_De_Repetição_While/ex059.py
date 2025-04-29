@@ -2,7 +2,7 @@ numero= 0
 
 priNumero = int(input('Me diga um valor: '))
 
-segNumero = int(input('Me giga o segundo: '))
+segNumero = int(input('Me diga o segundo: '))
 
 while numero != 5:
 

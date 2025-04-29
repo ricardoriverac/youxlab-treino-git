@@ -1,6 +1,9 @@
 total_gasto = 0
+
 mais_de_1000 = 0
+
 produto_mais_barato = ''
+
 preco_mais_barato = None
 
 while True:
@@ -20,7 +23,6 @@ while True:
     if continuar == 'N':
         break
 
-print("\n===== RESUMO DA COMPRA =====")
 print(f"Total gasto: R$ {total_gasto:.2f}")
 print(f"Produtos que custam mais de R$1000: {mais_de_1000}")
 print(f"Produto mais barato: {produto_mais_barato} (R$ {preco_mais_barato:.2f})")

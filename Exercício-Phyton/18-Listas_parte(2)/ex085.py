@@ -1,18 +1,11 @@
-numero = list()
+valores = [[], []]
 
-for n in range(0, 7):
-    numero.append(float(input('Digite um númuro')))
+for c in range(0, 7):
+    numero = int(input('Digite um valor: '))
 
-if list % 2 == 0:
-   print(f'Esses números são pares: ')
-else:
-    print(f'Esses são números ímpares')
+    if numero % 2 == 0:
+        valores[0].append(numero)
+    else:
+        valores[1].append(numero)
 
-
-# while n != 0:
-#     n = int(input('Digite um valor: '))    
-#     if  2 == 0:
-#         par = +1
-#     else:  
-#         impar += +1
-# print(f'Vo ce digitou {par} números pares e {impar} numeros impares!')
+print(f'Os valores pares são {sorted(valores[0])} e os ímpares são {sorted(valores[1])}')

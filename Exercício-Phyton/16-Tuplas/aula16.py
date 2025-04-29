@@ -20,8 +20,9 @@
 #-se colocar uma tupla c e somar a e b, junta elas 
 #-len conta quantos elementos tem dentro de uma tupla
 #-count conta quantos números que eu digitar tem na tupla
-a = (2, 5, 4)
-b = (5, 8, 1, 2)   
-c = a + b
-print(c)
-print(c.index(8))
+#-index conta em qual casa está localizado algum número
+# a = (2, 5, 4)
+# b = (5, 8, 1, 2)   
+# c = a + b
+# print(c)
+# print(c.index(8))

@@ -12,7 +12,7 @@ while n != 999:
     count += 1 
 
 soma -= 999
-count -=999
+
 print(f'{count} a soma de todos esses números é {soma}')
 print(f'Foram digitados {count} números.')
 

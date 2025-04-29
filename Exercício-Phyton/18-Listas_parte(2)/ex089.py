@@ -16,13 +16,13 @@ def boletim_escolar():
         media = soma / 2
         alunos.append(media)
         continuar = str(input("Quer continuar? S/N: ")).upper()
-        
+
         if continuar == "S":
             continue
         else:
             for aluno in alunos:
                 print(aluno)
             break
-    print(f'A Média desses alunos é {media}')
+    print(f'A Média dos lunos é {media}')
 
 boletim_escolar()
