@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vídeo em HTML 5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospeadados localmente </h1>
+    <p>Estou colocando vídeos hospeadados no meu site </p>
+    <video src="midia/meu-video.m4v" poster="imagem/limoes-capa.png" width="400" controls></video>
+    <!--Videos em varios outros navegadores-->
+    <video poster="imagem/limoes-capa.png" width="300" controls>
+        <source src="midia/meu-video.mp4" type="video/mp4">
+        <source src="midia/meu-video.m4v" type="video/m4v">
+        <source src="midia/meu-video.ogv" type="video/ogv">
+        <source src="midia/meu-video.webm" type="video/webm">
+        <p>Infelizemente seu navegador não teve condições de rodar esse video <a href="midia/meu-video.mp4">clique aqui para baixar o vídeo</a></p>
+    </video>
+    <h1>Inserindo vídeos do Youtube</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4ecATYbMeNk?si=LvCvVMa37oo170J1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h1>Inserindo vídeos do vimeo</h1>
+    <iframe src="https://player.vimeo.com/video/308172478?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="560" height="235" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"></iframe>
+</body>
+</body>
+</html>

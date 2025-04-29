@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispotivos diferentes ou simplesmente auumente e diminua o tamanho do seu navegador</p>
+    <picture>
+        <source media="(max-width: 730px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1030px)" srcset="imagens/foto-m.png" type="image/png">
+        <!--Arruma a largura da imagem no site exemplo se passar de 1030 de largura muda para imagem media. signifca que se passar da largura destinada muda de imagem com o srcset. tem que ser em ordem -->
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Reproduzindo áudios em HTML</p>
+    <audio src="media/happy_mistake_.mp3" controls></audio>
+    <audio preload="metadata" autoplay controls loop>
+        <source src="media/guanacast-33.mp3" type="audio/mpeg">
+        <source src="media/guanacast-33.ogg" type="audio/ogg">
+        <source src="media/guanacast-33.wav" type="audio/wav">
+        <p>Infelizemente seu site não foi capaz de suportar o áudio  <a href="media/guanacast-33.mp3">Clique aqui para baixar o áudio</a></p>
+    </audio>
+    <!--Podem conter varios tipos de downloads de audio como o OGG E WAV-->
+
+</body>
+</html>
