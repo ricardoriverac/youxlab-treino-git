@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citações e Códigos</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+
+        h1{
+            text-align: center;
+            font-size: 30px;
+        }
+        h2{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Citações e Códigos</h1>
+    <h2>Outras formatações</h2>
+<pre>
+    <code>def eh_primo(numero):
+        if numero < 2:
+            return False
+        for i in range(2, int(numero**0.5) + 1):
+            if numero % i == 0:
+                return False
+        return True
+    
+    # Testando a função
+    for n in range(1, 21):
+        if eh_primo(n):
+            print
+    </code>
+</pre>
+<h2>Citações Simples</h2>
+<p>O computador é um <q>Burro muito rapido</q>, esse comando adiciona aspas, <q>q</q></p>
+<h2>Citações completas</h2>
+<p>Segundo um cara ai desconhecido</p>
+<blockquote cite="blablablabla">
+    A diferança de um negocio ai é meio pá taligado, É isso mesmo RED DEAD 2
+    MElhor jogo do universo, bla bla bla
+</blockquote>
+<h2>Abreviações</h2>
+<p>Estou Reaprendendo <abbr title="HyperText Markup">HTML</abbr> e <abbr title="Cascading style ">CSS</abbr></p>
+<h2>Texto invertido</h2>
+<p><bdo dir="rtl">Texto invertido</bdo></p>
+    
+</body>
+</html>
