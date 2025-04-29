@@ -1,8 +1,20 @@
 frase = str(input('Digite uma frase: '))
-inverso = frase[::-1]
-espaco = inverso.replace(' ','')
-espacoFrase = frase.replace(' ','')
-if espaco == espacoFrase:
+junto = frase.replace(' ','')
+inverso = ''
+for letra in range(len(junto)-1, -1, -1):
+    inverso += junto[letra]
+if junto == inverso:
     print ('Esta frase é um palíndromo! ')
 else:
     print ('Esta frase não é um palíndromo. ')
+
+# frase = str(input('Digite uma frase: '))
+# palavras = frase.split()
+# junto = ''.join(palavras)
+# inverso = ''
+# for letra in range(len(junto)-1, -1, -1):
+#     inverso += junto[letra]
+# if inverso == junto:
+#     print ('Esta frase é um palíndromo! ')
+# else:
+#     print ('Esta frase não é um palíndromo! ')
