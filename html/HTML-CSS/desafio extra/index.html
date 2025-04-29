@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabela com Inputs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    input, button {
+      margin: 5px;
+      padding: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Adicionar Pessoa à Tabela</h2>
+
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" placeholder="Digite o nome">
+
+  <label for="idade">Idade:</label>
+  <input type="number" id="idade" placeholder="Digite a idade">
+
+  <label for="ano">Ano de Nascimento:</label>
+  <input type="number" id="ano" placeholder="Digite o ano">
+
+  <button onclick="adicionarLinha()">Adicionar</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Ano de Nascimento</th>
+      </tr>
+    </thead>
+    <tbody id="tabela-corpo">
+      <!-- Linhas adicionadas aqui -->
+    </tbody>
+  </table>
+
+  <script>
+    function adicionarLinha() {
+      const nome = document.getElementById('nome').value;
+      const idade = document.getElementById('idade').value;
+      const ano = document.getElementById('ano').value;
+
+      if (nome === "" || idade === "" || ano === "") {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      const tabela = document.getElementById('tabela-corpo');
+      const novaLinha = document.createElement('tr');
+
+      novaLinha.innerHTML = `
+        <td>${nome}</td>
+        <td>${idade}</td>
+        <td>${ano}</td>
+      `;
+
+      tabela.appendChild(novaLinha);
+
+      // Limpa os inputs
+      document.getElementById('nome').value = "";
+      document.getElementById('idade').value = "";
+      document.getElementById('ano').value = "";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Ricardin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Desafio Da tabela de jogo</h1>
+    <h2>Adicionar Personagens</h2>
+    <label for="personagem">Nome do personagem:</label>
+    <input type="text" id="personagem">
+    <label for="jogo">jogo:</label>
+    <input type="text" id="jogo">
+    <label for="plataforma">plataforma:</label>
+    <input type="text" id="plataforma">
+    <button onclick="adicionarLinha()">
+        Adicionar personagem
+    </button>
+    <table>
+        <thead>
+             <tr>
+            <th>
+                Personagem
+            </th>
+            <th>
+                Jogo
+            </th>
+            <th>
+                Plataforma
+            </th>
+        </tr>
+        </thead>
+       <tbody id="corpo-da-tabela"></tbody>
+    </table>
+    <script>
+        function adicionarLinha () {
+        const nome = document.getElementById('personagem').value;
+        const jogo = document.getElementById('jogo').value;
+        const plataforma = document.getElementById('plataforma').value;
+        if (nome === "" || jogo === "" ||plataforma === "") {
+            alert('Por favor preencha os campos destinados')
+            return;
+        }
+        const tabela = document.getElementById("corpo-da-tabela")
+        const novaLinha = document.createElement('tr')
+        novaLinha.innerHTML = `
+            <td>${nome}</td>
+            <td>${jogo}</td>
+            <td>${plataforma}</td>
+        `;
+        tabela.appendChild(novaLinha);
+        document.getElementById(nome).value = '';
+        document.getElementById(jogo).value = '';
+        document.getElementsById(plataforma) = '';
+    }
+    </script>
+</body>
+</html>
