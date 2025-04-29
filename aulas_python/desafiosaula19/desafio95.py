@@ -89,6 +89,5 @@ while True:
         print(f'MOSTRANDO DADOS DO JOGADOR \033[35m{time[dados]["nome"]}\033[m...')
         for i, g in enumerate(time[dados]["gols"]):
             print(f'   → Na partida {i+1}, fez {g} gols ')
-            print(f'Foram um total de \033[1;36m{total[dados]} GOLS!\033[m ')
     print('-'*40)
 print('\033[35mVOLTE SEMPRE!\033[m ')

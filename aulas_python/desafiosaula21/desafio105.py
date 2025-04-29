@@ -20,6 +20,7 @@ def notas(* n, sit = False):
     return dic
         
 resposta = notas(4.5, 8.5, 9.0, 10.0, 5.3, sit=True)
-# print(resposta)
-help(notas)
+print(resposta)
+# help(notas)
+
 

@@ -24,3 +24,4 @@ if ParImpar(numero):
     print('É par ')
 else:
     print('É ímpar ')
+    

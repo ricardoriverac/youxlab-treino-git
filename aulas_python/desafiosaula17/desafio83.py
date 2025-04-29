@@ -14,4 +14,3 @@ if len(pilha) == 0:
     print('Sua expressão está \033[36mCORRETA!\033[m ')
 else:
     print('Sua expressão está \033[31mERRADA!\033[m ')
-
