@@ -1,0 +1,181 @@
+<!-- Resumo sobre Input, Select e Button -->
+<!-- Feito pelo chatgpt -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo: Input, Select e Button</title>
+  
+  <style>
+    /* Estilo geral */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #5a2d82;
+      text-align: center;
+    }
+
+    h2 {
+      color: #4CAF50;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    ul {
+      margin: 10px 0;
+    }
+
+    li {
+      margin: 5px 0;
+    }
+
+    code {
+      background-color: #f2f2f2;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    pre {
+      background-color: #f5f5f5;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      overflow-x: auto;
+    }
+
+    pre code {
+      font-size: 1em;
+    }
+
+    /* Estilo para o Select */
+    select {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1em;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    option {
+      padding: 10px;
+    }
+
+    /* Estilo para o Input */
+    input {
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      font-size: 1em;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 10px;
+    }
+
+    /* Estilo para os Botões */
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Resumo sobre <code>&lt;input&gt;</code>, <code>&lt;select&gt;</code> e <code>&lt;button&gt;</code></h1>
+
+  <h2>1. <code>&lt;input&gt;</code></h2>
+  <p>O <code>&lt;input&gt;</code> é usado para criar campos de entrada de dados no HTML. Ele pode ter vários tipos (tipos de input) para capturar diferentes tipos de dados.</p>
+  
+  <h3>Tipos mais comuns:</h3>
+  <ul>
+    <li><code>type="text"</code> - Entrada de texto simples.</li>
+    <li><code>type="password"</code> - Entrada de senha (oculta).</li>
+    <li><code>type="email"</code> - Entrada para e-mail, com validação.</li>
+    <li><code>type="date"</code> - Entrada para selecionar uma data.</li>
+    <li><code>type="number"</code> - Entrada para números apenas.</li>
+    <li><code>type="checkbox"</code> - Caixa de seleção (checkbox).</li>
+    <li><code>type="radio"</code> - Botões de opção (radio).</li>
+  </ul>
+  
+  <h3>Exemplo:</h3>
+  <pre>
+    <code>
+      &lt;input type="text" name="nome" placeholder="Digite seu nome"&gt;
+      &lt;input type="password" name="senha"&gt;
+    </code>
+  </pre>
+
+  <h2>2. <code>&lt;select&gt;</code></h2>
+  <p>O <code>&lt;select&gt;</code> cria uma lista suspensa (dropdown) onde o usuário pode escolher uma opção. Dentro de <code>&lt;select&gt;</code>, você usa a tag <code>&lt;option&gt;</code> para definir as opções disponíveis.</p>
+
+  <h3>Atributos importantes:</h3>
+  <ul>
+    <li><code>name</code> - Nome da variável que será enviada no formulário.</li>
+    <li><code>id</code> - Identificador único do elemento (para CSS/JS).</li>
+    <li><code>multiple</code> - Permite selecionar múltiplas opções.</li>
+  </ul>
+
+  <h3>Exemplo:</h3>
+  <pre>
+    <code>
+      &lt;select name="cor" id="cores"&gt;
+        &lt;option value="vermelho"&gt;Vermelho&lt;/option&gt;
+        &lt;option value="azul"&gt;Azul&lt;/option&gt;
+        &lt;option value="verde"&gt;Verde&lt;/option&gt;
+      &lt;/select&gt;
+    </code>
+  </pre>
+
+  <h2>3. <code>&lt;button&gt;</code></h2>
+  <p>O <code>&lt;button&gt;</code> cria um botão clicável. Pode ser usado para enviar formulários, acionar funções JavaScript ou realizar outras ações.</p>
+  
+  <h3>Atributos importantes:</h3>
+  <ul>
+    <li><code>type</code> - Define o tipo do botão (ex: <code>submit</code>, <code>reset</code>, <code>button</code>).</li>
+    <li><code>onclick</code> - Define uma função JavaScript a ser executada ao clicar no botão.</li>
+  </ul>
+
+  <h3>Exemplo:</h3>
+  <pre>
+    <code>
+      &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+      &lt;button type="button" onclick="alert('Cliquei no botão!')"&gt;Clique aqui&lt;/button&gt;
+    </code>
+  </pre>
+
+</body>
+</html>

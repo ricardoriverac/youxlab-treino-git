@@ -1,0 +1,62 @@
+<!--Desafio Prático: Formulário de Contato Personalizado
+Objetivo:
+Criar uma página com um formulário de contato completo, utilizando
+HTML para a estrutura e CSS básico para estilização. O formulário deve ser
+visualmente organizado e conter campos com rótulos (labels),
+placeholders e botão de envio estilizado.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de contato</title>
+</head>
+<body>
+    <header>
+       <h1>Formulário de contato</h1>
+       <p>Esté e um formulario para contato, preencha com todas informações abaixo:</p>
+    </header>
+    <main>
+        <!--Introdução-->
+        <!-- <section>
+        </section> -->
+        <!--Formulario-->
+        <section>
+            <div>
+                <form>
+                    <h1>Fale com o suporte</h1>
+
+                    <label for="nome">Nome completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx">
+
+                    <label for="assunto">Assunto:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="">Selecione</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="orcamento">Orçamento</option>
+                        <option value="outro">Outro</option>
+                    </select>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                    
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
