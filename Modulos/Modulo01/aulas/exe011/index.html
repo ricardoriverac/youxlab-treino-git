@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumenta ou diminua o tamanho da janela do navegador.</p>
+    <picture>
+        <source media="(max-width: 750px)" srcset="Imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="Imagens/foto-m.png" type="image/png">
+        <img src="Imagens/foto-g.png" alt="Imagem flexivel G">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5.</p>
+    <!-- <audio src="midia/BackToBlackSlowedEReverb.mp3" controls autoplay></audio>
+    MP3, WAV, OGG -->
+
+    <audio preload="metadata" controls>
+        <source src="midia/BackToBlackSlowedEReverb.mp3" type="audio/mpeg">
+        <source src="midia/BackToBlackSlowedEReverb.ogg" type="audio/ogg">
+        <source src="midia/BackToBlackSlowedEReverb.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir audio. <a href="midia/BackToBlackSlowedEReverb.mp3">Clique aqui para baixar o arquivo .mp3</a></p>
+    </audio>
+     
+</body>
+</html>
