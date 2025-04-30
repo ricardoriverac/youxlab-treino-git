@@ -53,4 +53,4 @@ while True:
             print(l)
         list.append(f" Saldo Atualizado: {saldoatualizado}")
     else:
-        print ("\033[34mOpção inválida, digite novamente!\033[m")
+        print ("\033[34mOpção inválida, digite novamente!\033[m")  

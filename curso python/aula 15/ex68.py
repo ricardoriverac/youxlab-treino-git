@@ -1,7 +1,7 @@
 from random import randint
-print ("\t_=_" * 20)
+print ("\t===" * 20)
 print ("VAMOS JOGAR PAR OU ÍMPAR... ")
-print ("\t_=_" * 20)
+print ("\t===" * 20)
 contadorAcertos = 0
 while True:
     computador = randint (0,10)

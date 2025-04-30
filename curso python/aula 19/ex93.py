@@ -21,6 +21,6 @@ print(f'Desempenho do(a) jogador(a): {pessoa["nome"]}')
 print('\n' + '\033[35m-\033[m'*40)
 for i, gols in enumerate(pessoa['gols']):
     print(f' {i+1}ª partida: {gols} gol(s)')
-print('\n' + '\033[35m-\033[m'*40)
+print('\n' + '\033[36m-\033[m'*40)
 print(f' Soma total dos gols: {soma}')
 print('\n' + '\033[35m-\033[m'*40)
