@@ -1,10 +1,17 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: "Japonesa";
+    src: url("fontes/Sakitu\ Baelah.otf") format(truetype);
+    font-weight: normal;
+    font-style: normal;
+}
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 body {
     background-image: linear-gradient(to right, #7345d6 , #2e2e2e );
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 main{
     background-color: white;
@@ -18,6 +25,7 @@ h1{
     color: #bfab93;
     text-align: center;
     text-shadow: 10px 10px 5px rgba(137, 43, 226, 0.512);
+    font-family: "Japonesa";
 }
 h2 {
     color: #6743a5;
