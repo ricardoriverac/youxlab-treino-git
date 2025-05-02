@@ -1,0 +1,5 @@
+body { font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding: 20px; } 
+header { background-color: #c4d4c5; color: rgb(155, 148, 148); padding: 20px; }
+ h1 { font-size: 2em; } .image-container { display: flex; justify-content: center; align-items: center; margin: 20px 0; } 
+ img { max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); } 
+ footer { margin-top: 40px; font-size: 0.9em; color: #777; }
