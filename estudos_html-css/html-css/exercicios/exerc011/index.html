@@ -6,13 +6,24 @@
     <title>Mídias em HTML</title>
 </head>
 <body>
-    <h1 style = "background-color: rgb(212, 212, 212);"><em>IMAGENS DINÂMICAS</em></h1>
+    <h1 style = "background-color: rgb(194, 126, 126);"><em>IMAGENS DINÂMICAS</em></h1>
     <h3>Tente abrir esse site em vários dispositivos diferentes ou diminue e aumente o tamanho do seu navegador</h3>
     <picture>
         <source media="(max-width: 750px)" srcset="imagens/imagemPequena.png" type="image/png">
         <source media="(max-width: 1050px )" srcset="imagens/imagemMedia.png" type="image/png">
         <img src="imagens/imagemGrande.png" alt="Imagem flexível">
     </picture>
+
+    <h1 style = "background-color: rgb(194, 126, 126);"><em>REPRODUZINDO AÚDIOS</em></h1>
+    <p>Vamos aprender a reproduzir aúdios</p>
+    <audio src="midias/Yeah, yeah Ana Clara e Iza 1 (1).mp3" controls autoplay></audio>
+    <br>
+    <audio preload="metadata" autoplay controls>
+        <source src="midias/Yeah, yeah Ana Clara e Iza(1).mp3" type="audio/mpeg">
+        <source src="midias/Yeah, yeah Ana Clara e Iza(1).mp3" type="audio/ogg">
+        <source src="midias/Yeah, yeah Ana Clara e Iza(1).mp3" type="audio/wav">
+        <p>Infelizmente seu navegador não permite a reprodução do aúdio. <a href="midias/Yeah, yeah Ana Clara e Iza(1).mp3">Clique aqui para baixar.</a></p>
+    </audio>
     
 </body>
 </html>
