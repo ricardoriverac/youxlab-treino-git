@@ -8,8 +8,11 @@
 #        print(f'{valor} ', end='')
 #contador( 5,4,2 )
     
-def contador (* num):
-    tam= len(num)
-    print(f'Recebi os valores {num} e são ao todo {tam} números.')
+#def contador (* num):
+#    tam= len(num)
+#    print(f'Recebi os valores {num} e são ao todo {tam} números.')
 
-contador(1, 2, 7, 9, 10)
+#contador(1, 2, 7, 9, 10)
+
+def mostraLinha():
+    print('-------------------------')
