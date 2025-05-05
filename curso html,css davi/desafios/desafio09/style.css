@@ -1,0 +1,35 @@
+body {
+    background-color: rgb(33, 33, 33);
+}
+
+div {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+code {
+    text-align: center;
+    color: white;
+}
+
+a {
+    color: rgba(0, 0, 255, 0); /* Cor invisivel para nao marcar nas imagens dos botoes */
+}
+
+p {
+    color: white;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
