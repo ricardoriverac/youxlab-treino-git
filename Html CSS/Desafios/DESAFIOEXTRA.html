@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela do Brasileiro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #3f51b5;
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+
+        header h2 {
+            text-align: center;
+            margin: 40px 0 20px;
+            color: #3f51b5;
+        }
+
+        .form-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .input-group p {
+            margin-bottom: 8px;
+            font-size: 18px;
+            color: #444;
+        }
+
+        .input-group input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+
+        table {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        thead {
+            background-color: #3f51b5;
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #3f3d56;
+            color: white;
+            padding: 10px;
+            margin-top: 60px;
+            border-radius: 10px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <h1 id="titulo">Tabela do Brasileiro</h1>
+
+    <div class="form-container">
+        <div class="input-group">
+            <p>Nome da Lenda</p>
+            <input type="text" id="nome-lenda" name="nome-lenda" placeholder="Digite o nome do jogador">
+        </div>
+        <div class="input-group">
+            <p>Nome do Clube</p>
+            <input type="text" id="nome-clube" name="nome-clube" placeholder="Digite o nome do clube">
+        </div>
+    </div>
+
+    <header>
+        <h2>Tabela</h2>
+    </header>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Clube</th>
+                <th>Jogador Favorito</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cruzeiro</td>
+                <td>Kaio Jorge</td>
+            </tr>
+            <tr>
+                <td>Flamengo</td>
+                <td>Pedro</td>
+            </tr>
+            <tr>
+                <td>São Paulo</td>
+                <td>Rafael</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>Todos os direitos reservados YouX</p>
+    </footer>
+</body>
+</html>
