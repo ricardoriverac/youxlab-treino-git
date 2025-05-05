@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brasileirão Série A</title>
+  <style>
+    /* Estilo geral */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #26af4f, #264b2e);
+      color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #e5eceb;
+    }
+
+    form {
+      background-color: #000000;
+      padding: 20px;
+      max-width: 500px;
+      margin: 20px auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(12, 218, 74, 0.4);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 16px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #bb0f9e;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #00bfa6;
+    }
+
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background-color: #2b9bcf;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #000000;
+    }
+
+    th {
+      background-color: #eceeee;
+      color: #000000;
+    }
+
+    tr:hover {
+      background-color: #0de20d;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Brasileirão Série A</h1>
+
+  <form id="form-colocacao">
+    <label for="nome-time">Nome do time:</label>
+    <input type="text" id="nome-time" required />
+
+    <label for="jogador-favorito">Jogador favorito:</label>
+    <input type="text" id="jogador-favorito" required />
+
+    <button type="submit">Adicionar à colocação</button>
+  </form>
+
+  <h2>Tabela de Times</h2>
+  <table id="tabela-times">
+    <thead>
+      <tr>
+        <th>Time</th>
+        <th>Jogador Favorito</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cruzeiro</td>
+        <td>Gabigol</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    document.getElementById('form-colocacao').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const nomeTime = document.getElementById('nome-time').value.trim();
+      const jogador = document.getElementById('jogador-favorito').value.trim();
+
+      if (nomeTime && jogador) {
+        const tabela = document.querySelector('#tabela-times tbody');
+        const novaLinha = tabela.insertRow();
+
+        const celulaTime = novaLinha.insertCell(0);
+        const celulaJogador = novaLinha.insertCell(1);
+
+        celulaTime.textContent = nomeTime;
+        celulaJogador.textContent = jogador;
+
+        e.target.reset();
+      } else {
+        alert('Preencha todos os campos!');
+      }
+    });
+  </script>
+</body>
+</html>
