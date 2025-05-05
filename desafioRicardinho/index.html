@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELA DE ANIMES</title>
+    
+</head>
+
+<body>
+
+    <h1 style="background-color: crimson; color: #ffffff;" class="center"><strong>TABELA COM ANIMES</strong></h1>
+    <div class = "center corVermelha">
+        <div class="inputDiv">
+            <label for="anime"><strong>Nome do anime:</strong></label> 
+            <input type="text" id = "anime"> 
+        </div>
+        <div class="inputDiv">
+            <label for = "nome"><strong>Nome do personagem favorito: </strong></label>  
+            <input type="text" id="nome"> 
+        </div>
+    </div>
+    <div class="botaoDiv center" >
+        <button style = "background-color: crimson; color: #f3f3f3;">ADICIONAR</button>
+    </div>
+    
+    </div>
+    <br>
+    <div class="center">
+
+        <table>
+            <tr>
+                <th>NOME DO ANIME</th>
+                <th>NOME DO PERSONAGEM FAVORITO</th>
+            </tr>
+            <tr>
+                <td>Kimetsu no yaiba</td>
+                <td>Tangiro Kamado</td>
+            </tr>
+            <tr>
+                <td>Dragon Ball</td>
+                <td>Goku</td>
+            </tr>
+            <tr>
+                <td>Boku no hero</td>
+                <td>Shoto Todoroki</td>
+            </tr>
+
+        </table>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnAdicionar = document.querySelector('button');
+            const tabela = document.querySelector('table');
+            
+            btnAdicionar.addEventListener('click', function () {
+                const anime = document.getElementById('anime').value.trim();
+                const nome = document.getElementById('nome').value.trim();
+    
+                if (anime === '' || nome === '') {
+                    alert('Preencha os dois campos antes de adicionar!');
+                    return;
+                }
+                const novaLinha = document.createElement('tr');
+                const tdAnime = document.createElement('td');
+                tdAnime.textContent = anime;
+    
+                const tdNome = document.createElement('td');
+                tdNome.textContent = nome;
+                novaLinha.appendChild(tdAnime);
+                novaLinha.appendChild(tdNome);
+                tabela.appendChild(novaLinha);
+
+                document.getElementById('anime').value = '';
+                document.getElementById('nome').value = '';
+            });
+        });
+    </script>
+    
+</body>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    th {
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #ccc;
+    }
+    td {
+        color: rgb(111, 90, 90);
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #ccc;
+    }
+    label {
+        font-family: Arial, Helvetica, sans-serif;
+        
+    }
+    table {
+        color: crimson;
+        width: 90%;
+        justify-content: center;
+        justify-items: center;
+        border-collapse: collapse;
+    }
+    input {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        border-radius: 10%;
+        padding: 10px;
+        font-size: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+        border: 1px solid #ccc
+    }
+    
+    .corVermelha{
+        color: crimson;
+    }
+    .center {
+        display: flex;
+        align-items: center ;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    .inputDiv {
+        display: flex;
+        flex-direction: column;
+        padding-right: 40px;
+    }
+    .botaoDiv{
+        margin-top: 20px;;
+    }
+    
+</style>
+
+</html>

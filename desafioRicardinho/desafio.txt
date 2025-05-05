@@ -1,0 +1,1 @@
+você vai criar uma tabela interativa de "melhores animes". Nessa tela vai ter uma tabela com as seguintes colunas: "Nome do anime" e "Personagem favorito". Além dessa tabela, vão ter 2 campos de Input e um botão de "adicionar". Quando o botão "adicionar" for pressionado, os valores que estiverem nos campos de Input devem ir para a tabela.

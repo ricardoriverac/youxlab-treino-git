@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site de Animes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      background-color: crimson;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: darkred;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+    }
+
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    th {
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Tabela de Animes</h1>
+
+  <div class="container">
+    <label for="anime">Nome do anime:</label>
+    <input type="text" id="anime">
+
+    <label for="personagem">Personagem favorito:</label>
+    <input type="text" id="personagem">
+
+    <button onclick="adicionarNaTabela()">Adicionar à Tabela</button>
+
+    <table id="tabelaAnimes">
+      <tr>
+        <th>Anime</th>
+        <th>Personagem</th>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    function adicionarNaTabela() {
+      const anime = document.getElementById("anime").value.trim();
+      const personagem = document.getElementById("personagem").value.trim();
+
+      if (!anime || !personagem) {
+        alert("Preencha os dois campos.");
+        return;
+      }
+
+      const tabela = document.getElementById("tabelaAnimes");
+      const novaLinha = tabela.insertRow();
+
+      const celAnime = novaLinha.insertCell(0);
+      const celPerso = novaLinha.insertCell(1);
+
+      celAnime.textContent = anime;
+      celPerso.textContent = personagem;
+
+      document.getElementById("anime").value = "";
+      document.getElementById("personagem").value = "";
+    }
+  </script>
+
+</body>
+</html>
