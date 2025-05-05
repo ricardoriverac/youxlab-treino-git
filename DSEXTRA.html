@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="HTML/html.icon" type="image/x-icon">
+  <title>Tabela De Jogadores</title>
+  <style>
+    /* Centraliza tudo na tela */
+    body {
+      display: flex;
+      justify-content: center; 
+      align-items: center;     
+      height: 100vh; /* altura total da tela */
+      margin: 0;
+      background-color: #f3f3f3;
+    }
+
+    /* Container que envolve os inputs, botão e a tabela */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px; /* espaço entre os elementos */
+      width: 100%;
+      max-width: 600px; /* Limita a largura */
+    }
+
+    /* Estilo dos campos de input */
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 300px; /* Limita o tamanho máximo dos inputs */
+      margin: 5px 0;
+    }
+
+    /* Estilo do botão */
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px; /* Limita o tamanho máximo do botão */
+      margin: 5px 0;
+    }
+
+    /* Estilo da tabela */
+    table {
+      margin-top: 20px;
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+      max-width: 600px; /* Limita a largura da tabela */
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    th {
+      background-color: #571670;
+      color: white;
+    }
+
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .actions button {
+      padding: 5px 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogador">
+    <input type="text" id="time" name="time" placeholder="Digite o time do jogador">
+    <button onclick="adicionarJogador()">Adicionar na tabela</button>
+  </div>
+
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Time</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Linhas serão adicionadas aqui -->
+    </tbody>
+  </table>
+
+  <script>
+    function adicionarJogador() {
+      const nome = document.getElementById('nome').value;
+      const time = document.getElementById('time').value;
+
+      if (nome && time) {
+        const tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
+        
+        // Cria uma nova linha
+        const novaLinha = tabela.insertRow();
+
+        // Cria as células para o nome, time e ações
+        const celulaNome = novaLinha.insertCell(0);
+        const celulaTime = novaLinha.insertCell(1);
+        const celulaAcoes = novaLinha.insertCell(2);
+
+        // Preenche as células com os valores
+        celulaNome.textContent = nome;
+        celulaTime.textContent = time;
+
+        // Cria os botões de Ações (apagar e substituir)
+        const acoes = document.createElement('div');
+        acoes.classList.add('actions');
+        
+        const btnApagar = document.createElement('button');
+        btnApagar.textContent = 'Apagar';
+        btnApagar.onclick = function() {
+          tabela.deleteRow(novaLinha.rowIndex - 1);
+        };
+        
+        const btnSubstituir = document.createElement('button');
+        btnSubstituir.textContent = 'Substituir';
+        btnSubstituir.onclick = function() {
+          document.getElementById('nome').value = nome;
+          document.getElementById('time').value = time;
+          tabela.deleteRow(novaLinha.rowIndex - 1);
+        };
+
+        // Adiciona os botões de ação na célula
+        acoes.appendChild(btnApagar);
+        acoes.appendChild(btnSubstituir);
+        celulaAcoes.appendChild(acoes);
+
+        // Limpa os campos de input
+        document.getElementById('nome').value = '';
+        document.getElementById('time').value = '';
+      } else {
+        alert('Por favor, preencha todos os campos!');
+      }
+    }
+  </script>
+
+</body>
+</html>
