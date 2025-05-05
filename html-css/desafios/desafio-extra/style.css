@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+h1 {
+    color:  white;
+    text-align: center;
+    background-color: rgb(44, 139, 44);
+}
+body{
+    background-color: white;
+}
+.center {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    
+
+}
+.minhaDiv {
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
+    justify-items: flex-end;
+    padding-right: 15%;
+}
+.tabela {
+    width: 100%;
+}
+table {
+    width: 70%;
+}
+.inputs {
+    padding: 30px;
+}
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    padding-right: 30px;
+}
