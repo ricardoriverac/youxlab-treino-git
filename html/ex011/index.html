@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste de Picture</title>
+</head>
+<body>
+
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750)" srcset="imagens/imagemPP.png" type="image/png">
+
+        <source media="(max-width: 1100px)" srcset="imagens/imagemM.png" type="image/png">
+        <img src="imagens/ImagemG.png" alt="Imagem com base no tamanho da tela">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+
+    <h2>Maneira 1</h2>
+    <p>Só é limitada para 3 tipos MP3, ogg, wav</p>
+
+    <audio src="midia/Invisible - Anno Domini Beats.mp3 " controls autoplay></audio>
+
+    <h2>Maneira 2</h2>
+    <p>Vai criar um "Se" para caso o arquivo não seja um dos abaixos</p>
+
+    <audio preload="metadata"> controls autoplay
+
+        <source src="midia/Invisible - Anno Domini Beats.mp3" type="audio/mpeg">
+        <source src="midia/Invisible - Anno Domini Beats.mp3" type="audio/ogg">
+        <source src="midia/Invisible - Anno Domini Beats.mp3" type="audio/wav">
+
+        <p>Infelizmente o navegador não consegue reproduzir aúdio <a href="midia/Invisible - Anno Domini Beats.mp3">Clique aqui para abaixa</a></p>
+
+    </audio>
+
+
+ 
+</body>
+</html>
