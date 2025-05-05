@@ -1,0 +1,15 @@
+@charset "UTF-8";
+h1 {
+    color: white;
+    text-align: center;
+}
+body {
+    background-color: rgb(32, 32 ,32);
+}
+p {
+    text-align: center;
+}
+iframe {
+    margin: 0 auto;
+    display: flex;    
+}
