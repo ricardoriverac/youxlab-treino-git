@@ -4,6 +4,18 @@ body {
   padding: 20px;
 }
 
+.center{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.corAzul {
+  background-color: blue;
+}
+ 
 input, button {
   margin: 5px;
   padding: 8px;
@@ -12,13 +24,12 @@ input, button {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 5%;
 }
 
 th, td {
   border: 1px solid #ccc;
   padding: 10px;
-  text-align: left;
 }
 
 th {
