@@ -6,52 +6,38 @@
   <link rel="shortcut icon" href="HTML/html.icon" type="image/x-icon">
   <title>Tabela De Jogadores</title>
   <style>
-    /* Centraliza tudo na tela */
     body {
-      display: flex;
-      justify-content: center; 
-      align-items: center;     
-      height: 100vh; /* altura total da tela */
       margin: 0;
-      background-color: #f3f3f3;
+      height: 100vh;
+      background-color: #c5cca4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    /* Container que envolve os inputs, botão e a tabela */
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px; /* espaço entre os elementos */
+      gap: 10px;
       width: 100%;
-      max-width: 600px; /* Limita a largura */
+      max-width: 600px;
     }
 
-    /* Estilo dos campos de input */
-    input {
+    input, button {
       padding: 10px;
       font-size: 1rem;
       width: 100%;
-      max-width: 300px; /* Limita o tamanho máximo dos inputs */
+      max-width: 300px;
       margin: 5px 0;
     }
 
-    /* Estilo do botão */
-    button {
-      padding: 10px 20px;
-      font-size: 1rem;
-      cursor: pointer;
-      width: 100%;
-      max-width: 300px; /* Limita o tamanho máximo do botão */
-      margin: 5px 0;
-    }
-
-    /* Estilo da tabela */
     table {
       margin-top: 20px;
       border-collapse: collapse;
       width: 100%;
+      max-width: 600px;
       text-align: center;
-      max-width: 600px; /* Limita a largura da tabela */
     }
 
     table, th, td {
@@ -63,7 +49,7 @@
     }
 
     th {
-      background-color: #571670;
+      background-color: #acb190;
       color: white;
     }
 
@@ -78,35 +64,45 @@
       font-size: 0.9rem;
       cursor: pointer;
     }
-    h1 {
-        text-align: center;
-        color: #571670;
-        border-radius: 10px;
-        background-color: rgb(10, 10, 10);
-    }
 
+    h1 {
+      text-align: center;
+      color: #cec189;
+      border-radius: 10px;
+      background-color: rgb(65, 62, 62);
+      width: 100%;
+      padding: 10px;
+    }
+    .imagem-no-canto { 
+      position: fixed;
+      bottom: 10px;  /* distância da base da tela */
+      right: 10px;   /* distância da borda direita da tela */
+      width: 100px;  /* ajuste o tamanho como quiser */
+      z-index: 1000; /* garante que fique por cima de outros elementos */
+    }
   </style>
 </head>
 <body>
-  <h1>Tabela De Jogadores</h1>
+    <img src="HTML/imagens/Campeonato_Brasileiro_Série_A_logo.png" alt="Imagem no canto" class="imagem-no-canto">
   <div class="container">
+    <h1>Tabela De Jogadores Do Brasileirão</h1>
     <input type="text" id="nome" name="nome" placeholder="Digite o nome do jogador">
     <input type="text" id="time" name="time" placeholder="Digite o time do jogador">
     <button onclick="adicionarJogador()">Adicionar na tabela</button>
-  </div>
 
-  <table id="tabela">
-    <thead>
-      <tr>
-        <th>Nome</th>
-        <th>Time</th>
-        <th>Ações</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Linhas serão adicionadas aqui -->
-    </tbody>
-  </table>
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Time</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Linhas serão adicionadas aqui -->
+      </tbody>
+    </table>
+  </div>
 
   <script>
     function adicionarJogador() {
@@ -115,29 +111,24 @@
 
       if (nome && time) {
         const tabela = document.getElementById('tabela').getElementsByTagName('tbody')[0];
-        
-        // Cria uma nova linha
         const novaLinha = tabela.insertRow();
 
-        // Cria as células para o nome, time e ações
         const celulaNome = novaLinha.insertCell(0);
         const celulaTime = novaLinha.insertCell(1);
         const celulaAcoes = novaLinha.insertCell(2);
 
-        // Preenche as células com os valores
         celulaNome.textContent = nome;
         celulaTime.textContent = time;
 
-        // Cria os botões de Ações (apagar e substituir)
         const acoes = document.createElement('div');
         acoes.classList.add('actions');
-        
+
         const btnApagar = document.createElement('button');
         btnApagar.textContent = 'Apagar';
         btnApagar.onclick = function() {
           tabela.deleteRow(novaLinha.rowIndex - 1);
         };
-        
+
         const btnSubstituir = document.createElement('button');
         btnSubstituir.textContent = 'Substituir';
         btnSubstituir.onclick = function() {
@@ -146,12 +137,10 @@
           tabela.deleteRow(novaLinha.rowIndex - 1);
         };
 
-        // Adiciona os botões de ação na célula
         acoes.appendChild(btnApagar);
         acoes.appendChild(btnSubstituir);
         celulaAcoes.appendChild(acoes);
 
-        // Limpa os campos de input
         document.getElementById('nome').value = '';
         document.getElementById('time').value = '';
       } else {
@@ -159,6 +148,5 @@
       }
     }
   </script>
-
 </body>
 </html>
