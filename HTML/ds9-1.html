@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Galeria de Vídeos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .video-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .thumbnail img {
+      width: 220px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .thumbnail img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-arrow {
+      font-size: 40px;
+      color: blueviolet;
+      text-decoration: none;
+      margin-bottom: 40px;
+      animation: bounce 1.5s infinite;
+    }
+
+    .back-arrow:hover {
+      color: violet;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      position: relative;
+      background: #000;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #video-frame {
+      width: 560px;
+      height: 315px;
+    }
+
+    #close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Galeria de Vídeos</h1>
+
+  <div class="video-gallery">
+    <div class="thumbnail" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+      <img src="imagens/thumb-hardware.png" alt="Video 1" />
+    </div>
+    <div class="thumbnail" data-video="https://www.youtube.com/embed/oHg5SJYRHA0">
+      <img src="imagens/thumb-html.png" alt="Video 2" />
+    </div>
+    <div class="thumbnail" data-video="https://www.youtube.com/embed/tgbNymZ7vqY">
+      <img src="imagens/thumb-js.png" alt="Video 3" />
+    </div>
+    <div class="thumbnail" data-video="https://www.youtube.com/embed/3JZ_D3ELwOQ">
+      <img src="imagens/thumb-python.png" alt="Video 4" />
+    </div>
+  </div>
+
+  <a href="ds9.html" class="back-arrow">⬅</a>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close">&times;</span>
+      <iframe id="video-frame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const modal = document.getElementById('modal');
+    const videoFrame = document.getElementById('video-frame');
+    const closeBtn = document.getElementById('close');
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        const videoUrl = thumbnail.getAttribute('data-video');
+        videoFrame.src = videoUrl + "?autoplay=1";
+        modal.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+      videoFrame.src = "";
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        videoFrame.src = "";
+      }
+    });
+  </script>
+</body>
+</html>
