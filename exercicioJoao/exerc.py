@@ -6,11 +6,9 @@ def enfeite():
     print('~' * len(texto))
 
 enfeite()
-br = []
-jp = []
-usa = []
-fr = []
-ar = []
+
+listaPaises = []
+medias = []
 
 jogadores = [
     {"nome": "Ricardo", "gols": 5, "nacionalidade": "BR"},#ok
@@ -34,27 +32,46 @@ jogadores = [
     {"nome": "Mauricio", "gols": 6, "nacionalidade": "AR"}#ok
 ]
 
-for jogador in jogadores:
-    nacionalidades = (jogador['nacionalidade'])
-    if nacionalidades in 'BR':
-        br.append(jogador['gols'])
-    elif nacionalidades in 'JP':
-        jp.append(jogador["gols"])
-    elif nacionalidades in 'USA':
-        usa.append(jogador["gols"])
-    elif nacionalidades in 'FR':
-        fr.append(jogador["gols"])
-    elif nacionalidades in 'AR':
-        ar.append(jogador["gols"])
+for jogador in jogadores: 
+    if jogador["nacionalidade"] not in listaPaises:
+        listaPaises.append(jogador['nacionalidade'])
+print(listaPaises)
+for paises in listaPaises:
+    gol = []
+    for jogador in jogadores:
+        
+        if jogador["nacionalidade"]==paises:
+            gol.append(jogador['gols'])
+    media = sum(gol)/ len(gol)
+    medias.append(media)
+    print('A média do país {} é {:.1f}'.format(paises, media))
+
+ranking = sorted(medias, reverse=True)
+
+
+# for jogador in jogadores:
+#     nacionalidades = (jogador['nacionalidade'])
+#     if nacionalidades in 'BR':
+#         br.append(jogador['gols'])
+#     elif nacionalidades in 'JP':
+#         jp.append(jogador["gols"])
+#     elif nacionalidades in 'USA':
+#         usa.append(jogador["gols"])
+#     elif nacionalidades in 'FR':
+#         fr.append(jogador["gols"])
+#     elif nacionalidades in 'AR':
+#         ar.append(jogador["gols"])
 
     
 
-mediaBR = sum(br)/len(br)
-mediaJP = sum(jp)/len(jp)
-mediaUSA = sum(usa)/len(usa)
-mediaFR = sum(fr)/len(fr)
-mediaAR = sum(ar)/len(ar)
+# mediaBR = sum(br)/len(br)
+# mediaJP = sum(jp)/len(jp)
+# mediaUSA = sum(usa)/len(usa)
+# mediaFR = sum(fr)/len(fr)
+# mediaAR = sum(ar)/len(ar)
 
-total = {"Brasil": mediaBR, "Japão": mediaJP, "Estados Unidos": mediaUSA, "França": mediaFR, "Argentina": mediaAR}
-for k,v in total.items():
-    print(f'\033[1;34m{k}\033[m: \033[1mMédia\033[m= {v:.1f}')
+# total = {"Brasil": mediaBR, "Japão": mediaJP, "Estados Unidos": mediaUSA, "França": mediaFR, "Argentina": mediaAR}
+# for k,v in total.items():
+#     print(f'\033[1;34m{k}\033[m: \033[1mMédia\033[m= {v:.1f}')
+# ranking = sorted(total.items(), key=lambda item: item[1], reverse=True) 
+# print(ranking)
