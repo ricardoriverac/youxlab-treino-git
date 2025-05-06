@@ -1,3 +1,5 @@
+from defs import *
+
 jogadores = [
     {
         "nome": "Ricardo",
@@ -45,10 +47,45 @@ jogadores = [
         "nacionalidade" : "PT"
     }
 ]
-# mediaBr = mediaJp = mediaEua = 0
+
 soma = 0
 paises = []
 
+rank = {}
+
+for n in jogadores:
+    if n["nacionalidade"] not in paises:
+        paises.append(n["nacionalidade"])
+
+titulo('Média de Gols das seleções')
+quebraDeLinha()
+
+for pais in paises:
+    jogadoresDoPais = []
+    cont = 0
+    for j in jogadores:
+        if j["nacionalidade"] == pais:
+            jogadoresDoPais.append(j)
+    soma = 0
+
+    for k in jogadoresDoPais:
+        soma += k["gols"]
+        calculoMedio = soma / len(jogadoresDoPais)
+
+    print(f'{pais} -> Média de gols: {calculoMedio}')
+    rank[(pais)] = calculoMedio
+
+quebraDeLinha()
+titulo('Ranking de maior média de Gols')
+
+rankeamento = sorted(rank.items(), key=valor, reverse=True)
+for k,v in rankeamento:
+    print(f'{cont+1}º Lugar  -> {k}: Média -> {v}')
+    cont += 1
+
+# Feito sem dinâmica
+
+# mediaBr = mediaJp = mediaEua = 0
 # jogadoresJapao = []
 # jogadoresBr = []
 # jogadoresUsa = []
@@ -85,31 +122,3 @@ paises = []
 # print(f'A média de gols do Brasil é de {mediaBr}')
 # print(f'A média de gols do Japão é de {mediaJp}')
 # print(f'A média de gols dos EUA é de {mediaEua}')
-rank = {}
-
-for n in jogadores:
-    if n["nacionalidade"] not in paises:
-        paises.append(n["nacionalidade"])
-
-
-for pais in paises:
-    jogadoresDoPais = []
-    cont = 0
-    for j in jogadores:
-        if j["nacionalidade"] == pais:
-            jogadoresDoPais.append(j)
-    soma = 0
-
-    for k in jogadoresDoPais:
-        soma += k["gols"]
-        calculoMedio = soma / len(jogadoresDoPais)
-
-    print(f'{pais} -> Média de gols: {calculoMedio}')
-    rank[(pais)] = calculoMedio
-
-for k,v in rank.items():
-    print(f'{cont+1}º Lugar -> {k} {v}')
-    cont += 1
-    # ranking = sorted(rank.values(), reverse=True)
-    # ranking = rank.keys() 
-# print(ranking)
