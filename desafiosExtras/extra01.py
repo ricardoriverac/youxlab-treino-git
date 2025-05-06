@@ -66,3 +66,9 @@ for jogador in jogadores:
 print("\n-=-=-=-=-=-=-=-==Ranking=-=-=-=-=-=-=-=-=-")
 for posicao, (pais, total_gols) in enumerate(ranking, start=1):
     print(f"{posicao}. {pais} ➤ {total_gols} gols")
+
+print('=-='*20)
+maior = max(jogadores, key=lambda x: x['gols'])
+print(f"O jogador que fez mais gols foi {maior['nome']} e fez {maior['gols']}")
+menor = min(jogadores, key=lambda x: x['gols'])
+print(f"O jogador que fez menos gols foi {menor['nome']} e fez {menor['gols']}")
