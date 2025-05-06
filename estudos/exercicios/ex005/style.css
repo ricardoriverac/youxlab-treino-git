@@ -1,0 +1,4 @@
+body { background-color: rgb(67, 226, 186); text-align: left; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; color: rgb(201, 216, 247); }
+button { background-color: rgb(102, 102, 98); border: none; padding: 10px 20px; font-family: Arial, Helvetica, sans-serif; color: white; border-radius: 40%; font-weight: bold; font-size: 16px; text-decoration: none; cursor: pointer; transition: background-color 0.3s; display: flex; align-items: center; gap: 10px; }
+button:hover { background-color: rgb(102, 102, 98); }
+img { border-radius: 50%; }
