@@ -1,9 +1,10 @@
+from time import sleep
 print('-='*20)
 print('RANK  JOGADORES')
 print('-='*20)
-somaBrasil = somaJapao = somaUsa = somaFranca =  0
-mediaBrasil = mediaUsa = mediaJapao = mediaFranca = 0
-contagem = contagemUsa = contagemJapao = contagemfranca = 0
+somaBrasil = somaJapao = somaUsa = somaFranca =  somaArgentina = 0
+mediaBrasil = mediaUsa = mediaJapao = mediaFranca = mediaArgentina =0
+contagem = contagemUsa = contagemJapao = contagemfranca = contagemArgentina = 0
 jogadores = [
     {"nome": "Ricardo", "gols": 5, "nacionalidade": "BR"},
     {"nome": "Walter", "gols": 7, "nacionalidade": "BR"},
@@ -38,13 +39,40 @@ for c in range(0, len(jogadores)):
     if jogadores[c]['nacionalidade'] in 'FR':
         contagemfranca += 1
         somaFranca += jogadores[c]['gols']
+    if jogadores[c]['nacionalidade'] in 'AR':
+        contagemArgentina += 1
+        somaArgentina += jogadores[c]['gols']
         
 mediaBrasil = somaBrasil/contagem
 mediaUsa = somaUsa/contagemUsa
 mediaJapao = somaJapao/contagemJapao
 mediaFranca = somaFranca/contagemfranca
+mediaArgentina = somaArgentina/contagemArgentina
 
 print(f'A média dos gols da \033[33mNacionalidade BR\033[m é {mediaBrasil:.2f}')
 print(f'A média dos gols da \033[32mNacionalidade USA\033[m é {mediaUsa:.2f}')
 print(f'A média dos gols da \033[31mNacionalidade JP\033[m é {mediaJapao:.2f}')  
 print(f'A média dos gols da \033[36mNacionalidade FR\033[m é {mediaBrasil:.2f}')
+print(f'A média dos gols da \033[35mNacionalidade AR\033[m é {mediaArgentina:.2f}')
+
+# golPais = {}
+# contadorPais = {}
+# for jogador in jogadores:
+#     pais = jogador['nacionalidade']
+#     golPais = jogador['gols']
+#     contadorPais += 1
+    
+ranking = []
+print('-='*20)
+print('\033[1;35mRANKING DA MÉDIA DOS GOLS DE CADA PAÌS\033[m')
+print('-='*20)
+ranking.append(mediaBrasil)
+ranking.append(mediaArgentina)
+ranking.append(mediaFranca)
+ranking.append(mediaJapao)
+ranking.append(mediaUsa)
+ranking.sort(reverse=True)
+for i, v in enumerate(ranking):
+        print(f'Em {i+1}º lugar: ', end='')
+        print(f'{v:.2f}')
+print('-='*20)
