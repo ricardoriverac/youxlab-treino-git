@@ -18,24 +18,5 @@ while True:
         print('EMPATE!')
         #se o vencedor for pedra
     else:
-        if jogador1== 1 and jogador2 ==1 and jogador3 ==3:
-         print('Jogador 3 perdeu. Os jogadores 1 e 2 venceram!')
-        if jogador2 == 1 and jogador3 ==1 and jogador1 ==3:
-            print('Jogador 1 perdeu. Os jogadores 2 e 3 venceram!')
-            if jogador3==1 and jogador1== 1 and jogador2==3:
-                print('Jogador 2 perdeu. Os jogadores 1 e  venceram!')
-        #se o vencedor for papel
-        if jogador1== 2 and jogador2 ==2 and jogador3 ==1:
-            print('Jogador 3 perdeu. Os jogadores 1 e 2 venceram!')
-            if jogador2 == 2 and jogador3 ==2 and jogador1 ==1:
-                print('Jogador 1 perdeu. Os jogadores 2 e 3 venceram!')
-                if jogador3==2 and jogador1== 2 and jogador2==1:
-                    print('Jogador 2 perdeu. Os jogadores 1 e  venceram!')
-        #se o vencedor for tesoura
-        if jogador1== 3 and jogador2 ==3 and jogador3 ==1:
-            print('Jogador 3 perdeu. Os jogadores 1 e 2 venceram!')
-        if jogador2 == 3 and jogador3 ==3 and jogador1 ==1:
-            print('Jogador 1 perdeu. Os jogadores 2 e 3 venceram!')
-        if jogador3==3 and jogador1== 3 and jogador2==1:
-            print('Jogador 2 perdeu. Os jogadores 1 e  venceram!')
-        
+       if jogador1 != jogador2 and jogador3:
+           print(jogador1)
