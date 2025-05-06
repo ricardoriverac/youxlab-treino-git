@@ -35,7 +35,7 @@
 #print (f'Na função principal n , vale {n}') # N é variavél global
 #teste()
 #def somar(a=0,b=0,c=0):
-#   s = a + b + c
+#   s = a + b + cprint(lanche)
 #   return s
 #r1=somar(3,2,5)
 #r2=somar(8,4)
