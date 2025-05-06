@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Teste MBTI</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #b30000;
+      text-align: center;
+    }
+
+    .question {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .question label {
+      display: block;
+      margin: 5px 0;
+    }
+
+    button {
+      display: block;
+      margin: 30px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: crimson;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #resultado {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Teste MBTI Rápido</h1>
+
+  <form id="quizForm">
+
+    <div class="question">
+      <p><strong>1. Você prefere:</strong></p>
+      <label><input type="radio" name="q1" value="E"> Estar com pessoas</label>
+      <label><input type="radio" name="q1" value="I"> Ficar sozinho(a)</label>
+    </div>
+
+    <div class="question">
+      <p><strong>2. Você confia mais em:</strong></p>
+      <label><input type="radio" name="q2" value="S"> Fatos e experiências</label>
+      <label><input type="radio" name="q2" value="N"> Intuição e ideias</label>
+    </div>
+
+    <div class="question">
+      <p><strong>3. Você toma decisões com base em:</strong></p>
+      <label><input type="radio" name="q3" value="T"> Lógica e razão</label>
+      <label><input type="radio" name="q3" value="F"> Emoções e valores</label>
+    </div>
+
+    <div class="question">
+      <p><strong>4. Você prefere um estilo de vida:</strong></p>
+      <label><input type="radio" name="q4" value="J"> Planejado e organizado</label>
+      <label><input type="radio" name="q4" value="P"> Flexível e espontâneo</label>
+    </div>
+
+    <button type="button" onclick="calcularMBTI()">Ver Resultado</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <script>
+    function calcularMBTI() {
+      const form = document.forms['quizForm'];
+      const q1 = form['q1'].value;
+      const q2 = form['q2'].value;
+      const q3 = form['q3'].value;
+      const q4 = form['q4'].value;
+
+      if (!q1 || !q2 || !q3 || !q4) {
+        alert("Por favor, responda todas as perguntas.");
+        return;
+      }
+
+      const tipo = q1 + q2 + q3 + q4;
+
+      const descricoes = {
+        INFP: "Idealista, leal, criativo e guiado por valores.",
+        INFJ: "Visionário, introspectivo e protetor.",
+        ENFP: "Entusiasta, sociável, cheio de energia criativa.",
+        ISTJ: "Responsável, confiável e focado em regras.",
+        ESTJ: "Líder nato, prático e organizado.",
+        INTJ: "Estratégico, independente e lógico.",
+        ENFJ: "Inspirador, empático e comunicativo.",
+        ISTP: "Lógico, prático e observador.",
+        // etc... (adicione mais conforme quiser)
+      };
+
+      const mensagem = descricoes[tipo] || "Tipo MBTI: " + tipo + " (sem descrição detalhada)";
+      document.getElementById('resultado').innerHTML = `<strong>Seu tipo MBTI é:</strong> ${tipo}<br>${mensagem}`;
+    }
+  </script>
+
+</body>
+</html>
