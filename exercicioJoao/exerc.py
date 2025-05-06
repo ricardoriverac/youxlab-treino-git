@@ -58,6 +58,3 @@ mediaAR = sum(ar)/len(ar)
 total = {"Brasil": mediaBR, "Japão": mediaJP, "Estados Unidos": mediaUSA, "França": mediaFR, "Argentina": mediaAR}
 for k,v in total.items():
     print(f'\033[1;34m{k}\033[m: \033[1mMédia\033[m= {v:.1f}')
-
-
-    
