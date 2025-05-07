@@ -1,0 +1,11 @@
+table , th , td {
+    border-style: inset;
+    border-radius: 10px;
+}
+
+.center {
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-flow: column wrap;
+}
