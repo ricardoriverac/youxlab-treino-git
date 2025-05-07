@@ -17,7 +17,8 @@ jogadores = [
     {"nome": "Ricardo Jr.", "gols": 9, "nacionalidade": "BR"},
     {"nome": "Santos", "gols": 1, "nacionalidade": "BR"},
     {"nome": "Gabriel", "gols": 3, "nacionalidade": "USA"},
-    {"nome": "Mauricio", "gols": 6, "nacionalidade": "AR"}
+    {"nome": "Mauricio", "gols": 6, "nacionalidade": "AR",
+    "nome": "Mauricio", "gols": 6, "nacionalidade": "CH "}
 ]
 
 golsPorNacionalidade = {}
