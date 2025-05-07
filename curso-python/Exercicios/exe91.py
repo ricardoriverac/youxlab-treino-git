@@ -16,6 +16,7 @@ print("Valores sorteados:")
 for k, v in jogo.items():
     print(f"{k} tirou {v} no dado.")
     sleep(1)
+    
 ranking = sorted(jogo.items(), key=itemgetter(1), reverse=True)
 print("-=" * 10)
 print(" == RAKING DOS JOGADORES ==")
