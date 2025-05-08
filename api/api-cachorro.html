@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="file:///home/youx/Downloads/images.icon" type="image/x-icon">
+  <title>Gerar Cachorro</title>
+</head>
+<body>
+  <center>
+  <button onclick="mostrarImagem()">Gerar</button>
+  </center>
+  <br><br>
+  <img id="imagem" alt="Imagem de cachorro" width="300">
+  <link rel="stylesheet" href="teste.css">
+
+  <script>
+    function mostrarImagem() {
+      fetch('https://dog.ceo/api/breeds/image/random') 
+        .then(resposta => resposta.json())             
+        .then(dados => {
+          let img = document.getElementById('imagem'); 
+          img.src = dados.message;                     
+        })
+        .catch(erro => {
+          console.error("Erro ao carregar imagem:", erro);
+        });
+    }
+  </script>
+</body>
+</html>
