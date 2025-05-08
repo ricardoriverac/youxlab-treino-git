@@ -9,4 +9,13 @@ print(data)
 #data.head(10)
 
 # exibe as informações do dataset
-data.info()
+#data.info() 
+
+# exibe o tipo do dataframe
+#type(data)
+
+#
+#data.shape
+
+# mostra o tanto de 
+#print(f'O DataFrame possui {data.shape[0]} linhas/observações/registros e {data.shape[1]} colunas/atributos/variáveis.')
