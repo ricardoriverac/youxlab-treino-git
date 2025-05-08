@@ -1,5 +1,5 @@
 import pandas as pd
-data = pd.read_csv('aulas_dados/datasets/GasPricesinBrazil_2004-2019_preprocessado_final.csv', sep=';')
+data = pd.read_csv('aulas_dados/datasets/venda-de-carros.csv', sep=';')
 print(data)
 data.head()
 data.info()
@@ -25,3 +25,8 @@ personagens_df.columns= ['NOME', 'IDADE', 'PESO', "EH JEDI"]
 print(personagens_df)
 print(data.columns)
 print(type(data.iloc[1]))
+# produtoCopyBK = data['PRODUTO'].copy()
+# print(produtoCopyBK)
+# data['PRODUTO'] = 'Combustível'
+# print(data.head())
+# print(data['Fabricante'].view)
