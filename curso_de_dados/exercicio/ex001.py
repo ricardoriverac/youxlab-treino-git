@@ -1,4 +1,5 @@
 import pandas as pd
+import csv
 rangeColunas = int(input("Quantas colunas vocẽ quer colocar? "))
 
 nomesDentroColuna = []
@@ -17,7 +18,13 @@ for c in range(rangeColunas):
     dados[nomeColuna] = aa
 
 dataf = pd.DataFrame(dados)
-print(dataf)
+
+planilha = 'ex001.csv'
+
+with open('planilha.csv', mode='a', newline='', encoding='utf-8') as arquivo:
+    escritor = csv.writer(arquivo)
+
+
 
 
 
