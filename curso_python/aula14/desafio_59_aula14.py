@@ -1,5 +1,6 @@
 primeiroNumero = int(input('Digite o primeiro número: '))
 segundoNumero = int(input('Digite o segundo número: '))
+
 opcao = 0
 while opcao != 5:
     soma = primeiroNumero + segundoNumero

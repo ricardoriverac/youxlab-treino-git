@@ -8,6 +8,7 @@ if elemento == 1:
     print (f'{primeiroElemento} -> ' ,end='')
 else:
     print (f'{primeiroElemento} -> {segundoElemento} -> ' ,end='')
+
 contador = 3
 while elemento >= contador:
     terceiroElemento = primeiroElemento + segundoElemento
@@ -15,4 +16,5 @@ while elemento >= contador:
     primeiroElemento = segundoElemento
     segundoElemento = terceiroElemento
     contador += 1
+
 print ('Fim')
