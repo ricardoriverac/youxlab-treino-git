@@ -23,6 +23,7 @@ jogadores = [
     {"nome": "paulo", "gols": 4, "nacionalidade": "ES"}
 
 ]
+rank = {}
 colocando_na_lista = []
 for jogador in jogadores:
     if jogador['nacionalidade'] not in paises:
@@ -40,6 +41,7 @@ for pais in paises:
         calculamedia = soma / len(jogadorpais)
     print(f'{pais} a média desse país é {calculamedia}')
     colocando_na_lista.append(calculamedia)
-rank = (sorted(colocando_na_lista , reverse=True))
-for r in rank:
-    print(r)
+    rank[pais] = calculamedia
+ranking = sorted(rank.items() , key=lambda x: x[1] , reverse=True)
+for contandor , (pais,calculamedia) in enumerate(ranking):
+    print(f'{contandor+1}° lugar {pais} com a média {calculamedia}')
