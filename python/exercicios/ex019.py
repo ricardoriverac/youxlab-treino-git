@@ -1,5 +1,7 @@
 import random
+
 import math
+
 nome1= str(input('Nome dos aluno (a): '))
 nome2= str(input('Nome dos aluno (a): '))
 nome3= str(input('Nome dos aluno (a): '))
