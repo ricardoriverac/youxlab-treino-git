@@ -1,2 +1,4 @@
-import pandas as pd
-df.to_csv('relatorio_estoque.csv', index=False)
+Nome do Livro,Autora,Editora,Data de lançamento,ISBN,Quantidade,Data de Chegada,Nome do Comprador
+Caraval,Stephanie Garber,Novo Conceito,29/09/2016,9781250095268,14,14/05/2024,Biblioteca Central
+Imperfeitos,Christina Lauren,Faro Editorial,10/03/2022,9786559571284,3,23/06/2024,Secretaria de Cultura
+Uma dama fora dos padroẽs,Julia Quinn,Arqueiros,29/03/2016,9788580418750,21,01/07/2024,Biblioteca Central
