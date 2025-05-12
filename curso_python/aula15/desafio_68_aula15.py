@@ -17,4 +17,5 @@ while True:
     else:
         print (f'Você jogou {valorJogador} e o computador jogou {valorComputador}. O total é de {soma}. \nVocê PERDEU! ')
         break
+
 print (f'Você ganhou {vitorias} vez(es)! ')
