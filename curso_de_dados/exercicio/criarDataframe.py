@@ -16,13 +16,17 @@ for c in range(rangeColunas):
         aa.append(elementoLinhas)
 
     dados[nomeColuna] = aa
-
+import os
 dataf = pd.DataFrame(dados)
+arquivo_csv = 'livros.csv'
 
-planilha = 'ex001.csv'
+arquivoExiate = os.path.exists(arquivo_csv)
 
-with open('planilha.csv', mode='a', newline='', encoding='utf-8') as arquivo:
-    escritor = csv.writer(arquivo)
+dataf.to_csv(arquivo_csv, index=False, mode='a', header=not arquivoExiate)
+
+
+
+
 
 
 
