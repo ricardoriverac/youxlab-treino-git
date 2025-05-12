@@ -29,6 +29,7 @@ while True:
         if j['nacionalidade']=='BR':
             mediaBR+=j['gols']/2
     print(f'A média de gols do Brasil é {mediaBR} gols')
+    if 
 
 
 

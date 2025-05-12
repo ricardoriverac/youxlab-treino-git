@@ -15,7 +15,7 @@ print('3° TESTE')
 resposta='SIM'
 while resposta=='SIM':
      numero=int(input('Digite um n°:'))
-     resposta=str(input('Quer continuar? Sim/Não:')).upper()
+     resposta=str(input('Quer continuar? Sim/Não:')).upper
 print('FIM!')
 
 print('4° TESTE')
