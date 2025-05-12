@@ -1,0 +1,18 @@
+import pandas as pd
+data = pd.read_csv('/home/youx/curso python/youxlab-treino-git/banco de dados/datasets/GasPricesinBrazil_2004-2019.csv', sep=';')
+print('-=' * 4, f'\033[35mTABELA COMPLETA\033[m','-=' * 4 )
+print(data.head())
+# AGRUPAMENTO
+print ('-=' * 4, f'\033[35m grupo de elementos \033[m','-=' * 4 )
+grupos = data.groupby('REGIÃO')
+print(grupos)
+print ('-=' * 4, f'\033[35m dc \033[m','-=' * 4 )
+print(grupos.groups)
+print ('-=' * 4, f'\033[35m indices \033[m','-=' * 4 )
+print(grupos.indices)
+print('-=' * 4, f'\033[35m OBS CENTRO OESTE \033[m','-=' * 4 )
+print(grupos.get_group('CENTRO OESTE'))
+print('-=' * 4, f'\033[35m ESTATÍSTICAS DESCRITIVAS \033[m','-=' * 4 )
+print(grupos.describe())
+print('-=' * 4, f'\033[35m MÉDIAS POR REGIÃO \033[m','-=' * 4 )
+print(grupos.mean(numeric_only=True))
