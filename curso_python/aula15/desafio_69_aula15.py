@@ -7,7 +7,7 @@ while True:
     idade = int(input('Idade: '))
     sexo = ' '
     while sexo not in 'FM':
-        sexo = str(input('Sexo [F/M]:')).strip().upper()
+        sexo = str(input('Sexo [F/M]: ')).strip().upper()
     if idade > 18:
         maisDezoito += 1
     if sexo == 'F' and idade < 20:
