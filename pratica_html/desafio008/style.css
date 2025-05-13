@@ -1,0 +1,18 @@
+body.cinza {
+    background-color: #ccc; /* cinza claro */
+    color: #000; /* texto preto */
+  }
+  
+  body.verde {
+    background-color: #90ee90; /* verde claro */
+    color: #000;
+  }
+  
+  body.amarela {
+    background-color: #ffff99; /* amarelo claro */
+    color: #000;
+  }
+  
+  h1, p, ul {
+    font-family: Arial, sans-serif;
+  }
