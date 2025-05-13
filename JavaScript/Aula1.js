@@ -1,0 +1,1 @@
+console.log("Ola,Mundo")//Imprimi algo no computador , serve como um print no python
