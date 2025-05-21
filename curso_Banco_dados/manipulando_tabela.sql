@@ -76,7 +76,8 @@ values(18, 'Pedro', NULL, NULL, '1995-08-16', 'F', 'Padeiro', 'BR', 'Rua Jorge',
 insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
 values(19, 'Miguel Lucas', NULL, NULL, '1998-07-21', 'M', 'Jardineiro', 'AR', 'Rua Madalena', NULL, NULL, NULL, NULL, NULL);
 
-
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(20, 'Maicon', '12312323', '3445345', '1955-01-21', 'F', 'Empresário', 'Brasileira', 'Rua Central', '343', 'Apartamento', 'Centro', 'Florianópolis);
 
 select * from cliente;
 select nome, data_nascimento from cliente;
@@ -110,4 +111,13 @@ select * from cliente where numero is not null;]
 select * from cliente where numero is null;
 select * from cliente where uf like 'SC';
 select * from cliente where data_nascimento between '2000-01-01' and '2002-01-01';
-select 'Nome: ' || nome || ' Logadouro: ' || logradouro || ' Número: ' || numero || ' Complemento: ' || complemento || ' Bairro: ' || bairro || ' Municipio: ' || municipio || ' UF: ' || uf as "Todos os clientes" from cliente;
+select 'Nome: ' || nome || ' Logadouro: ' || logradouro || ' Número: ' || numero || ' Complemento: ' || complemento || ' Bairro: ' || bairro || ' Municipio: ' || municipio || 'UF: ' || uf as "Todos os clientes" from cliente;
+
+update cliente set nome = 'Teste' where idcliente = 1;
+select * from cliente;
+update cliente set nome = 'Miguel' where idcliente = 1;
+update cliente set nome = 'Edudarda', genero = 'F', numero = '43' where idcliente = 14;
+
+insert into cliente (idcliente, nome) values (20, 'João');
+select nome from cliente where idcliente = 20;
+delete from cliente where idcliente = 20;
