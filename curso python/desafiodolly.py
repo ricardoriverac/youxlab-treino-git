@@ -21,24 +21,52 @@ jogadores = [
     {"nome": "izinha", "gols": 10, "nacionalidade": "goiais"}
 ]
 
-soma_gols = {}
-contagemJogadores = {}
-ranking = []
+# soma_gols = {}
+# contagemJogadores = {}
+# ranking = []
 
-for jogador in jogadores:
-    pais = jogador["nacionalidade"]
-    gols = jogador["gols"]
+# for jogador in jogadores:
+#     pais = jogador["nacionalidade"]
+#     gols = jogador["gols"]
     
-    if pais not in soma_gols:
-        soma_gols[pais] = 0
-        contagemJogadores[pais] = 0
+#     if pais not in soma_gols:
+#         soma_gols[pais] = 0
+#         contagemJogadores[pais] = 0
 
-    soma_gols[pais] += gols
-    contagemJogadores[pais] += 1
+#     soma_gols[pais] += gols
+#     contagemJogadores[pais] += 1
 
 
 
-for pais in soma_gols:
-        media = soma_gols[pais] / contagemJogadores[pais]
-        print(f'A média de gols do {pais} foi {media:.2f}')
-        ranking.append(media)
+# for pais in soma_gols:
+#         media = soma_gols[pais] / contagemJogadores[pais]
+#         print(f'A média de gols do {pais} foi {media:.2f}')
+#         ranking.append(media)
+paises = []
+for jogador in jogadores:
+    if jogador["nacionalidade"] not in paises:
+        paises.append(jogador["nacionalidade"])
+
+for pais in paises:
+    jogadoresMesmoPais = []
+    for jo in jogadores:
+        if jo["nacionalidade"] == pais:
+            jogadoresMesmoPais.append(jo)
+    soma = 0;
+
+    for jog in jogadoresMesmoPais:
+        soma += jog["gols"]
+        media = soma / len(jogadoresMesmoPais)
+    print(f"{pais} media é: {media}")
+
+
+for p in paises:
+    contador = 0
+    for j in jogadores:
+        if j["nacionalidade"] == p:
+            contador +=1
+    print(f"O numero de jogadores no {p} é {contador}")
+    
+
+
+
