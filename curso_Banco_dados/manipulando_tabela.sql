@@ -64,6 +64,20 @@ values(14, 'Eduardo', '33445566778', '889900', '1988-12-30', 'M', 'Arquiteto', '
 insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
 values(15, 'Patrícia', '55667788990', '998877', '1996-09-17', 'F', 'Jornalista', 'BR', 'Rua da Liberdade', 65, 'Casa Fundos', 'Vila Nova', 'Porto Alegre', 'RS');
 
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(16, 'ana', '55667788990', NULL, '1996-09-17', 'F', 'Jornalista', 'BR', 'Rua da Liberdade', 65, 'Casa Fundos', 'Vila Nova', 'Porto Alegre', 'RS');
+
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(17, 'Jessica', '55667788990', NULL, '1996-09-17', 'F', 'Confeiteira', 'BR', 'Rua Jorge', 67, 'Casa Fundos', 'Vila Nova', 'Porto Alegre', 'RS');
+
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(18, 'Pedro', NULL, NULL, '1995-08-16', 'F', 'Padeiro', 'BR', 'Rua Jorge', 67, NULL, NULL, NULL, NULL);
+
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(19, 'Miguel Lucas', NULL, NULL, '1998-07-21', 'M', 'Jardineiro', 'AR', 'Rua Madalena', NULL, NULL, NULL, NULL, NULL);
+
+
+
 select * from cliente;
 select nome, data_nascimento from cliente;
 select nome, data_nascimento as "Data De Nascimento" from cliente;
@@ -76,4 +90,24 @@ select * from cliente where nome like 'C%';
 select nome from cliente where nome like '%a%';
 select nome, data_nascimento from cliente where data_nascimento between '1999-01-01' and '2007-01-01';
 select nome, rg from cliente where rg is null;
-select nome from cliente order by nome;
+select nome from cliente order by nome asc;
+select nome from cliente order by nome desc;
+
+--exercicios
+
+select nome, genero, profissao from cliente order by nome desc;
+select * from cliente where nome like '%r%';
+select * from cliente where nome like 'C';
+select * from cliente where nome like '%a';
+select * from cliente where bairro like 'Centro';
+select * from cliente where complemento like 'A%';
+select * from cliente where genero like 'F';
+select * from cliente where rg is null;
+select * from cliente where cpf is null;
+select nome, profissao as "Nome da profissão" from cliente order by profissao asc;
+select * from cliente where nacionalidade like 'BR';
+select * from cliente where numero is not null;]
+select * from cliente where numero is null;
+select * from cliente where uf like 'SC';
+select * from cliente where data_nascimento between '2000-01-01' and '2002-01-01';
+select 'Nome: ' || nome || ' Logadouro: ' || logradouro || ' Número: ' || numero || ' Complemento: ' || complemento || ' Bairro: ' || bairro || ' Municipio: ' || municipio || ' UF: ' || uf as "Todos os clientes" from cliente;
