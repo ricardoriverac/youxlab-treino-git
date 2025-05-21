@@ -68,3 +68,12 @@ select * from cliente;
 select nome, data_nascimento from cliente;
 select nome, data_nascimento as "Data De Nascimento" from cliente;
 select 'CPF: ' || cpf || ' RG: ' || rg as "CPF e RG" from cliente;
+select rg as "Identidade", bairro as "Identidade e Bairro" from cliente;
+select * from cliente limit 3;
+
+select nome, data_nascimento from cliente where data_nascimento > '2000-01-01';
+select * from cliente where nome like 'C%';
+select nome from cliente where nome like '%a%';
+select nome, data_nascimento from cliente where data_nascimento between '1999-01-01' and '2007-01-01';
+select nome, rg from cliente where rg is null;
+select nome from cliente order by nome;
