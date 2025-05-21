@@ -8,7 +8,7 @@ function teste(){
     console.log("dentro do teste: " + nome)
 }
 
-teste()
+teste() 
 
 console.log("fora do teste: " + nome) // erro pq não pega a variavel nome pq ela ta declarada dentro da função
 
