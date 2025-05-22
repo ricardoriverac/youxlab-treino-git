@@ -1,0 +1,23 @@
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(22, 'Maicon', NULL, NULL, NULL, 'M', 'Médica', 'Brasileira', 'Rua dos Goitacases', '87', 'Ap', 'Flor nova', 'Rio preto','SP' );
+
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(23, 'Sandra', NULL, NULL, NULL, 'M', 'Empresário', 'Italiana', NULL, '65', 'Bloco A', NULL, NULL, NULL);
+
+update cliente set genero = 'M', nacionalidade = 'Brasileira', uf = 'BA' where idcliente = 20;
+update cliente set genero = 'M', data_nascimento = '1978-01-04' where idcliente = 21;
+update cliente set genero = 'F', profissao = 'Professora', numero = '123' where idcliente = 23;
+
+delete from cliente where nome = 'Maicon';
+delete from cliente where idcliente = 23;
+
+select * from cliente;
+
+create table profissao(
+	idprofissao integer not null,
+	nome varchar not null,
+
+
+	constraint pk_prf_idprofissao primary key (idprofissao),
+	constraint un_prf_nome unique (nome)
+);

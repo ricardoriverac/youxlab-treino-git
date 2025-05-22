@@ -100,7 +100,9 @@ select nome, genero, profissao from cliente order by nome desc;
 select * from cliente where nome like '%r%';
 select * from cliente where nome like 'C';
 select * from cliente where nome like '%a';
+
 select * from cliente where bairro like 'Centro';
+
 select * from cliente where complemento like 'A%';
 select * from cliente where genero like 'F';
 select * from cliente where rg is null;
@@ -121,3 +123,187 @@ update cliente set nome = 'Edudarda', genero = 'F', numero = '43' where idclient
 insert into cliente (idcliente, nome) values (20, 'João');
 select nome from cliente where idcliente = 20;
 delete from cliente where idcliente = 20;
+
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(22, 'Maicon', NULL, NULL, NULL, 'M', 'Médica', 'Brasileira', 'Rua dos Goitacases', '87', 'Ap', 'Flor nova', 'Rio preto','SP' );
+
+insert into cliente(idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values(23, 'Sandra', NULL, NULL, NULL, 'M', 'Empresário', 'Italiana', NULL, '65', 'Bloco A', NULL, NULL, NULL);
+
+update cliente set genero = 'M', nacionalidade = 'Brasileira', uf = 'BA' where idcliente = 20;
+update cliente set genero = 'M', data_nascimento = '1978-01-04' where idcliente = 21;
+update cliente set genero = 'F', profissao = 'Professora', numero = '123' where idcliente = 23;
+
+delete from cliente where nome = 'Maicon';
+delete from cliente where idcliente = 23;
+
+select * from cliente;
+
+create table profissao(
+	idprofissao integer not null,
+	nome varchar not null,
+
+
+	constraint pk_prf_idprofissao primary key (idprofissao),
+	constraint un_prf_nome unique (nome)
+);
+
+create table profissao(
+	idprofissao integer not null,
+	nome varchar not null,
+
+
+	constraint pk_prf_idprofissao primary key (idprofissao),
+	constraint un_prf_nome unique (nome)
+);
+
+create table nacionalidade(
+	idnacionalidade integer not null,
+	nome varchar(30) not null, --variable character 
+
+	constraint pk_ncn_idnacionalidade primary key (idnacionalidade),
+	constraint un_unc_nome unique (nome)
+);
+select nacionalidade from cliente;
+
+-- mudando a nacionalidae dos clientes
+update cliente set nacionalidade = 'Italiana' where idcliente = 2;
+update cliente set nacionalidade = 'Norte-Americana' where idcliente = 3;
+update cliente set nacionalidade = 'Alemã' where idcliente = 4;
+
+
+insert into nacionalidade (idnacionalidade, nome) values(1, 'Brasileira');
+insert into nacionalidade (idnacionalidade, nome) values(2, 'Italiana');
+insert into nacionalidade (idnacionalidade, nome) values(3, 'Norte-Americana');
+insert into nacionalidade (idnacionalidade, nome) values(4, 'Alemã');
+
+create table complemento(
+	idcomplemento integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_cpl_idcomplemento primary key (idcomplemento),
+	constraint un_cpl_nome unique (nome)
+);
+
+select * from cliente;
+select * from nacionalidade;
+
+insert into complemento (idcomplemento, nome) values (1, 'Perto do circuito');
+insert into complemento (idcomplemento, nome) values (2, 'Campo Grande');
+insert into complemento (idcomplemento, nome) values (3, 'Goias Campo');
+insert into complemento (idcomplemento, nome) values (4, 'Vida Bela');
+
+update 
+create table bairro (
+	idbairro integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_br_bairro primary key (idbairro),
+	constraint un_bairro_nome unique (nome)
+);
+
+insert into bairro (idbairro, nome) values (1, 'Nova Vida');
+insert into bairro (idbairro, nome) values (2, 'Vida Nova');
+insert into bairro (idbairro, nome) values (3, 'Vida Top');
+insert into bairro (idbairro, nome) values (4, 'Goitacases');
+
+insert into profissao (idprofissao, nome) values (1, 'Programador');
+insert into profissao (idprofissao, nome) values (2, 'Músico');
+insert into profissao (idprofissao, nome) values (3, 'Locutora');
+insert into profissao (idprofissao, nome) values (4, 'Engenheiro');
+insert into profissao (idprofissao, nome) values (5, 'Jornalista');
+
+alter table cliente rename column profissao to idprofissao;
+
+-- estudante -> 1, 9, 10, 12, 15, 17
+-- engenheiro -> 2
+-- pedreiro -> 3
+-- jornalista -> 4, 5
+-- professor -> 6, 7, 8, 13
+-- null 11, 14
+
+
+select * from cliente;
+select * from profissao;
+
+select * from cliente where idprofissao is null;
+update cliente set idprofissao = 'Pedreiro' where idcliente = 3;
+update cliente set idprofissao = 'Jornalista' where idcliente = 4;
+update cliente set idprofissao = 'Jornalista' where idcliente = 5;
+
+update cliente set idprofissao = 'Professor' where idcliente = 6;
+update cliente set idprofissao = 'Professor' where idcliente = 7;
+update cliente set idprofissao = 'Professor' where idcliente = 8;
+update cliente set idprofissao = 'Professor' where idcliente = 13;
+
+update cliente set idprofissao = NULL where idcliente = 11;
+update cliente set idprofissao = NULL where idcliente = 14;
+
+-- exclui a a coluna idcliente
+alter table cliente drop idprofissao;
+
+-- cria uma nova coluna que recebe dados inteiros
+alter table cliente add idprofissao integer;
+
+-- adicionar na tabela usando a chave estrangeira da idprofissao que relaciona com profissao utilizando a chave idprofissao
+alter table cliente add constraint fk_cln_idprofissao foreign key (idprofissao) references profissao (idprofissao);
+update cliente set idprofissao = 1 where idcliente in (1, 9, 10, 12, 15, 17);
+update cliente set idprofissao = 2 where idcliente in (2);
+update cliente set idprofissao = 3 where idcliente in (3);
+update cliente set idprofissao = 4 where idcliente in (4, 5);
+update cliente set idprofissao = 5 where idcliente in (6, 7, 8, 13);
+
+select * from cliente;
+select * from profissao;
+-- BR -> 1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21
+-- norte-americana -> 3
+-- Alemã -> 4
+-- Italiana -> 2
+alter table cliente add idnacionalidade integer;
+alter table cliente drop nacionalidae;
+alter table cliente add constraint fk_cln_idnacionalidade foreign key (idnacionalidade) references nacionalidade (idnacionalidade);
+
+select * from nacionalidade;
+update cliente set idnacionalidade = 1 where idcliente in (1, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21);
+update cliente set idnacionalidade = 2 where idcliente in (2);
+update cliente set idnacionalidade = 3 where idcliente in (3);
+update cliente set idnacionalidade = 4 where idcliente in (4);
+select * from cliente;
+
+-- alter table de complemento
+select * from cliente where complemento like 'Campo Grande';
+-- Casa dos fundos = (16, 15, 17)
+-- Apartamento = 21
+-- Perto do circuito = 1
+-- fundos = 9
+-- bloco c = 10
+-- cobertura = 12
+-- campo grande = 5, 2
+-- apt 202 = 6
+-- sala 10 = 7
+-- casa azul = 8
+-- bloco b = 13
+-- casa 2 = 11
+-- ap 101 = 14
+-- goias campo = 3
+-- vida bela = 4
+
+alter table cliente drop complemento;
+alter table cliente add idcomplemento integer;
+alter table cliente add constraint fk_cln_idcomplemento foreign key (idcomplemento) references complemento(idcomplemento);
+select * from complemento;
+update cliente set idcomplemento = 1 where idcliente in (1);
+update cliente set idcomplemento = 2 where idcliente in (2);
+update cliente set idcomplemento = 3 where idcliente in (3);
+update cliente set idcomplemento = 4 where idcliente in (4);
+select * from cliente;
+
+-- fazendo alter table de bairro
+-- nova vida = 1
+-- vida nova = 2
+-- vida top = 3
+-- goitacases = 4
+
+alter table cliente drop bairro;
+alter table cliente add idbairro integer;
+alter table cliente add constraint foreign key (idbairro)
