@@ -1,0 +1,26 @@
+5 frases marcantes
+==============================
+1 -Empatia é a chave pra gente entender de verdade o que o usuário precisa. Não é só adivinhar, é realmente se colocar no lugar dele.
+2 -No Design Thinking, o lance é que o processo nunca é reto, A gente vai e volta, faz ajustes, aprende com os erros
+3 -Prototipar rápido ajuda muito Assim você já testa na prática e não perde muito tempo com ideias que podem não funcionar.
+4 -Não adianta querer achar a solução perfeita logo de cara, o importante é testar várias coisas e ver o que dá certo.
+5 -Trabalhar com um time diverso é uma das melhores maneiras de chegar em soluções que realmente sejam inovadoras.
+==============================
+2 Duvidas
+==============================
+1 -Como garantir que durante a fase de prototipagem a gente não perde o foco nas necessidades do usuário e acaba só testando o que a gente acha legal?
+2 -Quando o protótipo não dá certo, qual é a melhor forma de lidar com isso sem desanimar? Porque a gente acaba ficando meio frustrado, né?
+==============================
+5 exemplos que chamou atenção
+==============================
+1 -Empatia no Design Thinking
+Eles falam que o segredo é fazer entrevistas mais profundas com os usuários. Tipo, não só perguntar o que eles acham, mas entender o que realmente se passa no dia a dia deles. Ai fica mais fácil encontrar problemas reais.
+2 -Prototipagem Rápida
+Achei muito legal a ideia de prototipar de forma simples. Tipo criar um protótipo com papel mesmo, só pra ver se a ideia funciona. Aí, se der errado, a gente testa de novo sem perder muito tempo.
+3 -Iteração Constante:
+Teve um projeto de app de saúde que me chamou atenção. Eles fizerm vários protótipos e, a cada teste, ajustavam a solução com base no feedback dos usuários. Isso ajudou demais a melhorar a experiência de quem usava o app.
+4 -Trabalho em Equipe Multidisciplinar:
+Eles estavam criando uma plataforma e chamaram gente de várias áreas, tipo design, TI, marketing e isso fez a solução ser mais redonda, porque todas as perspectivas se somaram.
+5 -Inovação no Varejo
+Vi um exemplo bem bacana no varejo, onde eles usaram o Design Thinking pra melhorar a experiência de compra. Em vez de pensar soo no produto, eles focaram em como o cliente se sente e o que ele realmente quer na hora da compra.
+==============================
