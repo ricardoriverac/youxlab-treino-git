@@ -1,1 +1,1 @@
-começndo curso de banco de dados
+começando curso de banco de dados
