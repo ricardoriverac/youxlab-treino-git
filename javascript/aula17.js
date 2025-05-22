@@ -5,12 +5,12 @@
 //     n++
 // }
 
-let n=10
-let fat=1
+let numero=10
+let fatorial=1
 
-while(n>=1){
-    fat*=n
-    n--
+while(numero>=1){
+    fatorial*=numero
+    numero--
 }
 
-console.log(fat)
+console.log(fatorial)
