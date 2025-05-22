@@ -1,3 +1,4 @@
+-- Abaixo temos a casinha dos dados :)
 create table cliente (
 	idcliente integer not null,
 	nome varchar(50) not null,
@@ -18,9 +19,9 @@ create table cliente (
 	constraint pk_cln_idcliente primary key (idcliente)
 );
 
+-- Abaixo temos nosso banco de dados
 insert into cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
 values(1, 'Garcia', '11122233344', '12345', '2007-08-05', 'M', 'Estudante', 'Brasileira', '25 de março', '23', 'Casa', 'Cidade Nova', 'Porto união', 'SP');
-
 
 insert into cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
 values (2, 'Geraldo', '12343299291', '56565', '1987-01-04', 'M', 'Engenheiro', 'Brasileira', 'Rua das Limas', '200', 'Ap.', 'Centro', 'P. União', 'SC');
@@ -63,3 +64,45 @@ values (14, 'Jeferson', null, null, '1983-07-01', 'M', null, 'Brasileiro', null,
 
 insert into cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
 values (15, 'Jessica', null, null, null, 'F', 'Estudante', null, null, null, null, null, 'União da Vitória', 'PR');
+
+-- Testes de consultas
+
+select * from cliente;
+-- Puxa os selecionados ( Abaixo )
+select nome, data_nascimento from cliente;
+
+-- Abaixo ele puxa renomeando visualmente
+select nome as "Nome", data_nascimento as "Data de Nascimento" from cliente;
+
+-- Selecionar e mostrar em linhas
+select 'CPF:' || cpf || ' RG ' || rg as "CPF e RG" from cliente;
+
+-- Abaixo temos tipo um head()
+select * from cliente limit 5;
+
+-----------------------------------------------
+-- Abaixo temos um comando que puxa apenas nascidos depois de 2000-01-01
+select nome, cpf, data_nascimento from cliente where data_nascimento > '2000-01-01';
+
+-- Abaixo temos um comando que vai selecionar os nomes que começam com C
+select nome from cliente where nome like 'C%';
+
+-- Abaixo temos um comando que seleciona nomes com c no meio
+select nome from cliente where nome like '%c%';
+
+-- Abaixo temos um filtro que comeca em um ano e acaba em outro
+select nome, cpf, data_nascimento from cliente where data_nascimento between '1990-01-01' and '1998-01-01'
+
+-- Busca apenas os rg 'null'
+select nome, rg from cliente where rg is null;
+
+-- Abaixo temos um comando pra deixar em abc..
+select nome from cliente order by nome;
+
+-- Decressente
+select nome from cliente order by nome desc;
+
+
+
+
+
