@@ -307,3 +307,143 @@ select * from cliente;
 alter table cliente drop bairro;
 alter table cliente add idbairro integer;
 alter table cliente add constraint foreign key (idbairro)
+
+alter table cliente add constraint fk_cln_idbairro foreign key (idbairro) references bairro (idbairro);
+select * from cliente;
+
+update cliente set idbairro = 1 where idcliente in (1);
+update cliente set idbairro = 2 where idcliente in (2);
+update cliente set idbairro = 3 where idcliente in (3);
+update cliente set idbairro = 4 where idcliente in (4);
+
+select * from bairro; 
+create table uf (
+	iduf integer not null,
+	nome varchar(30) not null,
+	sigla  varchar (2) not null, 
+
+	constraint fk_ufd_ifunidade_federacao primary key (iduf),
+	constraint un_ufd_nome unique (nome),
+	constraint un_ufd_sigla unique (sigla)
+);
+insert into uf (iduf, nome, sigla) values (1, 'Minas Gerais', 'MG');
+insert into uf (iduf, nome, sigla) values (2, 'Bahia', 'BA');
+insert into uf (iduf, nome, sigla) values (3, 'Rio grande', 'RS');
+insert into uf (iduf, nome, sigla) values (4, 'Rio De Janeiro', 'RJ');
+insert into uf (iduf, nome, sigla) values (5, 'São Paulo', 'SP');
+
+select * from uf;
+
+update uf set nome = 'Bahia' where iduf = 2;
+create table municipio(
+	idmunicipio integer not null,
+	nome varchar(30) not null,
+	iduf integer not null,
+
+	constraint pk_mnc_idmunicipio primary key (idmunicipio),
+	constraint un_mnc_nome unique (nome),
+	constraint un_mnc_idfuf foreign key (iduf) references uf (iduf)
+);
+select * from municipio;
+insert into municipio (idmunicipio, nome, iduf) values (1, 'Lavras', 1);
+insert into municipio (idmunicipio, nome, iduf) values (2, 'Salvador', 2);
+insert into municipio (idmunicipio, nome, iduf) values (3, 'Porto Alegre', 3);
+insert into municipio (idmunicipio, nome, iduf) values (4, 'Rio de Janeiro', 4);
+insert into municipio (idmunicipio, nome, iduf) values (5, 'São Paulo', 5);
+
+-- lavras - 1
+-- salvador - 2
+-- lavras 
+-- rio 12 
+-- sp - 11
+-- porto alegr - 16 ana 
+
+select * from cliente;
+select idcliente from cliente where municipio like 'Ri%';
+alter table cliente drop municipio;
+alter table cliente drop uf;
+
+alter table cliente add idmunicipio integer;
+alter table cliente add constraint fk_cliente_idmunicipio foreign key (idmunicipio) references municipio (idmunicipio);
+
+update cliente set idmunicipio = 1 where idcliente in (1, 3);
+update cliente set idmunicipio = 2 where idcliente in (2);
+update cliente set idmunicipio = 3 where idcliente in (16);
+update cliente set idmunicipio = 4 where idcliente in (12);
+update cliente set idmunicipio = 5 where idcliente in (11);
+select * from cliente;
+
+create table fornecedor(
+	idfornecedor integer not null,
+	nome varchar not null,
+
+	constraint pk_fndr_idfornecedor primary key (idfornecedor),
+	constraint un_nome unique (nome)
+	
+);
+
+insert into forncedores (idfornecedor, nome)
+
+create table vendedor(
+	idvendedor integer not null,
+	nome varchar (30) not null,
+
+	constraint pk_vndr_vendedor primary key (idvendedor),
+	constraint un_vndr_nome unique (nome)
+	
+);
+insert into vendedor (idvendedor, nome) values (1, 'Matheus Silva');
+insert into vendedor (idvendedor, nome) values (2, 'Thiago Gomes');
+insert into vendedor (idvendedor, nome) values (3, 'Erick Gomez');
+insert into vendedor (idvendedor, nome) values (4, 'Santiago Menez');
+insert into vendedor (idvendedor, nome) values (5, 'João Prado');
+insert into vendedor (idvendedor, nome) values (6, 'Gustavo Henrique');
+insert into vendedor (idvendedor, nome) values (7, 'Hiago Souza');
+
+create table transportadora(
+	idtransportadora integer not null,
+	idmunicipio integer not null,
+	nome varchar (50),
+	logradouro varchar (50),
+	numero varchar (10),
+	
+	constraint pk_tptd_transportadora primary key (idtransportadora),
+	constraint fk_mfcp_idmunicipio foreign key (idtransportadora) references municipio(idmunicipio),
+	constraint un_tptd_nome unique (nome)
+);
+
+select * from municipio;
+select * from bairro;
+
+insert into transportadora(idtransportadora, idmunicipio, nome, logradouro, numero) values (1, 2, 'AC. Materiais','Rua dos ipês', '45' );
+
+insert into transportadora(idtransportadora, idmunicipio, nome, logradouro, numero) values (2, 1, 'JP. Construção','Jardim Glória', '345' );
+
+insert into transportadora(idtransportadora, idmunicipio, nome, logradouro, numero) values (3, 5, 'BK Transporte','Rua dos palmares', '23' );
+
+insert into transportadora(idtransportadora, idmunicipio, nome, logradouro, numero) values (4, 4, 'RM. Transportadora','Ouro Preto', '67' );
+
+insert into transportadora(idtransportadora, idmunicipio, nome, logradouro, numero) values (5, 3, 'Pedro Caminhões','Rua das lagoas', '12' );
+select * from transportadora;
+
+select * from transportadora;
+
+create table Produto(
+	idproduto integer not null,
+	idfornecedor integer not null,
+	nome varchar (30) not null,
+	valor decimal(10, 2) not null,
+
+	constraint pk_pdt_idproduto primary key (idproduto),
+	constraint fk_frnc_idfornecedor foreign key (idfornecedor) references fornecedor (idfornecedor)
+);
+select * from fornecedor;
+
+insert into Produto(idproduto, idfornecedor, nome, valor) values (1, 2, 'Ford Focus - 2008', 28.000);
+insert into Produto(idproduto, idfornecedor, nome, valor) values (2, 3 ,'Corolla - 2010', 30.204);
+insert into Produto(idproduto, idfornecedor, nome, valor) values (3, 1, 'Kicks - 2025', 45.000);
+insert into Produto(idproduto, idfornecedor, nome, valor) values (4, 1, 'SUV compacto - 2017', 100.000);
+insert into Produto(idproduto, idfornecedor, nome, valor) values (5, 2, 'Mustang GT (manual) - 2020', 350.000);
+insert into Produto(idproduto, idfornecedor, nome, valor) values (6, 3, 'Carmy - 2013', 48.000);
+insert into Produto(idproduto, idfornecedor, nome, valor) values (7, 3, 'Yaris Cross - 2008', 21.000);
+select * from produto;
