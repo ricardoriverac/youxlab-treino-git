@@ -1,5 +1,5 @@
 let num=10 //sempre que a operação está pós a variavel, é pós incremento
-let x=-num// o - é um operador de inversão, ou seja, vira um numero negativo
+let x =-num// o - é um operador de inversão, ou seja, vira um numero negativo
 n1 = 10, n2 = 10
 console.log("Este é o pos incremento:")
 console.log(num ++)
