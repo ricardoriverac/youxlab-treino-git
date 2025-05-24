@@ -10,7 +10,7 @@ console.log("Bitwise, equivalencia usando |:")
 console.log(ress)
 console.log("Bitwise, retornando 1 ou 0:")
 console.log(resss)
-console.log("Bitwise, estamos deslocando bits agora:")
+console.log(" Bitwise, estamos deslocando bits agora:")
 console.log(rees)
 console.log(reess)
 
