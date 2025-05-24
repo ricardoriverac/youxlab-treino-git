@@ -21,3 +21,18 @@ create table profissao(
 	constraint pk_prf_idprofissao primary key (idprofissao),
 	constraint un_prf_nome unique (nome)
 );
+
+-- código do dia 24/05/2025
+create table pedidos(
+	idpedido integer not null,
+	idcliente integer not null,
+	idtransportadora integer not null.
+	idvendedor integer not null,
+	data_pedido date not null,
+	valor decimal (10, 2) not null,
+
+	constraint pk_pdd_idpedido primary key (idpedido),
+	constraint fk_pdd_idcliente foreign key (idcliente) references cliente (idcliente),
+	constraint fk_tpd_idtransportadora foreign key (idtransportadora) references transportadora (idtransportadora),
+	constraint fk_vnd_idvendedor foreign key (idvendedor) references vendedor (idvendedor)
+);

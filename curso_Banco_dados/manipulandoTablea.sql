@@ -447,3 +447,4 @@ insert into Produto(idproduto, idfornecedor, nome, valor) values (5, 2, 'Mustang
 insert into Produto(idproduto, idfornecedor, nome, valor) values (6, 3, 'Carmy - 2013', 48.000);
 insert into Produto(idproduto, idfornecedor, nome, valor) values (7, 3, 'Yaris Cross - 2008', 21.000);
 select * from produto;
+
