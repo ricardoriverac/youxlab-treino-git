@@ -4,4 +4,4 @@ console.log(num1 >= num3)//mostra que o numero é = ao outro
 console.log(num1 <= num3)//mostra que o numero é = ao outro 
 console.log(num1 == num3)//mostra que o numero é = ao outro 
 console.log(!(num1 >= num3))//mostra que estou negando a operação
-console.log((num1 !=num3))//mostra se é diferente 
+console.log((num1 !=num3))// mostra se é diferente 
