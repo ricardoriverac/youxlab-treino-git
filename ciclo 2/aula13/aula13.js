@@ -43,6 +43,3 @@ if (graus > 30 && clima === 'sol') {  // se estiver mais de 30 graus se tive sol
   console.log('Vou ao cinema'); 
 }
 console.log('Fim do programa \n');
-
-
-
