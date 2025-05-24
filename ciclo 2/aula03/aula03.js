@@ -9,4 +9,4 @@ if (true){
 }
 teste()
 
-console.log("fora do teste:" + nome)
+console.log( "fora do teste:" + nome)
