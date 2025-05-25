@@ -15,4 +15,4 @@ while (numero2 >= 1) {
     numero2--  // diminui 1 em "numero2" a cada loop
 }
 
-console.log(fatorial)  // No final, imprime o resultado do fatorial de 5 (120)
+console.log(fatorial)
