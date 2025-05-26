@@ -23,3 +23,5 @@ switch(colocacao){ // Avalia a variável colocacao
         console.log('Não subiu ao pódio')
         break
 }
+
+
