@@ -35,7 +35,7 @@ produtos.forEach(produto => {
     }
 })
 
-// barato
+// barato 
 console.log('Produtos baratos:')
 barato.forEach(produto => {
     console.log(produto.nome + ' - ' + produto.categoria + ' - Preço: R$' + produto.preco)
