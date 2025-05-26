@@ -38,7 +38,7 @@ funcionarios.forEach(funcionario => { // forEach percorre a lista
     }
 })
 
-// junior
+// junior 
 console.log('Funcionários juniores:')
 junior.forEach(funcionario => {
     console.log(funcionario.nome + ', ' + funcionario.cargo + ' - Salário: R$' + funcionario.salario)
