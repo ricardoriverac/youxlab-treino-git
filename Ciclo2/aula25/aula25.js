@@ -23,3 +23,4 @@ let adiciona=numero=>numero+10
 
 console.log(adiciona(10))
 console.log('\n')
+
