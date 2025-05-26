@@ -74,7 +74,7 @@ create table cliente (
 	
 	select * from cliente limit 6;
 	
-	select nome, data_nascimento from cliente where data_nascimento > '2000-01-01';
+	select nome, data_nascimento from cliente where data_nascimento = '2001-01-01';
 	
 	select nome from cliente where nome like 'C%';
 	
@@ -164,3 +164,108 @@ create table cliente (
 
 	--6
 	delete from cliente where idcliente = 16;
+	--end
+
+	create table profissao (
+	idprofissao integer not null,
+	nome varchar(30) not null,
+	
+	constraint pk_prf_idprofissao primary key (idprofissao),
+	
+	constraint un_prf_nome unique (nome)
+);
+
+	insert into profissao (idprofissao, nome) values (1, 'Estudante');
+	
+	insert into profissao (idprofissao, nome) values (2, 'Engenheiro');
+
+	insert into profissao (idprofissao, nome) values (3, 'Pedreiro');
+
+	insert into profissao (idprofissao, nome) values (4, 'Jornalista');
+	
+	insert into profissao (idprofissao, nome) values (5, 'Professor');
+
+	select * from profissao;
+	
+create table nacionalidade (
+	idnacionalidade integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_ncn_idnacionalidade primary key (idnacionalidade),
+	constraint un_ncn_nome unique (nome)
+
+);
+
+	insert into nacionalidade (idnacionalidade, nome) values (1, 'Brasileira');
+	
+	insert into nacionalidade (idnacionalidade, nome) values (2, 'Italiana');
+	
+	insert into nacionalidade (idnacionalidade, nome) values (3, 'Norte-Americana');
+	
+	insert into nacionalidade (idnacionalidade, nome) values (4, 'Alemã');
+
+	select * from nacionalidade
+
+	--Arrumando erro cometido--
+	update cliente set  data_nascimento = '2001-01-30' where idcliente = 1;
+
+	update cliente set  data_nascimento = '1987-01-04' where idcliente = 2;	
+	
+	update cliente set  data_nascimento = '1967-10-01' where idcliente = 3;
+
+	update cliente set  data_nascimento = '1989-09-10' where idcliente = 4;
+
+	update cliente set  data_nascimento = '1991-03-04' where idcliente = 5;
+
+	update cliente set  data_nascimento = '2000-01-01' where idcliente = 6;
+
+	update cliente set  data_nascimento = null where idcliente = 7;
+
+	update cliente set  data_nascimento = '2001-10-10' where idcliente = 8;
+
+	update cliente set  data_nascimento = null where idcliente = 9;
+
+	update cliente set  data_nascimento = null where idcliente = 10;
+
+	update cliente set  data_nascimento = null where idcliente = 11;
+
+	update cliente set  data_nascimento = '2000-02-10' where idcliente = 12;
+
+	update cliente set  data_nascimento = null where idcliente = 13;
+
+	update cliente set  data_nascimento = '1983-07-01' where idcliente = 14;
+
+	update cliente set  data_nascimento = null where idcliente = 15;
+	--end
+
+	create table complemento (
+	idcomplemento integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_cpl_idcomplemento primary key (idcomplemento), 
+	constraint un_cpl_nome unique (nome)
+);
+
+	insert into complemento (idcomplemento, nome) values (1, 'Casa');
+
+	insert into complemento (idcomplemento, nome) values (2, 'Apartamento');
+
+	select * from complemento;
+
+	create table bairro (
+	idbairro integer not null,
+	nome varchar (30) not null,
+
+	constraint pk_brr_idbairro primary key (idbairro),
+	constraint un_brr_nome unique (nome)
+);
+
+	insert into bairro (idbairro, nome) values (1, 'Cidade Nova');
+
+	insert into bairro (idbairro, nome) values (2, 'Centro');
+
+	insert into bairro (idbairro, nome) values (3, 'São Pedro');
+
+	insert into bairro (idbairro, nome) values (4, 'Santa Rosa');
+
+	select * from bairro
