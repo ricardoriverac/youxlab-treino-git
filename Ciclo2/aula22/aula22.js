@@ -1,4 +1,4 @@
-// FUNÇÕES PARAMETRIZADAS -->inserindo valores na função
+// FUNÇÕES PARAMETRIZADAS  #P3 -->inserindo valores na função
 
 function teste(parametro1){ //parametro1--> valor que entra dentro da função
     console.log(parametro1)//imprime o parametro1
