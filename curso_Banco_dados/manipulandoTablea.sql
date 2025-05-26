@@ -448,3 +448,463 @@ insert into Produto(idproduto, idfornecedor, nome, valor) values (6, 3, 'Carmy -
 insert into Produto(idproduto, idfornecedor, nome, valor) values (7, 3, 'Yaris Cross - 2008', 21.000);
 select * from produto;
 
+create table pedidos(
+	idpedido integer not null,
+	idcliente integer not null,
+	idtransportadora integer not null,
+	idvendedor integer not null,
+	data_pedido date not null,
+	valor decimal (10, 2) not null,
+
+	constraint pk_pdd_idpedido primary key (idpedido),
+	constraint fk_pdd_idcliente foreign key (idcliente) references cliente (idcliente),
+	constraint fk_tpd_idtransportadora foreign key (idtransportadora) references transportadora (idtransportadora),
+	constraint fk_vnd_idvendedor foreign key (idvendedor) references vendedor (idvendedor)
+);
+select * from cliente;
+select * from transportadora;
+select * from vendedor;
+
+insert into pedidos(idpedido,data_pedido, valor, idcliente, idtransportadora, idvendedor)
+values(1, '2008-04-01', 1300, 4, 2, 3);
+
+insert into pedidos(idpedido,data_pedido, valor, idcliente, idtransportadora, idvendedor)
+values(2, '2008-04-01', 500, 4, 2, 3);
+
+insert into pedidos(idpedido,data_pedido, valor, idcliente, idtransportadora, idvendedor)
+values(3, '2008-07-12', 700, 1, 3, 2);
+
+insert into pedidos(idpedido,data_pedido, valor, idcliente, idtransportadora, idvendedor)
+values(4, '2008-10-23', 450, 5, 1, 1);
+
+insert into pedidos(idpedido,data_pedido, valor, idcliente, idtransportadora, idvendedor)
+values(5, '2008-05-05', 1000, 3, 3, 3);
+
+insert into pedidos(idpedido,data_pedido, valor, idcliente, idtransportadora, idvendedor)
+values(6, '2008-05-05', 100, 3, 3, 3);
+
+insert into pedidos(idpedido,data_pedido, valor, idcliente, idtransportadora, idvendedor)
+values(7, '2008-09-03', 20.000, 5, 1, 1);
+
+create table pedido_produto(
+	idpedido integer not null,
+	idproduto integer not null,
+	quantidade integer not null,
+	valor_unitario decimal(10,2) not null,
+
+	constraint pk_pdp_idpedidoproduto primary key (idpedido, idproduto),
+	constraint fk_pdp_idpedido foreign key (idpedido) references pedidos(idpedido),
+	constraint fk_pdp_idproduto foreign key (idproduto) references produto(idproduto)
+	
+);
+
+select * from produto;
+select * from pedidos;
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (1, 1, 1, 28.000);
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (2, 1, 1, 28.000);
+update pedidos set valor = 350.000 where idpedido = 7;
+
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (3, 4, 1, 21.000);
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (4, 5, 1, 45.000);
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (5, 3, 1, 30.000);
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (6, 3, 1, 21.000);
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (7, 5, 1, 350.000);
+
+select * from pedido_produto;
+
+-- exercicio aula(29)
+-- ex 01:
+select nome from vendedor order by nome;
+
+-- ex 02
+select nome, valor from produto where valor > 100.000 order by valor asc;
+
+-- ex 03
+select nome, valor, valor + (valor * 10) / 100 from produto;
+
+-- ex 04;
+select * from uf;
+select * from municipio;
+select nome from municipio where idmunicipio = 3 and iduf = 3; 
+
+-- ex 05;
+select * from pedidos;
+select data_pedido, valor from pedidos where data_pedido between '2008-04-01' and '2008-05-05' order by valor;
+
+--ex 06
+select * from pedidos where valor between '10.000' and '50.000';
+
+-- ex 07
+select * from pedidos where valor not between '10.000' and '50.000';
+
+-- ex 08
+select * from vendedor;
+select * from pedidos where idvendedor = 3 order by valor desc;
+
+-- ex 09
+select * from pedidos;
+select * from pedidos where idcliente = 3 order by valor;
+
+-- ex 10
+select * from pedidos;
+select * from pedidos where idcliente = 4 and idvendedor = 3;
+
+-- ex 11
+select * from pedidos where idtransportadora = 3;
+
+-- ex 12
+select * from pedidos where idvendedor = 2 or idvendedor = 1;
+
+-- ex 13
+select * from cliente where idmunicipio = 1 or idmunicipio = 4;
+
+-- ex 14
+select * from cliente where idmunicipio <> 1 and idmunicipio <> 4;
+-- ex 15
+select * from cliente where logradouro is null;
+select * from cliente;
+
+-- ex 16
+select * from cliente where logradouro like 'Av%';
+
+-- ex 17
+select * from vendedor where nome like 'S%';
+
+-- ex 18
+select * from vendedor where nome like '%a';
+
+-- ex 19
+select * from vendedor where nome not like 'A%'
+
+-- ex 20
+select * from municipio where nome like 'P%' and iduf = 3;
+
+-- ex 21
+select * from transportadora;
+select * from transportadora where logradouro is not null;
+
+-- ex 22
+select * from pedido_produto where idpedido = 1;
+
+-- ex 23
+select * from pedido_produto where idpedido = 3 or idpedido = 5;
+
+
+------ funções agragarias
+-- comando avg tira a media dos valores da coluna
+
+select avg(valor) from pedidos;
+
+select count(idmunicipio) from municipio;
+
+-- conta tudo independende se o campo estiver null
+select count(*) from municipio;
+
+select count(idtransportadora) from transportadora;
+
+select * from municipio;
+-- filtrando contando o numero de idmunicipio onde os id uf é igual a 2
+select count(idmunicipio) from municipio where iduf = 2;
+
+select max(valor ) from pedidos;
+select min(valor ) from pedidos;
+
+select sum(valor ) from pedidos;
+
+-- agrupando os id dos clientes e somando os pedidos deles para aprecer uma unica vez 
+select idcliente, sum(valor) from pedidos group by idcliente;
+
+-- impondo condições para que filtrar o valor da soma apenas para os maiores que 60.000
+select idcliente, sum(valor) from pedidos group by idcliente having sum(valor) > 60.000;
+
+------ exercicios das funções----------
+
+-- ex 01
+select * from pedidos;
+select idvendedor, sum(valor) from pedidos group by idvendedor having sum(valor) > 60.000;
+
+-- ex 02
+select idvendedor, valor from pedidos where valor > 50.000; 
+
+-- ex 03
+select idvendedor, sum(valor) from pedidos group by idvendedor having sum(valor) > 50.000;
+
+-- ex 04
+select count(idmunicipio) from municipio;
+
+-- ex 05
+select count(idmunicipio) from municipio where iduf = 1 or iduf = 3;
+
+-- ex 06
+
+select iduf, count(idmunicipio) from municipio group by iduf;
+
+-- ex 07
+
+select * from cliente where logradouro is not null;
+
+-- ex 08
+
+select idmunicipio, count(idcliente) from cliente group by idmunicipio;
+select * from cliente;
+select * from pedido;
+select * from municipio;
+
+-- ex 09
+
+select idfornecedor, count(idfornecedor) from fornecedor;
+
+-- ex 10
+select * from produto;
+select idfornecedor, count(idproduto) from produto group by idfornecedor;
+
+-- ex 11
+
+select avg(valor) from produto where idfornecedor = 2;
+
+-- ex 12
+select sum(valor) from produto;
+
+-- ex 13
+select max(valor) from produto;
+select nome, valor from produto order by valor desc limit 1
+
+-- ex 14
+
+select nome, valor from produto order by valor asc limit 1
+
+-- ex 15
+
+select avg(valor) from produto;
+
+-- ex 16
+select count(idtransportadora) from transportadora;
+
+-- ex 17
+select sum(valor) from pedidos;
+
+-- ex 18
+select idcliente, sum(valor) from pedidos group by idcliente;
+
+-- ex 19
+
+select idvendedor, sum(valor) from pedidos group by idvendedor;
+
+-- 20
+select idtransportadora, sum(valor) from pedidos group by idtransportadora;
+
+-- 21
+select data_pedido, sum(valor) from pedidos group by data_pedido;
+
+-- 22
+select idcliente, idvendedor, idtransportadora, sum(valor) from pedidos group by idcliente, idvendedor, idtransportadora;
+
+-- 23 
+select sum(valor) from pedidos where data_pedido between '2008-04-01' and '2008-05-05' and valor > 50.000;
+
+--24
+select sum(valor) from pedidos where idvendedor = 2;
+
+-- 25
+select sum(valor) from pedidos where idcliente = 3;
+
+-- 26
+select * from pedidos;
+select * from transportadora;
+select count(idtransportadora) from pedidos where idtransportadora = 2;
+
+-- 27
+select idvendedor, count(idvendedor) from pedidos group by idvendedor
+
+-- 28
+select idcliente, count(idcliente) from pedidos group by idcliente;	
+
+-- 29 
+select count(idpedido) from pedidos where data_pedido between '2008-04-15' and '2008-05-05';
+
+-- 30 
+select count(idpedido) from pedidos where valor > 50.000;
+
+--31
+select * from pedidos;
+select * from produto;
+select count (idproduto) from produto where idproduto = 2;
+
+--32
+select idproduto, count(idpedido) from pedido_produto group by idproduto;
+
+--33
+select * from pedido_produto;
+select idpedido, sum(valor) from pedidos group by idpedido;
+select idpedido, sum(valor_unitario) from pedidos group by idpedido
+
+--34 quantidade de produtos agrupados por pedido
+select idpedido, count(quantidade) from pedido_produto group by idpedido;
+
+-- 35 
+select sum(valor_unitario) from pedido_produto;
+
+--36 
+select avg(valor_unitario) from pedido_produto where idpedido = 6;
+
+--37
+select max(valor_unitario) from pedido_produto;
+
+--38
+select min(valor_unitario) from pedido_produto;
+
+--39
+select * from pedidos;
+select idpedido, sum(idproduto) from pedido_produto group by idpedido;
+
+--40
+select sum(valor_unitario) from pedido_produto;
+
+-------- relacionamento com joins --------------
+
+select * from cliente;
+select * from profissao;
+update cliente set idprofissao = 1 where idcliente = 2;
+update cliente set idprofissao = 3 where idcliente = 1;
+update cliente set idprofissao = 2 where idcliente = 4;
+update cliente set idprofissao = 4 where idcliente = 3;
+update cliente set idprofissao = 2 where idcliente = 5;
+update cliente set idprofissao = 1 where idcliente = 6;
+update cliente set idprofissao = 4 where idcliente = 7;
+update cliente set idprofissao = 1 where idcliente = 8;
+update cliente set idprofissao = 3 where idcliente = 9;
+update cliente set idprofissao = 3 where idcliente = 10;
+update cliente set idprofissao = 2 where idcliente = 11;
+update cliente set idprofissao = 4 where idcliente = 12;
+update cliente set idprofissao = 1 where idcliente = 13;
+update cliente set idprofissao = 1 where idcliente = 14;
+update cliente set idprofissao = 3 where idcliente = 15;
+update cliente set idprofissao = 2 where idcliente = 16;
+update cliente set idprofissao = 1 where idcliente = 17;
+update cliente set idprofissao = 3 where idcliente = 18;
+update cliente set idprofissao = 4 where idcliente = 19;
+update cliente set idprofissao = 2 where idcliente = 20;
+
+
+
+-- left outer join retorna tudo até o null (melhor opcção)
+-- inner join apenas os cliente que informaram os dados
+
+-- seleciona nome dos clientes e as profissões da tabela de profissão 
+select cliente.nome as cliente, profissao.nome as profissao from cliente inner join profissao on cliente.idprofissao = profissao.idprofissao;
+
+---- Exercicios --------
+
+select
+	cliente.nome as cliente,
+	profissao.nome as profissao,
+	nacionalidade.nome as nacionalidade,
+	cliente.logradouro,
+	cliente.numero,
+	complemento.nome as complemento,
+	bairro.nome as bairro,
+	municipio.nome as municipio
+	
+from
+	cliente 
+left outer join 
+	profissao on cliente.idprofissao = profissao.idprofissao
+left outer join 
+	nacionalidade on cliente.idnacionalidade = nacionalidade.idnacionalidade
+left outer join 
+	complemento on cliente.idcomplemento = complemento.idcomplemento
+left outer join 
+	bairro on cliente.idbairro = bairro.idbairro
+left outer join 
+	municipio on cliente.idmunicipio = municipio.idmunicipio
+
+-- ex 02 nome do produto, valor e o nome do fornecedor
+select
+	produto.nome as produto,
+	produto.valor
+	fornecedor.nome as fornecedor
+
+from
+	produto 
+left outer join 
+	fornecedor on produto.idfornecedor = fornecedor.idfornecedor
+
+-- ex 03
+select
+	transportadora.nome as transportadora,
+	municipio.nome as municipio
+
+from
+	transportadora
+	
+left outer join 
+	municipio on transportadora.idmunicipio = municipio.idmunicipio
+	
+-- ex 04
+select
+	pedidos.data_pedido as data_pedido,
+	pedidos.valor as valor_do_pedido,
+	cliente.nome as cliente,
+	transportadora.nome as transportadora,
+	vendedor.nome as vendedor
+	
+
+from
+	pedidos
+left outer join 
+	cliente on pedidos.idcliente = cliente.idcliente
+left outer join 
+	vendedor on pedidos.idvendedor = vendedor.idvendedor
+left outer join 
+	transportadora on pedidos.idtransportadora = transportadora.idtransportadora
+
+-- ex 05
+select
+	produto.nome as produto,
+	pedido_produto.quantidade,
+	pedido_produto.valor_unitario
+	
+
+from
+	pedido_produto
+left outer join 
+	produto on pedido_produto.idproduto = produto.idproduto
+
+-- ex 06
+select
+	cliente.nome as cliente,
+	pedidos.data_pedido
+	
+	
+
+from
+	cliente
+inner join 
+	pedidos on cliente.idcliente = pedidos.idcliente
+order by cliente.nome
+
+-- ex 07
+select
+	cliente.nome as cliente,
+	pedidos.data_pedido
+	
+	
+
+from
+	cliente
+left outer join 
+	pedidos on cliente.idcliente = pedidos.idcliente
+order by cliente.nome
+
+-- ex 08 quantidade 
+select
+	cliente.idmunicipio,
+	count(cliente.idcliente)
+	
+	
+from
+	cliente
+left outer join 
+	municipio on cliente.idmunicipio = municipio.idmunicipio
+
+group by cliente.idmunicipio

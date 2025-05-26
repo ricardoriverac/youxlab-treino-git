@@ -23,6 +23,7 @@ create table profissao(
 );
 
 -- código do dia 24/05/2025
+
 create table pedidos(
 	idpedido integer not null,
 	idcliente integer not null,
@@ -36,3 +37,21 @@ create table pedidos(
 	constraint fk_tpd_idtransportadora foreign key (idtransportadora) references transportadora (idtransportadora),
 	constraint fk_vnd_idvendedor foreign key (idvendedor) references vendedor (idvendedor)
 );
+
+create table pedido_produto(
+	idpedido integer not null,
+	idproduto integer not null,
+	quantidade integer not null,
+	valor_unitario decimal(10,2) not null,
+
+	constraint pk_pdp_idpedidoproduto primary key (idpedido, idproduto),
+	constraint fk_pdp_idpedido foreign key (idpedido) references pedidos(idpedido),
+	constraint fk_pdp_idproduto foreign key (idproduto) references produto(idproduto)
+	
+);
+
+select * from produto;
+select * from pedidos;
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (1, 1, 1, 28.000);
+insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (2, 1, 1, 28.000);
+update pedidos set valor = 350.000 where idpedido = 7;
