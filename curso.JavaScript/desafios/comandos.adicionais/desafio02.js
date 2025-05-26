@@ -21,14 +21,14 @@ const produtos = [
 { nome: "Estabilizador", categoria: "Energia", preco: 350, estoque: 5 } 
 ]
 
-const barato = []
-const intermediario = []
-const caro = []
+let barato = []
+let intermediario = []
+let caro = []
 
 for (n of produtos){
     if (n.preco <= 100){
         barato.push(n)
-    }else if (n.preco >=101 && n.preco <= 1.000){
+    }else if (n.preco >=101 && n.preco <= 1000){
         intermediario.push(n)
     }else if(n.preco >=1000){
         caro.push(n)
@@ -39,11 +39,12 @@ let quantIntermediario = []
 let quantCaro = []
 
 
-console.log("BARATOS: ")
+console.log("BARATOS: (" + barato.length + ')')
+
 for (material of barato){
-    console.log('PRODUTO: ' + material.nome + '; CATEGORIA: ' + material.categoria + ', R$' + material.preco + '; ESTOQUE: ' + material.estoque )
+    console.log(material.nome +  ' (R$' + material.preco + ') ESTOQUE: ' + material.estoque)
 }
-let q = 0
+
 let soma = 0
 for (e of barato){
     quantBarato.push(e.estoque)}
@@ -52,16 +53,33 @@ for (e of barato){
 for (let i = 0; i < quantBarato.length; i++) {
   soma += quantBarato[i]}
 
-for (quantidade in quantBarato){
-    q = quantBarato.length
-}
 
 console.log("A quantidade de produtos baratos é " + soma)
 console.log("-------------------------------------------")
-console.log("INTERMEDIÁRIOS: ")
+console.log("INTERMEDIÁRIOS: (" + intermediario.length + ')')
 
-console.log(intermediario)
-
-for (material of intermediario){
-    console.log('PRODUTO: ' + material.nome + '; CATEGORIA: ' + material.categoria + ', R$' + material.preco + '; ESTOQUE: ' + material.estoque )
+for (material of intermediario)
+    console.log(material.nome + '(R$' + material.preco + ') ESTOQUE: ' +material.estoque)
+let somaI = 0
+for (e of intermediario){
+    quantIntermediario.push(e.estoque)
 }
+for(let i = 0; i < quantIntermediario.length; i++){
+    somaI += quantIntermediario[i]
+}
+console.log('A quantidade de produtos intermediários é ' + somaI)
+
+console.log('------------------------------------------')
+console.log('CAROS: (' + caro.length + ') ' )
+for (material of caro){
+    console.log(material.nome + '(R$' + material.preco + '); ESTOQUE: ' + material.estoque)
+}
+
+for (e of caro){
+    quantCaro.push(e.estoque)
+}
+let somaC = 0
+for (let i = 0; i < quantCaro.length; i ++){
+    somaC += quantCaro[i]
+}
+console.log('A quantidade de materiais caros é ' + somaC)
