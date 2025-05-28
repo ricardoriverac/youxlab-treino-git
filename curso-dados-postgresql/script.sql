@@ -38,4 +38,16 @@ VALUES
 (14, 'Jeferson', null, null, '1983-07-01', 'M', null, 'Brasileiro', null, null, null, null, 'União da Vitória', 'PR'),
 (15, 'Jessica', null, null, null, 'F', 'Estudante', null, null, null, null, null, 'União da Vitória', 'PR');
 
-SELECT * FROM cliente;
+SELECT * FROM cliente; -- Visualiza a tabela inteira, (Select = Selecionar | * = Tudo | From = de | Cliente = Tabela do cliente)
+
+select nome, data_nascimento from cliente;	-- Visualiza apenas o nome é data de nascimento da tabela
+
+select nome as "Nome", data_nascimento as "Data de Nascimento" from cliente; -- Visualizando é mudando o nome da coluna (nome, para Nome) é (data_nascimento, para Data de Nascimento)
+
+select 'CPF: ' || cpf || ' RG: ' || rg as "CPF e RG" from cliente; -- Contatenando o CPF é o RG (Juntando os dois)
+
+select * from cliente limit 3; -- Visualiza apenas os 3 primeiros clientes da tabela
+
+select nome, data_nascimento from cliente where data_nascimento > '2000-01-01'; -- Visualiza apenas os clientes que a data de nascimento é maior que '2000-01-01'
+
+
