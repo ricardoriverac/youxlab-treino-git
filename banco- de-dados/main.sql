@@ -269,3 +269,75 @@ create table nacionalidade (
 	insert into bairro (idbairro, nome) values (4, 'Santa Rosa');
 
 	select * from bairro
+
+	select * from cliente;
+
+	alter table cliente rename column profissao to idprofissao;
+
+	alter table cliente alter column idprofissao type integer; 
+
+	--Estudantes -> 1, 9, 10, 12, 15, 17
+	--Engenheiro -> 2
+	--Pedreiro -> 3
+	--Jornalista -> 4, 5
+	--Professor -> 6, 7, 8, 13
+	--Null -> 11,14
+
+	alter table cliente drop idprofissao;
+
+	select * from cliente
+
+	alter table cliente add idprofissao integer;
+
+	select * from cliente
+
+	alter table cliente add constraint fk_cln_idprofissao foreign key (idprofissao) references profissao (idprofissao);
+
+	update cliente set idprofissao = 1 where idcliente in (1, 9, 10, 12, 15, 17)
+
+	update cliente set idprofissao = 2 where idcliente = 2;
+
+	update cliente set idprofissao = 3 where idcliente = 3;
+
+	update cliente set idprofissao = 4 where idcliente in (4, 5);
+
+	update cliente set idprofissao = 5 where idcliente in (6, 7, 8, 13);
+
+	select * from cliente;
+
+	select * from profissao;
+
+	delete from profissao where idprofissao = 10;
+
+	insert into profissao (idprofissao, nome) values (10, 'Teste')
+
+	select * from cliente 
+
+	alter table cliente drop nacionalidade;
+
+	alter table cliente add idnacionalidade integer;
+
+	alter table cliente add constraint fk_cln_idnacionalidade foreign key (idnacionalidade) references nacionalidade;
+
+	update cliente set idnacionalidade = 1 where idcliente in (1, 2, 3, 4, 6, 10, 11, 14);
+
+	update cliente set idnacionalidade = 2 where idcliente in (5, 7);
+	
+	update cliente set idnacionalidade = 3 where idcliente = 8;
+	
+	update cliente set idnacionalidade = 4 where idcliente in (9, 13)	
+
+	select * from cliente 
+	
+	alter table cliente drop complemento;
+	
+	alter table cliente add idcomplemento int;
+	
+	alter table cliente add constraint fk_cln_idcomplemento foreign key (idcomplemento) references complemento (idcomplemento);
+	
+	update cliente set idcomplemento = 1 where idcliente in (1, 4, 9, 13);
+	
+	update cliente set idcomplemento = 2 where idcliente in (2, 3, 7);
+	
+	
+		
