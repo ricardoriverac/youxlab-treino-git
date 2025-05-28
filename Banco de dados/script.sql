@@ -106,3 +106,8 @@ select nome , data_nascimento from cliente where data_nascimento between '2000-0
 -- 14 EXERCICIO
 select 'NOME: '|| nome || ' LOGRADOURO: ' || logradouro || ' NUMERO: ' || numero || ' COMPLEMENTO: ' || complemento || ' BAIRRO: ' || bairro || ' MUNICIPIO: ' || municipio|| 'UF: ' || Uf as "NOME E ENDEREÇO" from cliente;
 
+select * from cliente; 
+update cliente  set nome = 'Teste' where idcliente = 1; --atulize a tabela de cliente mudando o nome que esta no  idcliente 1 
+update cliente set nome = 'Adriano', genero = 'M', numero =  '241' where idcliente = 4; 
+insert  into cliente (idcliente, nome ) values (16, 'João');
+delete from cliente where  idclente = 16; 
