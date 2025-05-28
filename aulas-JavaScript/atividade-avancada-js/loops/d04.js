@@ -31,20 +31,26 @@ for (let modelos of marcas){
     console.log('Marca: ' + modelos)
 
     let anos = []
-    let nomeCarros = []
     for (let nome of carros){
-        if(nome.marca == modelos){
+        if(nome.marca === modelos){
             console.log('   •' + nome.modelo + ' (' + nome.ano + ')')
-            anos.push(nome.ano)
-            nomeCarros.push(nome.modelo)
+            anos.push(nome)
         }
     }
 
-    const anoMaisNovo = Math.max(...anos)
-    const anoMaisVelho = Math.min(...anos)
+    let anoMaisNovo = anos[0]
+    let anoMaisVelho = anos[0]
 
-    console.log('O carro mais novo ' + nomeCarros[0])
-    console.log('O carro mais antigo ' + nomeCarros[1])
+    for (let c of anos){
+        if (c.ano > anoMaisNovo.ano){
+            anoMaisNovo = c
+        } if (c.ano < anoMaisVelho.ano){
+            anoMaisVelho = c
+        }
+}
+
+    console.log(`O carro mais novo é ${anoMaisNovo.modelo} (${anoMaisNovo.ano})`)
+    console.log(`O carro mais antigo é ${anoMaisVelho.modelo} (${anoMaisVelho.ano})`)
 
     console.log()
 }
