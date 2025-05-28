@@ -111,3 +111,36 @@ update cliente  set nome = 'Teste' where idcliente = 1; --atulize a tabela de cl
 update cliente set nome = 'Adriano', genero = 'M', numero =  '241' where idcliente = 4; 
 insert  into cliente (idcliente, nome ) values (16, 'João');
 delete from cliente where  idclente = 16; 
+-- 1. Insira os dados abaixo na tabela de clientes
+
+insert into cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values
+(16, 'Maicon', '12349596421', '1234', '1965-10-10', 'F', 'Empresário', null, null, null, null, null, 'Florianópolis', 'PR'),
+(17, 'Getúlio', null, '4631', null, 'F', 'Estudante', 'Brasileira', 'Rua Central', '343', 'Apartamento', 'Centro', 'Curitiba', 'SC'),
+(18, 'Sandra', null, null, null, 'M', 'Professor', 'Italiana', null, '12', 'Bloco A', null, null, null)
+
+-- 2
+
+update cliente set cpf = '45390569432' where idcliente = 16; -- a
+update cliente set genero = 'M' where idcliente = 16;  -- b
+update cliente set nacionalidade = 'Brasileira' where idcliente = 16; -- c
+update cliente set UF = 'SC' where idcliente = 16; -- d
+
+select * from cliente;
+
+-- 3
+
+update cliente set data_nascimento = '1978-04-01' where idcliente = 17;  -- a
+update cliente set genero = 'M' where idcliente = 17;  -- b
+
+ --4
+update cliente set genero = 'F' where idcliente = 18; --a
+update cliente set profissao = 'Professora' where idcliente = 18; --b
+update cliente set numero = '123' where idcliente = 18; --c
+
+select * from cliente;
+
+delete from cliente where idcliente = 16;
+delete from cliente where idcliente = 18;
+
+select * from cliente;
