@@ -42,3 +42,10 @@ select nome, data_nascimento from cliente;  --selecionar a coluna nome e data de
 select nome, data_nascimento  as "Data de nascimento" from cliente; -- renomeiar uma coluna
 select  'CPF: ' || cpf || 'RG: ' || rg as "CPF e RG" from cliente; -- aqui vemos dois || que serve para fazer a concateçao sao chamadas de pipe um exemplo e que esta concatenando o a string CPF com o campo cpf, tornando se apenas uma cpo
 select * from  cliente  limit 3; -- indica que  vai selecionar  somente 3/1 clientes da base de dados na ordem que eles aparecem 
+select nome, data_nascimento from cliente where data_nascimento  > '2000_01_21'; -- nesse comando tmeos um filtro "where" traduzido 'onde' que faz com que vc consiga filtrar oque vc quer mostrar, neste codigo como exemplo foi a data de nascimento
+select nome from cliente where nome like 'C%' ; -- basicamente o mesmo esquema de filtro so que o "like" traduzido "como" faz com que todo nome que comça com a letra C apareça, e o "%" e para retornar tudo que estiver depois da letra C 
+select nome , data_nascimento from cliente where data_nascimento between '1990-01-01' and '1998-01-01'; -- isso indica que nos queremos filtrar todos os clientes que nasceram a data '1990-01-01' entre 1998-01-01
+select nome from cliente where nome like '%c%'; --significa que começa com qualquer caracter e termina com qualquer caracter e no meio C
+select nome , rg from cliente where rg  is nul; -- vaai mostar todos rgs que estao sem nada 'null']
+select nome from cliente order by nome asc ; -- vaimostrar em ordem alfabetica 'asc' significa ordem crescente
+select nome from cliente order by nome desc; --vai mostrar order decrescente 
