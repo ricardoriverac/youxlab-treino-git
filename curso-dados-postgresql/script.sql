@@ -48,6 +48,17 @@ select 'CPF: ' || cpf || ' RG: ' || rg as "CPF e RG" from cliente; -- Contatenan
 
 select * from cliente limit 3; -- Visualiza apenas os 3 primeiros clientes da tabela
 
-select nome, data_nascimento from cliente where data_nascimento > '2000-01-01'; -- Visualiza apenas os clientes que a data de nascimento é maior que '2000-01-01'
+select nome, data_nascimento from cliente where data_nascimento > '2000-01-01'; -- Visualiza apenas os clientes que a data de nascimento é maior que '2000-01-01' (where = onde)
 
+select nome from cliente where nome like 'C%'; -- Visualiza apenas os clientes que começa com a letra "C", (% = seguido de zero ou mais caracteres quaisquer) (like = como)
+
+select nome from cliente where nome like '%c%'; -- Buscando clientes que tem a letra "C" no nome
+
+select nome, data_nascimento from cliente where data_nascimento between '1990-01-01' and '1998-01-01'; -- Filtra todos clientes com datas entre 1990 é 1998(between = Entre)
+
+select nome, rg	from cliente where rg is null; -- Selecionando pessoas com RG nulo(vazio)
+
+select nome from cliente order by nome asc; -- Ordena os nomes em Ordem Alfabetica
+
+select nome from cliente order by nome desc; -- Decrescente
 
