@@ -49,3 +49,60 @@ select nome from cliente where nome like '%c%'; --significa que começa com qual
 select nome , rg from cliente where rg  is nul; -- vaai mostar todos rgs que estao sem nada 'null']
 select nome from cliente order by nome asc ; -- vaimostrar em ordem alfabetica 'asc' significa ordem crescente
 select nome from cliente order by nome desc; --vai mostrar order decrescente 
+
+--1. O nome, o gênero e a profissão de todos os clientes, ordenado pelo nome em ordem decrescente
+
+--2. Os clientes que tenham a letra “R” no nome
+
+--3. Os clientes que o nome inicia com a letra “C”
+
+--4. Os clientes que o nome termina com a letra “A”
+
+--5. Os clientes que moram no bairro “Centro”
+
+--6. Os clientes que moram em complementos que iniciam com a letra “A”
+
+--7. Somente os clientes do sexo feminino
+
+--8. Os clientes que não informaram o CPF
+
+--9. O nome e a profissão dos clientes, ordenado em ordem crescente pelo nome da profissão
+
+--10. Os clientes de nacionalidade “Brasileira”
+
+--11. Os clientes que informaram o número da residência
+
+--12. Os clientes que moram em Santa Catarina
+
+--13. Os clientes que nasceram entre 01/01/2000 e 01/01/2002
+
+--14. O nome do cliente e o logradouro, número, complemento, bairro, município e UF concatenado de todos os clientes
+ -- 1 EXERCICIO
+select nome, genero ,profissao from cliente order by nome desc;
+ -- 2 EXERCICIO
+select nome from cliente where nome like '%r%';
+ -- 3 EXERCICIO
+select nome from cliente where nome like 'C%';
+-- 4 EXERCICIO
+select nome from cliente where nome like '%a';
+-- 5 EXERCICIO
+select nome , bairro from cliente where bairro like 'Centro';
+-- 6 EXERCICIO
+select nome , complemento from cliente where complemento  like 'A%';
+-- 7 EXERCICIO
+select nome from cliente where genero like 'F';
+-- 8 EXERCICIO
+select nome , cpf from cliente where cpf  is  null;
+-- 9 EXERCICIO
+select nome , profissao from cliente order by nome , profissao desc;
+-- 10 EXERCICIO
+select nome , nascionalidade from cliente where nascionalidade like 'B%';
+-- 11 EXERCICIO
+select nome , numero from cliente where numero like'%';
+-- 12 EXERCICIO
+select nome , bairro from cliente where bairro like 'Santa Catarina';
+-- 13 EXERCICIO
+select nome , data_nascimento from cliente where data_nascimento between '2000-01-01' and '2002-01-01';
+-- 14 EXERCICIO
+select 'NOME: '|| nome || ' LOGRADOURO: ' || logradouro || ' NUMERO: ' || numero || ' COMPLEMENTO: ' || complemento || ' BAIRRO: ' || bairro || ' MUNICIPIO: ' || municipio|| 'UF: ' || Uf as "NOME E ENDEREÇO" from cliente;
+
