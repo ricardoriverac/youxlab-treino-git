@@ -35,11 +35,22 @@ let marcas = []
 for (let m of carros){
     if (!marcas.includes(m.marca))
         marcas.push(m.marca)
-}
+    }
+const maisNovo = 0
+const maisVelho = 0
 for (let c of marcas) {
 console.log('--------------------------------------------------')
   console.log("==" + c + "==")
   for (let carro of carros) {
     if (carro.marca == c) {
       console.log(carro.modelo + '(' + carro.ano + ')')
+      for (let a of carros){
+        if (carros.ano > maisNovo)
+            maisNovo = a
+      }
+        if (carros.ano < maisVelho){
+            maisVelho = a
+        }
   }}}
+
+  console.log(maisVelho)
