@@ -1,4 +1,4 @@
-create table cliente (
+	create table cliente (
 	idcliente integer not null, -- número inteiro ( não pode ser vazio )
 	nome varchar(50) not null, -- armazena 50 valor no disco, porem usa apenas o necessario com limite de até 50
 	cpf char(11), -- armazena 11 valor fixo no disco, fica reservado os 11 valores, mesmo não estando usando
@@ -77,7 +77,7 @@ select nome from cliente where nome like 'C%';
 select nome from cliente where nome like '%a';
 
 -- 5. Os clientes que moram no bairro “Centro”
-select nome, bairro from cliente where bairro like 'Centro';
+select nome, bairro from cliente where bairro = 'Centro' or bairro = 'Cto.' or bairro = 'Ctr.';
 
 -- 6. Os clientes que moram em complementos que iniciam com a letra “A”
 select nome, complemento from cliente where complemento like 'A%'
@@ -105,3 +105,57 @@ select nome, data_nascimento from cliente where data_nascimento between '2000-01
 
 -- 14. O nome do cliente e o logradouro, número, complemento, bairro, município e UF concatenado de todos os clientes
 select 'Nome: ' || nome || ' | Logradouro: ' || logradouro || ' | Número: ' || numero || ' | Complemento: ' || complemento || ' | Bairro: ' || bairro || ' | Município: ' || municipio || ' | UF: ' || uf as "Nome e Endereço" from cliente;
+
+select * from cliente;
+update cliente set nome = 'Teste' where idcliente = 1; -- !!COMANDO PERIGOSO!!, lembrar de indicar o ID do Cliente antes de alterar, caso contrario ira mudar de todas pessoas.
+
+update cliente set nome = 'Adriano', genero = 'M', numero = '241' where idcliente = 4;
+
+insert into cliente (idcliente, nome) values (16, 'João')
+
+delete from cliente where idcliente = 16; -- !!COMANDO PERIGOSO!!, lembrar de indicar o ID do Cliente, caso contrario ira apagar todos os clientes.
+
+-- Exercícios – comandos update e delete
+-- 1. Insira os dados abaixo na tabela de clientes
+
+insert into cliente (idcliente, nome, cpf, rg, data_nascimento, genero, profissao, nacionalidade, logradouro, numero, complemento, bairro, municipio, uf)
+values
+(16, 'Maicon', '12349596421', '1234', '1965-10-10', 'F', 'Empresário', null, null, null, null, null, 'Florianópolis', 'PR'),
+(17, 'Getúlio', null, '4631', null, 'F', 'Estudante', 'Brasileira', 'Rua Central', '343', 'Apartamento', 'Centro', 'Curitiba', 'SC'),
+(18, 'Sandra', null, null, null, 'M', 'Professor', 'Italiana', null, '12', 'Bloco A', null, null, null)
+
+-- 2. Altere os dados do cliente Maicon
+	-- a. O CPF para 45390569432
+	-- b. O gênero para M
+	-- c. A nacionalidade para Brasileira
+	-- d. O UF para SC
+
+update cliente set cpf = '45390569432' where idcliente = 16;
+update cliente set genero = 'M' where idcliente = 16;
+update cliente set nacionalidade = 'Brasileira' where idcliente = 16;
+update cliente set UF = 'SC' where idcliente = 16;
+
+select * from cliente;
+
+-- 3. Altere os dados do cliente Getúlio
+	-- a. A data de nascimento para 01/04/1978
+	-- b. O gênero para M
+
+update cliente set data_nascimento = '1978-04-01' where idcliente = 17;
+update cliente set genero = 'M' where idcliente = 17;
+
+-- 4. Altere os dados da cliente Sandra
+	-- a. O gênero para F
+	-- b. A profissão para Professora
+	-- c. O número para 123
+
+update cliente set genero = 'F' where idcliente = 18;
+update cliente set profissao = 'Professora' where idcliente = 18;
+update cliente set numero = '123' where idcliente = 18;
+
+select * from cliente;
+
+delete from cliente where idcliente = 16;
+delete from cliente where idcliente = 18;
+
+select * from cliente;
