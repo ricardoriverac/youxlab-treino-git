@@ -37,3 +37,8 @@ values(1, 'Manoel', '88828383821', '32323', '2001-10-10', 'M', 'Estudante', 'Bra
 (14, 'Jeferson', null, null, '1983-07-01', 'M', null, 'Brasileiro', null, null, null, null, 'União da Vitória', 'PR'),
 (15, 'Jessica', null, null, null, 'F', 'Estudante', null, null, null, null, null, 'União da Vitória', 'PR'); 	
 select * from cliente;
+
+select nome, data_nascimento from cliente;  --selecionar a coluna nome e data de nascmento  da tabela cliente e ira mostrar somente essas colunas
+select nome, data_nascimento  as "Data de nascimento" from cliente; -- renomeiar uma coluna
+select  'CPF: ' || cpf || 'RG: ' || rg as "CPF e RG" from cliente; -- aqui vemos dois || que serve para fazer a concateçao sao chamadas de pipe um exemplo e que esta concatenando o a string CPF com o campo cpf, tornando se apenas uma cpo
+select * from  cliente  limit 3; -- indica que  vai selecionar  somente 3/1 clientes da base de dados na ordem que eles aparecem 
