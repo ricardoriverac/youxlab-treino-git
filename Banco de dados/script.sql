@@ -100,7 +100,7 @@ select nome , nascionalidade from cliente where nascionalidade like 'B%';
 -- 11 EXERCICIO
 select nome , numero from cliente where numero like'%';
 -- 12 EXERCICIO
-select nome , bairro from cliente where bairro like 'Santa Catarina';
+select nome , bairro from cliente where uf like 'SC';
 -- 13 EXERCICIO
 select nome , data_nascimento from cliente where data_nascimento between '2000-01-01' and '2002-01-01';
 -- 14 EXERCICIO
