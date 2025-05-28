@@ -908,3 +908,184 @@ left outer join
 	municipio on cliente.idmunicipio = municipio.idmunicipio
 
 group by cliente.idmunicipio
+
+-- ex 09
+select * from produto;
+select
+	fornecedor.nome as nome,
+	count(produto.nome)
+from
+	fornecedor
+
+-- ex10
+select
+	cliente.nome as cliente,
+	sum(valor)
+from
+	pedidos
+left outer join
+	cliente on pedidos.idcliente = cliente.idcliente
+group by cliente.nome
+-- ex 11 nome e o somatorio dos pedidos por vendedor
+
+select 
+	vendedor.nome as vendedor,
+	sum(valor)
+select from 
+	pedidos
+left outer join
+	vendedor on pedidos.idvendedor = vendedor.idvendedor
+group by vendedor.nome
+
+-- ex 12
+
+select
+	transportadora.nome as transportadora,
+	sum(valor)
+from 
+	pedidos
+left outer join
+	transportadora on pedidos.idtransportadora = transportadora.idtransportadora
+group by transportadora
+
+-- ex 13
+select * from pedido_produto;
+select * from pedidos;
+select
+	pedidos.idcliente,
+	count(idpedido) as contagem
+
+from pedidos
+left outer join
+	cliente on pedidos.idcliente = cliente.idcliente
+group by pedidos.idcliente
+
+-- ex 14 nome do produto e a quantidade vendida (agrupado por produto)
+
+select 
+	produto.nome as produto,
+	count(idpedido)
+from 
+	pedido_produto
+left outer join
+	produto on pedido_produto.idproduto = produto.idproduto
+group by produto.nome
+
+-- ex 15 data do pedido e o somatorio do valor dos produtos  do pedido (agrupado pela data do pedido)
+select * from pedido_produto;
+
+select
+	pedidos.data_pedido,
+	sum(pedido_produto.valor_unitario) as valor_total
+from
+	pedido_produto
+left outer join
+	pedidos on pedido_produto.idpedido = pedidos.idpedido
+group by pedidos.data_pedido
+
+
+-- ex 16
+select 
+	pedidos.data_pedido,
+	sum(pedido_produto.quantidade) as quantidade
+from 
+	pedido_produto
+left outer join
+	pedidos on pedido_produto.idpedido = pedidos.idpedido
+group by pedidos.data_pedido
+
+select * from pedido_produto;
+select * from produit
+
+
+-- extraiando datas da coluna
+	
+select 
+	data_pedido, 
+	extract (day from data_pedido),
+	extract (month from data_pedido),
+	extract (year from data_pedido)
+from 
+	pedidos
+
+select nome, substring (nome from 1 for 5 ) from cliente;
+
+select nome, upper(nome ) from cliente;
+
+select nome, cpf, coalesce (cpf, 'Não informado ') from cliente;
+
+-- impondo condições 
+
+select case sigla when 'SP' then 'São Paulo' when 'MG' then 'Minas gerais' else 'outros' end as uf from uf
+
+-- exercicios
+
+-- 01 somente mes 
+select * from cliente;
+select 
+	nome,
+	case extract(data_nascimento
+
+from cliente
+
+-- ex 02 O nome do cliente e somente o nome do mês de nascimento (Janeiro, Fevereiro etc).
+-- Caso a data de nascimento não esteja preenchida mostrar a mensagem “Não informado”.
+
+select
+	 nome, 
+	 case extract(month from data_nascimento)
+	 	when 1 then 'janeiro '
+		when 2 then 'fevereiro'
+		when 3 then 'Março'
+		when 4 then 'Abril'
+		end as cliente
+	
+from cliente;	
+
+-- ex 03 3. O nome do cliente e somente o ano de nascimento.
+--Caso a data de nascimento não esteja preenchida mostrar a mensagem “Não informado”.
+
+select 
+	nome, 
+	coalesce(extract(year from data_nascimento), 0)
+		
+from cliente;
+
+-- ex 4. O caractere 5 até o caractere 10 de todos os municípios.
+
+select
+	nome,
+substring 
+	(nome from 5 for 10)
+from
+	municipio
+
+-- 5. O nome de todos os municípios em letras maiúsculas.
+
+select nome, upper(nome) from municipio;
+
+-- 6. O nome do cliente e o gênero. Caso seja M mostrar “Masculino”, senão mostrar “Feminino”.
+select 
+	 nome,
+	 case genero 
+	 	when 'M' then 'Masculino' 
+		when 'F' then 'Feminino'
+		end as cliente
+from
+	cliente
+
+-- 7. O nome do produto e o valor. Caso o valor seja maior do que R$ 500,00 mostrar a mensagem “Acima de 500”, 
+-- caso contrário, mostrar a mensagem “Abaixo de 500”.
+
+select 
+	nome, 
+	valor,
+	case
+		when valor > 50.00 then 'Acima de 50.00'
+		else
+			'Abaixo de 50.00'
+		end as faixa
+from
+	produto;
+
+-- subconsultas 
