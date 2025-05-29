@@ -788,3 +788,114 @@ select * from pedido where idcliente = 1 order by valor asc;
 select * from vendedor;
 select * from pedido where idcliente = 15 and idvendedor = 1;
 --fim
+
+--Exercício 11:
+select * from transportadora;
+select * from pedido where pedido.idtransportadora = 2;
+--fim
+
+--Exercício 12:
+select * from vendedor
+select * from pedido where idvendedor - 5 or idvendedor = 7
+--fim
+
+--Exercício 13:
+select * from municipio	
+select * from cliente where idmunicipio - 1 or idmunicipio - 9
+--fim
+
+--Exercício 14:
+SELECT * FROM cliente where idmunicipio <> 1 and idmunicipio <> 9
+--fim
+
+--Exercício 15:
+select * from cliente where logradouro is null
+--fim
+
+--Exercício 16:
+select * from cliente where logradouro like 'Av%'
+--fim
+
+--Exercício 17:
+select * from vendedor where nome like 'S%'
+--fim
+
+--Exercício 18:
+select * from vendedor where nome like '%a'
+--fim
+
+--Exercício 19:
+select * from vendedor where nome like 'A%'
+--fim
+
+--Exercício 20:
+select * from uf
+select * from municipio where nome like '%P' and iduf = 1
+--fim
+
+--Exercício 21:
+select * from idtransportadora where logradouro is not null;
+--fim
+
+--Exercício 22:
+select * from pedido_produto where idpedido = 1
+--fim
+
+--Exercício 23:
+select * from pedido_produto where idpedido = 6 or idpedido = 10;
+--fim dos desafios.
+
+--Funções agregadas
+--Select idpedido, sum (valor_unitario) from pedido_produto group by idpedido
+
+select avg(valor) from pedido
+
+select count(idmunicipio) from municipio
+
+select count (*) from municipio
+
+select * from transportadora
+
+select count(logradouro) from transportadora
+
+select count(idtransportadora) from transportadora
+
+select * from municipio
+
+select count (idmunicipio) from municipio where iduf = 2
+
+select min(valor) from pedido
+
+select max(valor) from pedido
+
+select  sum (valor) from pedido
+
+select idcliente, sum (valor) from pedido group by idcliente
+
+select idcliente, min (valor) from pedido group by idcliente
+
+select idcliente, max (valor) from pedido group by idcliente
+
+select idcliente, sum (valor) from pedido group by idcliente having sum (valor) > 500
+
+
+--inicio Exercícios   -   funções agregadas
+
+--Exercício 1:
+select idvendedor, avg(valor) from pedido group by idvendedor having avg(valor) > 200;
+--fim
+
+--Exercício 2:
+select min(valor) from pedido group by idcliente > 1500;
+--fim
+
+--Exercício 3:
+select sum (valor) from 
+--fim
+
+--Exercício 4:
+select * from municipio
+--fim
+
+--Exercício 5:
+select municipio like ('SC','PR')
