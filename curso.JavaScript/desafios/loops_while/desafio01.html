@@ -4,10 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DESAFIO SENHA</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 185, 161);
+    }
+        h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            
+        }
+        .main{
+            width: 300px;
+            height: 300px;
+            border-radius: 10%;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            box-sizing: border-box;
+                }
+        h1{
+            font-style: inherit;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: medium;
+        }
+        #quadrado {
+            width: 300px;
+            height: 300px;
+            background-color: #e9e9e9;
+            border: 2px solid #c4c4c4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            color: darksalmon;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            box-sizing: border-box;
+            }
+            button{
+               padding: 8px 16px;
+                font-size: 14px;
+                background-color: darksalmon;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                flex-direction: column;
+
+            }
+    </style>
 </head>
 <body>
-    <script src="desafio01.js"> 
-    </script>
+    <div class="main" id="quadrado">
+        <h1><mark style="background-color: darksalmon;" > GERADOR DE SENHA TESTE</mark></h1>
+        <h2 class="text-center" >GERADOR DE SENHAS</h2>
+        <input type ="text" id="campo-senha" class="form-control" placeholder="Digite sua senha aqui" size="40">
+        <button class="btn btn-primary w-100">CLICAR</button>
+    </div>
 
 </body>
 </html>
