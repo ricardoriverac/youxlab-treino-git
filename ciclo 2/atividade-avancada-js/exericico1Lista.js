@@ -21,11 +21,7 @@ const funcionarios = [
   { nome: "Vanessa", salario: 8500, cargo: "Diretora" }
 ];
 
-const faixas = {
-  Junior: [],
-  Pleno: [],
-  Senior: [],
-  Especialista: []
+const faixas = { Junior: [], Pleno: [],Senior: [], Especialista: []
 };
 
 for (const funcionario of funcionarios) {
@@ -43,13 +39,9 @@ for (const funcionario of funcionarios) {
 }
 
 console.log("Funcionários Juniores:");
-faixas.Junior.forEach(func => console.log(func));
 
-console.log("\nFuncionários Plenos:");
-faixas.Pleno.forEach(func => console.log(func));
+console.log("Funcionários Plenos:");
 
-console.log("\nFuncionários Seniores:");
-faixas.Senior.forEach(func => console.log(func));
+console.log("Funcionários Seniores:");
 
-console.log("\nFuncionários Especialistas:");
-faixas.Especialista.forEach(func => console.log(func));
+console.log("Funcionários Especialistas:");

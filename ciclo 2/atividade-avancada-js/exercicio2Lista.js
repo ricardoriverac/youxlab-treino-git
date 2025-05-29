@@ -21,24 +21,36 @@ const produtos = [
   { nome: "Estabilizador", categoria: "Energia", preco: 350, estoque: 5 }
 ];
 
-const faixas = {
+const valor = {
   Barato: [],
   Intermediario: [],
   Caro: []
 };
 
+const totaisEstoque = {
+  Barato: 0,
+  Intermediario: 0,
+  Caro: 0
+};
+
 for (const produto of produtos) {
-  const preco = produto.preco;
+  const { preco, estoque } = produto;
 
   if (preco <= 100) {
-    faixas.Barato.push(produto);
+    valor.Barato.push(produto);
+    totaisEstoque.Barato += estoque;
   } else if (preco <= 1000) {
-    faixas.Intermediario.push(produto);
+    valor.Intermediario.push(produto);
+    totaisEstoque.Intermediario += estoque;
   } else {
-    faixas.Caro.push(produto);
+    valor.Caro.push(produto);
+    totaisEstoque.Caro += estoque;
   }
 }
 
-console.log("Produtos Baratos:", faixas.Barato);
-console.log("Produtos Intermediários:", faixas.Intermediario);
-console.log("Produtos Caros:", faixas.Caro);
+console.log("Produtos Baratos:", valor.Barato);
+console.log("Total de estoque (Barato):", totaisEstoque.Barato);
+console.log("Produtos Intermediários:", valor.Intermediario);
+console.log("Total de estoque (Intermediário):", totaisEstoque.Intermediario);
+console.log("Produtos Caros:", valor.Caro);
+console.log("Total de estoque (Caro):", totaisEstoque.Caro);
