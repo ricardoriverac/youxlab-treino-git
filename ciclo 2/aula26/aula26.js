@@ -1,6 +1,12 @@
-//const soma = function(v1,v2)(return v1+v2)
-const soma = (v1,v2)=> {return v1=v2}//usando arrow function, funçao de seta, ele passa os parametros pra dentro da funçao 
-const nome=n=>{return n} //as chaves sao o corpo da funçao, entao é importante sempre usar
-const add=n=>+10
-console.log(add(10))//se for uma operaçao simples n precisa do return
-console.log(nome("alexia"))//se for um parametro de entrada não precisa dos ()
+const soma = (...valores)=>{//função arrow 
+    const somar = val=>{ //funçao somar
+        let res=0
+        for(v of val)//o valor da arrya foi para o "V" vindo do val
+            res+=v
+        return res// retorno da soma 
+    }
+    return somar (valores)
+}
+console.log(soma(10,5,15))
+valor=[10,15,20]
+console.log(soma(...valor))
