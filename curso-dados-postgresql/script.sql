@@ -157,5 +157,80 @@ select * from cliente;
 
 delete from cliente where idcliente = 16;
 delete from cliente where idcliente = 18;
-
+	
 select * from cliente;
+
+-- Criando tabela profissao
+
+create table profissao (
+	idprofissao integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_prf_idprofissao primary key (idprofissao),
+	constraint un_prf_nome unique (nome)
+);
+
+-- Adicionando valores na tabela profissao
+
+insert into profissao (idprofissao, nome)
+values
+(1, 'Estudante'),
+(2, 'Engenheiro'),
+(3, 'Pedreiro'),
+(4, 'Jornalista'),
+(5, 'Professor');
+
+select * from profissao
+select profissao from cliente
+
+-- Criando tabela nacionalidade
+
+create table nacionalidade (
+	idnacionalidade integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_ncn_idnacionalidade primary key (idnacionalidade),
+	constraint un_ncn_nome unique (nome)
+);
+
+select nacionalidade from cliente;
+
+-- Adicionando valores na tabela nacionalidade
+
+insert into nacionalidade (idnacionalidade, nome)
+values
+1, 'Brasileira'),
+(2, 'Italiana'),
+(3, 'Norte-americana'),
+(4, 'Alemã');
+
+select * from nacionalidade;
+
+-- Criando a tabela complemento
+
+create table complemento (
+	idcomplemento integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_cpl_idcomplemento primary key (idcomplemento),
+	constraint un_cpl_nome unique (nome)
+);
+
+-- Adicionando valores na tabela complemento
+
+insert into complemento (idcomplemento, nome)
+values
+(1, 'Casa'),
+(2, 'Apartamento');
+
+select * from complemento;
+
+-- Criando a tabela bairro
+
+create table bairro (
+	idbairro integer not null,
+	nome varchar(30) not null,
+
+	constraint pk_brr_idbairro primary key (idbairro),
+	constraint un_brr_nome unique (nome)
+);
