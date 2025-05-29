@@ -199,7 +199,7 @@ select nacionalidade from cliente;
 
 insert into nacionalidade (idnacionalidade, nome)
 values
-1, 'Brasileira'),
+(1, 'Brasileira'),
 (2, 'Italiana'),
 (3, 'Norte-americana'),
 (4, 'Alemã');
@@ -234,3 +234,57 @@ create table bairro (
 	constraint pk_brr_idbairro primary key (idbairro),
 	constraint un_brr_nome unique (nome)
 );
+
+insert into bairro (idbairro, nome)
+values
+(1, 'Cidade Nova'),
+(2, 'Centro'),
+(3, 'São Pedro'),
+(4, 'Santa Rosa');
+
+select * from bairro;
+
+select * from cliente;
+
+-- Altera a estrutura de uma tabela em um banco de dados
+
+alter table cliente rename column profissao to idprofissao;
+
+alter table cliente rename column idprofissao type integer;
+-- Estudante -> 1, 9, 10, 12, 15
+-- Engenheiro -> 2
+-- Pedreiro -> 3
+--Jornalista -> 4, 5
+-- Professor -> 6, 7, 8, 13
+-- Null -> 11,14
+alter table cliente drop idprofissao;
+alter table cliente add idprofissao integer;
+alter table cliente add constraint fk_cln_idprofissao foreign key (idprofissao) references profissao (idprofissao);
+
+-- Definindo o que cada ID de profissao será
+
+update cliente set idprofissao = 1 where idcliente in (1, 9, 10, 12, 15, 17);
+update cliente set idprofissao = 2 where idcliente = 2;
+update cliente set idprofissao = 3 where idcliente = 3;
+update cliente set idprofissao = 4 where idcliente in (4, 5);
+update cliente set idprofissao = 5 where idcliente in (6, 7, 8, 13);
+
+select * from cliente;
+
+select * from profissao;
+
+-- Deletando a profissao 01
+	--Obs: não da pra excluir quando tem algum cliente vinculado a profissao
+
+delete from profissao where idprofissao = 1;
+
+-- Adicionando uma profissao de Teste
+
+insert into profissao (idprofissao, nome)
+values
+(10, 'Teste');
+
+-- Deletando a profissao de Teste
+	--Obs: funciona pois nenhum cliente está vinculado a ela
+
+delete from profissao where idprofissao = 10;
