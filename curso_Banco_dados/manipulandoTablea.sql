@@ -1089,3 +1089,111 @@ from
 	produto;
 
 -- subconsultas 
+
+
+-- selecionar a data do pedido e o valor onde o valor seja maior que a média dos 
+-- valores de todos  os pedidos
+select 
+	data_pedido,
+	valor
+from 
+	pedidos
+where 
+	valor > (select avg(valor) from pedidos)
+
+-- exemplo de count 
+select
+	pedidos.data_pedido,
+	pedidos.valor,
+	(select sum(quantidade) from pedido_produto pdp where pdp.idpedido = pedidos.idpedido)
+from
+	pedidos
+
+-- exemplo de update aumentando o valor dos pedidos somente dos que possui o valor acima da media do valor total 
+update pedidos set valor = valor + ((valor * 5 ) / 100)
+where valor > (select avg (Valor) from pedidos)
+select * from pedidos;
+
+-- exercicios de subconsultas
+
+select
+	nome,
+	(select cliente.idcliente where idmunicipio = 2)
+
+from cliente;
+
+-- 2. A data e o valor dos pedidos que o valor do pedido seja menor que a média de todos os pedidos.
+select
+ 	data_pedido,
+	valor
+
+from 
+	pedidos
+where 
+	valor > (select avg(valor) from pedidos)
+
+-- 3. A data,o valor, o cliente e o vendedor dos pedidos que possuem 2 ou mais produtos.
+select
+	pedidos.data_pedido,
+	pedidos.valor, 
+	pedidos.idcliente,
+	pedidos.idvendedor,
+	(select sum(quantidade) > 2 from pedido_produto where pedido_produto.idpedido = pedidos.idpedido)
+from
+	pedidos
+
+select * from pedido_produto;
+select * from pedidos;
+
+-- 4. O nome dos clientes que moram na mesma cidade da transportadora BSTransportes.
+
+select 
+	 nome,
+	 idmunicipio
+from 
+	cliente
+where
+	idmunicipio = (select idmunicipio from transportadora where idtransportadora = 2)
+
+--5. O nome do cliente e o município dos clientes que estão 
+--localizados no mesmo município de qualquer uma das transportadoras.
+
+select
+	nome,
+	idmunicipio
+from cliente
+where idmunicipio = (select idmunicipio from transportadora where cliente.idmunicipio = transportadora.idmunicipio)
+
+-- 6. Atualizar o valor do pedido em 5% para os pedidos que o somatório do valor total dos 
+-- produtos daquele pedido seja maior que a média do valor total
+
+
+update 
+	pedidos 
+set 
+	valor = pedidos.valor + ((valor * 5 ) / 100)
+
+where
+	(select sum(pedido_produto.valor_unitario) from pedido_produto where pedidos.idpedido = pedido_produto.idpedido) > (select avg(valor_unitario) from pedido_produto)
+
+-- 7. O nome do cliente e a quantidade de pedidos feitos pelo cliente.
+select
+	nome,
+	(select count(idpedido) from pedidos where cliente.idcliente = pedidos.idcliente)
+	
+from cliente
+
+-- 8. Para revisar, refaça o exercício anterior (número 07) utilizando group by
+-- e mostrando somente os clientes que fizeram pelo menos um pedido.
+
+select
+	cliente.nome as cliente,
+	count(pedidos.idpedido) as total
+from
+	pedidos
+left outer join
+	cliente on pedidos.idcliente = cliente.idcliente
+group by
+	cliente.nome
+
+-- aula 50
