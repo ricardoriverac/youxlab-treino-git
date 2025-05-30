@@ -20,3 +20,36 @@ const produtos = [
   { nome: "Notebook Gamer", categoria: "Eletrônicos", preco: 7500, estoque: 2 },
   { nome: "Estabilizador", categoria: "Energia", preco: 350, estoque: 5 }
 ];
+
+function* EstoquePorCategoria(produtos) {
+  const categorias = {};
+
+  for (let produto of produtos) {
+    const { categoria, nome, preco, estoque } = produto;
+
+    if (!categorias[categoria]) {
+      categorias[categoria] = { produtos: [], totalEstoque: 0 };
+    }
+
+    categorias[categoria].produtos.push(produto);
+    categorias[categoria].totalEstoque += estoque;
+  }
+
+  for (let categoria in categorias) {
+    yield {
+      categoria,
+      produtos: categorias[categoria].produtos,
+      totalEstoque: categorias[categoria].totalEstoque
+    };
+  }
+}
+
+const categoriaIterator = EstoquePorCategoria(produtos);
+
+for (let categoriaInfo of categoriaIterator) {
+  console.log(`Categoria: ${categoriaInfo.categoria}`);
+  for (let produto of categoriaInfo.produtos) {
+    console.log(`  ${produto.nome} | Estoque: ${produto.estoque} | Preço: R$ ${produto.preco},00`);
+  }
+  console.log(`Total de Estoque na categoria ${categoriaInfo.categoria}: ${categoriaInfo.totalEstoque}\n`);
+}

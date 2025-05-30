@@ -1,56 +1,58 @@
-const produtos = [
-  { nome: "Notebook", categoria: "Eletrônicos", preco: 3500, estoque: 5 },
-  { nome: "Mouse", categoria: "Periféricos", preco: 80, estoque: 25 },
-  { nome: "Teclado Mecânico", categoria: "Periféricos", preco: 250, estoque: 12 },
-  { nome: "Smartphone", categoria: "Eletrônicos", preco: 2200, estoque: 8 },
-  { nome: "Monitor", categoria: "Eletrônicos", preco: 900, estoque: 10 },
-  { nome: "Pen Drive 32GB", categoria: "Acessórios", preco: 45, estoque: 50 },
-  { nome: "HD Externo", categoria: "Armazenamento", preco: 400, estoque: 7 },
-  { nome: "Webcam", categoria: "Periféricos", preco: 320, estoque: 15 },
+const produtos = [ 
+  { nome: "Notebook", categoria: "Eletrônicos", preco: 3500, estoque: 5 }, 
+  { nome: "Mouse", categoria: "Periféricos", preco: 80, estoque: 25 }, 
+  { nome: "Teclado Mecânico", categoria: "Periféricos", preco: 250, estoque: 12 }, 
+  { nome: "Smartphone", categoria: "Eletrônicos", preco: 2200, estoque: 8 }, 
+  { nome: "Monitor", categoria: "Eletrônicos", preco: 900, estoque: 10 }, 
+  { nome: "Pen Drive 32GB", categoria: "Acessórios", preco: 45, estoque: 50 }, 
+  { nome: "HD Externo", categoria: "Armazenamento", preco: 400, estoque: 7 }, 
+  { nome: "Webcam", categoria: "Periféricos", preco: 320, estoque: 15 }, 
   { nome: "Impressora", categoria: "Periféricos", preco: 850, estoque: 4 },
-  { nome: "Cadeira Gamer", categoria: "Móveis", preco: 1500, estoque: 3 },
-  { nome: "Roteador", categoria: "Rede", preco: 300, estoque: 9 },
-  { nome: "Headset", categoria: "Acessórios", preco: 200, estoque: 20 },
-  { nome: "Tablet", categoria: "Eletrônicos", preco: 1800, estoque: 6 },
-  { nome: "Carregador Portátil", categoria: "Acessórios", preco: 120, estoque: 30 },
-  { nome: "Cabo HDMI", categoria: "Acessórios", preco: 60, estoque: 40 },
-  { nome: "Switch de Rede", categoria: "Rede", preco: 250, estoque: 11 },
-  { nome: "Luminária LED", categoria: "Iluminação", preco: 100, estoque: 18 },
-  { nome: "Extensão Elétrica", categoria: "Utilidades", preco: 70, estoque: 35 },
-  { nome: "Notebook Gamer", categoria: "Eletrônicos", preco: 7500, estoque: 2 },
-  { nome: "Estabilizador", categoria: "Energia", preco: 350, estoque: 5 }
+  { nome: "Cadeira Gamer", categoria: "Móveis", preco: 1500, estoque: 3 }, 
+  { nome: "Roteador", categoria: "Rede", preco: 300, estoque: 9 }, 
+  { nome: "Headset", categoria: "Acessórios", preco: 200, estoque: 20 }, 
+  { nome: "Tablet", categoria: "Eletrônicos", preco: 1800, estoque: 6 }, 
+  { nome: "Carregador Portátil", categoria: "Acessórios", preco: 120, estoque: 30 }, 
+  { nome: "Cabo HDMI", categoria: "Acessórios", preco: 60, estoque: 40 }, 
+  { nome: "Switch de Rede", categoria: "Rede", preco: 250, estoque: 11 }, 
+  { nome: "Luminária LED", categoria: "Iluminação", preco: 100, estoque: 18 }, 
+  { nome: "Extensão Elétrica", categoria: "Utilidades", preco: 70, estoque: 35 }, 
+  { nome: "Notebook Gamer", categoria: "Eletrônicos", preco: 7500, estoque: 2 }, 
+  { nome: "Estabilizador", categoria: "Energia", preco: 350, estoque: 5 } 
 ];
 
-const valor = {
-  Barato: [],
-  Intermediario: [],
-  Caro: []
-};
-
-const totaisEstoque = {
-  Barato: 0,
-  Intermediario: 0,
-  Caro: 0
-};
-
-for (const produto of produtos) {
-  const { preco, estoque } = produto;
-
-  if (preco <= 100) {
-    valor.Barato.push(produto);
-    totaisEstoque.Barato += estoque;
-  } else if (preco <= 1000) {
-    valor.Intermediario.push(produto);
-    totaisEstoque.Intermediario += estoque;
-  } else {
-    valor.Caro.push(produto);
-    totaisEstoque.Caro += estoque;
-  }
+// Produtos Baratos
+let quantidadeBarato = 0;
+console.log('Produtos Baratos:');
+for (let produto of produtos) {
+    if (produto.preco <= 100) {
+        console.log(`${produto.nome} Estoque: ${produto.estoque} R$ ${produto.preco},00`);
+        quantidadeBarato += produto.estoque;
+    }
 }
+console.log('Produtos baratos:', quantidadeBarato);
+console.log('\n');
 
-console.log("Produtos Baratos:", valor.Barato);
-console.log("Total de estoque (Barato):", totaisEstoque.Barato);
-console.log("Produtos Intermediários:", valor.Intermediario);
-console.log("Total de estoque (Intermediário):", totaisEstoque.Intermediario);
-console.log("Produtos Caros:", valor.Caro);
-console.log("Total de estoque (Caro):", totaisEstoque.Caro);
+// Produtos Intermediários
+let quantidadeIntermediario = 0;
+console.log('Produtos Intermediários:');
+for (let produto of produtos) {
+    if (produto.preco > 100 && produto.preco <= 1000) {
+        console.log(`${produto.nome} Estoque: ${produto.estoque} R$ ${produto.preco},00`);
+        quantidadeIntermediario += produto.estoque;
+    }
+}
+console.log('Produtos intermediários:', quantidadeIntermediario);
+console.log('\n');
+
+// Produtos Caros
+let quantidadeCaro = 0;
+console.log('Produtos Caros:');
+for (let produto of produtos) {
+    if (produto.preco > 1000) {
+        console.log(`${produto.nome} Estoque: ${produto.estoque} R$ ${produto.preco},00`);
+        quantidadeCaro += produto.estoque;
+    }
+}
+console.log('Produtos caros:', quantidadeCaro);
+console.log('\n');
