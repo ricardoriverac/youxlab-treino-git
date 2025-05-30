@@ -1,4 +1,4 @@
-//MAP-->percorre arrays
+//MAP-->percorre arrays e devolve um array alterado
 
 const cursos=['html','css','javascript','php','react']
 
