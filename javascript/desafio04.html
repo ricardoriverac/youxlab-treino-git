@@ -1,11 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 04</title>
+    <style>
+        .main {
+            margin: 30px auto;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            width: 300px;
+            margin: 30px auto;
+            font-weight: 300;
+            color: rgb(164, 94, 230);
+        }
+
+        button{
+            width: 200px;
+            margin: 30px auto;
+            background-color: rgb(140, 88, 189);
+            height: 50px;
+            border-block-color: blueviolet;
+            color: snow;
+            border-radius: 15px;
+        }
+        
+
+        input{
+            width: 300px;
+            margin: 30px auto;
+            height: 30px;
+        }
+        
+        img{
+            float: right;
+        }
+
+        .row{
+            display: flex;
+            justify-content: end;
+        }
+
+    </style>
 </head>
+
 <body>
+    <h2 class="text-center">Gerador de senhas</h2>
+    <div class="main">
+
+        <input type="text" id="campo-senha" class="form-control" placeholder="Sua senha será gerada aqui">
+        <button>Gerar nova senha</button>
+        <div class="row">
+            <img src="imagem_png.jpg" alt="imagem" alignt="right">
+        </div>
+
     <script src="desafio04.js"></script>
 </body>
 </html>
