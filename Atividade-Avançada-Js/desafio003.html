@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de Senhas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f0f0f0;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    #resultado {
+      margin-top: 15px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2> Validador de Senhas</h2>
+    <label for="senha">Digite sua senha:</label>
+    <input type="password" id="senha" placeholder="Digite aqui sua senha">
+    <button onclick="validarSenha()">Validar</button>
+    <div id="resultado"></div>
+  </div>
+
+  <script>
+    function validarSenha() {
+      const senha = document.getElementById('senha').value;
+      const resultado = document.getElementById('resultado');
+
+      if (senha.length < 8) {
+        resultado.innerHTML = " A senha deve ter pelo menos 8 caracteres.";
+        resultado.style.color = "red";
+        return;
+      }
+
+      if (!/[A-Z]/.test(senha)) {
+        resultado.innerHTML = " A senha deve ter pelo menos uma letra maiúscula.";
+        resultado.style.color = "red";
+        return;
+      }
+
+      if (!/[0-9]/.test(senha)) {
+        resultado.innerHTML = " A senha deve ter pelo menos um número.";
+        resultado.style.color = "red";
+        return;
+      }
+
+      if (!/[!@#$%]/.test(senha)) {
+        resultado.innerHTML = " A senha deve ter pelo menos um caractere especial (!@#$%).";
+        resultado.style.color = "red";
+        return;
+      }
+
+      resultado.innerHTML = "Senha válida e segura!";
+      resultado.style.color = "green";
+    }
+  </script>
+
+</body>
+</html>
