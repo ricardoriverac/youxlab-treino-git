@@ -7,4 +7,13 @@ const dc6 = document.getElementById("c6")
 
 const arrayElementos = [dc1, dc2, dc3, dc4, dc5, dc6]
 
-const colecaoHTML = document.getElementsByTagName()
+let colecaoHTML = [...document.getElementsByTagName("div")] // Obtém todos os elementos do array
+// Usamos o spread para converter a coleção HTML em um array
+colecaoHTML = [...colecaoHTML]
+
+console.log(arrayElementos)
+console.log(colecaoHTML)
+
+colecaoHTML.map((e) => {
+    console.log(e)
+})
