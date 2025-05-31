@@ -1048,22 +1048,161 @@ from
 
 -- 6. O nome do cliente e o gênero. Caso seja M mostrar “Masculino”, senão mostrar “Feminino”.
 select
-	nome
+	nome,
+	case genero
+		when 'M' then 'Masculino'
+		when 'F' then 'Feminino'
+	end as genero
+from
+	cliente
+
+-- 7. O nome do produto e o valor. Caso o valor seja maior do que R$ 500,00 mostrar a mensagem “Acima de 500”, caso contrário, mostrar a mensagem “Abaixo de 500”.
+select 
+	nome,
+	valor,
+	case 
+		when valor > 500 then 'Acima de 500'
+	else 'Abaixo de 500'
+	end as valor
+from
+	produto;
 	
+	
+select * from pedido_produto
+select * from produto
+
+----------------------------------------------------------------------------------------------------------
+-- Subconsultas
+select 
+	date_pedido,
+	valor
+from
+	pedido
+where
+	valor > (select avg(valor) from pedido)
+
+-----------
+select 
+	pdd.date_pedido,
+	pdd.valor,
+	(select sum(quantidade) from pedido_produto as pdp where pdp.id_pedido = pdd.id_pedido)
+from 
+	pedido as pdd
+-----------
+select * from pedido
+
+update pedido set valor = valor + ((valor * 5) / 100)
+where valor > (select avg(valor) from pedido)
+----------
+-- 1. O nome dos clientes que moram na mesma cidade do Manoel. Não deve ser mostrado o Manoel.
+select 
+	nome,
+	idmunicipio
+from
+	cliente
+where
+	idmunicipio = (select idmunicipio from cliente where nome = 'Garcia2')
+and 
+	idcliente <> 1
+-- 2. A data e o valor dos pedidos que o valor do pedido seja menor que a média de todos os pedidos.
+select
+	date_pedido,
+	valor
+from pedido 
+where
+	valor < (select avg(valor) from pedido)
+
+-- 3. A data,o valor, o cliente e o vendedor dos pedidos que possuem 2 ou mais produtos.
+SELECT
+	DATE_PEDIDO,
+	VALOR,
+	CLN.NOME AS CLIENTE,
+	VDD.NOME AS VENDEDOR,
+	(
+		SELECT
+			SUM(QUANTIDADE)
+		FROM
+			PEDIDO_PRODUTO AS PDP
+		WHERE
+			PDP.ID_PEDIDO = PDD.ID_PEDIDO
+	)
+FROM
+	PEDIDO AS PDD
+	LEFT OUTER JOIN CLIENTE AS CLN ON PDD.IDCLIENTE = CLN.IDCLIENTE
+	LEFT OUTER JOIN VENDEDOR AS VDD ON PDD.ID_VENDEDOR = VDD.ID_VENDEDOR
+WHERE
+	(
+		SELECT
+			SUM(QUANTIDADE)
+		FROM
+			PEDIDO_PRODUTO AS PDP
+		WHERE
+			PDP.ID_PEDIDO = PDD.ID_PEDIDO
+	) >= 2
+
+-- 4. O nome dos clientes que moram na mesma cidade da transportadora BSTransportes.
+select 
+	nome
+from
+	cliente
+where
+	cliente.idmunicipio = (
+	select 
+		id_municipio 
+	from 
+		transportadora as tpa
+	where 
+		tpa.nome = 'BS. Transportes'
+	);
+	
+-- 5. O nome do cliente e o município dos clientes que estão localizados no mesmo município de qualquer uma das transportadoras.
+select 
+	cln.nome,
+	mnc.nome as municipio
+from cliente as cln
+left outer join 
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+where
+	cln.idmunicipio = (
+	select 
+		id_municipio 
+	from 
+		transportadora as tpa
+	where 
+		cln.idmunicipio = tpa.id_municipio);
 
 
-
-select * from cliente
-select * from municipio
-
+select * from transportadora
+select count(idmunicipio = 9 ) from cliente where idmunicipio = 9 
 
 
+-- 6. Atualizar o valor do pedido em 5% para os pedidos que o somatório do valor total dos produtos daquele pedido seja maior que a média do valor total
 
+	-- Não consegui fazer pq o cara do video fez uma bagunça la
 
+-- 7. O nome do cliente e a quantidade de pedidos feitos pelo cliente.
+select
+	cln.nome,
+	(select
+		count(id_pedido)
+	from 
+		pedido as pdd
+	where pdd.idcliente = cln.idcliente) as total
+from 
+	cliente as cln
+	
+select * from pedido
 
-
-
-
+-- 8. Para revisar, refaça o exercício anterior (número 07) utilizando group by e mostrando somente os clientes que fizeram pelo menos um pedido.
+select
+	cln.nome as cliente,
+	count(pdd.id_pedido) as total
+from 
+	pedido as pdd
+left outer join 
+	cliente as cln on pdd.idcliente = cln.idcliente
+group by 
+	cln.nome
 
 
 
