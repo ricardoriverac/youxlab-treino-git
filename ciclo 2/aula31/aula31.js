@@ -8,7 +8,7 @@ const dc6=document.getElementById("c6")
 const arrayElementos=[dc1,dc2,dc3,dc4,dc5,dc6]
 
 const coleçaoHTML=[...document.getElementsByTagName("div")]//mais vantagem
-let coleçaoHTML=document.getElementsByTagName("div")
+//let coleçaoHTML=document.getElementsByTagName("div")
 
 console.log(coleçaoHTML)
 
