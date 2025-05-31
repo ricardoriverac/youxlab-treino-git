@@ -1197,3 +1197,828 @@ group by
 	cliente.nome
 
 -- aula 50
+
+
+-- Liste o nome do cliente que possui o maior valor somado de pedidos.
+
+SELECT cliente.nome as cliente
+FROM cliente 
+WHERE idcliente = (
+	SELECT idcliente
+	FROM pedidos
+	GROUP BY idcliente 
+	ORDER BY SUM(valor) DESC 
+	LIMIT 1 
+);
+
+-- clientes que fizeram pedidos acima da media
+
+SELECT cliente.nome as cliente
+FROM cliente
+JOIN pedidos on cliente.idcliente = pedidos.idcliente
+WHERE pedidos.valor > (
+	SELECT AVG(pedidos.valor) from pedidos
+);
+
+-- cliente que nunca fizeram pedido 
+
+SELECT cliente.nome as cliente
+FROM cliente
+WHERE idcliente not in (
+	SELECT DISTINCT idcliente from pedidos
+);
+
+-- pedido mais recente de cada cliente
+SELECT cliente.nome as cliente, pedidos.valor
+FROM pedidos
+JOIN cliente on pedidos.idcliente = cliente.idcliente
+WHERE pedidos.data_pedido > (
+	SELECT MAX (pedidos.data_pedido)
+	FROM pedidos 
+	WHERE pedidos.idcliente = cliente.idcliente 
+);
+
+-- continuando a aula 50 - views
+CREATE VIEW cliente_profissao as
+SELECT cliente.nome as cliente, profissao.nome as profissao
+FROM cliente
+JOIN profissao on cliente.idprofissao = profissao.idprofissao
+
+SELECT * FROM cliente_profissao WHERE profissao = 'Programador';
+
+-- exercicio de views
+
+-- ex 01 
+CREATE VIEW cliente_dados AS
+SELECT cliente.nome as cliente, profissao.nome as profissao, nacionalidade, complemento, municipio, bairro , cpf, rg, data_nascimento, CASE genero WHEN 'M' THEN 'Masculino' WHEN 'F' THEN 'Feminino' end as genero, logradouro
+FROM cliente
+LEFT OUTER JOIN profissao on cliente.idprofissao = profissao.idprofissao
+LEFT OUTER JOIN nacionalidade on cliente.idnacionalidade = nacionalidade.idnacionalidade
+LEFT OUTER JOIN complemento on cliente.idcomplemento = complemento.idcomplemento
+LEFT OUTER JOIN municipio on cliente.idmunicipio = municipio.idmunicipio
+LEFT OUTER JOIN bairro on cliente.idbairro = bairro.idbairro
+
+SELECT * FROM cliente
+
+-- ex 02
+CREATE VIEW dados_uf_com_municipio AS
+SELECT municipio.nome as municipio, uf.nome as estado, uf.sigla as sigla
+FROM municipio
+JOIN uf on municipio.iduf = uf.iduf  
+
+select * from municipio;
+select * from uf;
+
+-- ex 03
+CREATE VIEW produto_fornecedor AS
+SELECT produto.nome as produto, produto.valor as valor, fornecedor.nome as fornecedor
+FROM produto
+JOIN fornecedor on produto.idfornecedor = fornecedor.idfornecedor
+
+-- ex 04
+CREATE VIEW transportadora_uf AS
+SELECT transportadora.nome as transportadora, transportadora.logradouro as logradouro, transportadora.numero, municipio.nome as municipio, uf.sigla
+FROM transportadora
+JOIN municipio on transportadora.idmunicipio = municipio.idmunicipio
+JOIN uf on municipio.iduf = uf.iduf	
+select * from transportadora;
+
+-- ex 05
+CREATE VIEW dados_transportadora_pedido AS
+SELECT pedidos.data_pedido, pedidos.valor, transportadora.nome as transportadora, cliente.nome as cliente, vendedor.nome as vendedor
+FROM pedidos
+JOIN transportadora on pedidos.idtransportadora = transportadora.idtransportadora
+JOIN cliente on pedidos.idcliente = cliente.idcliente
+JOIN vendedor on vendedor.idvendedor = pedidos.idvendedor
+
+-- ex 06
+CREATE VIEW nome_pedido_produto as
+SELECT produto.nome as produto, pedido_produto.valor_unitario, pedido_produto.quantidade
+FROM pedido_produto
+JOIN produto on pedido_produto.idproduto = produto.idproduto
+
+
+SELECT * FROM pedido_produto
+
+select * from exemplo;
+
+SELECT MAX(idbairro) + 1 FROM bairro 
+CREATE SEQUENCE bairro_id_seq minvalue 5
+ALTER TABLE bairro ALTER idbairro SET DEFAULT NEXTVAL('bairro_id_seq')
+ALTER SEQUENCE bairro_id_seq OWNED BY bairro.idbairro
+INSERT INTO bairro (nome) values ('Teste 1');
+INSERT INTO bairro (nome) values ('Teste 2'); 
+
+-- EXERCICIO DE SEQUENCIAS 
+SELECT MAX(idmunicipio) + 1 FROM municipio
+
+CREATE SEQUENCE municipio_id_seq minvalue 6
+ALTER TABLE municipio ALTER idmunicipio SET DEFAULT NEXTVAL('municipio_id_seq')
+ALTER SEQUENCE municipio_id_seq OWNED BY municipio.idmunicipio
+
+INSERT INTO municipio (nome) values ('Teste 1');
+INSERT INTO municipio (nome) values ('Teste 2');
+INSERT INTO municipio (nome) values ('Teste 3');
+INSERT INTO municipio (nome) values ('Teste 4');
+
+--------
+
+INSERT INTO complemento (nome) values('Teste complemento 1');
+INSERT INTO complemento (nome) values('Teste complemento 2');
+INSERT INTO complemento (nome) values('Teste complemento 3');
+INSERT INTO complemento (nome) values('Teste complemento 4');
+
+SELECT MAX(idcomplemento) + 1 FROM complemento
+
+CREATE SEQUENCE complemento_id_seq minvalue 5
+ALTER TABLE complemento ALTER idcomplemento SET DEFAULT NEXTVAL ('complemento_id_seq')
+ALTER SEQUENCE complemento_id_seq OWNED BY complemento.idcomplemento
+
+--------
+SELECT MAX(idfornecedor) + 1 FROM fornecedor
+
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 1');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 2');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 3');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 4');
+
+CREATE SEQUENCE fornecedor_id_seq minvalue 4
+ALTER TABLE fornecedor ALTER idfornecedor SET DEFAULT NEXTVAL ('fornecedor_id_seq')
+ALTER SEQUENCE fornecedor_id_seq OWNED BY fornecedor.idfornecedor
+-------
+
+SELECT MAX(idnacionalidade) + 1 FROM nacionalidade
+
+CREATE SEQUENCE nacionalidade_id_seq minvalue 5
+ALTER TABLE nacionalidade ALTER idnacionalidade SET DEFAULT NEXTVAL ('nacionalidade_id_seq')
+ALTER SEQUENCE nacionalidade_id_seq OWNED BY nacionalidade.idnacionalidade
+
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 1');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 2');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 3');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 4');
+
+----------
+SELECT MAX(idproduto) + 1 from produto
+
+CREATE SEQUENCE produto_id_seq minvalue 8
+ALTER TABLE produto ALTER idproduto SET DEFAULT NEXTVAL ('produto_id_seq')
+ALTER SEQUENCE produto_id_seq OWNEd BY produto.idproduto
+
+--------- 
+SELECT MAX(idcliente) + 1 FROM cliente
+CREATE SEQUENCE cliente_id_seq minvalue 22
+ALTER TABLE cliente ALTER idcliente SET DEFAULT NEXTVAL ('cliente_id_seq')
+ALTER SEQUENCE cliente_id_seq OWNEd BY cliente.idcliente
+
+INSERT INTO cliente (nome) values('Teste nome cliente 1');
+INSERT INTO cliente (nome) values('Teste nome cliente 2');
+INSERT INTO cliente (nome) values('Teste nome cliente 3');
+INSERT INTO cliente (nome) values('Teste nome cliente 4');
+
+------
+SELECT MAX(idprofissao) + 1 FROM profissao
+CREATE SEQUENCE profissao_id_seq minvalue 5
+ALTER TABLE profissao ALTER idprofissao SET DEFAULT NEXTVAL ('profissao_id_seq')
+ALTER SEQUENCE profissao_id_seq OWNED BY profissao.idprofissao
+SELECT * FROM profissao;
+
+INSERT INTO profissao (nome) values ('Teste Profissão 1');
+INSERT INTO profissao (nome) values ('Teste Profissão 2');
+INSERT INTO profissao (nome) values ('Teste Profissão 3');
+INSERT INTO profissao (nome) values ('Teste Profissão 4');
+
+--------
+SELECT MAX(idpedido) + 1 from pedidos;
+select * from pedidos;
+
+CREATE SEQUENCE pedidos_id_seq minvalue 8
+ALTER TABLE pedidos ALTER idpedido SET DEFAULT NEXTVAL ('pedidos_id_seq')
+ALTER SEQUENCE pedidos_id_seq OWNED BY pedidos.idpedido
+
+
+------
+SELECT MAX(iduf) + 1 from uf
+CREATE SEQUENCE uf_id_seq minvalue 6
+ALTER TABLE uf ALTER iduf SET DEFAULT NEXTVAL ('uf_id_seq')
+ALTER SEQUENCE uf_id_seq OWNED BY uf.iduf
+
+select * from uf 
+INSERT INTO uf (nome, sigla) values ('Teste uf 1', 'PA');
+INSERT INTO uf (nome, sigla) values ('Teste uf 2', 'SA');
+INSERT INTO uf (nome, sigla) values ('Teste uf 3', 'SC');
+INSERT INTO uf (nome, sigla) values ('Teste uf 4', 'RA');
+
+------
+SELECT MAX(idvendedor) + 1 FROM vendedor;
+CREATE SEQUENCE vendedor_id_seq minvalue 8
+ALTER TABLE vendedor ALTER idvendedor SET DEFAULT NEXTVAL ('vendedor_id_seq')
+ALTER SEQUENCE vendedor_id_seq OWNED BY vendedor.idvendedor
+
+INSERT INTO vendedor (nome) values ('Teste vendedor 1');
+INSERT INTO vendedor (nome) values ('Teste vendedor 2');
+INSERT INTO vendedor (nome) values ('Teste vendedor 3');
+INSERT INTO vendedor (nome) values ('Teste vendedor 4');
+
+------
+SELECT MAX(Idtransportadora) + 1 from transportadora
+
+CREATE SEQUENCE transportadora_id_seq minvalue 6
+ALTER TABLE transportadora ALTER idtransportadora SET DEFAULT NEXTVAL ('transportadora_id_seq')
+ALTER SEQUENCE transportadora_id_seq OWNED BY transportadora.idtransportadora
+
+
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 1');
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 2');
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 3');
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 4');
+
+ALTER TABLE pedidos ALTER COLUMN data_pedido SET DEFAULT current_date;
+ALTER TABLE pedidos ALTER COLUMN valor SET DEFAULT 0;
+INSERT INTO pedidos (idcliente, idvendedor, idtransportadora) values (1, 1, 1);
+SELECT * FROM pedidos 
+
+--- exercicio de valores default
+SELECT MAX(idpedido) + 1 FROM pedido_produto -- 8
+SELECT MAX(idproduto) + 1 FROM pedido_produto -- 6
+SELECT MAX(quantidade) + 1 FROM pedido_produto -- 2
+
+CREATE SEQUENCE pedido_produto_id_seq minvalue
+
+select * from pedido_produto
+
+-- 01
+ALTER TABLE pedidos ALTER COLUMN data_pedido SET DEFAULT current_date;
+ALTER TABLE pedidos ALTER COLUMN valor SET DEFAULT 0;
+
+ALTER TABLE pedido_produto ALTER COLUMN quantidade SET DEFAULT 1;
+ALTER TABLE pedido_produto ALTER COLUMN valor_unitario SET DEFAULT 0;
+
+--
+---- prova final
+
+CREATE TABLE editora (
+	id_editora serial not null,
+	nome varchar not null,
+
+	CONSTRAINT pk_edt_ideditora PRIMARY KEY (id_editora)
+)
+
+INSERT INTO editora (nome) values ('Bookman');
+INSERT INTO editora (nome) values ('Edgard Blusher');
+INSERT INTO editora (nome) values ('Nova Terra');
+INSERT INTO editora (nome) values ('Brasport');
+
+select * from editora
+
+CREATE TABLE categoria (
+	id_categoria serial not null,
+	nome varchar (50) not null,
+
+	CONSTRAINT pk_ctg_idcategoria PRIMARY KEY (id_categoria),
+	CONSTRAINT un_nome_categoria UNIQUE (nome)
+);
+
+INSERT INTO categoria (nome) values ('Banco de Dados');
+INSERT INTO categoria (nome) values ('HTML');
+INSERT INTO categoria (nome) values ('Java');
+INSERT INTO categoria (nome) values ('PHP');
+
+select * from categoria
+
+-----
+CREATE TABLE autor(
+	id_autor serial not null,
+	nome varchar (30) not null,
+
+	CONSTRAINT pk_alt_idautor PRIMARY KEY(id_autor)
+)
+
+INSERT INTO autor (nome) VALUES
+('Waldemar Setzer'),
+('Flávio Soares'),
+('John Watson'),
+('Rui Rossi dos Santos'),
+('Antonio Pereira de Resende'),
+('Claudiney Calixto Lima'),
+('Evandro Carlos Teruel'),
+('Ian Graham'),
+('Fabrício Xavier'),
+('Pablo Dalloglio');
+
+select * from autor
+
+CREATE TABLE livro (
+	id_livro serial not null,
+	id_editora integer NOT NULL,
+	id_categoria integer NOT NULL,
+	nome varchar (30) not null,
+
+	CONSTRAINT pk_lvr_idlivro PRIMARY KEY (id_livro),
+	CONSTRAINT fk_edt_ideditora foreign key(id_editora),
+	CONSTRAINT fk_ctg_idcategoria foreign key (id_categoria),
+);
+
+select * from editora; -- 1 bookman, 2 edgard, 3 nova tera , 4 brasport
+SELECT * FROM categoria;
+INSERT INTO livro (id_editora, id_categoria, nome) values (2, 1, 'Banco de Dados 1 Edição');
+INSERT INTO livro (id_editora, id_categoria, nome) values (1, 1, 'Oracle DataBase 11G Administração');
+INSERT INTO livro (id_editora, id_categoria, nome) values (3, 3,'Programação de Computadores em Java');
+INSERT INTO livro (id_editora, id_categoria, nome) values (4, 3, 'Programação Orientada a Aspectos em Java');
+INSERT INTO livro (id_editora, id_categoria, nome) values (4, 2, 'HTML5 - Guia Prático');
+INSERT INTO livro (id_editora, id_categoria, nome) values (3, 2, 'XHTML: Guia de Referência para Desencolvimento na Web');
+INSERT INTO livro (id_editora, id_categoria, nome) values (1, 4, 'PHP para Desenvolvimento Profissional');
+INSERT INTO livro (id_editora, id_categoria, nome) values (2, 4, 'PHP com Programação Orientada a Objetos');
+
+------
+CREATE TABLE livro_autor (
+	id_livro integer not null,
+	id_autor integer not null,
+
+	CONSTRAINT pk_lvat_idlivroautor primary key (id_livro, id_autor),
+	CONSTRAINT fk_lvat_idlivro foreign key (id_livro) REFERENCES livro (id_livro),
+	CONSTRAINT fk_lvat_idautor foreign key (id_autor) REFERENCES autor (id_autor)
+);
+
+select * from livro;
+select * from autor; 
+
+INSERT INTO livro_autor (id_livro, id_autor) values (1, 1);
+INSERT INTO livro_autor (id_livro, id_autor) values (1, 2);
+INSERT INTO livro_autor (id_livro, id_autor) values (2, 3);
+INSERT INTO livro_autor (id_livro, id_autor) values (3, 4);
+INSERT INTO livro_autor (id_livro, id_autor) values (4, 5);
+INSERT INTO livro_autor (id_livro, id_autor) values (4, 6);
+INSERT INTO livro_autor (id_livro, id_autor) values (5, 7);
+INSERT INTO livro_autor (id_livro, id_autor) values (6, 8);
+INSERT INTO livro_autor (id_livro, id_autor) values (7, 9);
+INSERT INTO livro_autor (id_livro, id_autor) values (8, 10);
+
+
+select * from livro_autor;
+
+------
+
+CREATE TABLE aluno(
+	id_aluno serial not null,
+	nome varchar (50) not null,
+
+	CONSTRAINT pk_aln_idaluno PRIMARY KEY (id_aluno)
+)
+
+INSERT INTO aluno (nome) VALUES 
+('Mario'),
+('João'),
+('Paulo'),
+('Pedro'),
+('Maria');
+
+CREATE TABLE emprestimo(
+	id_emprestimo serial not null,
+	id_aluno integer not null,
+	data_emprestimo date not null,
+	data_devolucao date not null,
+	valor decimal(10,2) not null,
+	devolvido char(1) not null,
+
+	CONSTRAINT pk_emp_idemprestimo PRIMARY KEY (id_emprestimo),
+	CONSTRAINT fk_emp_idaluno FOREIGN KEY (id_aluno) REFERENCES aluno (id_aluno)
+	
+);
+select * from aluno;
+
+INSERT INTO emprestimo (id_aluno, data_emprestimo, data_devolucao, valor, devolvido)
+VALUES (1, '2012-05-02', '2012-05-12', 10.00, 'S');
+
+INSERT INTO emprestimo (id_aluno, data_emprestimo, data_devolucao, valor, devolvido)
+VALUES (1, '2012-04-23', '2012-05-03', 5.00, 'N');
+
+INSERT INTO emprestimo (id_aluno, data_emprestimo, data_devolucao, valor, devolvido)
+VALUES (2, '2012-05-10', '2012-05-20', 12.00, 'N');
+
+INSERT INTO emprestimo (id_aluno, data_emprestimo, data_devolucao, valor, devolvido)
+VALUES (3, '2012-05-10', '2012-05-20', 8.00, 'S');
+
+INSERT INTO emprestimo (id_aluno, data_emprestimo, data_devolucao, valor, devolvido)
+VALUES (4, '2012-05-05', '2012-05-15', 15.00, 'N');
+
+INSERT INTO emprestimo (id_aluno, data_emprestimo, data_devolucao, valor, devolvido)
+VALUES (4, '2012-05-07', '2012-05-17', 20.00, 'S');
+
+INSERT INTO emprestimo (id_aluno, data_emprestimo, data_devolucao, valor, devolvido)
+VALUES (4, '2012-05-08', '2012-05-18', 5.00, 'S');
+
+select * from emprestimo;
+
+CREATE TABLE emprestimo_livro(
+	id_emprestimo integer not null,
+	id_livro integer not null,
+	
+
+	CONSTRAINT pk_empl_idempl PRIMARY KEY (id_emprestimo, id_livro),
+	CONSTRAINT fk_empl_idemprestimo FOREIGN KEY (id_emprestimo) REFERENCES emprestimo (id_emprestimo),
+	CONSTRAINT fk_empl_idlivro FOREIGN KEY (id_livro) REFERENCES livro (id_livro)
+	
+);
+
+DROP TABLE empretimo_livro
+SELECT * FROM emprestimo;
+select * from livro;
+select * from aluno; -- 1 mario, 2 joao, 3 paulo, 4 pedro, 5 maria
+
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (1, 1);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (2, 4);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (2, 3);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (3, 2);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (3, 7);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (4, 5);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (5, 4);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (6, 6);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (6, 1);
+INSERT INTO emprestimo_livro (id_emprestimo, id_livro) values (7, 8);
+
+
+-----
+CREATE INDEX idx_empt_data_emprestimo on emprestimo(data_emprestimo);
+CREATE INDEX idx_empt_data_devolucao on emprestimo(data_devolucao);
+
+---- concsultas
+--1
+SELECT nome
+FROM autor
+ORDER BY nome DESC
+
+-----
+
+---2
+
+SELECT nome
+FROM aluno
+WHERE nome like 'P%'
+select * from livro
+SELECT livro.nome as livro
+FROM livro
+WHERE livro.id_categoria = 1 or livro.id_categoria = 3
+
+
+---- 3
+Select nome
+from livro
+where id_editora = 1
+
+-- 4
+select * 
+from emprestimo
+where data_emprestimo between '2012-05-05' and '2012-05-10'
+
+- 5 
+select *
+from emprestimo
+where data_emprestimo not between '2012-05-05' and '2012-05-10'
+
+--- 6
+
+select * from emprestimo
+where devolvido = 'S'
+
+--- 7
+-- consulta com agrupamento simples
+
+select count(id_livro) from livro
+
+--- 8 
+select sum(emprestimo.valor) from emprestimo
+
+
+---- 9
+
+select avg(emprestimo.valor) from emprestimo
+
+--- 10
+select max(valor) from emprestimo
+
+---- 11 
+select min(valor ) from emprestimo
+
+-- 12
+select sum(emprestimo.valor)
+FROM emprestimo
+where data_emprestimo between '2012-05-05' and '2012-05-10'
+
+-- 13
+
+select count(id_emprestimo)
+from emprestimo
+where data_emprestimo between '2012-05-01' and '2012-05-05'
+
+--- 14
+select * from livro;
+select * from categoria 
+
+
+select livro.nome, categoria.nome as categoria, editora.nome as editora
+from livro
+JOIN categoria on categoria.id_categoria = livro.id_categoria
+JOIN editora on editora.id_editora = livro.id_editora
+
+select * from editora
+
+--- 15
+select * from livro_autor
+
+select livro.nome as livro, autor.nome as autor
+from livro_autor
+join livro on livro_autor.id_livro = livro.id_livro
+join autor on livro_autor.id_autor = autor.id_autor
+
+-- 16 
+
+select livro.nome as livro, autor.nome as autor
+from livro_autor
+join autor on livro_autor.id_autor = autor.id_autor
+join livro on livro_autor.id_livro = livro.id_livro
+where livro_autor.id_autor = 8
+select * from autor 
+
+--- 17
+select aluno.nome as aluno, emprestimo.data_emprestimo, emprestimo.data_devolucao
+from emprestimo
+join aluno on emprestimo.id_aluno = aluno.id_aluno
+
+--- 18 
+select editora.nome as editora, count(livro.id_livro)
+from livro
+join editora on livro.id_editora = editora.id_editora
+group by editora.nome
+
+--- 19 
+select categoria.nome as categoria, count(livro.id_categoria)
+from livro
+join categoria on categoria.id_categoria = livro.id_categoria
+group by categoria.nome
+
+---- 20 
+select * from livro_autor
+select autor.nome as autor, count(livro_autor.id_livro)
+from livro_autor
+join autor on livro_autor.id_autor = livro_autor.id_autor
+group by autor.nome
+
+
+---- 21
+select * from emprestimo_livro
+select aluno.nome as aluno, count(emprestimo.id_emprestimo) as quantidade
+from emprestimo_livro
+join emprestimo on emprestimo_livro.id_emprestimo = emprestimo.id_emprestimo
+join aluno on aluno.id_aluno = emprestimo.id_aluno
+group by aluno.nome
+----- 22
+select aluno.nome as aluno, sum(emprestimo.valor) as valor_total
+from emprestimo
+join aluno on aluno.id_aluno = emprestimo.id_aluno
+group by aluno.nome
+
+--- 23
+SELECT aluno.nome as aluno, sum(emprestimo.valor)
+from emprestimo
+join aluno on aluno.id_aluno = emprestimo.id_aluno
+where (select sum(emprestimo.valor) > avg(emprestimo.valor) from emprestimo)
+group by aluno.nome
+
+-- 44
+select upper(nome)
+from aluno
+order by nome desc
+
+--45 
+select *
+from emprestimo 
+where (select extract(month from data_emprestimo) = 04) and (select extract(year from data_emprestimo) = 2012)
+
+
+-- 46
+select
+case devolvido
+	when 'S' then 'Devolução completa'
+	else
+		'Não devolvido'
+	end
+from emprestimo
+
+--47 
+select autor.nome,
+substring (autor.nome from 5 for 10)
+from autor
+
+-- 48 
+select * from emprestimo
+
+select emprestimo.valor, emprestimo.data_emprestimo,
+case (select extract(month from data_emprestimo))
+	when '01' then 'janeiro'
+	when '02' then 'fevereiro'
+	when '03' then 'março'
+	when '04' then 'abril'
+	when '05' then 'maio'
+	when '06' then 'junho'
+	when '07' then 'julho'
+	when '08' then 'agosto'
+	when '09' then 'setembro'
+	when '10' then 'outubro'
+	when '11' then 'novembro'
+	when '12' then 'dezembro'
+	else
+		'oooo'
+	end
+from emprestimo
+
+group by emprestimo valor
+
+----
+select emprestimo.data_emprestimo, emprestimo.valor
+from emprestimo
+where emprestimo.valor > (select avg(emprestimo.valor) from emprestimo)
+
+----
+
+select * from emprestimo_livro
+
+select emprestimo.data_emprestimo, emprestimo.valor, (select count(emprestimo_livro.id_emprestimo) from emprestimo_livro where emprestimo_livro.id_emprestimo = emprestimo.id_emprestimo)
+from emprestimo
+where (select count(emprestimo_livro.id_emprestimo) from emprestimo_livro where emprestimo_livro.id_emprestimo = emprestimo.id_emprestimo) > 1
+
+----
+
+select emprestimo.data_emprestimo, emprestimo.valor
+from emprestimo
+where emprestimo.valor < (select sum(emprestimo.valor) from emprestimo)
+
+select * from exemplo;
+
+SELECT MAX(idbairro) + 1 FROM bairro 
+CREATE SEQUENCE bairro_id_seq minvalue 5
+ALTER TABLE bairro ALTER idbairro SET DEFAULT NEXTVAL('bairro_id_seq')
+ALTER SEQUENCE bairro_id_seq OWNED BY bairro.idbairro
+INSERT INTO bairro (nome) values ('Teste 1');
+INSERT INTO bairro (nome) values ('Teste 2'); 
+
+-- EXERCICIO DE SEQUENCIAS 
+SELECT MAX(idmunicipio) + 1 FROM municipio
+
+CREATE SEQUENCE municipio_id_seq minvalue 6
+ALTER TABLE municipio ALTER idmunicipio SET DEFAULT NEXTVAL('municipio_id_seq')
+ALTER SEQUENCE municipio_id_seq OWNED BY municipio.idmunicipio
+
+INSERT INTO municipio (nome) values ('Teste 1');
+INSERT INTO municipio (nome) values ('Teste 2');
+INSERT INTO municipio (nome) values ('Teste 3');
+INSERT INTO municipio (nome) values ('Teste 4');
+
+--------
+
+INSERT INTO complemento (nome) values('Teste complemento 1');
+INSERT INTO complemento (nome) values('Teste complemento 2');
+INSERT INTO complemento (nome) values('Teste complemento 3');
+INSERT INTO complemento (nome) values('Teste complemento 4');
+
+SELECT MAX(idcomplemento) + 1 FROM complemento
+
+CREATE SEQUENCE complemento_id_seq minvalue 5
+ALTER TABLE complemento ALTER idcomplemento SET DEFAULT NEXTVAL ('complemento_id_seq')
+ALTER SEQUENCE complemento_id_seq OWNED BY complemento.idcomplemento
+
+--------
+SELECT MAX(idfornecedor) + 1 FROM fornecedor
+
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 1');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 2');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 3');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 4');
+
+CREATE SEQUENCE fornecedor_id_seq minvalue 4
+ALTER TABLE fornecedor ALTER idfornecedor SET DEFAULT NEXTVAL ('fornecedor_id_seq')
+ALTER SEQUENCE fornecedor_id_seq OWNED BY fornecedor.idfornecedor
+-------
+
+SELECT MAX(idnacionalidade) + 1 FROM nacionalidade
+
+CREATE SEQUENCE nacionalidade_id_seq minvalue 5
+ALTER TABLE nacionalidade ALTER idnacionalidade SET DEFAULT NEXTVAL ('nacionalidade_id_seq')
+ALTER SEQUENCE nacionalidade_id_seq OWNED BY nacionalidade.idnacionalidade
+
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 1');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 2');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 3');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 4');
+
+----------
+SELECT MAX(idproduto) + 1 from produto
+
+CREATE SEQUENCE produto_id_seq minvalue 8
+ALTER TABLE produto ALTER idproduto SET DEFAULT NEXTVAL ('produto_id_seq')
+ALTER SEQUENCE produto_id_seq OWNEd BY produto.idproduto
+
+--------- 
+SELECT MAX(idcliente) + 1 FROM cliente
+CREATE SEQUENCE cliente_id_seq minvalue 22
+ALTER TABLE cliente ALTER idcliente SET DEFAULT NEXTVAL ('cliente_id_seq')
+ALTER SEQUENCE cliente_id_seq OWNEd BY cliente.idcliente
+
+INSERT INTO cliente (nome) values('Teste nome cliente 1');
+INSERT INTO cliente (nome) values('Teste nome cliente 2');
+INSERT INTO cliente (nome) values('Teste nome cliente 3');
+INSERT INTO cliente (nome) values('Teste nome cliente 4');
+
+------
+SELECT MAX(idprofissao) + 1 FROM profissao
+CREATE SEQUENCE profissao_id_seq minvalue 5
+ALTER TABLE profissao ALTER idprofissao SET DEFAULT NEXTVAL ('profissao_id_seq')
+ALTER SEQUENCE profissao_id_seq OWNED BY profissao.idprofissao
+SELECT * FROM profissao;
+
+INSERT INTO profissao (nome) values ('Teste Profissão 1');
+INSERT INTO profissao (nome) values ('Teste Profissão 2');
+INSERT INTO profissao (nome) values ('Teste Profissão 3');
+INSERT INTO profissao (nome) values ('Teste Profissão 4');
+
+--------
+SELECT MAX(idpedido) + 1 from pedidos;
+select * from pedidos;
+
+CREATE SEQUENCE pedidos_id_seq minvalue 8
+ALTER TABLE pedidos ALTER idpedido SET DEFAULT NEXTVAL ('pedidos_id_seq')
+ALTER SEQUENCE pedidos_id_seq OWNED BY pedidos.idpedido
+
+
+------
+SELECT MAX(iduf) + 1 from uf
+CREATE SEQUENCE uf_id_seq minvalue 6
+ALTER TABLE uf ALTER iduf SET DEFAULT NEXTVAL ('uf_id_seq')
+ALTER SEQUENCE uf_id_seq OWNED BY uf.iduf
+
+select * from uf 
+INSERT INTO uf (nome, sigla) values ('Teste uf 1', 'PA');
+INSERT INTO uf (nome, sigla) values ('Teste uf 2', 'SA');
+INSERT INTO uf (nome, sigla) values ('Teste uf 3', 'SC');
+INSERT INTO uf (nome, sigla) values ('Teste uf 4', 'RA');
+
+------
+SELECT MAX(idvendedor) + 1 FROM vendedor;
+CREATE SEQUENCE vendedor_id_seq minvalue 8
+ALTER TABLE vendedor ALTER idvendedor SET DEFAULT NEXTVAL ('vendedor_id_seq')
+ALTER SEQUENCE vendedor_id_seq OWNED BY vendedor.idvendedor
+
+INSERT INTO vendedor (nome) values ('Teste vendedor 1');
+INSERT INTO vendedor (nome) values ('Teste vendedor 2');
+INSERT INTO vendedor (nome) values ('Teste vendedor 3');
+INSERT INTO vendedor (nome) values ('Teste vendedor 4');
+
+------
+SELECT MAX(Idtransportadora) + 1 from transportadora
+
+CREATE SEQUENCE transportadora_id_seq minvalue 6
+ALTER TABLE transportadora ALTER idtransportadora SET DEFAULT NEXTVAL ('transportadora_id_seq')
+ALTER SEQUENCE transportadora_id_seq OWNED BY transportadora.idtransportadora
+
+
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 1');
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 2');
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 3');
+INSERT INTO transportadora (nome) VALUES ('Teste transportadora 4');
+
+ALTER TABLE pedidos ALTER COLUMN data_pedido SET DEFAULT current_date;
+ALTER TABLE pedidos ALTER COLUMN valor SET DEFAULT 0;
+INSERT INTO pedidos (idcliente, idvendedor, idtransportadora) values (1, 1, 1);
+SELECT * FROM pedidos 
+
+--- exercicio de valores default
+SELECT MAX(idpedido) + 1 FROM pedido_produto -- 8
+SELECT MAX(idproduto) + 1 FROM pedido_produto -- 6
+SELECT MAX(quantidade) + 1 FROM pedido_produto -- 2
+
+CREATE SEQUENCE pedido_produto_id_seq minvalue
+
+select * from pedido_produto
+
+-- 01
+ALTER TABLE pedidos ALTER COLUMN data_pedido SET DEFAULT current_date;
+ALTER TABLE pedidos ALTER COLUMN valor SET DEFAULT 0;
+
+ALTER TABLE pedido_produto ALTER COLUMN quantidade SET DEFAULT 1;
+ALTER TABLE pedido_produto ALTER COLUMN valor_unitario SET DEFAULT 0;
+
+--
+INSERT INTO pedido_produto (idpedido, idproduto) values (1, 3)
+select * from pedido_produto
+
+-- ex 02 
+ALTER TABLE produto ALTER COLUMN valor SET DEFAULT 0;
+
+INSERT INTO produto (nome, idfornecedor) values ('Teste de valor default', 1);
+
+select * from produto
+
+---- criando index
+
+CREATE INDEX idx_pdt_nome on produto(nome);
+CREATE INDEX idx_pdd_data on pedidos(data_pedido);

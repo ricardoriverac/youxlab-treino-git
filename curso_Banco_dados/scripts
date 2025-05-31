@@ -55,3 +55,66 @@ select * from pedidos;
 insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (1, 1, 1, 28.000);
 insert into pedido_produto(idpedido, idproduto, quantidade, valor_unitario) values (2, 1, 1, 28.000);
 update pedidos set valor = 350.000 where idpedido = 7;
+
+
+
+select * from exemplo;
+
+SELECT MAX(idbairro) + 1 FROM bairro 
+CREATE SEQUENCE bairro_id_seq minvalue 5
+ALTER TABLE bairro ALTER idbairro SET DEFAULT NEXTVAL('bairro_id_seq')
+ALTER SEQUENCE bairro_id_seq OWNED BY bairro.idbairro
+INSERT INTO bairro (nome) values ('Teste 1');
+INSERT INTO bairro (nome) values ('Teste 2'); 
+
+-- EXERCICIO DE SEQUENCIAS 
+SELECT MAX(idmunicipio) + 1 FROM municipio
+
+CREATE SEQUENCE municipio_id_seq minvalue 6
+ALTER TABLE municipio ALTER idmunicipio SET DEFAULT NEXTVAL('municipio_id_seq')
+ALTER SEQUENCE municipio_id_seq OWNED BY municipio.idmunicipio
+
+INSERT INTO municipio (nome) values ('Teste 1');
+INSERT INTO municipio (nome) values ('Teste 2');
+INSERT INTO municipio (nome) values ('Teste 3');
+INSERT INTO municipio (nome) values ('Teste 4');
+
+--------
+
+INSERT INTO complemento (nome) values('Teste complemento 1');
+INSERT INTO complemento (nome) values('Teste complemento 2');
+INSERT INTO complemento (nome) values('Teste complemento 3');
+INSERT INTO complemento (nome) values('Teste complemento 4');
+
+SELECT MAX(idcomplemento) + 1 FROM complemento
+
+CREATE SEQUENCE complemento_id_seq minvalue 5
+ALTER TABLE complemento ALTER idcomplemento SET DEFAULT NEXTVAL ('complemento_id_seq')
+ALTER SEQUENCE complemento_id_seq OWNED BY complemento.idcomplemento
+
+--------
+SELECT MAX(idfornecedor) + 1 FROM fornecedor
+
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 1');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 2');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 3');
+INSERT INTO fornecedor (nome) values('Teste Fornecedor 4');
+
+CREATE SEQUENCE fornecedor_id_seq minvalue 4
+ALTER TABLE fornecedor ALTER idfornecedor SET DEFAULT NEXTVAL ('fornecedor_id_seq')
+ALTER SEQUENCE fornecedor_id_seq OWNED BY fornecedor.idfornecedor
+-------
+
+SELECT MAX(idnacionalidade) + 1 FROM nacionalidade
+
+CREATE SEQUENCE nacionalidade_id_seq minvalue 5
+ALTER TABLE nacionalidade ALTER idnacionalidade SET DEFAULT NEXTVAL ('nacionalidade_id_seq')
+ALTER SEQUENCE nacionalidade_id_seq OWNED BY nacionalidade.idnacionalidade
+
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 1');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 2');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 3');
+INSERT INTO nacionalidade (nome) VALUES ('Teste nacionalidade 4');
+
+----------
+SELECT MAX(idproduto) + 1 from produto
