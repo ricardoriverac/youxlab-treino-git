@@ -914,36 +914,147 @@ left outer join
 group by vdr.id_vendedor
 order by vdr.nome
 
--- 
+-- 12.O nome da transportadora e o somatório do valor do pedido (agrupado por transportadora).
+select 
+	tpa.nome,
+	sum(valor)
+from 
+pedido as pdd
+left outer join 
+	transportadora as tpa on pdd.id_transportadora  = tpa.id_transportadora
+group by tpa.nome
+
+-- 13.O nome do cliente e a quantidade de pedidos de cada um (agrupado por cliente).
+select 
+	cln.nome,
+	sum(valor)
+from 
+pedido as pdd
+left outer join 
+	cliente as cln on pdd.idcliente  = cln.idcliente
+group by cln.nome
+
+-- 14.O nome do produto e a quantidade vendida (agrupado por produto).
+select 
+	pdt.nome,
+	count(id_pedido)
+from pedido_produto as pdd
+left outer join
+	produto as pdt on pdd.id_produto = pdt.id_produto
+group by 
+	pdt.nome
+
+-- 15.A data do pedido e o somatório do valor dos produtos do pedido (agrupado pela data do pedido).
+select 
+	date_pedido,
+	sum(valor)
+from pedido
+group by
+	date_pedido
+order by 
+	date_pedido
+
+-- 16.A data do pedido e a quantidade de produtos do pedido (agrupado pela data do pedido).
+select 
+	pdd.date_pedido,
+	count(pdp.id_produto)
+from 
+	pedido_produto as pdp
+left outer join
+	pedido as pdd on pdd.id_pedido = pdp.id_pedido
+group by
+	pdd.date_pedido
+
+-------------------------------------------------------------------------------------------------------------
+-- Comandos adicionais --
+select * from pedido
+select 
+	date_pedido,
+	extract(day from date_pedido),
+	extract(month from date_pedido),
+	extract(year from date_pedido)
+from
+	pedido
+
+----
+select
+	nome,
+	substring(nome from 1 for 5), substring(nome , 2)
+from 
+	cliente
+
+----
+select
+	nome, 
+	upper(nome)
+from
+	cliente
+----
+select nome, coalesce (cpf, 'Não foi informado') as cpf from cliente
+
+----
+select 
+	case sigla
+		when 'PR' then 'Paraná'
+		when 'SC' then 'Santa Catarina'
+	else
+		'Outros'
+	end as uf
+from uf
+---------------------------------------------------------------------------------------
+-- 1. O nome do cliente e somente o mês de nascimento.
+-- 1. Caso a data de nascimento não esteja preenchida mostrar a mensagem “Não informado”.
+select 
+	nome,
+	data_nascimento,
+	extract(month from data_nascimento) as mes,
+	coalesce(cast(extract(month from data_nascimento)as text),'Não informado')
+from 
+	cliente
+
+-- 2. O nome do cliente e somente o nome do mês de nascimento (Janeiro, Fevereiro etc). Caso a data de nascimento não esteja preenchida mostrar a mensagem “Não informado”.
+select 
+	nome,
+	case(extract(month from data_nascimento))
+		when 01 then 'Janeiro'
+		when 02 then 'Fevereiro'
+		when 03 then 'Março'
+		when 04 then 'Abril'
+		when 05 then 'Maio'
+		when 06 then 'Junho'
+		when 07 then 'Julho'
+		when 08 then 'Agosto'
+		when 09 then 'Setembro'
+		when 10 then 'Otubro'
+		when 11 then 'Novembro'
+		when 12 then 'Dezembro'
+	else 'Não informado'
+		end as "Mes de nascimento"
+from 
+	cliente;
+-- 4. O caractere 5 até o caractere 10 de todos os municípios.
+select
+	nome,
+	substring(nome from 5 for 10)
+from 
+	municipio
+	
+-- 5. O nome de todos os municípios em letras maiúsculas.
+select
+	nome, 
+	upper(nome)
+from
+	municipio
+
+-- 6. O nome do cliente e o gênero. Caso seja M mostrar “Masculino”, senão mostrar “Feminino”.
+select
+	nome
+	
+
+
 
 select * from cliente
-select * from vendedor
-select * from pedido
-select * from transportadora
-select * from pedido_produto -- essa
-select * from fornecedor
-select * from produto
 select * from municipio
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
