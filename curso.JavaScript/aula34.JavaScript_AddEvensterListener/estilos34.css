@@ -1,0 +1,31 @@
+.curso {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 15% outset; color: lightcoral;
+    border-radius: 10%;
+    padding: 14px;
+    margin: 5px 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.curso:hover{
+    background-color: rgb(249, 209, 209);
+
+}
+
+.c1 {
+    color: lightcoral;
+    
+}
+
+.c2{
+    color: rgb(221, 99, 99);
+    
+}
+
+.destaque{
+
+    background-color: rgb(249, 187, 187) !important;
+    color: rgb(27, 20, 20) !important;
+}
