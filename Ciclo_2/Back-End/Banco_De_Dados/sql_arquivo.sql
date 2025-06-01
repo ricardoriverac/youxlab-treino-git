@@ -1203,20 +1203,122 @@ left outer join
 	cliente as cln on pdd.idcliente = cln.idcliente
 group by 
 	cln.nome
+----------------------------------------------------------------------------------------------------------------------------
+-- Viewes 
+drop view cliente_profissao;
 
 
+create view cliente_profissao as
+select 
+	cln.nome as cliente,
+	cln.cpf,  
+	prf.nome as profissao
+from
+	cliente as cln
+left outer join
+	profissao as prf on cln.idprofissao = prf.idprofissao
+ 
+select cpf from cliente_profissao where profissao = 'Professor'
 
+----------------------------------------------
+-- 1. O nome, a profissão, a nacionalidade, o complemento, o município, a unidade de federação, o bairro, o CPF,o RG, a data de nascimento, o gênero (mostrar “Masculino” ou “Feminino”), o logradouro, o número e as observações dos clientes.
+create view dados_completos as
+select 
+	cln.nome as nome,
+	prf.nome as profissao,
+	ncd.nome as nacionalidade,
+	mnc.nome as municipio,
+	uf.nome as uf,
+	brr.nome as bairro,
+	cln.cpf as cpf,
+	cln.rg as rg,
+	cln.data_nascimento,
+	case genero
+		when 'M' then 'Masculino'
+		when 'F' then 'Feminino'
+	end as genero,
+	cln.logradouro,
+	cln.numero,
+	cln.obseracoes
+from 
+	cliente as cln
+left outer join 
+	profissao as prf on cln.idprofissao = prf.idprofissao
+left outer join
+	nacionalidade as ncd on cln.idnacionalidade = ncd.idnacionalidade
+left outer join
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+left outer join
+	uf as uf on mnc.iduf = uf.iduf
+left outer join
+	bairro as brr on cln.idbairro = brr.idbairro
+----
+-- 2. O nome do município e o nome e a sigla da unidade da federação.
+create view dados_localizacao as
+select 
+	mnc.nome as municipio,
+	cln.nome as cliente,
+	uf.nome as uf
+from cliente as cln
+left outer join
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+left outer join
+	uf on mnc.iduf = uf.iduff
+	
+----
+-- 3. O nome do produto, o valor e o nome do fornecedor dos produtos.
+create view dados_produto as
+select 
+	pdt.nome as produto,
+	pdt.valor as valor,
+	fnc.nome as fornecedor
+from 
+	produto as pdt
+left outer join
+	fornecedor as fnc on pdt.id_fornecedor = fnc.id_fornecedor
+----
+-- 4. O nome da transportadora, o logradouro, o número, o nome da unidade de federação e a sigla da unidade de federação das transportadoras.
+create view dados_transportadora as
+select 
+	tpa.nome as transportadora,
+	tpa.logradouro,
+	tpa.numero,
+	uf.nome as federacao,
+	uf.sigla as sigla
+from 
+	transportadora as tpa
+left outer join
+	municipio as mnc on tpa.id_municipio = mnc.idmunicipio
+left outer join
+	uf on mnc.iduf = uf.iduf
+----
+-- 5. A data do pedido, o valor, o nome da transportadora, o nome do cliente e o nome do vendedor dos pedidos.
+create view dados_pedido as
+select
+	pdd.date_pedido as data_pedido,
+	pdd.valor as valor,
+	cln.nome as cliente,
+	vdd.nome as vendedor
+from 
+	pedido as pdd
+left outer join 
+	cliente as cln on pdd.idcliente = cln.idcliente
+left outer join
+	vendedor as vdd on pdd.id_vendedor = vdd.id_vendedor
 
-
-
-
-
-
-
-
-
-
-
+----
+-- 6. O nome do produto, a quantidade, o valor unitário e o valor total dos produtos do pedido.
+create view dados_pedido_produto as 
+select 
+	prd.nome as produto,
+	pdp.quantidade,
+	pdp.valor_unitario
+from
+	pedido_produto as pdp
+left outer join
+	produto prd on pdp.id_produto = prd.id_produto
+-------------------------------------------------------------------------------------------------------------------
+-- Campos autoincriemento
 
 
 
