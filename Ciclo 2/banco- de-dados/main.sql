@@ -453,7 +453,7 @@ update cliente set idmunicipio = 7 where idcliente = 8;
 
 update cliente set idmunicipio = 8 where idcliente = 9;
 
-update cliente set idmunicipio = 9 where idcliente in (14, 15);
+left outer join
 
 select * from cliente
 
@@ -898,4 +898,506 @@ select * from municipio
 --fim
 
 --Exercício 5:
-select municipio like ('SC','PR')
+select * from uf
+select count(idmunicipio) from municipio where iduf = 1 or iduf = 2
+--fim
+
+--Exercício 6:
+select iduf, count(idmunicipio) from municipio group by iduf
+--fim
+
+--Exercício 7:
+select count(idcliente) from cliente where logradouro is not null
+--fim
+
+--Exercício 8:
+select idmunicipio, count(idcliente) from cliente group by idmunicipio
+--fim
+
+--Exercício 9:
+select count(idfornecedor) from fornecedor
+--fim
+
+--Exercício 10:
+select idfornecedor, count(idproduto) from produto group by idfornecedor
+--fim
+
+--Exercício 11:
+select * from fornecedor
+select avg(valor) from produto where idfornecedor = 1
+--fim
+
+--Exercício 12:
+select sum(valor) from produto
+--fim
+
+--Exercício 13:
+select nome, max(valor) from produto group by nome
+--fim
+
+--Exercício 14:
+select nome, valor from produto order by valor asc limit 1
+--fim
+
+--Exercício 15:
+select avg(valor) from produto
+--fim
+
+--Exercício 16:
+select count(idtransportadora) from transportadora
+--fim
+
+--Exercício 17:
+select avg(valor) from pedido
+--fim
+
+--Exercício 18:
+select idcliente, sum(valor) from pedido group by idcliente
+--fim
+
+--Exercício 19:
+select idvendedor, sum(valor) from pedido group by idvendedor
+--fim
+
+--Exercício 20:
+select idtransportadora, sum(valor) from pedido group by idtransportadora
+--fim
+
+--Exercício 21:
+select data_pedido, sum(valor) from pedido group by data_pedido
+--fim
+
+--Exercício 22:
+select idcliente, idvendedor, idtransportadora, sum(valor) from pedido group by idcliente, idvendedor, idtransportadora
+--fim
+
+--Exercício 23:
+select sum(valor) from pedido group by date_pedido between '2008-04-01' and '2009-12-10' having sum(valor) > 200;
+
+--Exercício 24
+select * from vendedor;
+select * from pedido;
+select avg(valor) from pedido group by id_vendedor = 1;
+
+--Exercício 25
+select * from cliente 15
+select avg(valor) from pedido group by idcliente = 15;
+
+--Exercício 26 
+select count(id_transportadora = 1) from pedido;
+select * from transportadora;
+
+--Exercício 27
+select count(id_pedido) from pedido group by id_vendedor;
+
+--Exercício 28
+select count(id_pedido) from pedido group by idcliente;
+
+--Exercício 29
+select count(id_pedido) from pedido group by date_pedido between '2008-04-15' and '2008-04-25';
+
+--Exercício 30
+select count(id_pedido) from pedido group by id_pedido having valor > 1000;
+
+--Exercício 31
+select count(id_produto) from pedido_produto group by id_produto having id_produto = 1;
+select * from produto
+
+--Exercício 32
+select count(id_produto) from pedido_produto group by id_produto;
+
+--Exercício 33
+select sum(valor_unitario) from pedido_produto group by id_pedido;
+
+--Exercício 34
+select id_pedido, count(id_produto) from pedido_produto group by id_pedido order by id_pedido;
+select * from pedido_produto
+
+--Exercício 35
+select id_produto, sum(valor_unitario) from pedido_produto group by id_produto
+
+--Exercício 36
+select avg(valor_unitario) from pedido_produto group by id_pedido having id_pedido = 6;
+
+--Exercício 37
+select max(valor_unitario) from pedido_produto 
+
+--Exercício 38
+select min(valor_unitario) from pedido_produto 
+
+--Exercício 39
+select id_pedido, sum(id_produto) from pedido_produto group by id_pedido
+
+--Exercício 40
+select sum(id_produto) from pedido_produt
+--fim dos desafios
+
+-- Relacionamentos com joins
+select 
+	cln.nome,
+	prf.nome
+from 
+	cliente as cln
+left outer join 
+	profissao as prf on cln.idprofissao = prf.idprofissao
+	----------------------
+select 
+	cln.nome as cliente,
+	prf.nome as profissao
+from 
+	cliente as cln
+inner join 
+	profissao as prf on cln.idprofissao = prf.idprofissao
+	-------------------------
+select 
+	cln.nome as cliente,
+	prf.nome as profissao
+from 
+	cliente as cln
+right outer join
+	profissao as prf on cln.idprofissao = prf.idprofissao
+	
+select * from profissao
+
+select * from cliente order by cliente
+
+select * from nacionalidade
+
+update cliente set idnacionalidade = 1 where idcliente in (1, 4, 7);
+
+update cliente set idnacionalidade = 2 where idcliente in (3, 8);
+
+update cliente set idnacionalidade = 3 where idcliente in (9, 5);
+
+update cliente set idnacionalidade = 4 where idcliente in (2, 6);
+
+update cliente set idmunicipio = 8 where idcliente = 9;
+
+	------------------
+	--Exercícios:
+
+--Exercício 1:nome do cliente, a profissão, a nacionalidade, 
+--o logradouro, o número, o complemento, o bairro, o município
+--e a unidade de federação.
+
+select
+	cln.nome,
+	prf.nome as profissao,
+	ncd.nome as nacionalidade,
+	cln.logradouro,
+	cln.numero,
+	cpt.nome as complemento,
+	bro.nome as bairro,
+	mnc.nome as municipio,
+	uf.nome as uf
+from
+	cliente as cln
+left outer join 
+	profissao as prf on cln.idprofissao = prf.idprofissao
+left outer join
+	nacionalidade as ncd on cln.idnacionalidade = ncd.idnacionalidade
+left outer join
+	complemento as cpt on cln.idcomplemento = cpt.idcomplemento
+left outer join
+	bairro as bro on cln.idbairro = bro.idbairro
+left outer join
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+left outer join
+	uf on mnc.iduf = uf.iduf;
+--fim
+
+-- 2.nome do produto, valor e nome do fornecedor.
+select 
+	pdt.nome as produto,
+	pdt.valor as valorProduto,
+	pdt.idproduto as produtoid,
+	pdd.idpedido as pedidoid,
+	pdd.valor as valorPedido
+
+from 
+produto as pdt
+join 
+pedido_produto as pdpr on pdt.idproduto = pdpr.idproduto
+join
+pedido as pdd on pdd.idpedido = pdpr.idpedido
+where pdd.idpedido = 6                     
+select * from fornecedor
+select produto.nome, produto.valor, fornecedor.nome from produto
+join
+fornecedor on fornecedor.idfornecedor = produto.idfornecedor
+--fim
+
+--Exercício 3:
+select
+	tpa.nome as transportadora,
+	mnc.nome as municipio
+from
+pedido as pdd
+left outer join
+	transportadora as tpa on pdd.idtransportadora = tpa.idtransportadora
+left outer join 
+	municipio as mnc on tpa.idmunicipio = mnc.idmunicipio
+group by tpa.nome, mnc.nome
+--fim
+
+--Exercício 4:
+select
+	pdd.data_pedido as data_pedido,
+	pdd.valor,
+	tpa.nome as transportadora,
+	nmv.nome as vendedor
+from
+	pedido as pdd
+left outer join 
+	transportadora as tpa on pdd.idtransportadora = tpa.idtransportadora
+left outer join
+	vendedor as nmv on pdd.idvendedor = nmv.idvendedor
+--fim
+
+--Exercício 5:
+select 
+	pdp.idpedido,
+	ndp.nome,
+	pdp.quantidade
+from 
+pedido_produto as pdp
+left outer join
+	produto as ndp on pdp.idproduto = ndp.idproduto
+--fim
+
+--Exercício 6:
+select 
+	cln.nome,
+	pdd.data_pedido
+from pedido as pdd
+left outer join
+	cliente as cln on pdd.idcliente = cln.idcliente
+order by cln.nome
+--fim
+
+--Exercício 7:
+select 
+	cln.nome,
+	pdd.data_pedido
+from pedido as pdd
+left outer join
+	cliente as cln on pdd.idcliente = cln.idcliente
+order by cln.nome
+--fim
+
+--Exercício 8:
+select 
+	count(idcliente),
+	mnc.nome as cidade
+from cliente as cln
+left outer join 
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+group by mnc.idmunicipio
+--fim
+
+--Exercício 9:
+select 
+	fnr.nome,
+	count(idproduto)
+from produto as pdt
+join
+	fornecedor as fnr on pdt.idfornecedor = fnr.idfornecedor
+group by fnr.idfornecedor
+--fim
+
+--Exercício 10:
+select 
+	cln.nome,
+	sum(valor) as soma
+from pedido as pdd
+left outer join
+	cliente as cln on pdd.idcliente = cln.idcliente
+group by cln.idcliente
+--fim
+
+--Exercício 11:
+select 
+	vdr.nome as vendedor,
+	sum(valor) as soma
+from pedido as pdd
+left outer join
+	vendedor as vdr on pdd.idvendedor = vdr.idvendedor
+group by vdr.idvendedor
+order by vdr.nome
+--fim
+
+--Exercício 12:
+select 
+	tpa.nome,
+	sum(valor)
+from 
+pedido as pdd
+left outer join 
+	transportadora as tpa on pdd.idtransportadora  = tpa.idtransportadora
+group by tpa.nome
+--fim
+
+--Exercício 13:
+select 
+	cln.nome,
+	sum(valor)
+from 
+pedido as pdd
+left outer join 
+	cliente as cln on pdd.idcliente  = cln.idcliente
+group by cln.nome
+--fim
+
+--Exercício 14:
+select 
+	pdt.nome,
+	count(idpedido)
+from pedido_produto as pdd
+left outer join
+	produto as pdt on pdd.idproduto = pdt.idproduto
+group by 
+	pdt.nome
+--fim
+
+--Exercício 15:
+select 
+	data_pedido,
+	sum(valor)
+from pedido
+group by
+	data_pedido
+order by 
+	data_pedido
+
+--Exercício 16:
+select 
+	pdd.data_pedido,
+	count(pdp.idproduto)
+from 
+	pedido_produto as pdp
+left outer join
+	pedido as pdd on pdd.idpedido = pdp.idpedido
+group by
+	pdd.data_pedido
+--fim dos desafios.
+
+-- Comandos adicionais
+select * from pedido
+select 
+	data_pedido,
+	extract(day from data_pedido),
+	extract(month from data_pedido),
+	extract(year from data_pedido)
+from pedido
+
+select
+	nome,
+	substring(nome from 1 for 5), substring(nome , 2)
+from  cliente
+
+select
+	nome, 
+	upper(nome)
+from cliente
+	
+select nome, coalesce (cpf, 'Não foi informado') as cpf from cliente
+
+select 
+	case sigla
+		when 'PR' then 'Paraná'
+		when 'SC' then 'Santa Catarina'
+	else
+		'Outros'
+	end as uf
+from uf
+--Exercícios comandos adicionais
+
+--Exercício 1:
+select nome, data_nascimento as data_nascimento from cliente
+--fim
+
+--Exercício 2:	
+select nome,
+	case(extract(month from data_nascimento))
+	when 01 then 'Janeiro'
+	when 02 then 'Fevereiro'
+	when 03 then 'Março'
+	when 04 then 'Abril'
+	when 05 then 'Maio'
+	when 06 then 'Junho'
+	when 07 then 'Julho'
+	when 08 then 'Agosto'
+	when 09 then 'Setembro'
+	when 10 then 'Outubro'
+	when 11 then 'Novembro'
+	when 12 then 'Dezembro'
+	else 'Não Informado'
+	end as "Mês De Nascimento"
+from cliente
+--fim
+
+--Exercício 3:
+select nome,
+	case(extract(year from data_nascimento))
+	when 01 then '2010'
+	when 02 then '2009'
+	when 03 then '2008'
+	when 04 then '2007'
+	when 05 then '2006'
+	when 06 then '2005'
+	when 07 then '2004'
+	else 'Não Informado'
+	end as "Ano de nascimento"
+from cliente
+--fim
+
+--Exercício 4:
+select	
+	nome,
+	substring(nome from 5 for 10), substring(nome , 2)
+from  cliente
+--fim
+
+--Exercício 5:
+select
+	idmunicipio, 
+	upper(nome)
+from cliente
+--fim
+
+--Exercício 6:
+select nome, coalesce (genero, 'Não foi informado') as genero from cliente
+--fim
+
+--Exercício 7:
+select 
+	nome,
+	valor,
+	case 
+		when valor > 500 then 'mais de 500'
+	else 'menos de 500'
+	end as valor
+from
+	produto
+--fim dos desafios
+
+-- Subconsultas
+select 
+	date_pedido,
+	valor
+from
+	pedido
+where
+	valor > (select avg(valor) from pedido)
+	
+select 
+	pdd.date_pedido,
+	pdd.valor,
+	(select sum(quantidade) from pedido_produto as pdp where pdp.id_pedido = pdd.id_pedido)
+from 
+	pedido as pdd
+	
+select * from pedido
+
+update pedido set valor = valor + ((valor * 5) / 100)
+where valor > (select avg(valor) from pedido)
