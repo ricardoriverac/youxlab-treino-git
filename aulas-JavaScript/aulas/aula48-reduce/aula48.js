@@ -1,0 +1,23 @@
+const p_array = document.querySelector('#array')
+const botaoReduzir = document.querySelector('#botaoReduzir')
+const resultado = document.querySelector('#resultado')
+
+const elementosArray = [1,2,3,4,5]
+let ant = []
+let atu = []
+let dobro = []
+
+p_array.innerHTML = `[ ${elementosArray} ]`
+
+botaoReduzir.addEventListener('click',(evento)=>{
+    dobro.push(elementosArray[0]*2)
+    resultado.innerHTML=elementosArray.reduce((anterior,atual,posicao)=>{
+        ant.push(anterior)
+        atu.push(atual)
+        dobro.push(atual*2)
+        return atual+anterior
+    })
+    resultado.innerHTML+=`<br/>V.anterior: ${ant} <br/>V.atual: ${atu} <br/>Dobro: ${dobro}`
+})
+
+// reduce permite operar os elementos do array e obter resultados com eles
