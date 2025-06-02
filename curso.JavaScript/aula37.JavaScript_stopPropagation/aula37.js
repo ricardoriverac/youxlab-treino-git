@@ -1,8 +1,16 @@
 const caixa1 = document.querySelector('#caixa1')
-const btn_c= [...document.querySelectorAll('.curso')]
+const btn_d1 = document.querySelector('#d1')
+const todos = [...document.querySelectorAll('.curso')]
 
+caixa1.addEventListener('click', (evt)=>{
+    console.log(evt.target + 'clicou') 
+})
 
+//btn_d1.addEventListener('click', (evt)=>{
+  //  evt.stopPropagation
 
-console.log(btn_c[0].getRootNode())
-console.log(btn_c[0].ownerDocument)
-console.log(caixa1.children[0])
+todos.map((el)=>{
+    el.addEventListener('click', (evt)=>{
+        evt.stopPropagation()
+})
+})
