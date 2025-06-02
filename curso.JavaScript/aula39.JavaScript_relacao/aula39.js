@@ -1,5 +1,6 @@
 const caixa1 = document.querySelector('#caixa1')
 const btn_c= [...document.querySelectorAll('.curso')]
+const c1_22 = document.querySelector('#c1_2')
 
 console.log(caixa1.hasChildNodes())
 console.log(btn_c[0].hasChildNodes())
