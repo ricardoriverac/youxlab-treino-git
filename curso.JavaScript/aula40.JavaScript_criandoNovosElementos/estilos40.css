@@ -1,0 +1,53 @@
+.curso {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    border: 15% outset; color: lightcoral;
+    border-radius: 10%;
+    padding: 14px;
+    margin: 5px 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.curso:hover{
+    background-color: rgb(249, 209, 209);
+
+}
+
+.c1 {
+    color: lightcoral;
+    
+}
+
+.c2{
+    color: rgb(221, 99, 99);
+    
+}
+
+.selecionado{
+
+    background-color: rgb(249, 187, 187) !important;
+    color: rgb(27, 20, 20) !important;
+}
+
+.botão{
+    width: 110px;
+    background-color: lightcoral;
+    border-radius: 12%;
+    color: rgb(248, 248, 248);
+    justify-content: center;
+    border: 5px ; color: azure;
+    display: flex;
+    margin-left: 65px;
+}
+
+.caixa{
+    border: 2px solid lightcoral; 
+    padding: 5px; 
+    margin: 10px;
+    display: inline-block;
+}
+
+.botão:hover{
+    background-color: rgb(183, 96, 96);
+}
