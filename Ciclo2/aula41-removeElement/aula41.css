@@ -1,0 +1,70 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    background-color: #e75480;
+    cursor: pointer;
+    border-radius: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.curso{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    border: 4px solid #e75480;
+    border-radius: 15px;
+    padding: 10px;
+    margin: 5px 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff0f5;
+}
+
+.selecionado{
+    background-color: #c084fc !important;
+    border: 4px solid #a855f7 !important;
+    color: purple !important;
+}
+
+.c1{
+    background-color: #f9c5d1;
+    color: #a02b5a;
+}
+
+.c2{
+    background-color: #d291bc;
+    color: #fff0f5;
+}
+
+.caixa{
+    border: 4px solid #f472b6;
+    background-color: #ffe4f0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    height: 500px;
+    width: 250px;
+    border-radius: 15px;
+}
+
+.botao_lixeira{
+    width: 20px;
+    cursor: pointer;
+}
