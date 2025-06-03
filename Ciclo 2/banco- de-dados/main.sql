@@ -1411,6 +1411,382 @@ select
 from
 	cliente
 where
-	idmunicipio = (select idmunicipio from cliente where nome = 'manoel')
+	idmunicipio = (select idmunicipio from cliente where nome = 'Manoel')
 and 
 	idcliente <> 1
+--fim
+
+--Exercício 2:
+select
+	data_pedido,
+	valor
+from pedido 
+where
+	valor < (select avg(valor) from pedido)
+--fim
+
+--Exercício 3:
+select
+	data_pedido,
+	valor,
+	cln.nome as cliente,
+	vdd.nome as vendedor,
+	(
+		select
+			sum(quantidade)
+		from
+			pedido_produto as pdp
+		where
+			pdd.idpedido = pdd.idpedido
+	)
+from
+	pedido as pdd
+	left outer join cliente as cln on pdd.idcliente = cln.idcliente
+	left outer join vendedor as vdd on pdd.idvendedor = vdd.idvendedor
+where
+	(
+		select
+			sum(quantidade)
+		from
+			pedido_produto as pdp
+		where
+			pdp.idpedido = pdd.idpedido
+	) >= 2
+
+--fim
+
+--Exercício 4:
+select 
+	nome
+from
+	cliente
+where
+	cliente.idmunicipio = (
+	select 
+		idmunicipio 
+	from 
+		transportadora as tpa
+	where 
+		tpa.nome = 'BS. Transportes'
+	)
+--fim
+
+--Exercício 5:
+select 
+	cln.nome,
+	mnc.nome as municipio
+from cliente as cln
+left outer join 
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+where
+	cln.idmunicipio = (
+	select 
+		idmunicipio 
+	from 
+		transportadora as tps
+	where 
+		cln.idmunicipio = tps.idmunicipio)
+--fim
+
+--Exercício 6:
+update pedido set valor = valor + ((valor * 5) / 100)
+select * from pedido
+--fim
+
+--Exercício 7:
+select
+	cln.nome,
+	(select
+		count(idpedido)
+	from 
+		pedido as pdd
+	where pdd.idcliente = cln.idcliente) as total
+from 
+	cliente as cln
+--fim
+
+--Exercício 8:
+select
+	cln.nome as cliente,
+	count(pdd.idpedido) as total
+from 
+	pedido as pdd
+left outer join 
+	cliente as cln on pdd.idcliente = cln.idcliente
+group by 
+	cln.nome
+--fim dos exercícios. 
+
+--Views
+drop view cliente_profissao
+create view cliente_profissao as
+select 
+	cln.nome as cliente,
+	cln.cpf,  
+	prf.nome as profissao
+from
+	cliente as cln
+left outer join
+	profissao as prf on cln.idprofissao = prf.idprofissao
+select cpf from cliente_profissao where profissao = 'Professor'
+select * from cliente_profissao
+
+--Exercícios Views:
+create view dados_do_cliente as
+select 
+	cln.nome as nome,
+	prf.nome as profissao,
+	ncd.nome as nacionalidade,
+	mnc.nome as municipio,
+	uf.nome as uf,
+	brr.nome as bairro,
+	cln.cpf as cpf,
+	cln.rg as rg,
+	cln.data_nascimento,
+	case genero
+		when 'M' then 'Masculino'
+		when 'F' then 'Feminino'
+	end as genero,
+	cln.logradouro,
+	cln.numero,
+	cln.observacoes
+from 
+	cliente as cln
+left outer join 
+	profissao as prf on cln.idprofissao = prf.idprofissao
+left outer join
+	nacionalidade as ncd on cln.idnacionalidade = ncd.idnacionalidade
+left outer join
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+left outer join
+	uf as uf on mnc.iduf = uf.iduf
+left outer join
+	bairro as brr on cln.idbairro = brr.idbairro
+select * from dados_do_cliente
+--fim
+
+--Exercício 2:
+create view uf_do_municipio as
+select 
+	mnc.nome as municipio,
+	cln.nome as cliente,
+	uf.sigla
+from cliente as cln
+left outer join
+	municipio as mnc on cln.idmunicipio = mnc.idmunicipio
+left outer join
+	uf on mnc.iduf = uf.iduf
+select * from uf_do_municipio
+--fim
+
+--Exercício 3:
+create view fornecedor_do_produto as
+select 
+	prd.nome as produto,
+	prd.valor,
+	frn.nome as fornecedor
+from 
+	produto prd
+left outer join
+	fornecedor frn on prd.idfornecedor = frn.idfornecedor
+select * from fornecedor_do_produto
+--fim
+
+--Exercício 4:
+create view dados_da_transportadora as
+select 
+	tpr.nome as transportadora,
+	tpr.logradouro,
+	tpr.numero,
+	uf.nome as federacao,
+	uf.sigla as sigla
+from 
+	transportadora as tpr
+left outer join
+	municipio as mnc on tpr.idmunicipio = mnc.idmunicipio
+left outer join
+	uf on mnc.iduf = uf.iduf
+select * from dados_da_transportadora
+--fim
+
+--Exercício 5:
+create view pedido_dados as
+select
+	pdd.data_pedido as data_pedido,
+	pdd.valor as valor,
+	cln.nome as cliente,
+	vdd.nome as vendedor
+from 
+	pedido pdd
+left outer join 
+	cliente cln on pdd.idcliente = cln.idcliente
+left outer join
+	vendedor vdd on pdd.idvendedor = vdd.idvendedor
+select * from pedido_dados
+--fim
+
+--Exercício 6:
+create view dados_do_pedido_e_produto as 
+select 
+	prd.nome produto,
+	pdp.quantidade,
+	pdp.valor_unitario
+from
+	pedido_produto pdp
+left outer join
+	produto prd on pdp.idproduto = prd.idproduto
+select * from dados_do_pedido_e_produto
+--fim dos desafios
+
+--Autoincremento
+select * from cliente
+create table exemplo (
+	idexemplo serial not null,
+	nome varchar(50) not null,
+
+	constraint pk_exemplo_idexemplo primary key (idexemplo)
+);
+insert into exemplo (nome) values
+	('Exemplo 1'), ('Exemplo 2'), ('Exemplo 3'), ('Exemplo 4'), ('Exemplo 5');
+	
+select * from exemplo
+
+select * from bairro
+
+select max(idbairro) + 1  from bairro 
+create sequence bairro_id_seq minvalue 5
+alter table bairro alter idbairro set default nextval('bairro_id_seq')
+alter sequence bairro_id_seq owned by bairro.idbairro
+insert into bairro (nome) values
+	('Teste 1'), ('Teste 2');
+select * from bairro
+
+--Exercício autoincremento
+select * from cliente
+select max(idcliente) +1 from cliente
+create sequence cliente_id_seq minvalue 18
+alter table cliente alter idcliente set default nextval('cliente_id_seq')
+alter sequence cliente_id_seq owned by cliente.idcliente
+
+--complemento
+
+select * from complemento
+select max(idcomplemento) +1 from complemento
+create sequence complemento_id_seq minvalue 3
+alter table complemento alter idcomplemento set default nextval('complemento_id_seq')
+alter sequence complemento_id_seq owned by complemento.idcomplemento
+
+--fornecedor
+
+select * from fornecedor
+select max(idfornecedor) +1 from fornecedor
+create sequence fornecedor_id_seq minvalue 4
+alter table fornecedor alter idfornecedor set default nextval('fornecedor_id_seq')
+alter sequence fornecedor_id_seq owned by fornecedor.idfornecedor
+
+--município
+
+select * from municipio
+select max(idmunicipio) +1 from municipio
+create sequence municipio_id_seq minvalue 10
+alter table municipio alter idmunicipio set default nextval('municipio_id_seq')
+alter sequence municipio_id_seq owned by municipio.idmunicipio
+
+--nacionalidade
+
+select * from nacionalidade
+select max(idnacionalidade) +1 from nacionalidade
+create sequence nacionalidade_id_seq minvalue 5
+alter table nacionalidade alter idnacionalidade set default nextval('nacionalidade_id_seq')
+alter sequence nacionalidade_id_seq owned by nacionalidade.idnacionalidade
+
+--pedido
+
+select * from pedido
+select max(idpedido) +1 from pedido
+create sequence pedido_id_seq minvalue 16
+alter table pedido alter idpedido set default nextval('pedido_id_seq')
+alter sequence pedido_id_seq owned by pedido.idpedido
+
+--profissão
+
+select * from profissao
+select max(idprofissao) +1 from profissao
+create sequence profissao_id_seq minvalue 6
+alter table profissao alter idprofissao set default nextval('profissao_id_seq')
+alter sequence profissao_id_seq owned by profissao.idprofissao
+
+--transportadora
+
+select * from transportadora
+select max(idtransportadora) +1 from transportadora
+create sequence transportadora_id_seq minvalue 3
+alter table transportadora alter idtransportadora set default nextval('transportadora_id_seq')
+alter sequence transportadora_id_seq owned by transportadora.idtransportadora
+
+--uf
+
+select * from uf
+select max(iduf) +1 from uf
+create sequence uf_id_seq minvalue 7
+alter table uf alter iduf set default nextval('uf_id_seq')
+alter sequence uf_id_seq owned by uf.iduf
+
+--vendedor
+
+select * from vendedor
+select max(idvendedor) +1 from vendedor
+create sequence vendedor_id_seq minvalue 9
+alter table vendedor alter idvendedor set default nextval('vendedor_id_seq')
+alter sequence vendedor_id_seq owned by vendedor.idvendedor
+
+--produto
+
+select * from produto
+select max(idproduto) +1 from produto
+create sequence produto_id_seq minvalue 8
+alter table produto alter idproduto set default nextval('produto_id_seq')
+alter sequence produto_id_seq owned by produto.idproduto
+--fim do desafio.
+
+--default
+alter table pedido alter column data_pedido set default current_date;
+
+alter table pedido alter column valor set default 0;
+
+select * from cliente
+
+insert into pedido (idcliente, idvendedor) values (1, 1)
+
+select * from pedido
+
+insert into pedido (idcliente, idvendedor, data_pedido, valor);
+values (1, 1, '2022-10-10', 234);
+
+select * from pedido
+
+--Exercício 1 campos default:
+
+alter table pedido_produto alter column quantidade set default 1;
+
+alter table pedido_produto alter column valor_unitario set default 0;
+
+insert into pedido_produto (idpedido, idproduto) values (1, 3)
+
+insert into pedido_produto (idpedido, idproduto, quantidade, valor_unitario)
+values (1, 4, 5, 100)
+
+--Exercício 2:
+alter table produto alter column valor set default 0;
+
+insert into produto (nome, idfornecedor, valor) values ('Teste 1', 1, 50)
+--fim dos desafios.
+
+--índices
+create index idx_cln_nome on cliente (nome);
+
+--Exercícios indices:
+create index idx_pdd_data_pedido on pedido(data_pedido)
+
+create index idx_pdr_nome on produto (nome)
+--fim dos desafios.
