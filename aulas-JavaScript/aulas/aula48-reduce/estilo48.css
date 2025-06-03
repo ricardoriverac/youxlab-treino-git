@@ -65,3 +65,8 @@ button:hover {
     background-color: #036;
     transform: scale(1.03);
 }
+input{
+    border-radius: 5px;
+    margin-top: 7px;
+    padding: 2px;
+}

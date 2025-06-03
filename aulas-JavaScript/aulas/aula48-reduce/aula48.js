@@ -2,12 +2,22 @@ const p_array = document.querySelector('#array')
 const botaoReduzir = document.querySelector('#botaoReduzir')
 const resultado = document.querySelector('#resultado')
 
-const elementosArray = [1,2,3,4,5]
+
+const botaoAdicionar = document.querySelector('#botaoAdicionar')
+
+let elementosArray = []
+
 let ant = []
 let atu = []
 let dobro = []
 
-p_array.innerHTML = `[ ${elementosArray} ]`
+const adicionarNumeros = (evento)=>{
+    const input = document.querySelector('#numerosArray')
+    const valorInput = Number(input.value)
+    elementosArray.push(valorInput)
+    console.log(elementosArray)
+    p_array.innerHTML = `[ ${elementosArray} ]`
+}
 
 botaoReduzir.addEventListener('click',(evento)=>{
     dobro.push(elementosArray[0]*2)
