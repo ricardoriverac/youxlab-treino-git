@@ -86,4 +86,5 @@ button{
 #nomeCurso{
     border: 2px solid plum;
     height: 20px;
+    border-radius: 10px;
 }
