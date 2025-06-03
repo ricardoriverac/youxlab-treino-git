@@ -52,5 +52,4 @@ btnCursoRemovido.addEventListener("click", (evt) => {
     }else{
         alert("Selecione um curso")
     }
-    
 })
