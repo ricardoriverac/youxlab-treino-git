@@ -1383,7 +1383,7 @@ from
 
 -- Subconsultas
 select 
-	date_pedido,
+	data_pedido,
 	valor
 from
 	pedido
@@ -1391,9 +1391,9 @@ where
 	valor > (select avg(valor) from pedido)
 	
 select 
-	pdd.date_pedido,
+	pdd.data_pedido,
 	pdd.valor,
-	(select sum(quantidade) from pedido_produto as pdp where pdp.id_pedido = pdd.id_pedido)
+	(select sum(quantidade) from pedido_produto as pdp where pdp.idpedido = pdd.idpedido)
 from 
 	pedido as pdd
 	
@@ -1401,3 +1401,16 @@ select * from pedido
 
 update pedido set valor = valor + ((valor * 5) / 100)
 where valor > (select avg(valor) from pedido)
+
+--Exercícios subconsultas:
+
+--Exercício 1:
+select 
+	nome,
+	idmunicipio
+from
+	cliente
+where
+	idmunicipio = (select idmunicipio from cliente where nome = 'manoel')
+and 
+	idcliente <> 1
