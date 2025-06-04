@@ -1,0 +1,27 @@
+/* h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    border-radius: 5px;
+    padding: 7px;
+    border-color: rgb(177, 174, 174);
+    
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+}
+button{
+    border-radius: 5px;
+    width: 80px;
+    background-color: #66A968;
+}
+th{
+    background-color: #66A968;
+}
+table{
+    border: 1px solid;
+
+} */
