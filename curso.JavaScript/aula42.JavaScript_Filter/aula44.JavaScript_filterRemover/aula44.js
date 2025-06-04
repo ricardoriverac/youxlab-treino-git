@@ -85,6 +85,16 @@ btnAdicionarAntes.addEventListener('click', (evt)=>{
     const novoElementos = document.createElement('div')
     novoElementos.setAttribute('class', 'curso c1')
     novoElementos.innerHTML=novoCurso
+    const rs=radioSelecionado()
+    console.log(rs)
+    if(rs!=undefined){
+        const cursoSelecionado = rs.parentNode.previousSibling.textContent
+        console.log(caixaCursos)
+        caixaCursos.insertBefore(novoCurso, cursoSelecionado)
+   }else {
+        
+    alert('adicione o curso')
+   }  
     const comandos =document.createElement('div')
     comandos.setAttribute('class', 'comandos')
 

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABELA</title>
+    <link rel="stylesheet" href="tabela.css">
+</head>
+<body>
+    <h3>Tabela pessoas</h3>
+    <div id="perguntasDados" class="perguntas">
+        <div id="Onome" class="dados">
+            <input placeholder="Digite um nome" id="digite"> 
+        </div>
+        <div id="numeroTelefone"  class="dados">
+            <input placeholder="Digite o número de telefone" id="digite">
+        </div>
+        <div id="cpf"  class="dados">
+            <input placeholder="Digite o CPF" id="digite">
+        </div>
+        <div id="email"  class="dados">
+            <input placeholder="Digite o email" id="digite">
+        </div>
+        <div id="inserir" >
+            <button id="btnInserir">Inserir</button>
+        </div>
+    </div>
+    <h6>Listagem de pessoas</h6>
+    <div id="tabela" class="tabela">
+        <table id="estilo">
+            <tr class="dadosp1">
+                <th> Nome</th>
+                <th>Número de Telefone</th>
+                <th>CPF</th>
+                <th>Email</th>
+                <th>Ações</th>
+            </tr>
+            <tr>
+                <td>Ana Clara</td>
+                <td>(35)99946-3326</td>
+                <td>856.743.261-12</td>
+                <td>anaclarapedrozo17@gmail.com</td>
+                <td><button class="btnRemover">Remover</button></td>
+            </tr>
+            <tr>
+                <td>Ricardinho</td>
+                <td>(35)97465-8472</td>
+                <td>534.298.098-21</td>
+                <td>ricardinholegal45@gmail.com</td>
+                <td><button class="btnRemover">Remover</button></td>
+            </tr>
+            <tr>
+                <td>Maria Luiza</td>
+                <td>(35)99876-2345</td>
+                <td>432.908.352-16</td>
+                <td>marialuizap8@gmail.com</td>
+                <td><button class="btnRemover">Remover</button></td>
+            </tr>
+        </table>
+    </div>
+
+
+    <script src="tabela.js"></script>
+</body>
+</html>
