@@ -1,17 +1,30 @@
-const dados = [...document.querySelectorAll('.dados')]
-// const pessoa = [...document.querySelector('#estilo')]
-const btnInserir=document.getElementById('btnInserir')
-const btnRemover=document.getElementsByClassName('btnRemover')
+const btnRemover = document.getElementsByClassName('btnRemover')
+const btnInserir = document.getElementById('btnInserir')
+
+const pessoas = [...document.querySelectorAll('.pessoa')]
+const tabela = document.getElementById('estilo')
+const respostas = document.querySelectorAll('#digite')
+
+console.log(pessoas)
+console.log(tabela)
 
 
-dados.map((ele)=>{
-    btnInserir.addEventListener('click', (evt)=>{
-        const para = document.createElement('tr')
-        const input = document.getElementById('digite').value
-        const node = document.createElement('td')
-        para.appendChild(node)
-        const element = document.getElementById('estilo')
-        element.appendChild(para)
+btnInserir.addEventListener('click', (evt)=>{
+    const novaLinha = tabela.insertRow(-1)
+    const botaoRemover = document.createElement('button')
+    botaoRemover.textContent = 'Remover'
+    botaoRemover.setAttribute('id', 'btnRemover')
+    botaoRemover.setAttribute('class', 'btnRemover')
+
+    botaoRemover.addEventListener('click', (evt)=>{
+        novaLinha.remove()
     })
-    
+    novaLinha.setAttribute('class','pessoa')
+    for(elemento of respostas){
+        var novaCedula = novaLinha.insertCell(-1)
+        novaCedula.innerHTML=elemento.value
+        elemento.value = ''
+    }
+    var novaCedula = novaLinha.insertCell(-1)
+    novaCedula.appendChild(botaoRemover)
 })

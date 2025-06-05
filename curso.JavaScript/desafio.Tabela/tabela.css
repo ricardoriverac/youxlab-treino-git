@@ -95,3 +95,7 @@ th{
 #btnInserir:hover{
     background-color: #487c4b;
 }
+
+.pessoa{
+    height: 50px;
+}
