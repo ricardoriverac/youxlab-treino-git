@@ -1,0 +1,112 @@
+* {
+      padding: 0px;
+      margin: 0px;
+      border: none;
+    }
+
+    main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    button {
+      width: 150px;
+      height: 40px;
+      background-color: #025;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 10px;
+      transition-duration: 0.4s;
+    }
+
+    .curso {
+      display: flex;
+      justify-content: center;
+      width: 200px;
+      border: 4px solid #888;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 5px 0px;
+      cursor: pointer;
+    }
+
+    .selecionado {
+      background-color: #800 !important;
+      color: #fcc !important;
+      border-color: #f00 !important;
+    }
+
+    .c1 {
+      background-color: #ccc;
+      color: #444;
+    }
+
+    .c2 {
+      background-color: #444;
+      color: #ccc;
+    }
+
+    .caixa {
+      border: 4px solid #000;
+      background-color: #eee;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 5px;
+      height: 500px;
+      width: 300px;
+    }
+
+    .btn_lixo {
+      width: 25px;
+      cursor: pointer;
+    }
+
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .button span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .button span:after {
+      content: '\00bb';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .button:hover span {
+      padding-right: 25px;
+    }
+
+    .button:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .button:hover {
+      background-color: #04AA6D;
+      color: white;
+    }

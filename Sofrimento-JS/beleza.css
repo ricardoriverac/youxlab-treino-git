@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+.form-section input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 8px;
+  width: 283px;
+}
+
+.form-section button {
+  background-color: #66A968;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-section button:hover {
+  background-color: #4f8551;
+}
+
+h3 {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border: none;
+}
+
+thead {
+  background-color: #66A968;
+  color: white;
+}
+
+th, td {
+  padding: 12px 10px;
+  text-align: center;
+  font-size: 12px;
+  border: none;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+th:nth-child(1), td:nth-child(1) { width: 20%; }
+th:nth-child(2), td:nth-child(2) { width: 20%; }
+th:nth-child(3), td:nth-child(3) { width: 20%; }
+th:nth-child(4), td:nth-child(4) { width: 20%; }
+
+td:last-child {
+  display: flex;
+  justify-content: center;
+  gap: 8px; 
+  align-items: center;
+}
+
+button.btn{
+  background: #66A968;
+}
+
+button{
+  background-color: #D43F3A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c9302c;
+}
+/* 
+button.editar-btn {
+  background-color: #66A968;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+button.editar-btn:hover {
+  background-color: #4f8551;
+} */
+
+.container {
+  margin-top: 10px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+input {
+      flex: 1;
+      min-width: 200px;
+      padding: 10px;
+      border: 1px solid #54585bc6;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    input::placeholder {
+      color: #a0cfd9;
+    }

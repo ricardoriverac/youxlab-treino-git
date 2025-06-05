@@ -1,0 +1,154 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background-color: #0f0f1a;
+  color: #e0e0e0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+button {
+  width: 160px;
+  height: 45px;
+  background: linear-gradient(145deg, #ff0040, #7200ff);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #7200ff, #ff0040);
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.curso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  border: 2px solid #666;
+  border-radius: 14px;
+  padding: 12px;
+  margin: 8px 0;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.curso:hover {
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.selecionado {
+  background-color: #ff0040 !important;
+  color: #fff !important;
+  border-color: #f00 !important;
+}
+
+.c1 {
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+}
+
+.c2 {
+  background-color: #444;
+  color: #ccc;
+}
+
+.caixa {
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(37, 45, 77, 0.9), rgba(87, 199, 133, 0.6));
+  backdrop-filter: blur(12px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  height: 500px;
+  width: 320px;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 255, 255, 0.2);
+  transition: all 0.3s ease;
+  overflow: auto;
+}
+
+.caixa::-webkit-scrollbar {
+  width: 10px;
+}
+
+.caixa::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.caixa::-webkit-scrollbar-thumb {
+  background: linear-gradient(145deg, #ff0040, #7200ff);
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.caixa::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(145deg, #7200ff, #ff0040);
+}
+
+.btn_lixeira {
+  width: 28px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 4px rgba(255, 0, 0, 0.6));
+  transition: transform 0.2s ease;
+}
+
+.btn_lixeira:hover {
+  transform: scale(1.2);
+}
+
+.caixaFuncionalidades {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.comandos {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#caixaNovoCurso input {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #1f1f2e;
+  border: 1px solid #555;
+  color: #fff;
+  width: 90%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#caixaNovoCurso input:focus {
+  outline: none;
+  border-color: #00f6ff;
+  box-shadow: 0 0 10px rgba(0, 246, 255, 0.4);
+}

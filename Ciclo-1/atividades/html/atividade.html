@@ -168,33 +168,6 @@
       playstation: 'playstation-store',
       xbox: 'xbox-store'
     };
-
-    async function buscarLinkCompra(nomeDoJogo, plataforma) {
-      const apiKey = 'SUA_API_KEY_AQUI'; // ✅ Substitua por sua chave da API RAWG
-      const query = encodeURIComponent(nomeDoJogo);
-      const url = `https://api.rawg.io/api/games?search=${query}&key=${apiKey}`;
-
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        if (data.results && data.results.length > 0) {
-          const jogo = data.results[0];
-          const lojaAlvo = lojasRAWG[plataforma.toLowerCase()];
-
-          if (jogo.stores && lojaAlvo) {
-            const loja = jogo.stores.find(store => store.store.slug === lojaAlvo);
-            return loja ? loja.url : null;
-          }
-        }
-
-        return null;
-      } catch (error) {
-        console.error('Erro ao buscar o link de compra:', error);
-        return null;
-      }
-    }
-
     async function adicionarGame() {
       const nome = document.getElementById('nome').value.trim();
       const genero = document.getElementById('genero').value.trim();
