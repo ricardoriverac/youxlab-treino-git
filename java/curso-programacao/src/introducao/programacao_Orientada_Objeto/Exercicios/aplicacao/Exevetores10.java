@@ -39,14 +39,6 @@ public class Exevetores10 {
                 System.out.println(nome[i]);
             }
         }
-
-
-
-
-
-
-
-
         input.close();
     }
 }
