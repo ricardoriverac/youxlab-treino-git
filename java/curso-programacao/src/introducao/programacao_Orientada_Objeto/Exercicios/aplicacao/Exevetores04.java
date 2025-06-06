@@ -17,11 +17,15 @@ public class Exevetores04 {
             System.out.print("Digite um número: ");
             array[i] = input.nextInt();
         }
-        System.out.println("Números pares: ");
+        int numerospar = 0;
+        System.out.print("Números pares: ");
         for (int i = 0; i < array.length; i++) {
             if (array[i] % 2 == 0) {
-                System.out.print(array[i]);
+                System.out.print(" "+array[i]);
+                numerospar += 1;
             }
         }
+        System.out.println();
+        System.out.print("Quantide de números pares: "+numerospar);
     }
 }
