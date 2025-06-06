@@ -8,8 +8,11 @@ public class Exercicio02 {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
         double a , b , c;
+        System.out.print("A: ");
         a = sc.nextDouble();
+        System.out.print("B: ");
         b = sc.nextDouble();
+        System.out.print("C: ");
         c = sc.nextDouble();
 
         double delta = b * b  - 4.0 * a * c;
