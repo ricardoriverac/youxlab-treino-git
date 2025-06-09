@@ -8,6 +8,7 @@ if (true){
 }
 console.log(nome1)
 
+
 // var e let são usadas para criar variáveis
 // A diferença é que:
 // - var funciona em toda a função (ou fora, se estiver no topo do código)
