@@ -1,3 +1,5 @@
+package java_introdução.curso_programacao.src;
+
 import java.util.Locale;
 
 public class Main {
