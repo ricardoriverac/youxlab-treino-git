@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Exercicios/Exercicios.iml" filepath="$PROJECT_DIR$/Exercicios/Exercicios.iml" />
       <module fileurl="file://$PROJECT_DIR$/P.O/P.O.iml" filepath="$PROJECT_DIR$/P.O/P.O.iml" />
-      <module fileurl="file://$PROJECT_DIR$/P.O/application/application.iml" filepath="$PROJECT_DIR$/P.O/application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/P.O/src/application/application.iml" filepath="$PROJECT_DIR$/P.O/src/application/application.iml" />
       <module fileurl="file://$PROJECT_DIR$/curso_programacao.iml" filepath="$PROJECT_DIR$/curso_programacao.iml" />
       <module fileurl="file://$PROJECT_DIR$/P.O/entities/entities.iml" filepath="$PROJECT_DIR$/P.O/entities/entities.iml" />
     </modules>
