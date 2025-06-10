@@ -8,43 +8,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>Tabela pessoas</h1>
-        <div class="row">
-            <input type="text" name="inputNome" id="inputNome" placeholder="Digite um nome">
-            <input type="text" name="inputNumeroTelefone" id="inputNumeroTelefone" placeholder="Digite o número de telefone">
-            <input type="text" name="inputCpf" id="inputCpf" placeholder="Digite o CPF">
-            <input type="text" name="inputEmail" id="inputEmail" placeholder="Digite o email">
-            <button id="botaoInserir" onclick="inserirLinha()">Inserir</button>
+        <h2>Tabela pessoas</h2>
+        <div class="divInputs">
+            <input type="text" name="inputNome" id="inputNome" class="input" placeholder="Digite um nome">
+            <input type="tel" maxlength=14 data-js="phone" name="inputNumeroTelefone" id="inputNumeroTelefone" class="input" placeholder="Digite o número de telefone">
+            <input type="text" name="inputCpf" id="inputCpf" class="input" placeholder="Digite o CPF">
+            <input type="text" name="inputEmail" id="inputEmail" class="input" placeholder="Digite o email">
+            <button id="botaoInserir" onclick="inserirPessoa()" class=" botaoInserir">Inserir</button>
         </div>
         <table id="tabela">
-            <caption>Listagem de pessoas</caption>
+            <h4>Listagem de pessoas</h4>
             <tr>
                 <th>Nome</th>
                 <th>Número de Telefone</th>
                 <th>CPF</th>
                 <th>Email</th>
                 <th>Ações</th>
-            </tr>
-            <tr>
-                <td>Lucas Almeida</td>
-                <td>(35) 91123-4567</td>
-                <td>123.123.202-58</td>
-                <td>matheusgc@ufla.com</td>
-                <td><button id="botaoRemover1" class="botaoRemover">Remover</button></td>
-            </tr>
-            <tr>
-                <td>Lucas Almeida</td>
-                <td>(35) 91123-4567</td>
-                <td>123.123.202-58</td>
-                <td>matheusgc@ufla.com</td>
-                <td><button id="botaoRemover1" class="botaoRemover">Remover</button></td>
-            </tr>
-            <tr>
-                <td>Lucas Almeida</td>
-                <td>(35) 91123-4567</td>
-                <td>123.123.202-58</td>
-                <td>matheusgc@ufla.com</td>
-                <td><button id="botaoRemover1" class="botaoRemover">Remover</button></td>
             </tr>
         </table>
     </div>

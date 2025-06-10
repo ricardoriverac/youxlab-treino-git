@@ -1,42 +1,52 @@
-const nome = document.getElementById('inputNome')
-const numero = document.getElementById('inputNumeroTelefone')
-const cpf = document.getElementById('inputCpf')
-const email = document.getElementById('inputEmail')
-
-let arrayNome = []
-let arrayNumero = []
-let arrayCpf = []
-let arrayEmail = []
-
-const inserirLinha = (linha)=>{
-    const valorInputNome = (nome.value)
-    arrayNome.push(valorInputNome)
-    console.log(arrayNome)
-
-    const valorInputNumero = Number(numero.value)
-    arrayNumero.push(valorInputNumero)
-    console.log(arrayNumero)
-
-    const valorInputCpf = Number(cpf.value)
-    arrayCpf.push(valorInputCpf)
-    console.log(arrayCpf)
-
-    const valorInputEmail = (email.value)
-    arrayEmail.push(valorInputEmail)
-    console.log(arrayEmail)
-
-    const novaLinha = document.createElement('tr')
-    novaLinha.setAttribute('nome', arrayNome)
-    novaLinha.setAttribute('numero', arrayNumero)
-    novaLinha.setAttribute('cpf', arrayCpf)
-    novaLinha.setAttribute('email', arrayEmail)
-    novaLinha.innerHTML= linha
-    
-    console.log(novaLinha)
-    return novaLinha
-    
+const limparInput = ()=>{
+    const input = document.getElementsByClassName('input')
+    for (limpar of input){
+        limpar.value=''
+    }
 }
-// const tabela = document.querySelector('#tabela')
 
-// const novaLinha = document.createElement('tr')
-// tabela.appendChild(novaLinha)
+function inserirPessoa(){
+    const nome = document.getElementById('inputNome').value
+    const numero = document.getElementById('inputNumeroTelefone').value
+    const cpf = document.getElementById('inputCpf').value
+    const email = document.getElementById('inputEmail').value
+    const tabela = document.getElementById('tabela')
+    
+    if (nome === "" || numero === "" || cpf === "" || email === ""){
+        alert("Preencha todos os campos")
+        return
+    }
+
+    let novaLinha = document.createElement('tr')
+    novaLinha.innerHTML = `<td>${nome}</td>
+                            <td>${numero}</td>
+                            <td>${cpf}</td>
+                            <td>${email}</td>
+                            <td><button class="botaoEditar">Editar</button>
+                            <button class="botaoRemover">Remover</button></td>
+                            `
+    tabela.appendChild(novaLinha)
+    limparInput()
+    
+    const botaoRemover = novaLinha.querySelector('.botaoRemover')
+    botaoRemover.addEventListener('click', (evento)=>{
+        novaLinha.remove()
+    })
+
+    const nomeInput = document.getElementById('inputNome')
+    const numeroInput = document.getElementById('inputNumeroTelefone')
+    const cpfInput = document.getElementById('inputCpf')
+    const emailInput = document.getElementById('inputEmail')
+
+    const botaoEditar = novaLinha.querySelector('.botaoEditar')
+    botaoEditar.addEventListener('click', (evento)=>{
+        const dados = novaLinha.querySelectorAll('td')
+        
+        nomeInput.value = dados[0].textContent
+        numeroInput.value = dados[1].textContent
+        cpfInput.value = dados[2].textContent
+        emailInput.value = dados[3].textContent
+
+        novaLinha.remove()
+    })
+}

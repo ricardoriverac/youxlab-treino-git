@@ -1,27 +1,77 @@
-/* h1{
+body{
     font-family: Arial, Helvetica, sans-serif;
+    margin: 50px;
 }
 input{
     border-radius: 5px;
     padding: 7px;
-    border-color: rgb(177, 174, 174);
-    
+    border: 1px solid rgb(209, 207, 207);
+    width: 100%;
+    margin-right: 9px;
+    height: 20px;
+    font-size: medium;
 }
-.row{
+.divInputs{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    width: 50%;
+    justify-content: space-around;
+    width: 100%;
 }
-button{
+.botaoInserir{
+    color: white;
+    border: none;
     border-radius: 5px;
-    width: 80px;
+    width: 30%;
     background-color: #66A968;
+    cursor: pointer;
+    
 }
 th{
     background-color: #66A968;
+    color: white;
+    padding: 5px;
+}
+
+tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+td{
+    text-align: center;
+    padding: 10px;
 }
 table{
-    border: 1px solid;
-
-} */
+    width: 100%;
+    border-collapse: collapse;
+}
+.botaoRemover{
+    background-color: #D43F3A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 6px;
+}
+.botaoEditar{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #66A968;
+    cursor: pointer;
+}
+.botaoSalvar{
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    background-color: #66A968;
+    cursor: pointer;
+}
+caption{
+    text-align: left;
+    padding: 10px;
+}
+button:hover{
+    transition: 0.3s;
+    background: rgb(156, 192, 168);
+}
