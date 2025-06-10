@@ -2,6 +2,13 @@ body {
   font-family: Arial, sans-serif;
   margin: 20px;
 }
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 8px;
+  width: 250px;
+}
 
 h1 {
   font-size: 18px;
@@ -80,7 +87,6 @@ button.btn{
 }
 
 button{
-  background-color: #D43F3A;
   color: white;
   border: none;
   border-radius: 5px;
@@ -88,11 +94,17 @@ button{
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #c9302c;
+button.btn:hover {
+  background-color: #4f8551;
 }
-/* 
-button.editar-btn {
+button.remover{
+  background-color:#D43F3A;
+}
+button.remover:hover {
+  background-color:#965553;
+}
+
+button.editar {
   background-color: #66A968;
   color: white;
   border: none;
@@ -101,9 +113,9 @@ button.editar-btn {
   cursor: pointer;
 }
 
-button.editar-btn:hover {
+button.editar:hover {
   background-color: #4f8551;
-} */
+}
 
 .container {
   margin-top: 10px;
@@ -117,15 +129,7 @@ button.editar-btn:hover {
   min-height: 40vh;
 }
 
-input {
-      flex: 1;
-      min-width: 200px;
-      padding: 10px;
-      border: 1px solid #54585bc6;
-      border-radius: 6px;
-      font-size: 16px;
-    }
+.cor {
+  background-color: rgb(255, 0, 238);
+}
 
-    input::placeholder {
-      color: #a0cfd9;
-    }
