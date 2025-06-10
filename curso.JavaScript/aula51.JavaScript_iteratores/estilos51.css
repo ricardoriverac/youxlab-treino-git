@@ -1,0 +1,36 @@
+h1{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffbcfc;
+}
+
+#digite{
+    display: flex;
+    justify-content: center;
+    /* margin-left: 500px; */
+    width: 500px;
+    height: 20px;
+    border: 2px solid #ffbcfc;
+    border-radius: 10px;
+    color: #ffbcfc;
+}
+
+button{
+    display: flex;
+    margin-top: 20px;
+    background-color: #ffbcfc;
+    border: 1px solid #ffbcfc;
+    border-radius: 10px;
+    width: 100px;
+    height: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff
+}
+
+button:hover{
+    background-color: #ff79fb;
+}
