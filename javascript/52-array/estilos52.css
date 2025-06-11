@@ -1,0 +1,27 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.caixa{
+    justify-content: center;
+    border: 3px solid #000;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+}
+
+h1{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: auto;
+    font-size: xx-large;
+    background-color: rgb(241, 141, 158);
+}
