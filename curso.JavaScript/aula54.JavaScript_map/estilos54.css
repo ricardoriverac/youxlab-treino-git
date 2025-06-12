@@ -1,0 +1,21 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.caixa{
+    border: 2px solid #dd8e8e;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #dd8e8e;
+}
