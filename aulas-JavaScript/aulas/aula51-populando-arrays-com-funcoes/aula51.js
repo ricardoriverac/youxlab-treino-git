@@ -1,27 +1,27 @@
-// let valores1 = [1,2,3,4,5]
-// const operacoes1 = [
-//     (valor)=>{
-//         let resultado1 = 0
-//         for (v of valor){
-//             resultado1+= v
-//         }
-//         return resultado1
-//     },
-//     (valor)=>{
-//         let resultado1 = 1
-//         for (v of valor){
-//             resultado1*=v
-//         }
-//         return resultado1
-//     },
-//     (valor)=>{
-//         for (v of valor){
-//             console.log(v)
-//         }
-//     }
-// ]
+let valores1 = [1,2,3,4,5]
+const operacoes1 = [
+    (valor)=>{
+        let resultado1 = 0
+        for (v of valor){
+            resultado1+= v
+        }
+        return resultado1
+    },
+    (valor)=>{
+        let resultado1 = 1
+        for (v of valor){
+            resultado1*=v
+        }
+        return resultado1
+    },
+    (valor)=>{
+        for (v of valor){
+            console.log(v)
+        }
+    }
+]
 
-// operacoes1[2](valores1)
+operacoes1[2](valores1)
 
 // calculadora
 
