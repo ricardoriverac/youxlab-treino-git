@@ -2,7 +2,7 @@ const caixa = document.querySelector("#caixa")
 
 const carros = ["Polo", "Golf", "T-Cross", "HRV"]
 
-let ol = `<ol>`
+let ol = `<ol>` // Lista ordenada
 
 carros.map((el) => {
     ol += `<li>${el}</li>`
