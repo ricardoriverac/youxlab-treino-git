@@ -57,4 +57,14 @@ button:hover{
 #armazenamento{
     font-family: Arial, Helvetica, sans-serif;
     color: #333333;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.Armazenamento{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #7bab7c;
+    font-weight: bold;
+    font-size: small;
 }

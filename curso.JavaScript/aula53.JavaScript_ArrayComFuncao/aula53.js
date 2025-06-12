@@ -52,7 +52,7 @@ btnSomar.addEventListener('click', (evt)=>{
     }
    const soma = op[0](numeros)
    resultado.value = soma
-   armazenamento.textContent= numeros[0] + ' + ' + numeros[1] + ' = ' + soma
+   armazenamento.innerHTML +=  `</p> ${numeros[0]}  +  ${numeros[1]}  =  ${soma} `
 })
 
 
@@ -64,7 +64,7 @@ btnSubtrair.addEventListener('click',(evt)=>{
     }
     const subtrair = op[3](numeros)
     resultado.value = subtrair
-    armazenamento.textContent= numeros[0] + ' - ' + numeros[1] + ' = ' + subtrair
+    armazenamento.innerHTML+=  `</p> ${numeros[0]}  -  ${numeros[1]}  =  ${subtrair} `
 })
 
 btnMultiplicar.addEventListener('click',(evt)=>{
@@ -75,7 +75,7 @@ btnMultiplicar.addEventListener('click',(evt)=>{
     }
     const multiplicar = op[1](numeros)
     resultado.value = multiplicar
-    armazenamento.textContent= numeros[0] + ' x ' + numeros[1] + ' = ' + multiplicar
+    armazenamento.innerHTML+=  `</p> ${numeros[0]}  x  ${numeros[1]}  =  ${multiplicar} `
 })
 
 btnDividir.addEventListener('click', (evt)=>{
@@ -85,7 +85,7 @@ btnDividir.addEventListener('click', (evt)=>{
     }
     const dividir = op[2](numeros)
     resultado.value = dividir
-    armazenamento.textContent= numeros[0] + ' / ' + numeros[1] + ' = ' + dividir
+    armazenamento.innerHTML+= `</p> ${numeros[0]} / ${numeros[1]}  =  ${ dividir } `
 })
 
 
