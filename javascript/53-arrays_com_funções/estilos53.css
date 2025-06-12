@@ -13,7 +13,7 @@
 }
 
 .valor input{
-    background-color: #ddd;
+    background-color: rgb(169, 241, 169);
     padding: 5px;
     border-radius: 5px;
 }
@@ -23,10 +23,19 @@
 }
 
 button{
-    border: 2px solid #ddd;
+    border: 2px solid rgb(44, 184, 44);
+    background-color: rgb(135, 214, 135);
     border-radius: 5px;
     padding: 5px 15px;
     display: flex;
     margin: 5px;
     cursor: pointer;
+}
+
+label{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#btn_resetar{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
