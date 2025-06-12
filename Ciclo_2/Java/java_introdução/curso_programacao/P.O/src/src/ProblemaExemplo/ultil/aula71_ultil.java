@@ -1,7 +1,7 @@
 package java_introdução.curso_programacao.P.O.src.src.ProblemaExemplo.ultil;
 
 public class aula71_ultil {
-
+    private  String nome;
     public final double PI = 3.14159;
 
     public double circumference(double radius){
@@ -10,6 +10,8 @@ public class aula71_ultil {
 
     public double volume(double radius){
         return 4.0 * PI * radius * radius * radius / 3.0;
+
+
     }
 
 }
