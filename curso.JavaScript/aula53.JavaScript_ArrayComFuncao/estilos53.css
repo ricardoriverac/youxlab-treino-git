@@ -1,50 +1,60 @@
 *{
-    background-color: rgb(254, 233, 233);
+    background-color: #e8f5e9
 }
 
 .valor{
     display: block;
     border: 1px solid #e9e9e9;
-    background-color: #fecbe9;
+    background-color: #a5d6a7;
     border-radius: 10px;
     width: 540px;
     height: 25px;
     margin: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 label{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #bd8ba8;
+    color: #333333;
+    font-weight: bold;
 }
 
 button{
     border: 1px solid #e9e9e9;
-    background-color: #fecbe9;
+    background-color: #a5d6a7;
     border-radius: 10px;
     width: 70px;
     height: 25px;
     margin: 15px;
     display: inline-block;
     align-items: center;
-    color: #bd8ba8;
+    color: #333333;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    transition: transform 0.2s;
 }
 
 button:hover{
-    background-color: #fbaedc;
+    background-color: #66bb6a;
+    transform: scale(1.1);
 }
 
 .valorResultado{
     display: block;
     border: 1px solid #e9e9e9;
-    background-color: #fecbe9;
+    background-color: #a5d6a7;
     border-radius: 10px;
     width: 540px;
     height: 25px;
     margin: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
 }
 
 #armazenamento{
     font-family: Arial, Helvetica, sans-serif;
-    color: #b2789b;
-    font-size: medium;
+    color: #333333;
 }
