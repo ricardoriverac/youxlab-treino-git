@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <link rel="stylesheet" href="execicio.css">
+</head>
+<body>
+    <h2>Tabela Pessoas</h2>
+    <div>
+        <input type="text" name="nome" id="nome" placeholder="Digite um nome">
+        <input type="text" name="numero" id="numero" placeholder="Digite o n° de telefone">
+        <input type="text" name="CPF" id="cpf" placeholder="Digite o CPF">
+        <input type="text" name="email" id="email" placeholder="Digite o e-mail">
+        <button id="btnAdicionar" onclick="insertRow()">adicionar</button>
+    </div>
+    <table id="tabela">
+        <caption>Listagem Pessoas</caption>
+        <thead>           <!--LINHA-->
+            <tr>
+                <th>Nome</th>    <!--CÉLULA-->
+                <th>Número de telefone</th>  
+                <th>CPF</th>
+                <th>E-mail</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaBody">
+            
+        </tbody>
+    </table>
+    <script src="exercicio.js"></script>
+</body>
+</html>

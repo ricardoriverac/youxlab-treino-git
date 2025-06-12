@@ -33,7 +33,7 @@ carregarLista();
 
 botaoAdicionarNovoCurso.addEventListener('click',(e) => { //Para cada vez que o botão for clicado
     const input = document.getElementById("nomeCurso") // adiciona o elemento com a div "nomeCurso" na var input
-    elemento = input.value  // adiciona a var input com seu valor na var elemento
+    elemento = input.value  // adiciona na var o input com seu valor na var elemento
 
     cursos.push(elemento) // coloquei o elemento no array
     carregarLista()  // adiciona a função
