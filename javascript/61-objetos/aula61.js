@@ -18,9 +18,9 @@ const Pessoa={
 const p2=Pessoa
 const p3=Pessoa
 
-p3.nome="Cladisvardson"
-p2["nome"]="Bridgertrudismelda"
-Pessoa.setNome("Patricscrerdison")
+p3.nome="Nagi"
+p2["nome"]="Isagi"
+Pessoa.setNome("Bachira")
 
 console.log(Pessoa.nome)
 console.log(p2.getNome())
