@@ -12,11 +12,12 @@
 }
 input{
     margin: 20px;
-    border: 2px solid #A7C1A8;
+    border: 2px solid #D1D8BE;;
     width: 500px;
     height: 25px;
     border-radius: 10px;
     background-color: #A7C1A8;
+    color: #000000;
 }
 
 button{
@@ -28,7 +29,7 @@ button{
     align-items: center;
     background-color: #A7C1A8;
     color: #819A91;
-    border: 2px solid #A7C1A8;
+    border: 2px solid #D1D8BE;
     border-radius: 10px;
     transition: transform 0.2s;
 }
@@ -37,9 +38,12 @@ button:hover{
     transform: scale(1.1);
     background-color: #a7c1a87c;
     color: #819A91;
+    border: 2px solid #D1D8BE;
 }
 
 #informaçoes{
     border: 2px solid #A7C1A8;
-    height: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
 }
