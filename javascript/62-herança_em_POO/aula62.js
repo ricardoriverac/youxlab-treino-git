@@ -18,6 +18,7 @@ class Carro{ // Classe PAI
 
 // } 
 
-const c1 = new Carro("Normal", 4)
+// const c1 = new Carro(`Normal, 4`)
 
-console.log(c1.nome)
+// console.log(c1.nome)
+
