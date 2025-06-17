@@ -52,7 +52,7 @@ public class aula81_aplication {
                 aula81_ultil.withdraw(withdrawValue);
                 System.out.println();
             }
-            else {
+            else if(option < 0 || option > 4){
                 System.out.println("We don't have the option: " + option);
                 System.out.println();
             }
