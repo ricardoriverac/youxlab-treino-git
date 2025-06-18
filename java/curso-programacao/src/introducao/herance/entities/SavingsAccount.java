@@ -1,6 +1,7 @@
 package introducao.herance.entities;
 
 // Extends significa que extende de uma outra classe
+// Final significa que a classe não pode ser herdada.
 public class SavingsAccount extends Account {
     private Double interestRate;
 
