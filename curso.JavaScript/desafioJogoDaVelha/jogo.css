@@ -1,0 +1,185 @@
+*{
+    background-color: #EAEBD0;
+    font-family: Arial, Helvetica, sans-serif; 
+   justify-content: center;
+}
+
+#entrada{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 200px;   */
+    
+}
+
+
+h1{
+    display: flex;
+
+    font-weight: bolder;
+    color: #DA6C6C;
+    font-size: 22px;
+}
+
+#label{
+    display: flex;
+    margin: 5px;
+    background-color: #AF3E3E;
+    color: #f5f5f5;
+    width: 200px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    margin-left: 400px;
+    font-size: 12px;
+    font-family: monospace;
+    border-radius: 10px;
+}
+
+#nome1, #nome2{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 20px; */
+    width: 250px;
+    height: 25px;
+    border: 2px solid #DA6C6C;
+    border-radius: 10px;
+    flex-direction: row;
+    margin: 10px;
+}
+
+#jogador1{
+    display: flex;
+    margin-top: 15px;
+    background-color: #AF3E3E;
+    border: 1px solid #AF3E3E;
+    width: 100px;
+    border-radius: 10px;
+    height: 30px;
+    font-family: monospace;
+    font-size: 12px;
+    color: #f5f5f5;
+    transition: transform (0.2s);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnRemove{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    margin-left: 15px ;
+    background-color: #AF3E3E;
+    border: 1px solid #AF3E3E;
+    width: 60px;
+    border-radius: 10px;
+    height: 20px;
+    font-family: monospace;
+    font-size: 10px;
+    color: #f5f5f5;
+    transition: transform (0.2s);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#jogador1:hover{
+    transform: scale(1.1);
+}
+
+#btnRemove:hover{
+    transform: scale(1.1);
+}
+
+::placeholder{
+    font-size: smaller;
+    color: #AF3E3E;
+}
+
+#respostas{
+    display: flex;
+    
+}
+
+h2{
+    text-align: left;
+    font-weight: bolder;
+    color: #DA6C6C;
+    font-size: 22px;
+}
+
+.coluna {
+  background-color: #AF3E3E;
+  padding: 20px;
+}
+
+#tabuleiro{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+  justify-content: center;
+}
+
+#jogadores{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    display: flex; /* coloca um do lado do outro */
+    justify-content: center; /* centraliza no eixo horizontal */
+    align-items: center; /* centraliza no eixo vertical, se quiser */
+    gap: 30px; 
+}
+
+#placar{
+    background-color: #AF3E3E;
+    width: 230px;
+    height: 300px;
+    margin: -100px;
+    text-align: center;
+    color: #AF3E3E;
+    font-weight: bolder;
+    border-radius: 10px;
+}
+
+.ponto{
+    background-color: #f5f5f5;
+    height: 60px;
+    width: 60px;
+    border: 2px solid #EAEBD0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+}
+
+#pontuacao{
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    margin-top: 10px;
+    background-color: #AF3E3E;
+}
+
+p{
+    background-color: #AF3E3E;
+    color: #EAEBD0;
+    font-size: larger;
+}
+
+.nomes{
+    background-color: #AF3E3E;
+    color: #EAEBD0;
+    justify-content: space-around;
+    gap: 70px;
+}
