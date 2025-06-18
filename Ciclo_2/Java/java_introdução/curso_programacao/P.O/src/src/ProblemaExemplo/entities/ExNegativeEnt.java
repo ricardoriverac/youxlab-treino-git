@@ -1,9 +1,9 @@
 package java_introdução.curso_programacao.P.O.src.src.ProblemaExemplo.entities;
 
-public class exVect_Ent {
+public class ExNegativeEnt {
      private int numbers;
 
-    public exVect_Ent(int numbers) {
+    public ExNegativeEnt(int numbers) {
         this.numbers = numbers;
     }
 

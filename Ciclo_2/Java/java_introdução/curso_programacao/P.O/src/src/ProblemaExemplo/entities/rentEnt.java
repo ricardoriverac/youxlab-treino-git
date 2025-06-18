@@ -1,4 +1,6 @@
 package java_introdução.curso_programacao.P.O.src.src.ProblemaExemplo.entities;
 
-public class Vetor2 {
+public class rentEnt {
+    public rentEnt(String name, String email) {
+    }
 }
