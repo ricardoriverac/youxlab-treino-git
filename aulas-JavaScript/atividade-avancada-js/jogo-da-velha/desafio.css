@@ -1,0 +1,38 @@
+.caixaGrande{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+body{
+    background-color: rgb(174, 234, 148);
+}
+input{
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+button{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    width: 70px;
+    background-color: rgb(70, 53, 177);
+    color: white;
+    border: none;
+    margin-top: 5px;
+}
+.coluna {
+  background-color: rgb(22, 121, 171);
+  padding: 20px;
+  cursor: pointer;
+}
+.tabuleiro{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+  justify-content: center;
+}
