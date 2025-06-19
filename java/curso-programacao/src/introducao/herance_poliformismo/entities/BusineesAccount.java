@@ -1,4 +1,4 @@
-package introducao.herance.entities;
+package introducao.herance_poliformismo.entities;
 
 // BusinessAccount e uma subclasse(Classe derivada) de account (Classe Base/Super Classe)significa ,
 // então ela pode herdar os atribuito da outra classe

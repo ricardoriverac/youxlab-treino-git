@@ -1,4 +1,4 @@
-package introducao.herance.entities;
+package introducao.herance_poliformismo.entities;
 
 public class Account {
     private Integer number;

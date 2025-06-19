@@ -1,4 +1,4 @@
-package introducao.herance.entities;
+package introducao.herance_poliformismo.entities;
 
 // Extends significa que extende de uma outra classe.
 // Final significa que a classe não pode ser herdada.

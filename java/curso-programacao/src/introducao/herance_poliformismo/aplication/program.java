@@ -1,10 +1,8 @@
-package introducao.herance.aplication;
+package introducao.herance_poliformismo.aplication;
 
-import introducao.herance.entities.Account;
-import introducao.herance.entities.BusineesAccount;
-import introducao.herance.entities.SavingsAccount;
-
-import java.nio.channels.AcceptPendingException;
+import introducao.herance_poliformismo.entities.Account;
+import introducao.herance_poliformismo.entities.BusineesAccount;
+import introducao.herance_poliformismo.entities.SavingsAccount;
 
 public class program {
     public static void main(String[] args) {
