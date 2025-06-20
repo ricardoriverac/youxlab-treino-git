@@ -1,38 +1,85 @@
-.caixaGrande{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 body{
-    background-color: rgb(174, 234, 148);
+  background-color: #1e1e1e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
+
+.caixaGrande{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+
+h1{
+  color: #f0f0f0;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.linha{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 input{
-    padding: 5px;
-    border-radius: 5px;
-    margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #444;
+  width: 200px;
 }
+
 button{
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 5px;
-    width: 70px;
-    background-color: rgb(70, 53, 177);
-    color: white;
-    border: none;
-    margin-top: 5px;
-}
-.coluna {
-  background-color: rgb(22, 121, 171);
-  padding: 20px;
   cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100px;
+  background-color: #6a00ff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
+
+button:hover{
+  background-color: #4b00b5;
+}
+
 .tabuleiro{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  width: 300px;
-  height: 300px;
-  margin: 40px auto;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.coluna{
+  width: 100px;
+  height: 100px;
+  background-color: #2e2e2e;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  border-radius: 8px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.coluna:hover{
+  background-color: #444;
+  cursor: pointer;
+}
+
+.nomeJogadores{
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ccc;
 }

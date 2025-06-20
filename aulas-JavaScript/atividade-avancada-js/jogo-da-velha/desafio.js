@@ -62,7 +62,7 @@ botaoReiniciar.addEventListener('click', (evento)=>{
 
 function atualizarPlacar(){
   nomeJogadores.innerHTML = `<p>${input1.value} X: ${vitoriaJogador1}</p>
-                             <p>${input2.value} X: ${vitoriaJogador2}</p>
+                             <p>${input2.value} O: ${vitoriaJogador2}</p>
                             `
 }
 
