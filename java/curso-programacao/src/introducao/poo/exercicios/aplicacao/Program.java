@@ -1,4 +1,4 @@
-package introducao.poo.Exercicios.aplicacao;
+package introducao.poo.exercicios.aplicacao;
 
 import java.util.Scanner;
 

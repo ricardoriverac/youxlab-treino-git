@@ -1,4 +1,4 @@
-package introducao.poo.Exercicios.entities;
+package introducao.poo.exercicios.entities;
 
 public class Empregado {
     public String nome;

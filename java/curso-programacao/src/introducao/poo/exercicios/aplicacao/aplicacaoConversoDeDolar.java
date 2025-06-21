@@ -1,6 +1,6 @@
-package introducao.poo.Exercicios.aplicacao;
+package introducao.poo.exercicios.aplicacao;
 
-import introducao.poo.Exercicios.entities.ConversoDeDolar;
+import introducao.poo.exercicios.entities.ConversoDeDolar;
 
 import java.util.Locale;
 import java.util.Scanner;

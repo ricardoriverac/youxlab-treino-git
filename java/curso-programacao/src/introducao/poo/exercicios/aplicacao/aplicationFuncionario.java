@@ -1,6 +1,6 @@
-package introducao.poo.Exercicios.aplicacao;
+package introducao.poo.exercicios.aplicacao;
 
-import introducao.poo.Exercicios.entities.Funcionario;
+import introducao.poo.exercicios.entities.Funcionario;
 
 import java.util.*;
 

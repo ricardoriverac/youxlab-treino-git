@@ -1,6 +1,6 @@
-package introducao.poo.Exercicios.aplicacao;
+package introducao.poo.exercicios.aplicacao;
 
-import introducao.poo.Exercicios.entities.Empregado;
+import introducao.poo.exercicios.entities.Empregado;
 
 import java.util.Locale;
 import java.util.Scanner;
