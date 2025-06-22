@@ -1,4 +1,4 @@
-
+-- Treinamento de JOIN proposto pelo rodrigão
 CREATE TABLE
     usuario (
         id SERIAL PRIMARY KEY,
