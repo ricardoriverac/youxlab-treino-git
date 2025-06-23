@@ -77,7 +77,5 @@ public class aplicationVeiculo {
             int y = input.nextInt();
             veiculo.mover(x , y);
         }
-
-
     }
 }
