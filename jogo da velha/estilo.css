@@ -1,0 +1,116 @@
+@font-face {
+    font-family: super;
+    src: url(p);
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #ffb6c1, #add8e6, #98fb98);
+    color: #333;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    color: #ff1493;
+    text-shadow: 2px 2px #fff;
+}
+
+#nomes2 {
+    margin: 20px;
+}
+
+.nome {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 3px solid white;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+}
+
+#jogo {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.caixa {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+    user-select: none;
+}
+
+.caixa:hover {
+    background-color: #ffe4e1;
+    transform: scale(1.05);
+}
+
+#mensagem {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #ff1493;
+    font-weight: bold;
+    text-shadow: 1px 1px #fff;
+}
+
+#reiniciar {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff1493;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#reiniciar:hover {
+    background-color: #c71585;
+    transform: scale(1.05);
+}
+
+select{
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 3px solid white;
+    background-color: #fff;
+    color: #333;
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+#jogar {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff1493;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#jogar:hover {
+    background-color: #c71585;
+    transform: scale(1.05);
+}

@@ -1,0 +1,80 @@
+/* Fundo da página */
+body {
+    background: linear-gradient(to bottom, #3a005a, #15002b);
+    font-family: 'Verdana', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Caixas dos inputs */
+.valor {
+    background-color: rgba(40, 10, 60, 0.8);
+    border: 3px solid #a34eff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    margin: 10px;
+    box-shadow: 0 0 15px #a34eff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 250px;
+}
+
+.valor label {
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #ffeaff;
+}
+
+.valor input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Operações */
+.operacoes {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* Botões */
+.operacoes button {
+    background: linear-gradient(to bottom, #ffdd00, #ffaa00);
+    border: 3px solid #ffb300;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #5a3200;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #ffb300;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.operacoes button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px #ffc400;
+}
+
+.operacoes button:active {
+    transform: scale(0.95);
+}
+
+/* Efeito no input resultado */
+#res {
+    background-color: #eee;
+    color: #111;
+    cursor: not-allowed;
+}

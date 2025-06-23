@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Aula 53 de Javascript</title>
+        <link rel="stylesheet" type="text/css" href="aula-53.css" />
+    </head>
+    <body>
+        <div class="valor">
+            <label>Valor 1</label>
+            <input type="text" name="valor1" id="valor1"placeholder="0"/>
+        </div>
+        <div class="valor">
+            <label>Valor 2</label>
+            <input type="text" name="valor2" id="valor2" placeholder="0"/>
+        </div>
+        <div class="valor">
+            <label>Resultado</label>
+            <input type="text" name="res" id="res" placeholder="0" readonly style="cursor:not-allowed"/>
+        </div>
+        <div class="operacoes">
+            <button id="btn_soma">+</button>
+            <button id="btn_subtracao">-</button>
+            <button id="btn_multiplicacao">×</button>
+            <button id="btn_divisao">÷</button>
+            <button id="btn_limpar">C</button>
+            
+            <h3>Histórico de Operações:</h3>
+            <ul id="historico"></ul>
+            
+        </div>
+        <script src="aula-53.js"></script>
+    </body>
+</html>
