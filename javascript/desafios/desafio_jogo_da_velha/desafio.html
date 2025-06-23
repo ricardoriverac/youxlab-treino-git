@@ -9,10 +9,27 @@
 <body>
     <h1>JOGO DA VELHA</h1>
     <div class="jogadores">
-        <label>Jogador 1</label>
-        <input type="text"/>
-        <label>Jogador 2</label>
-        <input type="text"/>
+        <div class="jgd1">
+            <label id="jogador1">Jogador 1 (X)</label>
+            <input id= "jgdr1" type="text"/>
+        </div>
+        <div class="jgd2">
+            <label id="jogador2">Jogador 2 (O)</label>
+            <input id="jgdr2" type="text"/>
+        </div>
+        <div class="btn_add">
+            <button>Adicionar</button>
+        </div>
     </div>
+    
+    <div class="jogador_x_o"></div>
+    
+    <div class="ganhador" style="display: flex; justify-content: center;"></div>
+    
+    <div class="jogo">
+
+    </div>
+
+    <script src="desafio.js"></script>
 </body>
 </html>
