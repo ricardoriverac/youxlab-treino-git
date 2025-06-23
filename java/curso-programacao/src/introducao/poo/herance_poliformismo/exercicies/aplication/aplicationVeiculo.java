@@ -29,7 +29,7 @@ public class aplicationVeiculo {
 
         for (int i = 0; i <quant; i++) {
             System.out.println("""
-                    Quais veículos deseja alugar: \
+                    Qual dos veículos deseja alugar: \
                     
                     [1] Carro\
                     
