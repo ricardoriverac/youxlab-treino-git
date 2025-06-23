@@ -1,9 +1,9 @@
-package introducao.poo.herance_poliformismo.exercicies.aplication;
+package introducao.poo.exeveiculo.apllication;
 
-import introducao.poo.herance_poliformismo.exercicies.entities.Caminhao;
-import introducao.poo.herance_poliformismo.exercicies.entities.Carro;
-import introducao.poo.herance_poliformismo.exercicies.entities.Moto;
-import introducao.poo.herance_poliformismo.exercicies.entities.Veiculo;
+import introducao.poo.exeveiculo.entities.Caminhao;
+import introducao.poo.exeveiculo.entities.Carro;
+import introducao.poo.exeveiculo.entities.Moto;
+import introducao.poo.exeveiculo.entities.Veiculo;
 
 import java.util.ArrayList;
 import java.util.List;

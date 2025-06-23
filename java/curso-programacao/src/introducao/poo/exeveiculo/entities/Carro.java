@@ -1,6 +1,6 @@
-package introducao.poo.herance_poliformismo.exercicies.entities;
+package introducao.poo.exeveiculo.entities;
 
-public class Carro extends Veiculo{
+public class Carro extends Veiculo {
 
     public Carro() {
     }

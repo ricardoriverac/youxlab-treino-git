@@ -1,6 +1,6 @@
-package introducao.poo.herance_poliformismo.exercicies.entities;
+package introducao.poo.exeveiculo.entities;
 
-public class Moto extends Veiculo{
+public class Moto extends Veiculo {
 
     public Moto() {
     }

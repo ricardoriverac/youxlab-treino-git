@@ -1,4 +1,4 @@
-package introducao.poo.herance_poliformismo.exercicies.entities;
+package introducao.poo.exeveiculo.entities;
 
 public abstract class Veiculo {
 
