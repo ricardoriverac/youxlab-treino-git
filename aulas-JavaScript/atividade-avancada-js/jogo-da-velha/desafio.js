@@ -8,6 +8,7 @@ let jogada = 'X'
 let marcacoesTabuleiro = ['', '', '', '', '', '', '', '', '']
 let vitoriaJogador1 = 0
 let vitoriaJogador2 = 0
+let statusJogos = true
 
 botaoJogar.addEventListener("click", (evento) => {
   if (input1.value === "" || input2.value === ""){
@@ -16,7 +17,7 @@ botaoJogar.addEventListener("click", (evento) => {
   }
 
   for (let i = 0; i < 9; i++) {
-    var quadrado = document.createElement("div");
+    const quadrado = document.createElement("div");
     quadrado.setAttribute("class", "coluna");
     quadrado.setAttribute("id", i)
     quadrado.addEventListener('click', marcarQuadrado)
@@ -24,6 +25,8 @@ botaoJogar.addEventListener("click", (evento) => {
   }
 
   atualizarPlacar()
+
+  botaoJogar.disabled = true;
 });
 
 function alternarJogador(){
@@ -58,6 +61,7 @@ botaoReiniciar.addEventListener('click', (evento)=>{
   quadrados.forEach((quadrado)=>{
     quadrado.textContent = ''
   })
+  statusJogos = true
 })
 
 function atualizarPlacar(){
@@ -67,6 +71,9 @@ function atualizarPlacar(){
 }
 
 function marcarQuadrado(evento){
+  if (!statusJogos){
+    return
+  }
   const quadrado = evento.target
   if (marcacoesTabuleiro[quadrado.id] !== ''){
     return
@@ -81,7 +88,8 @@ function marcarQuadrado(evento){
       vitoriaJogador2 += 1
     }
 
-    atualizarPlacar()
+    atualizarPlacar() 
+    statusJogos = false
     
     return
   }
