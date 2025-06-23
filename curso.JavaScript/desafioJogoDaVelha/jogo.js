@@ -2,8 +2,12 @@ const btnAdd = document.getElementById("jogador1");
 const jogador1 = document.querySelector("#nome1");
 const jogador2 = document.querySelector("#nome2");
 const caixa = document.querySelector("#caixa1");
-const jogadorX = document.querySelector('#x')
-const jogadorO = document.querySelector('#o')
+const jogadorX = document.querySelector("#x");
+const jogadorO = document.querySelector("#o");
+const pontoX = document.querySelector("#placar1");
+const pontoO = document.querySelector("#placar2");
+let contadorX = 0;
+let contadorO = 0;
 
 let jogadorA = "";
 let jogadorB = "";
@@ -11,16 +15,14 @@ roda = false;
 
 btnAdd.addEventListener("click", (evt) => {
   roda = true;
-  
+
   jogadorA = jogador1.value;
   jogadorB = jogador2.value;
-  jogadorX.innerHTML = jogadorA
-  jogadorO.innerHTML = jogadorB
+  jogadorX.innerHTML = jogadorA;
+  jogadorO.innerHTML = jogadorB;
   const div = document.createElement("div");
   div.setAttribute("id", "jogadores");
   div.setAttribute("class", "caixa2");
-  div.innerHTML = `<h2> OLÁ, ${jogadorA.toUpperCase()} E ${jogadorB.toUpperCase()} </h2>`;
-  div.appendChild(remove);
   caixa.appendChild(div);
 });
 
@@ -42,16 +44,32 @@ const colunas = document.querySelectorAll(".coluna");
 
 colunas.forEach((coluna) => {
   coluna.addEventListener("click", (evt) => {
-    if(roda==false){
-      return
+    console.log(jogadorAtual);
+    if (roda == false) {
+      return;
     }
     if (jogadorAtual % 2 == 0) {
       coluna.textContent = "X";
     } else {
       coluna.textContent = "O";
     }
-    jogadorAtual += 1;
-    verificarVitoria();
+    let vitoria = verificarVitoria();
+    console.log("jogador: ", jogadorAtual)
+    if (vitoria) {
+
+      if (jogadorAtual % 2 == 0) {
+        console.log("X ganhou")
+        contadorX++;
+        pontoX.innerHTML = contadorX;
+      } else {
+        console.log("O ganhou")
+        contadorO++;
+        pontoO.innerHTML = contadorO;
+      }
+      jogadorAtual = 0;
+    } else {
+      jogadorAtual += 1;
+    }
   });
 });
 
@@ -85,9 +103,9 @@ const verificarVitoria = () => {
       colunas.forEach((coluna) => {
         coluna.textContent = "";
       });
-      jogadorAtual = 0;
-      roda = false
-      return;
+      roda = false;
+
+      return true;
     }
   }
   let tudoPreenchido = true;
@@ -104,6 +122,6 @@ const verificarVitoria = () => {
       coluna.textContent = "";
     });
     jogadorAtual = 0;
-    roda = false
+    roda = false;
   }
 };
