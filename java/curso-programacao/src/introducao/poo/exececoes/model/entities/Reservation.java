@@ -13,7 +13,10 @@ public class Reservation {
     public Reservation(){
 
     }
-    public Reservation(Integer roomNumber, Date checkin, Date checkout) {
+    public Reservation(Integer roomNumber, Date checkin, Date checkout) throws DomainException {
+        if (!checkout.after(checkin)) {
+            throw new DomainException("Error in reservation: Check-out date must be after ckeck-in date");
+        }
         this.roomNumber = roomNumber;
         this.checkin = checkin;
         this.checkout = checkout;
@@ -42,17 +45,16 @@ public class Reservation {
         long diff = checkout.getTime() - checkin.getTime();
         return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
     }
-    public String updateDates(Date checkIn , Date checkOut) {
+    public void updateDates(Date checkIn , Date checkOut) throws DomainException {
         Date now = new Date();
         if (checkIn.before(now) || checkOut.before(now)) {
-            return "Error in reservation: Reservation dates for update must be future dates";
+            throw new DomainException("Error in reservation: Reservation dates for update must be future dates");
         }
         if (!checkOut.after(checkIn)) {
-            return "Error in reservation: Check-out date must be after ckeck-in date";
+            throw new DomainException("Error in reservation: Check-out date must be after ckeck-in date");
         }
         this.checkin = checkIn;
         this.checkout = checkIn;
-        return null;
     }
     @Override
     public String toString(){
