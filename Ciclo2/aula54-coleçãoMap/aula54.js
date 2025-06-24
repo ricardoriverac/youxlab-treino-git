@@ -36,6 +36,7 @@ resultado+="<br/> O tamanho da coleção é: "+mapa.size
 caixa.innerHTML=resultado
 
 
+// Para cada elemento
 mapa.forEach((elemento)=>{
     console.log(elemento)
 })
