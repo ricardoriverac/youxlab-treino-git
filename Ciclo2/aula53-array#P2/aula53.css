@@ -1,0 +1,64 @@
+*{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center ;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(203, 248, 203);
+}
+#v1{
+    border-radius: 10px;
+    border: solid, green;
+    background-color: rgb(203, 248, 203);
+}
+#v2{
+    border-radius: 10px;
+    border: solid, green;
+    background-color: rgb(203, 248, 203);
+}
+#resultado{
+    border-radius: 10px;
+    border: solid, green;
+    background-color: rgb(203, 248, 203); 
+}
+#btnSoma{
+    border-radius: 10px;
+    border: solid, green; 
+    padding: 6px;
+    width: 100px;
+    margin-right: 15px; 
+    background-color: green;
+    color: white;
+}
+#btnSubtracao{
+    border-radius: 10px;
+    border: solid, green;  
+    padding: 6px;
+    width: 100px;
+    margin-right: 15px;
+    background-color: green;
+    color: white;
+}
+#btnMultiplicacao{
+    border-radius: 10px;
+    border: solid, green;
+    padding: 6px;
+    width: 100px;
+    margin-right: 15px;  
+    background-color: green;
+    color: white;
+}
+#btnDivisao{
+    border-radius: 10px;
+    border: solid, green;  
+    padding: 6px;
+    width: 100px;
+    margin-right: 15px;
+    background-color: green;
+    color: white;
+}
+.botao{
+    display: flex;
+    flex-direction: row;
+}
