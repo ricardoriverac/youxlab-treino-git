@@ -60,9 +60,10 @@ const enter = document.createElement("button");
 enter.setAttribute("class", "enter");
 enter.textContent = "Enter";
 let animalAtual = "";
+let palavraSeparada = []
 let armazenarLetras = [];
 let erro = 1;
-const limiteErros = 8
+const limiteErros = 8;
 
 const mudarImagem = () => {
   erro++;
@@ -74,7 +75,16 @@ const sortearAnimal = () => {
   animalAtual = animais[indiceSorteada];
   console.log(animalAtual);
   const tracinhos = animalAtual.split("");
-  tracos = tracinhos.fill("_");
+  palavraSeparada = animalAtual.toLocaleUpperCase().split("");
+  tracos = tracinhos.map((letra) => {
+    if (letra === " " || letra === "-") {
+      return letra;
+    } else {
+      return "_";
+    }
+  });
+
+  // tracos = tracinhos.fill("_");
   palavras.innerHTML = `<div class="tracinhos"> ${tracos.join(" ")} </div>`;
 };
 
@@ -96,7 +106,6 @@ letras.forEach((letra) => {
   botao.setAttribute("class", "letra");
   botao.textContent = letra;
   teclado.appendChild(botao);
-  const palavraSeparada = animalAtual.toLocaleUpperCase().split("");
   botao.addEventListener("click", () => {
     botao.setAttribute("class", "letra");
     if (animalAtual.toLocaleUpperCase().includes(botao.textContent)) {
@@ -111,7 +120,7 @@ letras.forEach((letra) => {
             " "
           )} </div>`;
         }
-        if (armazenarLetras.length === palavraSeparada.length) {
+        if (tracos.join("").toUpperCase() === animalAtual.toUpperCase()) {
           imagem.src = "jogo1.png";
           resetarJogo();
           sortearAnimal();
@@ -122,11 +131,11 @@ letras.forEach((letra) => {
       mudarImagem();
       botao.setAttribute("class", "errado");
       botao.disabled = true;
-      if(erro >= limiteErros){
-        alert('Você perdeu! A palavra era ' + animalAtual)
-        resetarJogo()
-        sortearAnimal()
-      };
+      if (erro >= limiteErros) {
+        alert("Você perdeu! A palavra era " + animalAtual);
+        resetarJogo();
+        sortearAnimal();
+      }
     }
   });
 });
