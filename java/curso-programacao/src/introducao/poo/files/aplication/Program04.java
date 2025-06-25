@@ -1,11 +1,10 @@
 package introducao.poo.files.aplication;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Program4 {
+public class Program04 {
     public static void main(String[] args) throws IOException {
         String[] lines = new String[] {"Good morning " , "Boa tarde" , "Boa noite"};
 

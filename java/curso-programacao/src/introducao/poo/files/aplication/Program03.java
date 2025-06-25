@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Program3 {
+public class Program03 {
     public static void main(String[] args) {
         String path  = "/home/youx/Downloads/in.txt";
         try (BufferedReader br = new BufferedReader(new FileReader(path))){
