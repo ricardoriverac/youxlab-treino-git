@@ -1,6 +1,6 @@
 package Seção13.Exemplo1.Entites;
 
-public class BusinessAccount extends Account {
+public abstract class BusinessAccount extends Account {
 
     private Double loanLimit;
 
