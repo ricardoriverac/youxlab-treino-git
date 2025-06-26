@@ -1,4 +1,4 @@
-// COLEÇÃO SET--> não permite entrada duplicada de valor
+// COLEÇÃO SET--> não permite elementos duplicados
 
 const caixa=document.getElementById("caixa")
 
@@ -11,11 +11,21 @@ musicas.add("Praga")
 //NÃO ADICIONA:
 musicas.add("A flor")    //não adiciona pois já tem um valor igual na coleção
 
+//deleta um elemento:
+musicas.delete("Praga")
+
+//limpar toda a coleção:
+// console.clear()
 
 console.log(musicas)
 
 
 //percorre a coleção:
-musicas.forEach(()=>{
-
+musicas.forEach((elemento)=>{
+    caixa.innerHTML+=elemento+"<br/>" //Adiciona os elementos na caixa
 })
+
+// //de outra forma 
+// for(let music of musicas){
+//     caixa.innerHTML+=music+"<br/>"
+// }
