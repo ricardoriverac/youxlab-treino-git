@@ -55,20 +55,31 @@ public class Program {
 
         System.out.println("\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nEm qual casinha você quer jogar?\n\n0|1|2\n3|4|5\n6|7|8\n");
 
-        for (int o = 0; o < 8; o++) {
+        System.out.print("Jogador 1 - : ");
+        int Opçao = input.nextInt();
+        ListaVazia.set(Opçao, EscolhaJogador1);
+        System.out.println(ListaVazia);
 
-            System.out.print("Jogador 1 - : ");
-            int Opçao = input.nextInt();
-            ListaVazia.set(Opçao, EscolhaJogador1);
-            System.out.println(ListaVazia);
-
-            int Opçao2 = -1;
-
+        for (int i = 0; i < 4; i++) {
             System.out.print("Jogador 2 - : ");
-            Opçao2 = input.nextInt();
+            int Opçao2 = input.nextInt();
 
             ListaVazia.set(Opçao2, EscolhaJogador2);
             System.out.println(ListaVazia);
+
+            System.out.print("Jogador 1 - : ");
+            Opçao = input.nextInt();
+            ListaVazia.set(Opçao, EscolhaJogador1);
+            System.out.println(ListaVazia);
+        }
+
+
+        for (int i = 0; i < ListaVazia.size(); i++) {
+            System.out.print(ListaVazia.get(i) + " ");
+
+            if ((i + 1) % 3 == 0) {
+                System.out.println();
+            }
         }
     }
 }
