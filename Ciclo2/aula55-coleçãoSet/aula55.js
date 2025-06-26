@@ -10,7 +10,6 @@ musicas.add("Praga")
 
 //NÃO ADICIONA:
 musicas.add("A flor")    //não adiciona pois já tem um valor igual na coleção
-
 //deleta um elemento:
 musicas.delete("Praga")
 
