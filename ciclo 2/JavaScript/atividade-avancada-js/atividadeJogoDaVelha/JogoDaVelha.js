@@ -27,10 +27,11 @@ btnIniciar.onclick = () => {
   nomeX = inputJog1.value; // pega o nome do jogador x
   nomeO = inputJog2.value; // pega o nome do jogador o
 
-  // verifica se os dois jogadores preencheram o nome
-  if (nomeX === "" || nomeO === "") {
-    alert("preencha os nomes dos dois jogadores!"); // alerta se algum nome estiver vazio
-    return;
+  if (nomeX === "") {
+    nomeX = "Jogador X";
+  }
+  if (nomeO === "") {
+    nomeO = "Jogador O";
   }
 
   // cria o tabuleiro
@@ -86,7 +87,7 @@ function jogar() {
 
   tabuleiro[indice] = jogadorAtual; // marca a casa com o jogador atual
   this.textContent = jogadorAtual; // exibe o símbolo (X ou O) na casa
-  console.log(this.textContent)
+  console.log(this.textContent) //this: ultiliza contexto para referenciar ao objeto principal
   console.log(jogadorAtual)
 
   // verifica se algum jogador venceu
@@ -97,7 +98,7 @@ function jogar() {
     if (jogadorAtual === "X") vitoriasX++; // se x venceu, aumenta vitórias de x
     else vitoriasO++; // se o venceu, aumenta vitórias de o
 
-    placar.textContent = `parabéns! ${jogadorAtual === "X" ? nomeX : nomeO} venceu!`; // exibe mensagem de vitória
+    placar.textContent = `Parabéns! ${jogadorAtual === "X" ? nomeX : nomeO} venceu!`; // exibe mensagem de vitória
     atualizarPlacar(); // atualiza o placar
     return;
   }
@@ -105,13 +106,13 @@ function jogar() {
   // verifica se houve empate
   if (checarEmpate()) {
     jogando = false; // jogo acabou
-    placar.textContent = "empate!"; // exibe mensagem de empate
+    placar.textContent = "Empate!"; // exibe mensagem de empate
     return;
   }
 
   // muda o jogador para o próximo
   jogadorAtual = jogadorAtual === "X" ? "O" : "X";
-  placar.textContent = `vez de ${jogadorAtual === "X" ? nomeX : nomeO} (${jogadorAtual})`; // exibe a vez do próximo jogador
+  placar.textContent = `Vez de ${jogadorAtual === "X" ? nomeX : nomeO} (${jogadorAtual})`; // exibe a vez do próximo jogador
 }
 
 // função para verificar se algum jogador venceu
@@ -130,8 +131,8 @@ function checarVitoria() {
 
 // função para verificar se houve empate
 function checarEmpate() {
-  return tabuleiro.every(c => c !== ""); // verifica se todas as casas estão ocupadas
-}
+  return tabuleiro.every(casa => casa!== ""); // verifica se todas as casas estão ocupadas
+} //every:interpreta todos os valores de um array como um todo
 
 // função para atualizar o placar
 function atualizarPlacar() {

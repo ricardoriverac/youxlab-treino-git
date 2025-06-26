@@ -2,24 +2,26 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   margin: 70px;
-  background-color:rgb(24, 28, 20);
+  background-color:rgb(222, 211, 196);
 }
 h1{
-  color:rgb(236, 223, 204)
+  color:rgb(85, 88, 121);
 }
 #tabuleiro {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
-  gap: 5px;
+  gap: 20px;
   justify-content: center;
-  margin: 20px auto;
+  margin: 20px auto; 
+
+  
 }
 
 .casa {
   width: 100px;
   height: 100px;
-  border: 2px solid rgb(236, 223, 204);
+  border: 2px solid rgb(139, 137, 132);
   font-size: 60px;
   display: flex;
   align-items: center;
@@ -27,13 +29,13 @@ h1{
   cursor: pointer;
   border-width: 5px;
   border-radius: 8px;
-
+  color: rgb(85, 88, 121) ;
 }
 
 #placar {
   margin-top: 10px;
   font-weight: bold;
-  color: rgb(236, 223, 204);
+  color: rgb(85, 88, 121);
 }
 
 input {
@@ -42,9 +44,8 @@ input {
   width: 140px;
   margin: 5px;
   border-radius: 15px;
-  background-color: rgb(223, 208, 184);
+  background-color: rgb(244, 235, 211);
   border: none;
-
 }
 
 button {
@@ -53,7 +54,7 @@ button {
   margin: 5px;
   cursor: pointer;
   border-radius: 25px;
-  background-color: rgb(223, 208, 184);
+  background-color:rgb(152, 161, 188);
   border: none;
 }
 
@@ -61,5 +62,5 @@ button {
   margin-top: 15px;
   font-size: 18px;
   font-weight: 600;
-  color: rgb(236, 223, 204);
+  color: rgb(85, 88, 121);
 }
