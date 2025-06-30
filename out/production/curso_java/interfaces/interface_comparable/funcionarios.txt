@@ -1,0 +1,4 @@
+Alex, 2000
+Maria, 3000
+Bob, 1200
+Pamela, 400
