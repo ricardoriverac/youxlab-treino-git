@@ -23,7 +23,7 @@ function App () {
         profissao = "Chefão"
         foto = "/home/youx/youxlab-treino-git/my-app/public/foto01_coalas.jpg"
       />
-      <List/>
+     <List/>
     </div>
   )
 }
