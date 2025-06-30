@@ -89,14 +89,12 @@ public class Program {
 
 
     static void text(List<String> listaVazia) {
-        System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\nJogo atual:");
         for (int i = 0; i < listaVazia.size(); i++) {
             System.out.print(listaVazia.get(i) + " ");
 
             if ((i + 1) % 3 == 0) {
                 System.out.println();
             }
-            System.out.println("=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
         }
     }
