@@ -1,4 +1,4 @@
-package java_introdução.curso_programacao.P.O.src.src.ProblemaExemplo.entities;
+package ProblemaExemplo.entities;
 
 public class AlturaEnt {
 

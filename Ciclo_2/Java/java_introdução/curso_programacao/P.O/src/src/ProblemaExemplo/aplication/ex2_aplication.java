@@ -14,22 +14,20 @@ public class ex2_aplication {
 
         System.out.print("Qual o seu nome?: ");
         emp.nome =  input.nextLine();
-        System.out.print("Sálario Grosso?: ");
+        System.out.println("Sálario Grosso?: ");
         emp.grossSalary = input.nextDouble();
-        System.out.print("Tax?: ");
+        System.out.println("Tax?: ");
         emp.tax = input.nextDouble();
 
         System.out.println();
-        System.out.println("Employee: " + emp);
+        System.out.print(emp);
         System.out.println();
 
-        System.out.print("Which percentage to increase salary? ");
         double porcentage =  input.nextDouble();
         emp.increaseSalary(porcentage);
 
-        System.out.println();
-        System.out.println("Updated data: " + emp);
-        input.close();
+
+        System.out.println(emp);
 
 
     }
