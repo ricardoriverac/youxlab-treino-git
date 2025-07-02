@@ -10,7 +10,6 @@ let vitoriaJogador1 = 0;
 let vitoriaJogador2 = 0;
 let statusJogos = true;
 
-
 botaoJogar.addEventListener("click", (evento) => {
   if (input1.value === "" || input2.value === "") {
     alert("Preencha o nome dos jogadores");
