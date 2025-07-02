@@ -1,0 +1,4 @@
+maria, 23
+pedro, 12
+joão, 67
+miguel, 26
