@@ -1,0 +1,5 @@
+maria,1200
+robson,400
+ricardo,2000
+ana,2300
+bob,500
