@@ -10,11 +10,11 @@ function App() {
 
   const url = 'https://picsum.photos/300'
 
-  return (
+  return ( 
     <div className="App">
       <h2>Alterando o JSX</h2>
       <p>Olá, {novoNome}</p>
-      <p>Soma: {sum(1, 2  )}</p>
+      <p>Soma: {sum(1, 4)}</p>
       <img src={url} alt='Minha Imagem'/>
     </div>
   );
