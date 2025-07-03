@@ -8,26 +8,27 @@
 </head>
 <body>
     <h1>Jogo da Velha</h1>
+
     <div id="nomes2">
         <input type="text" id="nome1" class="nome" placeholder="Jogador 1 (X)" />
         <input type="text" id="nome2" class="nome" placeholder="Jogador 2 (O)" />
     </div>
-
-    <div id="jogo">
-        <div class="caixa"></div>
-        <div class="caixa"></div>
-        <div class="caixa"></div>
-        <div class="caixa"></div>
-        <div class="caixa"></div>
-        <div class="caixa"></div>
-        <div class="caixa"></div>
-        <div class="caixa"></div>
-        <div class="caixa"></div>
+    <div id="placar">
+       <p id="placarX"> X: 0</p>
+       <p id="placarO"> O: 0</p>
     </div>
 
-    <h2 id="mensagem"></h2>
+     <div id="reta">
+     <button id="Jogar"  onclick = "iniciar()">Jogar</button>
+     </div>
+     
+     <div id="jogo">
+        
+    </div>
+    <p id="mensagem"></p>
 
-    <button id="reiniciar">Reiniciar</button>
+    <button id="reiniciar" style="display:none;" onclick="reiniciarJogo()">Reiniciar</button>
+
     <script src="codigo.js"></script>
 </body>
 </html>

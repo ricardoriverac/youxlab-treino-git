@@ -25,6 +25,16 @@ h1 {
     margin: 20px;
 }
 
+#nome1:hover{
+
+    transform: scale(1.05);
+}
+#nome2:hover{
+
+    transform: scale(1.05);
+}
+
+
 .nome {
     padding: 10px;
     margin: 5px;
@@ -87,18 +97,7 @@ h1 {
     transform: scale(1.05);
 }
 
-select{
-    padding: 10px;
-    margin: 5px;
-    border-radius: 20px;
-    border: 3px solid white;
-    background-color: #fff;
-    color: #333;
-    font-family: 'Comic Sans MS', 'Arial', sans-serif;
-    font-weight: bold;
-}
-
-#jogar {
+#Jogar {
     padding: 10px 25px;
     border: none;
     border-radius: 20px;
@@ -110,7 +109,25 @@ select{
     transition: background-color 0.3s, transform 0.2s;
 }
 
-#jogar:hover {
+#Jogar:hover {
     background-color: #c71585;
     transform: scale(1.05);
 }
+
+#reiniciar{
+  display:none;
+}
+
+#placar {
+        margin-top: 10px;
+        font-weight: bold;
+        border-radius: 15px;
+        background-color: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        transition: background-color 0.3s, transform 0.2s;
+}
+
+#placar:hover {
+    transform: scale(1.05);
+}
+
