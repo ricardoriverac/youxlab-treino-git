@@ -67,7 +67,7 @@ function iniciarJogo() {
     // console.log(letra.textContent)
     letra.addEventListener("click", (evento) => {
       if (imagem.childNodes.length - 3 == 0){
-        alert('já perdeu troxa')
+        alert('já perdeu louco')
         return
       }
       letra.disabled = true;
@@ -85,7 +85,7 @@ function iniciarJogo() {
       }
 
       if (imagem.childNodes.length - 3 == 0){
-        alert('perdeu otário')
+        alert('perdeu')
       }
     });
   });
