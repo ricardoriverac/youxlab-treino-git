@@ -8,12 +8,14 @@ function App() {
     return a + b
   }
 
+   const url = "https://via.placeholder.com/150"
+
   return (
     <div className="App">
        <h2>Ola mundo</h2>
        <p>Ola {newName}</p>
        <p>Soma: {sum(1, 2)}</p>
-
+       <img src={url} alt="Minha imagem" />
     </div>
   )
 }
