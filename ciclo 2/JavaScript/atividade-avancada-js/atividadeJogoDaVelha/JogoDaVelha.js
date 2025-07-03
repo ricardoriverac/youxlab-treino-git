@@ -89,27 +89,27 @@ function jogar() {
   this.textContent = jogadorAtual; // exibe o símbolo (X ou O) na casa
   console.log(this.textContent) //this: ultiliza contexto para referenciar ao objeto principal
   console.log(jogadorAtual)
-
+  
   // verifica se algum jogador venceu
   if (checarVitoria()) {
     console.log(checarVitoria())
     jogando = false; // jogo acabou
-
+    
     if (jogadorAtual === "X") vitoriasX++; // se x venceu, aumenta vitórias de x
     else vitoriasO++; // se o venceu, aumenta vitórias de o
-
+    
     placar.textContent = `Parabéns! ${jogadorAtual === "X" ? nomeX : nomeO} venceu!`; // exibe mensagem de vitória
     atualizarPlacar(); // atualiza o placar
     return;
   }
-
+  
   // verifica se houve empate
   if (checarEmpate()) {
     jogando = false; // jogo acabou
     placar.textContent = "Empate!"; // exibe mensagem de empate
     return;
   }
-
+  
   // muda o jogador para o próximo
   jogadorAtual = jogadorAtual === "X" ? "O" : "X";
   placar.textContent = `Vez de ${jogadorAtual === "X" ? nomeX : nomeO} (${jogadorAtual})`; // exibe a vez do próximo jogador
@@ -122,11 +122,11 @@ function checarVitoria() {
     [0, 3, 6], [1, 4, 7], [2, 5, 8], // colunas
     [0, 4, 8], [2, 4, 6] // diagonais
   ];
-
+  
   // verifica se alguma combinação de 3 casas tem o mesmo símbolo
   return combinacoes.some(([a, b, c]) =>
     tabuleiro[a] && tabuleiro[a] === tabuleiro[b] && tabuleiro[a] === tabuleiro[c]
-  ); //compara de acordo com a tabela, ex: a tabelaa e tabelaa comfere se é igual a b, e c
+); //compara de acordo com a tabela, ex: a tabelaa e tabelaa comfere se é igual a b, e c
 }
 
 // função para verificar se houve empate
