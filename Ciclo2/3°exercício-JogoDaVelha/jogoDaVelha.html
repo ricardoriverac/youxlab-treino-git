@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="jogoDaVelha.css" />
+  </head>
+  <body>
+    <div class="jogo">
+      <h1>Jogo da Velha</h1>
+      <input
+        type="text"
+        id="jogadorX"
+        placeholder="Digite o nome do jogador X"
+      />
+      <input
+        type="text"
+        id="jogadorO"
+        placeholder="Digite o nome do jogador O"
+      />
+      <div id="tabuleiro"></div>
+      <p id="status"></p>
+      <button id="reiniciar" class="botao" onclick="reiniciarJogo()">
+        Reiniciar
+      </button>
+      <button id="iniciar" class="botao" onclick="iniciarJogo()">
+        Iniciar
+      </button>
+      <button id="ZerarPacar" class="botao" onclick="zerarPlacar()">Zerar placar</button>
+      <div id="placar">
+        <h3>Placar:</h3>
+        <p>Jogador X: <span id="jogadorPlacarX">0</span></p>
+        <!-- span => tag utilizada para agrupar trechos de conteúdo e aplicar estilos ou manipulá-los com JavaScrip -->
+        <p>Jogador O: <span id="jogadorPlacarO">0</span></p>
+      </div>
+    </div>
+
+
+    <script src="jogoDaVelha.js"></script>
+  </body>
+</html>
