@@ -1,4 +1,5 @@
 import './App.css';
+import HelloWord from './components/HelloWord';
 
 function App() {
   const name = 'Aléxia'
@@ -16,6 +17,7 @@ function App() {
      <p> Olá, {newName}</p>
      <p> Soma: {2+2}</p>
      <img src={url} alt="Minha Imagem" />
+     <HelloWord />
     </div>
 
   );
