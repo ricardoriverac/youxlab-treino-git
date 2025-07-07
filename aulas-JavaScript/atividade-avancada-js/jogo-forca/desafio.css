@@ -1,47 +1,105 @@
-body {
-  background-color: #1e1e1e;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #f0f0f0;
+/* Reset básico */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.caixaGrande {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.direita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ffffff;
+}
+
+.btnJogar {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btnJogar:hover {
+  background-color: #45a049;
+}
+
+.dicaNaTela {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #ffd700;
+}
+
+.imagem {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+.imagem.ativo {
+  display: flex;
+}
+
+.imagem img {
+  width: 3em;
+  height: auto;
+}
+
+#linha {
+  display: flex;
+  gap: 10px;
+  font-size: 2em;
+  letter-spacing: 10px;
+}
+
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  grid-gap: 0.4em;
+  justify-content: center;
+  margin-top: 15px;
 }
 
 .letra {
   cursor: pointer;
   border-radius: 7px;
-  margin: 3px;
   padding: 8px;
-  line-height: 1em;
-  display: flex;
-  margin: 0;
-  touch-action: manipulation;
   font-size: 1em;
-  justify-content: center;
-  align-items: center;
-  font-weight: 500;
-  font-family: "Mitr", sans-serif;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
-.teclado {
-  display: grid;
-  grid-template-columns: repeat(9, 80px);
-  grid-gap: 0.25em;
-  margin-top: 15px;
-  flex-wrap: wrap-reverse;
-}
-
-.btnJogar {
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 8px;
-  width: 100px;
-}
-
-.linha {
-  display: flex;
-  flex-direction: row;
-  letter-spacing: 30px;
-  font-size: 2em;
+.letra:hover:enabled {
+  background-color: #555;
 }
 
 .letraCerta {
@@ -52,51 +110,4 @@ body {
 .letraErrada {
   background-color: #cb0404 !important;
   color: #fcc !important;
-}
-
-.caixaGrande {
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-  text-align: center;
-  height: 100vh;
-  width: 100%;
-}
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  font-family: Arial, sans-serif;
-}
-
-/* Estilo da área da imagem à esquerda */
-.imagem {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background-color: #f3f3f3; */
-  padding: 20px;
-}
-
-.imagem img {
-  max-width: 100%;
-  max-height: 90%;
-  object-fit: contain;
-}
-
-/* Estilo da parte direita com os elementos do jogo */
-.direita {
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 40px;
-  gap: 20px;
 }

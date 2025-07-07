@@ -25,7 +25,7 @@ const palavras = [
   { id: 24, palavra: "teclado", dica: "acessório de computador" },
   { id: 25, palavra: "relogio", dica: "marca o tempo" },
 ];
-const alfabeto = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Ç","Z","X","C","V","B","N","M",];
+const alfabeto = ["Q","W","E","R","T","Y","U","I","O","P","A","S","D","F","G","H","J","K","L","Ç","Z","X","C","V","B","N","M"];
 
 let letrasUsadas = "";
 let tracinhos = [];
@@ -34,7 +34,7 @@ const teclado = document.getElementById("teclado");
 const botaoJogar = document.querySelector(".btnJogar");
 const linha = document.getElementById("linha");
 const dica = document.getElementById("id_dica");
-const imagem = document.getElementById('imagem_coracao')
+const imagem = document.getElementById("imagem_coracao");
 
 function montarTeclado() {
   botaoJogar.style.display = "none";
@@ -48,16 +48,8 @@ function montarTeclado() {
   });
 }
 
-for(let i=0; i<6; i++){
-  var imagemCoracao = document.createElement('img')
-  imagemCoracao.src = 'coracao-mine-removebg-preview.png'
-  imagemCoracao.alt = 'imagem coração para contar vidas'
-  imagemCoracao.style.width = '5em'
-  imagemCoracao.setAttribute('id', i)
-  imagem.appendChild(imagemCoracao)
-}
-
 function iniciarJogo() {
+  criarCoracao()
   montarTeclado();
   mostrarDica();
   montarTraco();
@@ -66,9 +58,9 @@ function iniciarJogo() {
   letraTeclado.forEach((letra) => {
     // console.log(letra.textContent)
     letra.addEventListener("click", (evento) => {
-      if (imagem.childNodes.length - 3 == 0){
-        alert('já perdeu louco')
-        return
+      if (imagem.childNodes.length === 0) {
+        alert("Já perdeu louco, para de tentar");
+        return;
       }
       letra.disabled = true;
       letrasUsadas = letra.textContent;
@@ -78,14 +70,23 @@ function iniciarJogo() {
       if (verificacaoLetra) {
         evento.target.classList.toggle("letraCerta");
         marcarTracinho(letrasUsadas);
+
+        let venceu = tracinhos.every(
+          (traco, i) => traco.textContent === palavraSorteadaDividida[i]
+        );
+        if (venceu) {
+          alert("Parabéns, você venceu!");
+          letraTeclado.forEach((letra) => {
+            letra.disabled = true;
+          });
+        }
       } else {
         evento.target.classList.toggle("letraErrada");
         imagem.removeChild(imagem.lastElementChild);
-
       }
 
-      if (imagem.childNodes.length - 3 == 0){
-        alert('perdeu')
+      if (imagem.childNodes.length === 0) {
+        alert("Você perdeu, melhore na próxima!");
       }
     });
   });
@@ -134,4 +135,16 @@ function marcarTracinho(letra) {
       tracinhos[i].textContent = letra;
     }
   });
+}
+
+function criarCoracao(){
+  for (let i = 0; i < 6; i++) {
+    var imagemCoracao = document.createElement("img");
+    imagemCoracao.src = "coracao-mine-removebg-preview.png";
+    imagemCoracao.alt = "imagem coração para contar vidas";
+    imagemCoracao.style.width = "3em";
+    imagemCoracao.setAttribute("id", i);
+    imagem.appendChild(imagemCoracao);
+  }
+  imagem.classList.add('ativo')
 }
