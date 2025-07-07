@@ -1,5 +1,7 @@
 import './App.css';
 import HelloWord from './components/HelloWord';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 
 function App() {
   const name = 'Aléxia'
@@ -10,14 +12,22 @@ function App() {
   }
 
   const url = "https://picsum.photos/300"
+  const nome= "sophia"
+  
+  
   return (
 
     <div className="App">
-     <h1>ALterando o JSX</h1>
+     <h1>Alterando o JSX</h1>
      <p> Olá, {newName}</p>
-     <p> Soma: {2+2}</p>
-     <img src={url} alt="Minha Imagem" />
-     <HelloWord />
+     <SayMyName nome="Aléxia"/>
+      <SayMyName nome="Paim"/>
+      <SayMyName nome = {nome} />
+      <Pessoa nome="Alexia"
+       idade = "16" 
+       profissao = "Estudante" 
+       foto="https://picsum.photos/300"/>
+
     </div>
 
   );
