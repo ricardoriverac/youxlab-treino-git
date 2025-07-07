@@ -1,0 +1,13 @@
+.telaLogin{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.telaLogin label{
+    color: #7b7b7b;
+}
+
+.telaLogin h2 {
+    color: purple;
+}
