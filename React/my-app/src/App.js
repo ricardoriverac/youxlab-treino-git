@@ -1,24 +1,25 @@
 import './App.css'
 import HellWorld from './components/HelloWord'
+import MeuNome from './components/MeuNome'
+import Pessoa from './components/pessoa'
+
 
 function App() {
+    
+  
 
-  const name = "Kauan"
-  const newName = name.toLocaleUpperCase()
-  function sum(a, b) {
-    return a + b
-  }
-
-  const url = "https://picsum.photos/300"
+  // const url = "https://picsum.photos/300"
 
   return (
     <div className="App">
-       <h2>Ola mundo</h2>
-       <p>Ola {newName}</p>
-       <p>Soma: {sum(3, 2)}</p>
-       <img src={url} alt="Minha imagem" />
        <HellWorld/> 
-       <segundo/>   
+       <MeuNome nome="Kauan"/>
+       <Pessoa 
+       nome="Kauna" 
+       idade="18" 
+       profissao="Atendente"
+       foto="https://picsum.photos/300"
+       />
      </div>
   )
 }
