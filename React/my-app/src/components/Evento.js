@@ -1,13 +1,21 @@
+import Button from "./Butao"
+
+
 function Evento() {
 
     function meuEvt() {
-        console.log("AEEEEE")
+        console.log("Ativando")
     } 
+
+    function segundoEvt() {
+       console.log("segundo")
+    }
 
     return(
        <div>
            <p>Clique :D</p>
-           <button onClick={meuEvt}>!!!!Clique Aqui!!!!</button>
+           <Button event={meuEvt} text="Novo Evento"/>
+           <Button event={segundoEvt} text="Evento 2"/>
        </div>
     )
 }
