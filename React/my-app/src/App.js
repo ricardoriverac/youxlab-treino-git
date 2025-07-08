@@ -1,8 +1,7 @@
 import './App.css'
-import HellWorld from './components/HelloWord'
-import MeuNome from './components/MeuNome'
-import Pessoa from './components/pessoa'
-import List from './components/Lista'
+
+import Evento from './components/Evento';
+import Form from './components/Form';
 
 
 function App() {
@@ -13,15 +12,8 @@ function App() {
 
   return (
     <div className="App">
-       <HellWorld/> 
-       <MeuNome nome="Kauan"/>
-       <Pessoa 
-       nome="Kauna" 
-       idade="18" 
-       profissao="Atendente"
-       foto="https://picsum.photos/300"
-       />
-      <List/>
+      <Evento></Evento>
+      <Form></Form>
      </div>
   )
 }
