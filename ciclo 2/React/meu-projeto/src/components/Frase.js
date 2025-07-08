@@ -1,9 +1,11 @@
-function Frase(){
-    return(
-        <div>
-            <p>Esse é um componente com uma frase!</p>
-        </div>
-    )
+import styles from "./Frase.module.css";
+function Frase() {
+  return (
+    <div className={styles.fraseContainer}>
+      <p className={styles.fraseContent}>Esse é um componente com uma frase!</p>
+    </div>
+  );
 }
 
-export default Frase
+export default Frase;
+  
