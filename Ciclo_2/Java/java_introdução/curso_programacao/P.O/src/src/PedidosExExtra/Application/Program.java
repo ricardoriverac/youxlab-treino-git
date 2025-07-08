@@ -99,7 +99,7 @@ public class Program {
             System.out.println("Qual o id do pedido?");
             int id = input.nextInt();
             for (Pedido pedido : ListaPedidos) {
-                if (id == pedido.getId(id)) {
+                if (id == pedido.getId()) {
                     System.out.println(pedido.toString());
                     System.out.println("Valor total dos produtos vendidos: " + pedido.valorTotal());
                 }

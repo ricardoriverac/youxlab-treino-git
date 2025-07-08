@@ -3,6 +3,7 @@ package PedidosExExtra.Entities;
 public class CLiente {
     private int id;
     private String nome;
+    private String email;
 
     public CLiente(){
 
@@ -37,8 +38,6 @@ public class CLiente {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    private String email;
 
     @Override
     public String toString() {
