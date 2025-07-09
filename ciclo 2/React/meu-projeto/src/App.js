@@ -1,34 +1,15 @@
 import "./App.css";
-import HelloWord from "./components/HelloWord";
-import SayMyName from "./components/SayMyName";
-import Pessoa from "./components/Pessoa";
-import Frase from "./components/Frase";
-
+import Evento from "./components/Evento";
+import Form from "./components/Form";
 function App() {
   const name = "Aléxia";
-  const newName = name.toUpperCase();
-
-  function sum(a, b) {
-    return a + b;
-  }
-
-  const url = "https://picsum.photos/300";
-  const nome = "sophia";
 
   return (
     <div className="App">
-      <h1>Testando CSS</h1>
-      <Frase />
-      <Frase />
-      <SayMyName nome="Aléxia" />
-      <SayMyName nome="Paim" />
-      <SayMyName nome={nome} />
-      <Pessoa
-        nome="Alexia"
-        idade="16"
-        profissao="Estudante"
-        foto="https://picsum.photos/300"
-      />
+      <h1>Eventos</h1>
+      <Evento numero="1" />
+      <Evento numero="2" />
+      <Form />
     </div>
   );
 }
