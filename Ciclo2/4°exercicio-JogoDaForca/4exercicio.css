@@ -1,0 +1,37 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#divTracinho{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tracinho{
+    padding: 10px;
+    font-size: xx-large;
+}
+#divTeclado{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+.teclas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-right: 10px;
+    border: solid, lightgray;
+    border-radius: 10px;
+}
+.erro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-right: 10px;
+    border: solid, lightgray;
+    border-radius: 10px;
+    background-color: rgb(243, 61, 61);
+}
