@@ -7,13 +7,20 @@
     <link rel="stylesheet" href="4exercicio.css" />
   </head>
   <body>
-    <button id="btnIniciar" onclick="iniciarJogo()">Iniciar</button>
-    <button id="btnReiniciar" onclick="reiniciarJogo()">Reiniciar</button>
-    <div id="divImagem"></div>
-    <h1>Jogo da Forca</h1>
-    <div id="divTracinho"></div>
-    <div id="divDica"></div>
-    <div id="divTeclado"></div>
+    <div id="container">
+      <div id="divImagem"></div>
+      <h1>Jogo da Forca</h1>
+      <div id="Jogo">
+        <div id="divTracinho"></div>
+        <div id="divDica"></div>
+        <div id="divTeclado"></div>
+      </div>
+    </div>
+    <div id="botoes">
+      <button id="btnIniciar" onclick="iniciarJogo()">Iniciar</button>
+      <button id="btnReiniciar" onclick="reiniciarJogo()">Reiniciar</button>
+    </div>
+    <div id="mensagemFinal"></div>
     <script src="4exercicio.js"></script>
   </body>
 </html>

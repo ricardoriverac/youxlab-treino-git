@@ -79,18 +79,21 @@ const alfabeto = [
   "Z",
 ];
 
-function IniciarJogo(palavra, dica) {
-  imagemForca();
-  criarTracinho(palavra);
-  teclado(palavra);
-  mostrarDica(dica);
-}
-
 const divTracinho = document.getElementById("divTracinho");
 let divImagem = document.getElementById("divImagem");
 
 function sorteia() {
   return Math.round(Math.random() * 11);
+}
+
+function iniciarJogo() {
+  palavraSorteada = palavrasForca[sorteia()];
+  let palavra = palavraSorteada.palavra;
+  let dica = palavraSorteada.dica;
+  criarTracinho(palavra);
+  teclado(palavra);
+  mostrarDica(dica);
+  let btniniciar = (document.getElementById("btnIniciar").disabled = true);
 }
 
 function mostrarDica(dica) {
@@ -99,12 +102,6 @@ function mostrarDica(dica) {
   dicaParagrafo.setAttribute("class", "dica");
   dicaParagrafo.textContent = dica;
   divDica.appendChild(dicaParagrafo);
-}
-
-function imagemForca() {
-  let imagem = document.createElement("img");
-  imagem.src = "./imagens/hangman-0.svg";
-  divImagem.appendChild(imagem);
 }
 
 function criarTracinho(palavraSorteada) {
@@ -124,50 +121,94 @@ function teclado(palavra) {
     let tecla = document.createElement("div");
     tecla.setAttribute("class", "teclas");
     tecla.textContent = letra;
-    tecla.addEventListener("click", (evento) =>{
-      marcarTecla(tecla.textContent, palavraSeparada)
-    })
+    tecla.addEventListener("click", (evento) => {
+      marcarTecla(tecla.textContent, palavraSeparada);
+    });
     divTeclado.appendChild(tecla);
   });
 }
+function verificarVitoria() {
+  let tracinhos = document.querySelectorAll(".tracinho");
+  return Array.from(tracinhos).every((traco) => traco.textContent !== "_");
+}
 
-function marcarTecla(elemento, palavra){
-  palavra.forEach((letra, index)=> {
+let imagem = document.createElement("img");
+imagem.src = "./imagens/hangman-0.svg";
+divImagem.appendChild(imagem);
+
+let contador = 0;
+
+function trocarImagem() {
+  if (contador == 1) {
+    imagem.src = "./imagens/hangman-1.svg";
+    divImagem.appendChild(imagem);
+  }
+  if (contador == 2) {
+    imagem.src = "./imagens/hangman-2.svg";
+    divImagem.appendChild(imagem);
+  }
+  if (contador == 3) {
+    imagem.src = "./imagens/hangman-3.svg";
+    divImagem.appendChild(imagem);
+  }
+  if (contador == 4) {
+    imagem.src = "./imagens/hangman-4.svg";
+    divImagem.appendChild(imagem);
+  }
+  if (contador == 5) {
+    imagem.src = "./imagens/hangman-5.svg";
+    divImagem.appendChild(imagem);
+  }
+  if (contador == 6) {
+    imagem.src = "./imagens/hangman-6.svg";
+    divImagem.appendChild(imagem);
+    setTimeout(() => {
+      alert("Você perdeu");
+      reiniciarJogo();
+    }, 1000);
+  }
+}
+
+function marcarTecla(elemento, palavra) {
+  let acertou = false;
+  palavra.forEach((letra, index) => {
     if (letra == elemento) {
-      substituiTraco(letra, index)
+      substituiTraco(letra, index);
+      acertou = true;
     }
-  })
+  });
+  const teclas = document.querySelectorAll(".teclas");
+  teclas.forEach((tecla) => {
+    if (tecla.textContent === elemento) {
+      if (!acertou) {
+        contador++;
+        tecla.style.backgroundColor = "red";
+        tecla.style.color = "white";
+        trocarImagem();
+      } else {
+        tecla.style.backgroundColor = "green"; // letra certa (opcional)
+        tecla.style.color = "white";
+      }
+      tecla.style.pointerEvents = "none"; // desativa o botão após clique
+    }
+  });
+  if (verificarVitoria()) {
+    setTimeout(() => {
+      alert("Você Ganhou");
+      reiniciarJogo();
+    }, 1000);
+  }
 }
 
 function substituiTraco(letra, index) {
-  let tracos = document.querySelectorAll(".tracinho")
-
+  let tracos = document.querySelectorAll(".tracinho");
   tracos.forEach((traco, i) => {
     if (i == index) {
-      traco.textContent = letra
-      return
+      traco.textContent = letra;
     }
-  })
-}
-
-let palavraSorteada=''
-
-function iniciarJogo() {
-  palavraSorteada = palavrasForca[sorteia()];
-  let palavra = palavraSorteada.palavra;
-  let dica = palavraSorteada.dica
-  let tracinhosExistentes = document.querySelectorAll(".tracinho");
-  tracinhosExistentes.forEach((traco) => {
-    traco.remove();
   });
-  IniciarJogo(palavra, dica);
 }
 
-// function reiniciarJogo(){
-//   palavraSorteada=palavrasForca[sorteia()]
-//   palavra= palavraSorteada.palavra
-//   dica=palavraSorteada.dica
-// }
-
-
-
+function reiniciarJogo() {
+  location.reload();
+}

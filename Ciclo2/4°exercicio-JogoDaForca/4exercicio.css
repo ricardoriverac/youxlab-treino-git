@@ -1,37 +1,106 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
+/* Reset geral */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-#divTracinho{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+/* Fundo da página */
+body {
+  background-color: #f4f6fa;
+  display: flex;
+  align-items: center;
 }
-.tracinho{
-    padding: 10px;
-    font-size: xx-large;
+
+/* Botões de iniciar/reiniciar */
+button {
+    padding-top: 40px;
+  margin: 20px 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
 }
-#divTeclado{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
+
+/* Container principal: imagem + jogo */
+#container {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px; 
 }
-.teclas{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-right: 10px;
-    border: solid, lightgray;
-    border-radius: 10px;
+
+/* Imagem do enforcado */
+#divImagem {
+    padding-left: 80px;
+  padding-top: 110px;
 }
-.erro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-right: 10px;
-    border: solid, lightgray;
-    border-radius: 10px;
-    background-color: rgb(243, 61, 61);
+
+/* Jogo da Forca */
+#Jogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;   
+  border-radius: 10px;
+}
+
+/* Título */
+h1 {
+  padding-right: 20px;
+}
+
+/* Tracinhos da palavra */
+#divTracinho {
+  display: flex;
+  justify-content: center;
+  padding: 20px ;
+}
+
+.tracinho {
+  padding: 10px;
+  font-size: 28px;
+  text-align: center;
+}
+
+.dica {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Teclado */
+#divTeclado {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 450px;
+}
+
+.teclas {
+  background-color: #eaeaea;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-size: 16px;
+}
+
+#mensagemFinal {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff4d4d;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 6px;
+  font-size: 18px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+  display: none;
+  z-index: 1000;
+}
+
+#mensagemFinal.mostrar {
+  display: block;
 }
