@@ -77,6 +77,7 @@ const alfabeto = [
   "X",
   "Y",
   "Z",
+  "-",
 ];
 
 const divTracinho = document.getElementById("divTracinho");
