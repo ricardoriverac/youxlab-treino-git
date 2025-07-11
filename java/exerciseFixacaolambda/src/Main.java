@@ -30,8 +30,8 @@ public class Main {
                 .map(x -> x.getEmail())
                 .sorted((x1 , x2) -> x1.compareTo(x2))
                 .toList();
-        namesEmails.forEach(System.out::println);
 
+        namesEmails.forEach(System.out::println);
 
         Double sum = employees.stream()
                 .filter(x -> x.getName().charAt(0) == 'M' || x.getName().charAt(0) == 'm')
