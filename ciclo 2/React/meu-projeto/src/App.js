@@ -1,15 +1,12 @@
 import "./App.css";
-import Evento from "./components/Evento";
-import Form from "./components/Form";
+import Condicional from "./components/Condicional";
 function App() {
   const name = "Aléxia";
 
   return (
     <div className="App">
-      <h1>Eventos</h1>
-      <Evento numero="1" />
-      <Evento numero="2" />
-      <Form />
+      <h1>Rederização condicional</h1>
+    <Condicional />
     </div>
   );
 }

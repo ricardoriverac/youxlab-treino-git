@@ -1,3 +1,5 @@
+
+
 function Evento({numero}){
 
     function meuEvento(){
@@ -7,6 +9,7 @@ function Evento({numero}){
     return (
         <>
         <p> CLique para desparar um evento</p>
+        <button text= "Primeiro evento"/>
         <button onClick={meuEvento}>Ativar </button>
         </>
     )
