@@ -1,64 +1,50 @@
-body {
-  margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: linear-gradient(135deg, #0f0f1c, #1a1a2e);
-  color: #ffffff;
-  height: 100vh;
-}
 
 .App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px;
-  gap: 30px;
+  background-color: #c0c0c0;
+  border: 4px double #000080;
+  margin: 30px auto;
+  padding: 30px;
+  width: 600px;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 8px 8px 0px #000;
 }
 
-.component-box {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 20px 30px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  transition: 0.3s;
-}
-
-.component-box:hover {
-  box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
-  transform: translateY(-5px);
-}
-
-.component-box img {
-  width: 200px;
-  border-radius: 10px;
-  border: 2px solid #00ffff;
-  box-shadow: 0 0 20px #00ffff66;
-}
-
-h1, h2 {
-  color: #00ffff;
-  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+.App h1 {
+  color: #000080;
+  background-color: #fff;
+  border: 2px solid #000080;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 2px 2px #808080;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 
-p {
-  color: #c4f2ff;
-  font-size: 1.1rem;
-  margin: 5px 0;
+.minha-lista {
+  background-color: #f0f0f0;
+  border: 3px solid #000080;
+  padding: 20px;
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 5px 5px 0px #000;
 }
-input{
-   background-color: #1e1e1e;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #00000080;
-  margin: auto;
-  color: white;
+
+.minha-lista h3 {
+  background-color: #000080;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 2px dashed #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
-button{
-  background-color: #1e1e1e;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #00000080;
-  margin: auto;
-  color: white;
+
+.minha-lista p {
+  background-color: #fff;
+  padding: 8px;
+  border: 2px inset #000;
+  margin: 10px 0;
+  color: #000080;
+  font-weight: bold;
 }
