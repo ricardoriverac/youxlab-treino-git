@@ -1,13 +1,14 @@
 import "./App.css";
 import Condicional from "./components/Condicional";
+import OutraLista from "./components/OutraLista";
 function App() {
-  const name = "Aléxia";
+  const meusItens = ['React', 'Vue', 'Angular']
 
   return (
     <div className="App">
       <h1>Rederização condicional</h1>
-    <Condicional />
-    </div>
+      <OutraLista itens={meusItens} />
+      </div>
   );
 }
 
