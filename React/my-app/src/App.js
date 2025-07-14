@@ -1,8 +1,6 @@
 import './App.css'
 
-import Evento from './components/Evento';
-import Form from './components/Form';
-
+import Escolha from './components/Esolha'
 
 function App() {
     
@@ -12,8 +10,8 @@ function App() {
 
   return (
     <div className="App">
-      <Evento></Evento>
-      <Form></Form>
+      <h1>Rederização</h1>
+      <Escolha/>
      </div>
   )
 }

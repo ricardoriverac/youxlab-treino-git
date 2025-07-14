@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 
-function Form(){
+function pegar(){
 
       function cadastraUsuario(e) {
         e.preventDefault()
@@ -45,4 +45,4 @@ function Form(){
 }
 
 
-export default Form
+export default pegar
