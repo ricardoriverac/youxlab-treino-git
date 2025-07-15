@@ -13,6 +13,9 @@ public class CarRental {
     public CarRental(LocalDateTime start, LocalDateTime finish, String carModel) {
     }
 
+    public CarRental(LocalDateTime start, LocalDateTime finish, Vehicle vehicle) {
+    }
+
     public LocalDateTime getStart() {
         return start;
     }
