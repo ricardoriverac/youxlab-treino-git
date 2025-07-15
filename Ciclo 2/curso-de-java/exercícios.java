@@ -1,4 +1,7 @@
-public class exercícios {        //Exercícios:
+import java.util.Scanner;
+
+public class exercícios {        
+        //Exercício Estrutura sequencial:
 
         //01:
 //        Scanner sc = new Scanner(System.in);
@@ -77,4 +80,16 @@ public class exercícios {        //Exercícios:
 //        System.out.println("Retângulo: "+ A + B);
         //Fim dos desafios.
     
+
+        //Exercícios Estrutura Condicional (if-else):
+
+//        01:
+        // Scanner ab = new Scanner(System.in);
+        // int a = ab.nextInt();
+        // if (a <= -1) {
+        //     System.out.println("Negativo");
+        // }
+        // else {
+        //         System.out.println("Não negativo");
+        //}
 }

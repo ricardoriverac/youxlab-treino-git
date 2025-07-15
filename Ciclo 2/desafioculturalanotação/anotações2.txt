@@ -1,0 +1,125 @@
+1. 📥 Criação e login na conta gov.br
+Passo a passo no app ou site
+
+    Baixe o app gov.br (Android/iOS) ou acesse gov.br
+    Toque em “Entrar com gov.br” e informe seu CPF.
+    Selecione “Criar conta”, insira dados, crie senha de 8–70 caracteres com letras, números e caracteres especiais
+
+
+    
+2. 🪪 Carteira de Documentos Digitais
+O que inclui:
+CPF digital, CNH digital, CTPS digital, Certificado Militar, habilitações técnicas, RG
+
+Como acessar:
+    No app, vá em “Meus Documentos” (ou “Carteira de Documentos”)
+    Visualize, compartilhe via PDF com QR Code de autenticidade e marque favoritos .
+
+
+
+3. ✍️ Assinatura Eletrônica
+Disponível nos Níveis Prata ou Ouro,
+a assinatura digital com validade legal de acordo com ICP‑Brasil e Lei 14.063
+
+Passo a passo no app:
+    Acesse “Assinar documentos digitalmente” na aba “Início”;
+    Faça login;
+    Selecione o arquivo (DOC, DOCX, ODT ou PDF até 100 MB);
+    Posicione assinatura, toque em “Assinar” e selecione Gov.br;
+    Digite código enviado por SMS pelo app; clique em “Autorizar”;
+    Baixe o documento assinado    
+
+Pela web:
+O fluxo é idêntico: upload do arquivo, posicionamento, assinatura via SMS e download
+
+
+
+
+
+4. 🎥 Prova de Vida Digital
+O que é:
+Comprovação periódica via biometria facial para aposentados/pensionistas, evitando filas.
+
+Passo a passo no app:
+    Vá em “Serviços” → “Prova de vida”;
+    Selecione pendência → toque “Autorizar”;
+    Posicione rosto, siga instruções (olhar, sorrir, girar);
+    Após validação com sucesso, toque em “OK”;
+    Status muda para “Autorizado”, e o órgão recebedor é informado.
+
+
+
+5. Serviços da Receita Federal e Imposto de Renda
+Funcionalidades:
+Consulta de CPF (situação, certidões), emissão de DARF, declaração e restituição de IR, carnê-leão e acesso ao e-CAC .
+
+Como usar:
+Acesse “Buscar serviços” → digite “Imposto de Renda” ou “Receita Federal”.
+
+
+
+
+6. INSS (Meu INSS)
+Funcionalidades:
+Simulação e requerimento de aposentadoria, agendamento de perícia, extrato CNIS, requerimento de benefícios; atualização de dados pessoais .
+
+Como usar:
+Acesse “Buscar serviços” → digite “INSS”.
+
+
+
+
+7. Saúde – Conecte SUS / Meu SUS Digital
+Funcionalidades:
+Histórico de vacinas, registro COVID-19, rede de atendimento, receituário digital .
+
+Como usar:
+Acesse “Buscar serviços” → digite “SUS” ou “Conecte SUS”.
+
+
+
+
+8. Educação e Programas Sociais
+O que abrange:
+Inscrições e consulta em ENEM, SISU, Prouni, Fies, além de PIS/Pasep e abono salarial
+
+Como usar:
+Acesse “Buscar serviços” → digite o nome do programa.
+
+
+
+
+9. Veículos e Trânsito
+Funcionalidades:
+Consulta de CNH digital, multas, infrações, licenciamento e CRLV pelo app Carteira Digital de Trânsito (CDT)
+
+Como usar:
+Acesse “Buscar serviços” → digite “CNH” ou “CRLV”.
+
+
+
+
+
+10. Outros Serviços
+Exemplos úteis:
+Saque de FGTS, passaporte, certidões negativas, consulta de dívidas, acompanhamento de processos e-SAJ ou PJe.
+
+Como usar:
+Acesse “Buscar serviços” → digite o serviço desejado (ex: “passaporte”, “FGTS”, “processo”).
+
+
+
+
+11. 🔐 Segurança da Conta
+Recursos disponíveis:
+    2FA: via código SMS/app, disponível para Prata e Ouro
+    Gestão de dispositivos: visualize e remova acessos ativos.
+    Painel de privacidade: revogue permissões dado serviço/app.
+    Notificações: alertas de login, acesso a dados ou novos documentos.
+
+
+
+✅ Recomendações:
+    Suba ao nível Prata (validação por biometria CNH ou banco) para acessar a maioria dos serviços essenciais.
+    Ative a verificação em duas etapas (2FA) para maior segurança.
+    Mantenha o app gov.br atualizado e habilite notificações para acompanhar alertas importantes.
