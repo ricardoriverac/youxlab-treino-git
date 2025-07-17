@@ -33,3 +33,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+#python3 update_discord.py
