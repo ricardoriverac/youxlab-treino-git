@@ -1,0 +1,50 @@
+
+.App {
+  background-color: #c0c0c0;
+  border: 4px double #000080;
+  margin: 30px auto;
+  padding: 30px;
+  width: 600px;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 8px 8px 0px #000;
+}
+
+.App h1 {
+  color: #000080;
+  background-color: #fff;
+  border: 2px solid #000080;
+  padding: 10px;
+  text-align: center;
+  text-shadow: 2px 2px #808080;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+
+.minha-lista {
+  background-color: #f0f0f0;
+  border: 3px solid #000080;
+  padding: 20px;
+  margin: 20px 0;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 5px 5px 0px #000;
+}
+
+.minha-lista h3 {
+  background-color: #000080;
+  color: #fff;
+  padding: 10px;
+  border-bottom: 2px dashed #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.minha-lista p {
+  background-color: #fff;
+  padding: 8px;
+  border: 2px inset #000;
+  margin: 10px 0;
+  color: #000080;
+  font-weight: bold;
+}
