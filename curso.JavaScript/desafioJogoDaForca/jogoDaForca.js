@@ -56,9 +56,6 @@ const palavras = document.querySelector("#palavra");
 let certo = false;
 let errado = false;
 let tracos = "";
-const enter = document.createElement("button");
-enter.setAttribute("class", "enter");
-enter.textContent = "Enter";
 let animalAtual = "";
 let palavraSeparada = []
 let armazenarLetras = [];
