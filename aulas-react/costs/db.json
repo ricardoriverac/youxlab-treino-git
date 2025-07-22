@@ -32,6 +32,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "6abf",
+      "name": "meu projeto ",
+      "budget": "15000",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
