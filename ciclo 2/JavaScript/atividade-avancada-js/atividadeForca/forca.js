@@ -93,10 +93,12 @@ function verificarLetra(letra) {
 
   if (tracinhos.join("") === palavraAtual) {
     alert("Você ganhou, jiló");
-    sortearPalavra();
+    // sortearPalavra();
+    iniciarJogo();
   } else if (tentativasErradas >= maxTentativas) {
     alert(`Você perdeu bobo! A palavra era: ${palavraAtual}`);
-    sortearPalavra();
+    // sortearPalavra();
+    iniciarJogo();
   }
 }
 
