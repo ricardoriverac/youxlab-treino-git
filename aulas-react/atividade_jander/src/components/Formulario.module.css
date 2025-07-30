@@ -1,0 +1,29 @@
+.inputs {
+  border-radius: 5px;
+  padding: 7px;
+  border: 1px solid rgb(209, 207, 207);
+  margin-right: 9px;
+  height: 20px;
+  font-size: medium;
+}
+
+.botao {
+  color: white;
+  background-color: #66a968;
+  height: 3em;
+  margin-top: 1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-around;
+}
+
+.quadradoGrande{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+  background-color: #1e1e1e;
+}

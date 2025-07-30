@@ -1,0 +1,47 @@
+.botaoEditar {
+  background-color: #66a968;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 6px;
+  width: 90px;
+  margin: 10px;
+}
+
+.botaoDeletar {
+  background-color: #d43f3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 6px;
+  width: 90px;
+  margin: 10px;
+}
+
+.cabecario {
+  background-color: #66a968;
+  color: white;
+  padding: 5px;
+  height: 30px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dados {
+  text-align: center;
+  justify-content: center;
+  height: 6px;
+}
+
+.dados:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.quadradoGrande {
+  background-color: #1e1e1e;
+}

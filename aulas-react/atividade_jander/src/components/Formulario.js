@@ -1,0 +1,78 @@
+import { useState } from "react";
+import styles from "./Formulario.module.css";
+
+import Tabela from "./Tabela";
+
+function Formulario() {
+  const [nome, setNome] = useState("");
+  const [cpf, setCpf] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
+  const [dados, setDados] = useState([]);
+
+  function salvarDados() {
+    let listaDados = { name: nome, cpf: cpf, nascimento: dataNascimento };
+
+    if(listaDados.name === '' || listaDados.cpf === '' || listaDados.nascimento === ''){
+      alert('Preencha todos os campos')
+    } else {
+      setDados([...dados, listaDados]);
+  
+  
+      setNome("");
+      setCpf("");
+      setDataNascimento("");
+    }
+  }
+
+  return (
+    <div className={styles.quadradoGrande}>
+      <h2>Cadastro</h2>
+      <div className={styles.linha}>
+        <p>
+          <label>Nome: </label>
+          <input
+            placeholder="Digite seu nome"
+            className={styles.inputs}
+            value={nome}
+            type="text"
+            onChange={(e) => setNome(e.target.value)}
+          />
+        </p>
+
+        <p>
+          <label>CPF: </label>
+          <input
+            placeholder="Digite seu CPF"
+            className={styles.inputs}
+            value={cpf}
+            type="text"
+            onChange={(e) => setCpf(e.target.value)}
+          />
+        </p>
+
+        <p>
+          <label>Data de Nascimento: </label>
+          <input
+            className={styles.inputs}
+            value={dataNascimento}
+            type="date"
+            onChange={(e) => setDataNascimento(e.target.value)}
+          />
+        </p>
+
+        <button className={styles.botao} onClick={salvarDados}>
+          Salvar Dados
+        </button>
+      </div>
+      <Tabela
+        dados={dados}
+        setDados={setDados}
+        setNome={setNome}
+        setCpf={setCpf}
+        setDataNascimento={setDataNascimento}
+      />
+    </div>
+  );
+}
+
+export default Formulario;
