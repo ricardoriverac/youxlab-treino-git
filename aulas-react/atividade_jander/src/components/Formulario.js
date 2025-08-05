@@ -37,7 +37,7 @@ function Formulario() {
 
   return (
     <div className={styles.quadradoGrande}>
-      <h2>Cadastro</h2>
+      <h2>Novo Cadastro</h2>
       <div className={styles.linha}>
         <p>
           {/* <label>Nome: </label> */}
