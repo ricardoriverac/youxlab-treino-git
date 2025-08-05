@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Exercicio Jander
+  datasource:
+    url: jdbc:postgresql://localhost:5432/exjander1
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
