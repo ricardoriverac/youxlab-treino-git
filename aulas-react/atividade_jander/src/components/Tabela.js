@@ -1,7 +1,7 @@
 import { FaPen, FaTrash } from "react-icons/fa";
 import styles from './Tabela.module.css'
 
-function Tabela({ dados, setDados, setNome, setCpf, setDataNascimento }) {
+function Tabela({ dados, setDados, setNome, setCpf, setDataNascimento, setTelefone }) {
   const novosDados = [...dados];
 
   const removerDados = (i) => {
@@ -13,19 +13,21 @@ function Tabela({ dados, setDados, setNome, setCpf, setDataNascimento }) {
     const linhaEditada = dados[index];
     setNome(linhaEditada.name);
     setCpf(linhaEditada.cpf);
+    setTelefone(linhaEditada.telefone);
     setDataNascimento(linhaEditada.nascimento);
 
     removerDados(index)
   };
 
   return (
-    <div className={styles.quadradoGrande}>
+    <div>
       <table className={styles.tabela}>
         <thead>
           <h4>Listagem de Pessoas</h4>
           <tr className={styles.cabecario}>
             <th>Nome</th>
             <th>CPF</th>
+            <th>Telefone</th>
             <th>Data de Nascimento</th>
             <th>Editar</th>
             <th>Deletar</th>
@@ -37,6 +39,7 @@ function Tabela({ dados, setDados, setNome, setCpf, setDataNascimento }) {
               <tr key={i} className={styles.dados}>
                 <td>{pessoa.name}</td>
                 <td>{pessoa.cpf}</td>
+                <td>{pessoa.telefone}</td>
                 <td>{pessoa.nascimento}</td>
                 <td>
                   <button className={styles.botaoEditar} onClick={() => editarDados(i)}><FaPen /></button>
@@ -47,7 +50,7 @@ function Tabela({ dados, setDados, setNome, setCpf, setDataNascimento }) {
               </tr>
             );
           })}
-          {/* {console.log(dados)} */}
+          {console.log(dados)}
         </tbody>
       </table>
     </div>

@@ -7,19 +7,30 @@ function Formulario() {
   const [nome, setNome] = useState("");
   const [cpf, setCpf] = useState("");
   const [dataNascimento, setDataNascimento] = useState("");
+  const [telefone, setTelefone] = useState("");
   const [dados, setDados] = useState([]);
 
   function salvarDados() {
-    let listaDados = { name: nome, cpf: cpf, nascimento: dataNascimento };
+    let listaDados = {
+      name: nome,
+      cpf: cpf,
+      telefone: telefone,
+      nascimento: dataNascimento,
+    };
 
-    if(listaDados.name === '' || listaDados.cpf === '' || listaDados.nascimento === ''){
-      alert('Preencha todos os campos')
+    if (
+      listaDados.name === "" ||
+      listaDados.cpf === "" ||
+      listaDados.telefone === "" ||
+      listaDados.nascimento === ""
+    ) {
+      alert("Preencha todos os campos");
     } else {
       setDados([...dados, listaDados]);
-  
-  
+
       setNome("");
       setCpf("");
+      setTelefone("");
       setDataNascimento("");
     }
   }
@@ -29,7 +40,7 @@ function Formulario() {
       <h2>Cadastro</h2>
       <div className={styles.linha}>
         <p>
-          <label>Nome: </label>
+          {/* <label>Nome: </label> */}
           <input
             placeholder="Digite seu nome"
             className={styles.inputs}
@@ -40,7 +51,7 @@ function Formulario() {
         </p>
 
         <p>
-          <label>CPF: </label>
+          {/* <label>CPF: </label> */}
           <input
             placeholder="Digite seu CPF"
             className={styles.inputs}
@@ -51,7 +62,18 @@ function Formulario() {
         </p>
 
         <p>
-          <label>Data de Nascimento: </label>
+          {/* <label>CPF: </label> */}
+          <input
+            placeholder="Digite o número de telefone"
+            className={styles.inputs}
+            value={telefone}
+            type="text"
+            onChange={(e) => setTelefone(e.target.value)}
+          />
+        </p>
+
+        <p>
+          {/* <label>Data de Nascimento: </label> */}
           <input
             className={styles.inputs}
             value={dataNascimento}
@@ -70,6 +92,7 @@ function Formulario() {
         setNome={setNome}
         setCpf={setCpf}
         setDataNascimento={setDataNascimento}
+        setTelefone={setTelefone}
       />
     </div>
   );

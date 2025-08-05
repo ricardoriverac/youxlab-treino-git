@@ -5,13 +5,14 @@
   margin-right: 9px;
   height: 20px;
   font-size: medium;
+  width: 300px;
 }
 
 .botao {
   color: white;
   background-color: #66a968;
-  height: 3em;
-  margin-top: 1em;
+  height: 2.7em;
+  margin-top: 1.2em;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -25,5 +26,5 @@
 .quadradoGrande{
   font-family: Arial, Helvetica, sans-serif;
   margin: 50px;
-  background-color: #1e1e1e;
+  /* background-color: #1e1e1e; */
 }

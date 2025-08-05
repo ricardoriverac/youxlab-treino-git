@@ -41,7 +41,3 @@
 .dados:nth-child(even) {
   background-color: #f2f2f2;
 }
-
-.quadradoGrande {
-  background-color: #1e1e1e;
-}
