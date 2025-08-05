@@ -1,0 +1,20 @@
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: 'Orbitron', sans-serif;
+  color: #00f0ff;
+}
+
+.h2 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 12px #00f0ff, 0 0 8px #ff00ff;
+}

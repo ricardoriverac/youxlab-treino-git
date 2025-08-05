@@ -1,7 +1,6 @@
 import './App.css';
 
-import Formulario from './ComponenteFormulario/formulario';
-
+import Formulario from './ComponenteFormulario/Formulario';
 
 function App() {
   return (

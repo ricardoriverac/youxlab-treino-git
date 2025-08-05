@@ -1,17 +1,36 @@
-function Tabela(){
-    return(
-        <table id="tabela">
-          <thead>
-           <tr>
+import React from "react";
+
+import style from "./tabela.module.css";
+
+function TabelaDados({ dados, remover, editar }) {
+  return (
+    <div>
+      <h3 className={style.h3}>Lista de Dados</h3>
+      <table className={style.table}>
+        <thead>
+          <tr>
             <th>Nome</th>
-            <th>Cpf</th>
-            <th>Data</th>
+            <th>CPF</th>
+            <th>Data de Nascimento</th>
+            <th>Ações</th>
           </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-    )
+        </thead>
+        <tbody>
+          {dados.map((item, index) => (
+            <tr key={index}>
+              <td>{item.nome}</td>
+              <td>{item.cpf}</td>
+              <td>{item.data}</td>
+              <td>
+                <button onClick={() => remover(index)}>Remover</button>
+                <button onClick={() => editar(index)}>Editar</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
-export default Tabela
+export default TabelaDados;
