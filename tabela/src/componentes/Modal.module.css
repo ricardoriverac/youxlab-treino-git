@@ -1,0 +1,76 @@
+.modal {
+    background-color: transparent;
+}
+
+.btn_modal{
+  width: auto;
+  font-size: smaller;
+  padding: 3px;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  transition: none;
+  width: 28px;
+  margin-top: 15px;
+}
+
+.btn_modal:hover {
+    transform: scale(1.05);
+    background-color: transparent;
+}
+
+.modal_edit {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff86;
+}
+
+.modal_cont {
+    background-color: #386651;
+    border: 10px solid white;
+    align-items: center;
+    height: auto;
+    width: 500px;
+    border-radius: 5px;
+}
+
+.btn_fechar {
+    background-color: #7c9284;
+    color: white;
+    border: none;
+    font-size: small;
+    width: 100%;
+}
+
+.btn_salvar {
+    background-color: #7c9284;
+    color: white;
+    border: none;
+    font-size: small;
+    width: 100%;
+    display: flex;
+}
+
+.btn_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 3em;
+}
+
+.title {
+    background-color: white;
+    margin-top: -10px;
+    text-align: center;
+    color: #386651;
+    width: 530px;
+}

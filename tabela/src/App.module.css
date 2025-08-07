@@ -1,0 +1,25 @@
+body {
+    background-color: #FFB8E0;
+    background-image: radial-gradient(circle, #6b967b, #386651);
+}
+
+button {
+    background-color: #7c9284;
+    color: #fff;
+    padding: 0.7em 1.2em;
+    text-decoration: none;
+    transition: 0.5s;
+    cursor: pointer;
+    border-color: #205781;
+    width: 150px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    color: #386651;
+}
+
+h2 {
+    color: white;
+}

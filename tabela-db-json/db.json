@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "nome": "lucas",
+      "id": "e168",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "123"
+    },
+    {
+      "id": "efa9",
+      "nome": "iza",
+      "idade": "30",
+      "estadoCivil": "edfed",
+      "cpf": "123"
+    },
+    {
+      "id": "8c89",
+      "nome": "Rodrigão",
+      "idade": "12",
+      "estadoCivil": "kbhb",
+      "cpf": "123"
+    }
+  ]
+}

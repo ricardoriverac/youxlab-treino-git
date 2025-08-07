@@ -1,0 +1,42 @@
+.table {
+  width: 100%;
+  margin-left: 350px;
+  margin-top: -450px;
+  border: 1px solid white;
+  border-collapse: initial;
+}
+
+table td, tr, th{
+  border-collapse: initial;
+  border: 1px solid white;
+}
+
+.btn {
+  width: auto;
+  font-size: smaller;
+  padding: 3px;
+  align-items: center;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  transition: none;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background-color: transparent;
+}
+
+.th {
+  font-weight: bold;
+  color: white;
+}
+
+.td {
+  color: white;
+}
+
+/* .title {
+  margin-left: 100%;
+  margin-top: -500px;
+} */

@@ -1,0 +1,20 @@
+label {
+    margin-bottom: .6em;
+    font-weight: bold;
+    color: white;
+}
+
+input {
+    padding: .7em;
+   border-radius: 5px;
+   border: none;
+   border-color:#7b7b7b;
+   width: 300px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    padding: 10px;
+}
