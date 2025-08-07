@@ -1,0 +1,146 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "nagi",
+      "senha": "123456",
+      "email": "teste@gmail.com"
+    },
+    {
+      "id": "2a35",
+      "nome": "Maria Luiza",
+      "senha": "123456",
+      "email": "maria@gmail.com"
+    },
+    {
+      "id": "f7fb",
+      "nome": "Maria Luiza",
+      "senha": "123456",
+      "email": "maria@gmail.com"
+    },
+    {
+      "id": "e73f",
+      "nome": "Maria Luiza",
+      "senha": "123456",
+      "email": "maria@gmail.com"
+    },
+    {
+      "id": "8226",
+      "nome": "Maria Luiza",
+      "senha": "123456",
+      "email": "maria@gmail.com"
+    },
+    {
+      "id": "b582",
+      "nome": "",
+      "senha": "123456",
+      "email": "marialu@gmail.com"
+    },
+    {
+      "id": "ecd9",
+      "nome": "Maria Luiza",
+      "senha": "123456",
+      "email": "maria@gmail.com"
+    },
+    {
+      "id": "d7d5",
+      "nome": "Maria",
+      "senha": "123456",
+      "email": "marialui@gmail.com"
+    },
+    {
+      "id": "a414",
+      "nome": "Keverson",
+      "senha": "123908",
+      "email": "kever@gmail.com"
+    },
+    {
+      "id": "284f",
+      "nome": "Keverson",
+      "senha": "123456",
+      "email": "kekel@gmail.com"
+    },
+    {
+      "id": "0757",
+      "nome": "Keverson",
+      "senha": "oieoie",
+      "email": "kever@gmail.com"
+    },
+    {
+      "id": "e50d",
+      "nome": "",
+      "senha": "oieoiee",
+      "email": "kevers@gmail.com"
+    },
+    {
+      "id": "f3fd",
+      "nome": "Keverson",
+      "senha": "oieoiee",
+      "email": "Keverson@gmail.com"
+    },
+    {
+      "id": "44eb",
+      "nome": "Keverson",
+      "senha": "oieoiee",
+      "email": "keverson123@gmail.com"
+    },
+    {
+      "id": "0367",
+      "nome": "Julio",
+      "senha": "keverson",
+      "email": "juliogoiabinha@gmail.com"
+    },
+    {
+      "id": "29d7",
+      "nome": "kaio jorge ",
+      "senha": "987654",
+      "email": "iuuuyyytrrr@gmail.com"
+    },
+    {
+      "id": "836a",
+      "nome": "Daichi",
+      "senha": "oieoiee",
+      "email": "daichi@gmail.com"
+    },
+    {
+      "id": "8d42",
+      "nome": "MP10",
+      "senha": "123456",
+      "email": "mp@gmail.com"
+    },
+    {
+      "id": "ad88",
+      "nome": "Giulia",
+      "senha": "123456",
+      "email": "Giulia@gmail.com"
+    },
+    {
+      "id": "9cac",
+      "nome": "Henrique",
+      "senha": "123456",
+      "email": "henrique@gmail.com"
+    },
+    {
+      "id": "cc44",
+      "nome": "Taylão",
+      "senha": "123456",
+      "email": "taylao@gmail.com"
+    }
+  ],
+  "livros": [
+    {
+      "ISBN": "9788711982457",
+      "nomeLivro": "O Príncipe Cruel",
+      "nomeAutor": "Holly Black",
+      "data": "18/01/2018",
+      "id": "015c"
+    },
+    {
+      "ISBN": "9788711982457",
+      "nomeLivro": "O Príncipe Cruel",
+      "nomeAutor": "Holly Black",
+      "data": "18/01/2018",
+      "id": "f799"
+    }
+  ]
+}

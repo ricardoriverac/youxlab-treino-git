@@ -1,0 +1,98 @@
+/* h2{
+    color: #AA60C8;
+    display: flex;
+    font-size: larger;
+} */
+
+.tituloTabela{
+    background-color: white; 
+    color: #AA60C8; 
+    text-align: left;
+    padding: 10px;
+    font-size: large;
+}
+
+.tabela{
+    width: 100%;
+    display: block;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: white;
+    border: 1px solid #efeded;
+    /* margin-top: 30px;  */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 1px 8px 1px #AA60C8;
+}
+
+.livros td{
+    justify-content: center;
+    text-align: left;
+    color: black;
+    width: 80px;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.th{
+    margin: 0px;
+    border: none;
+    height: 30px;
+    justify-content: space-between;
+    width: 200px;
+    text-align: center;
+    align-items: center;
+}
+
+.tr{
+    border: solid #efeded 2px;
+}
+
+.button{
+    border: none;
+    background-color: #AA60C8;
+    color: white;
+    font-size: medium; 
+    text-align: center;
+    align-items: center;
+}
+
+.close{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    margin-left: 380px;
+}
+
+.info{
+    font-size: large;
+    font-weight: bold;
+    color: #AA60C8;
+}
+
+.divInfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divInfoDois{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5em;
+}
+
+.divInfoSinopse{
+    margin-top: 7em;
+}

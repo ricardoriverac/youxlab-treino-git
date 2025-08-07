@@ -6,4 +6,6 @@ h2 {
 label {
     color: #7b7b7b;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }

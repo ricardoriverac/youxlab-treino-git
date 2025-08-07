@@ -1,0 +1,27 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: #AA60C8;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    height: 35px;
+}
+
+h1{
+    color: white;
+    justify-content: center;
+    margin-top: 8px;
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+h3{
+    color: white;
+    justify-content: center;
+    margin-top: 8px;
+    margin-right: auto;
+    margin-left: 800px;
+}
