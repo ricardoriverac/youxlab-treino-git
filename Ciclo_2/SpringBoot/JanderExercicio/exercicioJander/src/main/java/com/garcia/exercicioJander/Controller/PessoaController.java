@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RequiredArgsConstructor
 @RestController
@@ -37,4 +38,26 @@ public class PessoaController {
     public List<PessoaModel> maioresde30() {
         return pessoaService.filtro30();
     }
+
+    @GetMapping("/mais-velha")
+    public PessoaModel maisVelha(){
+        return pessoaService.maisVelha();
+    }
+
+    @GetMapping("/contagem-por-cidade")
+    public Map<String, Long> cpc(){
+        return pessoaService.cpc();
+    }
+
+    @GetMapping("/todas-maiores")
+    public boolean tdsMaiores(){
+        return pessoaService.tdsMaiores();
+    }
+
+    @GetMapping("/media-idade")
+    public double mediaC(@RequestParam("cidade") String cidade){
+        return pessoaService.mediaC(cidade);
+
+    }
+
 }
