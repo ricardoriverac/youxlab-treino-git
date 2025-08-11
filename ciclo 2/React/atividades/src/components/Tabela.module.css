@@ -1,0 +1,9 @@
+.tabela{
+    width: 100%;
+    border-collapse: collapse;
+    justify-content: center;
+}
+.tabelinha{
+    border: 1px solid #ccc;
+    align-items: center;
+}
