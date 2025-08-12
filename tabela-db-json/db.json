@@ -1,24 +1,38 @@
 {
   "usuarios": [
     {
-      "nome": "lucas",
-      "id": "e168",
-      "idade": "20",
-      "estadoCivil": "casado",
-      "cpf": "123"
-    },
-    {
       "id": "efa9",
       "nome": "iza",
       "idade": "30",
-      "estadoCivil": "edfed",
+      "estadoCivil": "solteiro",
       "cpf": "123"
     },
     {
       "id": "8c89",
       "nome": "Rodrigão",
       "idade": "12",
-      "estadoCivil": "kbhb",
+      "estadoCivil": "casado",
+      "cpf": "12345677"
+    },
+    {
+      "id": "5da4",
+      "nome": "Daniel",
+      "idade": "30",
+      "estadoCivil": "casado",
+      "cpf": "12345678907"
+    },
+    {
+      "id": "fb2b",
+      "nome": "Gabriel",
+      "idade": "15",
+      "estadoCivil": "solteiro",
+      "cpf": "12345678907"
+    },
+    {
+      "id": "9990",
+      "nome": "oie",
+      "idade": "12",
+      "estadoCivil": "solteiro",
       "cpf": "123"
     }
   ]
