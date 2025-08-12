@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 @RequiredArgsConstructor
 @RestController
@@ -57,7 +58,21 @@ public class PessoaController {
     @GetMapping("/media-idade")
     public double mediaC(@RequestParam("cidade") String cidade){
         return pessoaService.mediaC(cidade);
+    }
 
+    @GetMapping("/media-por-cidade")
+    public Map<String, Double> mpc(){
+        return pessoaService.mpc();
+    }
+
+    @GetMapping("/primeira-com-a")
+    public List<String> pca(){
+        return pessoaService.pca();
+    }
+
+    @GetMapping("/nomes-unicos")
+    public List<String> nm(){
+        return pessoaService.nm();
     }
 
 }

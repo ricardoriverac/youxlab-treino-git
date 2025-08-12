@@ -4,9 +4,7 @@ import com.garcia.exercicioJander.Model.PessoaModel;
 import com.garcia.exercicioJander.Repository.PessoaRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Service
 public class PessoaService {
@@ -72,19 +70,65 @@ public class PessoaService {
         }
     }
 
-    public double mediaC(String cidade){
+    public double mediaC(String cidade) {
         List<PessoaModel> pessoas = pessoaRepository.findAll();
 
         int count = 0;
         double media = 0;
 
-        for (PessoaModel pessoa : pessoas){
-            if (pessoa.getCidade().equals(cidade)){
+        for (PessoaModel pessoa : pessoas) {
+            if (pessoa.getCidade().equals(cidade)) {
                 media += pessoa.getIdade();
                 count += 1;
             }
         }
-        media = media/count;
+        media = media / count;
         return media;
+    }
+
+    public Map<String, Double> mpc() {
+        List<PessoaModel> pessoas = pessoaRepository.findAll();
+
+        Map<String, Integer> somaIdades = new HashMap<>();
+        Map<String, Integer> contagem = new HashMap<>();
+
+        for (PessoaModel p : pessoas) {
+            String cidade = p.getCidade();
+            int idade = p.getIdade();
+
+            somaIdades.put(cidade, somaIdades.getOrDefault(cidade, 0) + idade);
+            contagem.put(cidade, contagem.getOrDefault(cidade, 0) + 1);
+        }
+
+        Map<String, Double> mediaPorCidade = new HashMap<>();
+        for (String cidade : somaIdades.keySet()) {
+            double media = (double) somaIdades.get(cidade) / contagem.get(cidade);
+            mediaPorCidade.put(cidade, media);
+        }
+        return mediaPorCidade;
+    }
+
+    public List<String> pca(){
+        List<PessoaModel> pessoas = pessoaRepository.findAll();
+
+        List<String> pessoasA = new ArrayList<>();
+
+        for(PessoaModel pessoa : pessoas){
+            if (pessoa.getNome().charAt(0) == 'A' || pessoa.getNome().charAt(0) == 'a'){
+                pessoasA.add(pessoa.getNome());
+            }
+        }
+        return pessoasA;
+    }
+
+    public List<String> nm(){
+        List<PessoaModel> pessoas = pessoaRepository.findAll();
+
+        Set<String> namesA = new HashSet<>();
+
+        for (PessoaModel pesssoa : pessoas){
+            namesA.add(pesssoa.getNome());
+        }
+        return namesA.stream().distinct().toList();
     }
 }
