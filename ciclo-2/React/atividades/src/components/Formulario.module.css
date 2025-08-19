@@ -1,0 +1,58 @@
+.caixaTotal {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #383a3d;
+  background: linear-gradient(
+    90deg,
+    rgba(56, 58, 61, 1) 0%,
+    rgba(175, 196, 175, 1) 50%,
+    rgba(56, 58, 61, 1) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo {
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.linha {
+  display: flex;
+  flex-direction:column;
+  gap: 5px;
+}
+
+.label {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.inputs {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btnSalvar {
+  padding: 12px;
+  background-color: #363738;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnSalvar:hover {
+  background-color: #838688;
+}

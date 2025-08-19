@@ -1,0 +1,81 @@
+h1 {
+    color: black;
+    text-align: left;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+    border-radius: 5px;
+    color: rgb(131, 131, 131);
+    border: 1px solid rgb(160, 160, 160);
+    padding: 4px;
+    width: 280px;
+}
+
+.btnInserir {
+    background-color: #66A968;
+    border-radius: 5px;
+    height: 35px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #66A968;
+    color: white;
+    padding: 12px;
+}
+
+caption {
+    text-align: left;
+    padding: 13px;
+    font-size: large;
+}
+
+tr:nth-child(even) {
+    background: rgba(221, 221, 221, 0.76);
+}
+
+td, th {
+    padding: .7em;
+    margin: 0;
+    text-align: center;
+}
+
+.btnRemover {
+    color: white;
+    background-color: #D43F3A;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    cursor: pointer;
+}
+
+.btnEditar {
+    background-color: #66A968;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    height: 25px;
+    cursor: pointer;
+}
+
+button {
+    background-color: #66A968;
+    border: none;
+    border-radius: 5px;
+    height: 25px;
+    color: white;
+    cursor: pointer;
+}
+
