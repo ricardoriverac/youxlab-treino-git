@@ -1,39 +1,174 @@
 {
   "usuarios": [
     {
-      "id": "efa9",
-      "nome": "iza",
-      "idade": "30",
-      "estadoCivil": "solteiro",
-      "cpf": "123"
-    },
-    {
-      "id": "8c89",
-      "nome": "Rodrigão",
-      "idade": "12",
-      "estadoCivil": "casado",
-      "cpf": "12345677"
-    },
-    {
-      "id": "5da4",
-      "nome": "Daniel",
-      "idade": "30",
-      "estadoCivil": "casado",
-      "cpf": "12345678907"
-    },
-    {
-      "id": "fb2b",
+      "id": "af0f",
       "nome": "Gabriel",
-      "idade": "15",
+      "idade": "20",
       "estadoCivil": "solteiro",
-      "cpf": "12345678907"
+      "cpf": "123.456.789-08"
     },
     {
-      "id": "9990",
-      "nome": "oie",
+      "id": "548b",
+      "nome": "Kaio",
+      "idade": "30",
+      "estadoCivil": "casado",
+      "cpf": "123.782.638-82"
+    },
+    {
+      "id": "f097",
+      "nome": "Matheus",
+      "idade": "10",
+      "estadoCivil": "solteiro",
+      "cpf": "182.839.818-28"
+    },
+    {
+      "id": "0d94",
+      "nome": "Luiza",
+      "idade": "30",
+      "estadoCivil": "casado",
+      "cpf": "727.384.927-72"
+    }
+  ],
+  "selecionados": [
+    {
+      "id": "8437",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "de57",
+      "nome": "iza",
       "idade": "12",
       "estadoCivil": "solteiro",
-      "cpf": "123"
+      "cpf": "123.456.789-09"
+    },
+    {
+      "id": "dc50",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "bd8a",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "a932",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "0fd0",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "49c0",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "6505",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "e9f2",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "4b78",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "81ee",
+      "nome": "Davi",
+      "idade": "10",
+      "estadoCivil": "solteiro",
+      "cpf": "909.090.998-97"
+    },
+    {
+      "id": "bb0c",
+      "nome": "iza",
+      "idade": "12",
+      "estadoCivil": "solteiro",
+      "cpf": "123.456.789-09"
+    },
+    {
+      "id": "90e7",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "c16f",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "7825",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "ca7e",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "583f",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "4308",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "b85b",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
+    },
+    {
+      "id": "dc44",
+      "nome": "Rodrigo",
+      "idade": "20",
+      "estadoCivil": "casado",
+      "cpf": "878.787.878-78"
     }
   ]
 }

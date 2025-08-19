@@ -4,24 +4,42 @@ import * as React from "react";
 import { useState } from "react";
 import Modal from "./Modal";
 import EditIcon from "@mui/icons-material/Edit";
-import { getUser, getResp, deleteUser } from '../service/api'
+import {
+  getUser,
+  deleteUser,
+  deleteUsers,
+  selecionadosUsers
+} from "../service/api";
 
 function Tabela({ dados, setDados }) {
   const [abrirModal, setAbrirModal] = useState(false);
   const [pessoaEdit, setPessoaEdit] = useState();
-  const [indexPessoa, setIndexPessoa] = useState(null)
+  const [indexPessoa, setIndexPessoa] = useState(null);
+  const [selecionados, setSelecionados] = useState([]);
 
   function editar(pessoa, index) {
-    setIndexPessoa(index)
+    setIndexPessoa(index);
     setAbrirModal(true);
     setPessoaEdit(pessoa);
     console.log(pessoa, index);
-    getUser(pessoa?.nome)
+    getUser(pessoa?.nome);
   }
 
   function fecharModal() {
     setAbrirModal(false);
   }
+
+  function selecionar (id) {
+    if (selecionados.indexOf(id) !== -1) { // Se retornar -1 o id não está na lista
+      const copiaSelecionado = selecionados.filter((elemento) => elemento != id)
+      setSelecionados(copiaSelecionado)
+    } else {
+      let copia = [...selecionados, id]
+      setSelecionados(copia)
+    }
+  }
+  
+  console.log(selecionados)
 
   return (
     <>
@@ -43,6 +61,7 @@ function Tabela({ dados, setDados }) {
               <th>CPF</th>
               <th>EDITAR</th>
               <th>APAGAR</th>
+              <th>SELECIONAR</th>
             </tr>
           </thead>
 
@@ -73,7 +92,7 @@ function Tabela({ dados, setDados }) {
                   <button
                     className={styles.btn}
                     onClick={() => {
-                      deleteUser(cadastroPessoa.id)
+                      deleteUser(cadastroPessoa.id);
                     }}
                   >
                     <DeleteOutlineIcon
@@ -85,10 +104,18 @@ function Tabela({ dados, setDados }) {
                     />
                   </button>
                 </td>
+                <td className={styles.input}>
+                    <input type="checkbox" name="checkbox" id={cadastroPessoa.id} className={styles.input} checked={selecionados.includes(cadastroPessoa.id)} onChange={() => {selecionar(cadastroPessoa.id)}}/>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
+        {selecionados.length > 0 && (
+          <button className={styles.buttonApagarSelecionados} onClick={() => {
+            deleteUsers(selecionados)
+          }}>Apagar Selecionados</button>
+        )}
       </div>
     </>
   );

@@ -3,6 +3,7 @@ import Form from "./componentes/Form";
 import Tabela from "./componentes/Tabela";
 import "./App.module.css";
 import { cadastrarUser, getUsers } from "../src/service/api";
+import FormCpf from "./componentes/FormCpf";
 
 function App() {
   const [nome, setNome] = useState("");
@@ -10,7 +11,6 @@ function App() {
   const [estadoCivil, setEstadoCivil] = useState("");
   const [cpf, setCpf] = useState("");
   const [dados, setDados] = useState([]);
-  const [msgErro, setMsgErro] = useState(false);
 
   useEffect(() => {
     getUsers().then((resp) => {
@@ -31,24 +31,35 @@ function App() {
   };
 
   const handleChangeCpf = (e) => {
-    setCpf(e.target.value);
+    cpfMask2(e.target.value);
   };
 
-  function salvarDados() {
+  function cpfMask2(cpf) {
+    if (cpf.length < 3) {
+      setCpf(cpf);
+    } else if (cpf.length === 3) {
+      let copy = `${cpf}.`;
+      setCpf(copy);
+    } else if (cpf.length > 3 && cpf.length < 7) {
+      setCpf(cpf);
+    } else if (cpf.length === 7) {
+      let copy = `${cpf}.`;
+      setCpf(copy);
+    } else if (cpf.length > 7 && cpf.length < 11) {
+      setCpf(cpf);
+    } else if (cpf.length === 11) {
+      let copy = `${cpf}-`;
+      setCpf(copy);
+    } else if (cpf.length > 12) {
+      setCpf(cpf)
+    }
+  }
+
+   function salvarDados() {
     if (nome === "" || idade === "" || estadoCivil === "" || cpf === "") {
-      alert("Preencha todos os campos antes de salvar!");
+      alert("Preencha os campos antes de salvar!");
     } else {
       cadastrarUser(nome, idade, estadoCivil, cpf, dados, setDados);
-      // let pessoa = {
-      //   nome: nome,
-      //   idade: idade,
-      //   estadoCivil: estadoCivil,
-      //   cpf: cpf,
-      //   id: 1
-      // };
-
-      // setDados([...dados, pessoa]);
-
       console.log(dados);
       setNome("");
       setIdade("");
@@ -57,44 +68,25 @@ function App() {
     }
   }
 
-  const listaCpf = [];
-  let cpfForm = cpf.split("");
-  const listaUm = [cpfForm[0], cpfForm[1], cpfForm[2]];
-  listaCpf.push(listaUm);
 
-  if (cpfForm[2]) {
-    listaCpf.push(".");
+  function cpfMask(cpf) {
+    const listaCpf = [];
+    let cpfForm = cpf.split("");
+    const listaUm = [cpfForm[0], cpfForm[1], cpfForm[2]];
+    listaCpf.push(listaUm);
+    const listaDois = [cpfForm[3], cpfForm[4], cpfForm[5]];
+    if (cpfForm[2]) {
+      listaCpf.push(".");
+    } else if (cpfForm[5]) {
+      listaCpf.push(".");
+    } else if (cpfForm[8]) {
+      listaCpf.splice(11, 1, "7");
+    }
+
+    let listaCpfForm = listaCpf.toString().replaceAll(",", "");
+
+    return listaCpfForm;
   }
-  const listaDois = [cpfForm[3], cpfForm[4], cpfForm[5]];
-  listaCpf.push(listaDois);
-
-  if (cpfForm[5]) {
-    listaCpf.push(".");
-  }
-  const listaTres = [cpfForm[6], cpfForm[7], cpfForm[8]];
-  listaCpf.push(listaTres);
-
-  if (cpfForm[8]) {
-    listaCpf.push("-");
-  }
-
-  if (cpfForm[9]) {
-    const listaQuatro = [cpfForm[9], cpfForm[10]];
-    listaCpf.push(listaQuatro);
-  }
-
-  let listaCpfForm = listaCpf.toString().replaceAll(",", "");
-  let listaCpfFormArray = [...listaCpfForm];
-  listaCpfFormArray.forEach((elem) => {
-    setCpf(elem)
-  })
-  console.log(listaCpfFormArray)
-
-  // listaCpfFormArray.map((elem) => {
-  //   setCpf(elem)
-  // });
-
-  // listaCpf.toString().replaceAll(",", "");
 
   return (
     <>
@@ -123,15 +115,14 @@ function App() {
         onChange={handleChangeEstadoCivil}
       />
 
-      <Form
+      <FormCpf
         text="CPF"
-        type="number"
+        type="text"
         name="name"
         value={cpf}
         onChange={handleChangeCpf}
+        maxLength={14}
       />
-
-      {/* <h1>{cpfMask(cpf)}</h1> */}
 
       <button onClick={salvarDados}>Salvar</button>
 

@@ -1,6 +1,7 @@
 import axios from "axios";
 
 const url = "http://localhost:3000/usuarios";
+const urlSelecionados = "http://localhost:3000/selecionados";
 
 export async function getResp() {
   let response = await axios
@@ -29,15 +30,22 @@ export async function getUser(nome) {
 }
 
 export async function getUsers() {
-  try{
-    const response = await axios.get('http://localhost:3000/usuarios')
-    return response.data
-  }catch(err) {
-    console.log(err)
+  try {
+    const response = await axios.get("http://localhost:3000/usuarios");
+    return response.data;
+  } catch (err) {
+    console.log(err);
   }
 }
 
-export async function cadastrarUser( nome, idade, estadoCivil, cpf, data, setData) {
+export async function cadastrarUser(
+  nome,
+  idade,
+  estadoCivil,
+  cpf,
+  data,
+  setData
+) {
   await axios
     .post(url, { nome: nome, idade: idade, estadoCivil: estadoCivil, cpf: cpf })
     .then((resp) => {
@@ -49,13 +57,13 @@ export async function cadastrarUser( nome, idade, estadoCivil, cpf, data, setDat
     });
 }
 
-export async function editarUser( id, newUser  ) {
+export async function editarUser(id, newUser) {
   await axios
     .patch(`http://localhost:3000/usuarios/${id}`, {
       nome: newUser.nome,
       idade: newUser.idade,
       estadoCivil: newUser.estadoCivil,
-      cpf: newUser.cpf
+      cpf: newUser.cpf,
     })
     .then((resp) => {
       console.log(resp.data);
@@ -65,9 +73,42 @@ export async function editarUser( id, newUser  ) {
     });
 }
 
-export async function deleteUser( id ) {
-  await axios.delete(`http://localhost:3000/usuarios/${id}`)
+export async function deleteUser(id) {
+  await axios.delete(`http://localhost:3000/usuarios/${id}`);
 }
+
+export async function selecionadosUsers(
+  nome,
+  idade,
+  estadoCivil,
+  cpf,
+  data,
+  setData
+) {
+  await axios
+    .post(urlSelecionados, {
+      nome: nome,
+      idade: idade,
+      estadoCivil: estadoCivil,
+      cpf: cpf,
+    })
+    .then((resp) => {
+      // console.log(resp.data)
+      setData([...data, resp.data]);
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+}
+
+export async function deleteUsers(ids) {
+  for (let i = 0; i < ids.length; i++) {
+    const id = ids[i];
+    await axios.delete(`http://localhost:3000/usuarios/${id}`);
+  }
+}
+
+
 
 // async function pegarDados() {
 //   const resultado = await fetch("http://localhost:3000/usuarios").then((res) =>

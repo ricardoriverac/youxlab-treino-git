@@ -1,6 +1,6 @@
 .table {
-  width: 100%;
-  margin-left: 370px;
+  width: 800px;
+  margin-left: 400px;
   margin-top: -458px;
   border: 1px solid white;
   border-collapse: initial;
@@ -40,3 +40,27 @@ table td, tr, th{
   margin-left: 100%;
   margin-top: -500px;
 } */
+
+.buttonSellection{
+  margin-left: 120%;
+  margin-top: 10px;
+}
+
+.tdSelecionar{
+  padding: 0;
+  width: 10px;
+}
+
+.buttonApagarSelecionados{
+  width: 300px;
+  font-size: small;
+  padding: 5px;
+  background-color: #7c9284;
+  margin-left: auto;
+}
+
+.input {
+  width: auto;
+  align-items: center;
+  justify-content: center;
+}
