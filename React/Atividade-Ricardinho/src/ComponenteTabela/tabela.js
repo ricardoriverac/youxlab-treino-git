@@ -2,6 +2,7 @@ import React from "react";
 
 import style from "./tabela.module.css";
 
+
 function TabelaDados({ dados, remover, editar }) {
   return (
     <div>
@@ -16,14 +17,14 @@ function TabelaDados({ dados, remover, editar }) {
           </tr>
         </thead>
         <tbody>
-          {dados.map((item, index) => (
-            <tr key={index}>
+          {dados.map((item) => (
+            <tr key={item.id}>
               <td>{item.nome}</td>
               <td>{item.cpf}</td>
               <td>{item.data}</td>
               <td>
-                <button onClick={() => remover(index)}>Remover</button>
-                <button onClick={() => editar(index)}>Editar</button>
+                <button onClick={() => remover(item.id)}>Remover</button>
+                <button onClick={() => editar(item)}>Editar</button>
               </td>
             </tr>
           ))}

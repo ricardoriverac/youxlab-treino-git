@@ -32,7 +32,7 @@ function FormularioInputs({
         onChange={(e) => setData(e.target.value)}
         placeholder="Sua data de nascimento"
       />
-      <button className={styles.butonA} onClick={adicionar}>
+      <button className={styles.butonA} onClick={() => adicionar()}>
         Adicionar
       </button>
     </div>
