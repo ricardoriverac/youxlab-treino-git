@@ -13,5 +13,9 @@ export async function buscarTodosDados() {
 }
 
 export async function editarDadosApi(pessoa, id) {
-  return await api.put(`/dados/${id}`, pessoa);
+  return await api.patch(`/dados/${id}`, pessoa);
+}
+
+export async function deletandoDados(id) {
+  return await api.delete(`/dados/${id}`);
 }

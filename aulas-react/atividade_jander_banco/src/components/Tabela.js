@@ -1,13 +1,7 @@
 import { FaPen, FaTrash } from "react-icons/fa";
 import styles from './Tabela.module.css'
 
-function Tabela({ dados, setDados, editarDados }) {
-  const novosDados = [...dados];
-
-  const removerDados = (i) => {
-    novosDados.splice(i, 1);
-    setDados(novosDados);
-  };
+function Tabela({ dados, setDados, editarDados, deletarDados, marcarSelecionados, marcado, handleChange}) {
 
   return (
     <div>
@@ -21,6 +15,7 @@ function Tabela({ dados, setDados, editarDados }) {
             <th>Data de Nascimento</th>
             <th>Editar</th>
             <th>Deletar</th>
+            <th>Selecionar</th>
           </tr>
         </thead>
         <tbody>
@@ -32,14 +27,15 @@ function Tabela({ dados, setDados, editarDados }) {
                 <td>{pessoa.telefone}</td>
                 <td>{pessoa.nascimento}</td>
                 <td>
-                  <button className={styles.botaoEditar} onClick={() => editarDados(i)}><FaPen /></button>
+                  <button className={styles.botaoEditar} onClick={() => editarDados(pessoa)}><FaPen /></button>
                 </td>
                 <td>
-                  <button className={styles.botaoDeletar} onClick={() => removerDados(i)}><FaTrash /></button>
+                  <button className={styles.botaoDeletar} onClick={() => deletarDados(pessoa.id)}><FaTrash /></button>
                 </td>
+                <td><input type="checkbox" onChange={() => marcarSelecionados(pessoa.id, i)} /></td>
               </tr>
             );
-          }) : <tr><td>fds</td></tr>}
+          }) : <tr><td>vazio</td></tr>}
           {/* {console.log(dados)} */}
         </tbody>
       </table>

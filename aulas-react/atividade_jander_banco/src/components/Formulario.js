@@ -4,6 +4,7 @@ import styles from "./Formulario.module.css";
 import Tabela from "./Tabela";
 import {
   buscarTodosDados,
+  deletandoDados,
   editarDadosApi,
   salvarNovosDados,
 } from "../services/api";
@@ -14,43 +15,54 @@ function Formulario() {
   const [dataNascimento, setDataNascimento] = useState("");
   const [telefone, setTelefone] = useState("");
   const [dados, setDados] = useState([]);
-
-  let editando = false;
+  const [editando, setEditando] = useState(false);
+  const [id, setId] = useState("");
+  const [selecionados, setSelecionados] = useState([]);
+  const [marcado, setMarcado] = useState(false);
 
   useEffect(() => {
     buscarDados();
   }, []);
 
+  useEffect(() => {
+    // console.log('selecionados :>> ', selecionados);
+  }, [selecionados])
+
   async function salvarDados() {
-    if (editando === false) {
-      let listaDados = {
-        name: nome,
-        cpf: cpf,
-        telefone: telefone,
-        nascimento: dataNascimento,
-      };
-      if (
-        listaDados.name === "" ||
-        listaDados.cpf === "" ||
-        listaDados.telefone === "" ||
-        listaDados.nascimento === ""
-      ) {
-        alert("Preencha todos os campos");
-      } else {
-        try {
+    let listaDados = {
+      name: nome,
+      cpf: cpf,
+      telefone: telefone,
+      nascimento: dataNascimento,
+    };
+    if (
+      listaDados.name === "" ||
+      listaDados.cpf === "" ||
+      listaDados.telefone === "" ||
+      listaDados.nascimento === ""
+    ) {
+      alert("Preencha todos os campos");
+    } else {
+      try {
+        if (!editando) {
           await salvarNovosDados(listaDados);
-        } catch (err) {
-          alert("Deu ruim");
-          console.log("err :>> ", err);
+        } else {
+          await editarDadosApi(listaDados, id);
         }
-
-        setNome("");
-        setCpf("");
-        setTelefone("");
-        setDataNascimento("");
-
-        buscarDados();
+      } catch (err) {
+        alert("Deu ruim");
+        console.log("err :>> ", err);
+      } finally {
+        setEditando(false);
+        setId("");
       }
+
+      setNome("");
+      setCpf("");
+      setTelefone("");
+      setDataNascimento("");
+
+      buscarDados();
     }
   }
 
@@ -64,23 +76,66 @@ function Formulario() {
     }
   }
 
-  async function editarDados(index) {
-    try {
-      const linhaEditada = dados[index];
-      setNome(linhaEditada.name);
-      setCpf(linhaEditada.cpf);
-      setTelefone(linhaEditada.telefone);
-      setDataNascimento(linhaEditada.nascimento);
-      
-      await editarDadosApi(dados, index);
-      // editando = true;
-      // console.log("dados :>> ", dados);
-      // await editarDadosApi(dados, index);
+  async function editarDados(pessoa) {
+    setEditando(true);
+    setNome(pessoa.name);
+    setCpf(pessoa.cpf);
+    setTelefone(pessoa.telefone);
+    setDataNascimento(pessoa.nascimento);
+    setId(pessoa.id);
+  }
 
-      // editando = false;
+  async function removerDados(idPessoa) {
+    try {
+      await deletandoDados(idPessoa);
+      buscarDados();
     } catch (err) {
-      // alert("Deu ruim");
       console.log("err :>> ", err);
+    }
+  }
+
+  async function removerTodos() {
+    try {
+      for (let i = 0; i < dados.length; i++) {
+        await deletandoDados(dados[i].id);
+        buscarDados();
+      }
+    } catch (err) {
+      console.log("err :>> ", err);
+    }
+  }
+
+  async function marcarSelecionados(idPessoa) {
+    console.log('idPessoa :>> ', idPessoa);
+
+    if (selecionados.includes(idPessoa)) {
+      const copiaSelecionados = [...selecionados]
+      console.log('antes :>> ', copiaSelecionados);
+      
+      const pegarIndexSelecionado = selecionados.findIndex(id => id === idPessoa)
+
+      copiaSelecionados.splice(pegarIndexSelecionado ,1)
+
+      console.log('depois :>> ', copiaSelecionados);
+      setSelecionados(copiaSelecionados);
+    } else {
+      setSelecionados([...selecionados, idPessoa]);
+    }
+
+  }
+
+  async function handleChange(e) {
+    setMarcado(e.target.marcado)
+  }
+
+  async function removerSelecionados() {
+    for (let i = 0; i < selecionados.length; i++) {
+      try {
+        await deletandoDados(selecionados[i]);
+        buscarDados();
+      } catch (err) {
+        console.log("err :>> ", err);
+      }
     }
   }
 
@@ -134,8 +189,23 @@ function Formulario() {
         <button className={styles.botao} onClick={salvarDados}>
           Salvar Dados
         </button>
+
+        <button className={styles.botao} onClick={removerTodos}>
+          Apagar todos
+        </button>
+        <button className={styles.botao} onClick={removerSelecionados}>
+          Apagar selecionados
+        </button>
       </div>
-      <Tabela dados={dados} setDados={setDados} editarDados={editarDados} />
+      <Tabela
+        dados={dados}
+        setDados={setDados}
+        editarDados={editarDados}
+        deletarDados={removerDados}
+        marcarSelecionados={marcarSelecionados}
+        marcado={marcado}
+        handleChange={handleChange}
+      />
     </div>
   );
 }
