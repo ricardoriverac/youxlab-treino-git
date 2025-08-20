@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Formulario from "./components/Formulario";
 import Tabela from "./components/Tabela";
-import { buscarTodos, salvarDado, deletarDado } from "./services/api";
+import { buscarTodos, salvarDado, atualizarDado, deletarDado } from "./services/api";
 
 function App() {
   const [dados, setDados] = useState([]);
+  const [idEditando, setIdEditando] = useState(null);
   const [nome, setNome] = useState("");
   const [cpf, setCPF] = useState("");
   const [nascimento, setNascimento] = useState("");
@@ -13,11 +14,6 @@ function App() {
     carregarDados();
   }, []);
 
-  async function salvarPessoa(novaPessoa) {
-    await salvarDado(novaPessoa);
-    carregarDados();
-  }
-
   async function carregarDados() {
     try {
       const resposta = await buscarTodos();
@@ -25,6 +21,28 @@ function App() {
     } catch (error) {
       console.error(error);
     }
+  }
+
+  async function salvarPessoa(pessoa) {
+    try {
+      if (idEditando) {
+        await atualizarDado(idEditando, pessoa);
+        setIdEditando(null);
+      } else {
+        await salvarDado(pessoa);
+      }
+      limparFormulario();
+      carregarDados();
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function editarPessoa(pessoa) {
+    setIdEditando(pessoa.id);
+    setNome(pessoa.nome);
+    setCPF(pessoa.cpf);
+    setNascimento(pessoa.nascimento);
   }
 
   async function removerPessoa(id) {
@@ -36,24 +54,27 @@ function App() {
     }
   }
 
+  function limparFormulario() {
+    setNome("");
+    setCPF("");
+    setNascimento("");
+  }
+
   return (
     <div>
       <Formulario
         salvarPessoa={salvarPessoa}
-        dados={dados}
-        setDados={setDados}
         nome={nome}
-        nascimento={nascimento}
         cpf={cpf}
+        nascimento={nascimento}
         setNome={setNome}
         setCPF={setCPF}
         setNascimento={setNascimento}
+        isEditando={!!idEditando}
       />
       <Tabela
         dados={dados}
-        setNome={setNome}
-        setCPF={setCPF}
-        setNascimento={setNascimento}
+        editarPessoa={editarPessoa}
         removerPessoa={removerPessoa}
       />
     </div>

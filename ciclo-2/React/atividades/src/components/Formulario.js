@@ -8,6 +8,7 @@ function Formulario({
   setCPF,
   nascimento,
   setNascimento,
+  isEditando
 }) {
   function salvarDados() {
     const pessoa = { nome, cpf, nascimento };
@@ -26,14 +27,11 @@ function Formulario({
     }
 
     salvarPessoa(pessoa);
-    setNome("");
-    setCPF("");
-    setNascimento("");
   }
 
   return (
     <div className={styles.caixaTotal}>
-      <h1 className={styles.titulo}>Cadastro</h1>
+      <h1 className={styles.titulo}>{isEditando ? "Editar Pessoa" : "Cadastro"}</h1>
       <div className={styles.linha}>
         <p>
           <label className={styles.label}>Nome:</label>
@@ -65,7 +63,7 @@ function Formulario({
           />
         </p>
         <button className={styles.btnSalvar} onClick={salvarDados}>
-          Salvar
+          {isEditando ? "Atualizar" : "Salvar"}
         </button>
       </div>
     </div>

@@ -1,14 +1,7 @@
 import { FaTrash, FaPencilAlt } from "react-icons/fa";
 import styles from "./Tabela.module.css";
 
-function Tabela({ dados, setNome, setCPF, setNascimento, removerPessoa }) {
-  const editarDados = (index) => {
-    const pessoa = dados[index];
-    setNome(pessoa.nome);
-    setCPF(pessoa.cpf);
-    setNascimento(pessoa.nascimento);
-  };
-
+function Tabela({ dados, editarPessoa, removerPessoa }) {
   return (
     <table className={styles.tabela}>
       <thead>
@@ -20,7 +13,7 @@ function Tabela({ dados, setNome, setCPF, setNascimento, removerPessoa }) {
         </tr>
       </thead>
       <tbody>
-        {dados.map((pessoa, i) => (
+        {dados.map((pessoa) => (
           <tr key={pessoa.id}>
             <td className={styles.tabelatd}>{pessoa.nome}</td>
             <td className={styles.tabelatd}>{pessoa.cpf}</td>
@@ -28,7 +21,7 @@ function Tabela({ dados, setNome, setCPF, setNascimento, removerPessoa }) {
             <td>
               <button
                 className={styles.btnEditar}
-                onClick={() => editarDados(i)}
+                onClick={() => editarPessoa(pessoa)}
               >
                 Editar <FaPencilAlt />
               </button>
