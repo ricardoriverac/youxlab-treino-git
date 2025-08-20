@@ -13,7 +13,7 @@ public class ArquiteturaspringApplication {
 		SpringApplicationBuilder builder =
 				new SpringApplicationBuilder(ArquiteturaspringApplication.class); // <-- aqui
 		builder.bannerMode(Banner.Mode.OFF);
-		builder.profiles("producao, homologacao"); // melhor colocar ANTES do run()
+		builder.profiles("producao");
 
 		ConfigurableApplicationContext applicationContext = builder.run(args);
 
