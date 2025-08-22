@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: Exercicio Por Fora
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Produto
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
