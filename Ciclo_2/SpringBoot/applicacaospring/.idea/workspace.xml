@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8310bcd9-e159-44f8-bcf5-e267a62a9973" name="Changes" comment="" />
+    <list default="true" id="8310bcd9-e159-44f8-bcf5-e267a62a9973" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ProjetoA/exercicioPorFora/src/main/java/exPF/exercicioPorFora/Controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjetoA/exercicioPorFora/src/main/java/exPF/exercicioPorFora/Controller/ProdutoController.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +48,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "marcoslabpy",
+    "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/youxlab/youxlab-treino-git/Ciclo_2/SpringBoot/Secão 1/applicacaospring",
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }

@@ -18,14 +18,23 @@ public class ProdutoController {
         return produtoService.salvar(produtoModel);
     }
 
-    @GetMapping("{id}")
+    @GetMapping("/buscar/{id}")
     public ProdutoModel buscar(@PathVariable("id") Integer id){
         return produtoService.buscarPorId(id);
     }
 
-    @DeleteMapping("{id}")
-    public void deletar(@PathVariable("id") String id){
-        produtoService.
+    @DeleteMapping("/deletar/{id}")
+    public void deletar(@PathVariable("id") Integer id){
+
+         produtoService.deletarPorId(id);
     }
+
+    @PutMapping("{id}")
+    public void atualizarStatus(@PathVariable("id") Integer id, @RequestBody ProdutoModel todo){
+        todo.setId(id);
+
+        produtoService.atualizarStatus(todo);
+    }
+
 
 }

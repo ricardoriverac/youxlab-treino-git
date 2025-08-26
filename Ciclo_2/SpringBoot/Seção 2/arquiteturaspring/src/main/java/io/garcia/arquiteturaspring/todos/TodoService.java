@@ -1,11 +1,16 @@
 package io.garcia.arquiteturaspring.todos;
 
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service
+@Component
 public class TodoService {
 
     private TodoRepository repository;
+    private TodoValidator validator;
+    private Email
+
+
 
     public TodoService(TodoRepository repository) {
         this.repository = repository;
