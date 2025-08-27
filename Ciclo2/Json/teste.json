@@ -1,0 +1,12 @@
+[
+  {
+    "nome": "Sophia",
+    "idade": 16,
+    "esta_estuda": true,
+    "detalhes_estudo": {
+      "estudando": "Json",
+      "curso": "Hora de Codar"
+    },
+    "hobies": ["treinar", "correr", "cantar"]
+  }
+]
