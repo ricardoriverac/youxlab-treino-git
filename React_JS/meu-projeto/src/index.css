@@ -1,8 +1,14 @@
 body{
   padding: 50px;
   background-color:#efefef;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1{
   color: #333;
+}
+
+p{
+  background-color: #999;
+  padding: 6px;
 }
