@@ -1,0 +1,46 @@
+.inputNome {
+  flex: 0.4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.inputData {
+  flex: 0.2;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  background: blueviolet;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(90, 34, 143);
+  transition: 0.3s;
+  transform: scale(1.1);
+  font: bold;
+}
+
+.titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: rgb(29, 28, 28);
+}
+
+.form {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.formRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}

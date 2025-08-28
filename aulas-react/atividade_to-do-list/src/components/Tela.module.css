@@ -1,0 +1,9 @@
+.select {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  position: absolute;
+  top: 45%;
+  margin-left: 19px;
+}

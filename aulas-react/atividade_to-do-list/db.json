@@ -1,0 +1,74 @@
+{
+  "categoria": [
+    {
+      "id": "1",
+      "nome": "Trabalho"
+    },
+    {
+      "id": "2",
+      "nome": "Estudo"
+    },
+    {
+      "id": "3",
+      "nome": "Casa"
+    }
+  ],
+  "categoriaFiltro": [
+    {
+      "id": "1",
+      "nome": "Todos"
+    },
+    {
+      "id": "2",
+      "nome": "Em andamento"
+    },
+    {
+      "id": "3",
+      "nome": "Concluido"
+    }
+  ],
+  "dados": [
+    {
+      "id": "0260",
+      "tarefa": "codar",
+      "categoriaSelecionada": "Trabalho",
+      "data": "2025-08-20",
+      "status": "Em andamento"
+    },
+    {
+      "id": "aa5e",
+      "tarefa": "ler",
+      "categoriaSelecionada": "Estudo",
+      "data": "2025-08-26",
+      "status": "Em andamento"
+    },
+    {
+      "id": "63a8",
+      "tarefa": "cozinhar feijão",
+      "categoriaSelecionada": "Casa",
+      "data": "2025-08-07",
+      "status": "Concluido"
+    },
+    {
+      "id": "b8a2",
+      "tarefa": "lavar caneca",
+      "categoriaSelecionada": "Trabalho",
+      "data": "2025-09-11",
+      "status": "Em andamento"
+    },
+    {
+      "id": "0241",
+      "tarefa": "teste",
+      "categoriaSelecionada": "Estudo",
+      "data": "2025-09-03",
+      "status": "Em andamento"
+    },
+    {
+      "id": "a205",
+      "tarefa": "teste2",
+      "categoriaSelecionada": "Casa",
+      "data": "2025-08-13",
+      "status": "Em andamento"
+    }
+  ]
+}
