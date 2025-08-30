@@ -1,14 +1,13 @@
 package io.garcia.arquiteturaspring.todos;
 
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 @Component
 public class TodoService {
 
     private TodoRepository repository;
     private TodoValidator validator;
-    private Email
+    private MailSender mailSender;
 
 
 
@@ -22,6 +21,8 @@ public class TodoService {
 
     public void atualizarStatus(TodoEntity todo){
         repository.save(todo);
+        String status = todo.getConcluido() == Boolean.TRUE ? "Concluido" : "Não Concluido";
+        mailSender.enviar("Todo " + todo.getDescricao() + "foi atualizado para " + status );
     }
 
     public TodoEntity buscarPorId(Integer id){

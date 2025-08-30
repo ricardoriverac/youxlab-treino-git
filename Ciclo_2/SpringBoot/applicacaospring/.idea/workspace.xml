@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8310bcd9-e159-44f8-bcf5-e267a62a9973" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../ProjetoA/exercicioPorFora/src/main/java/exPF/exercicioPorFora/Controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProjetoA/exercicioPorFora/src/main/java/exPF/exercicioPorFora/Controller/ProdutoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Controller/ControllerProdutos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Model/Enum/CategoriaProdutos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Model/ModelProdutos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Repository/RepositoryProdutos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Service/ServiceProdutos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Secão 1/applicacaospring/src/main/java/com/youxlab/cursodespring/applicacaospring/Repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Secão 1/applicacaospring/src/main/java/com/youxlab/cursodespring/applicacaospring/Repository/ProdutoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.AplicacaoSpringApplication.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "marcoslabpy",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/youxlab/youxlab-treino-git/Ciclo_2/SpringBoot/Secão 1/applicacaospring",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.AplicacaoSpringApplication.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;marcoslabpy&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/youxlab/youxlab-treino-git/Ciclo_2/SpringBoot/Secão 1/applicacaospring&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="AplicacaoSpringApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.youxlab.cursodespring.applicacaospring.AplicacaoSpringApplication" />
