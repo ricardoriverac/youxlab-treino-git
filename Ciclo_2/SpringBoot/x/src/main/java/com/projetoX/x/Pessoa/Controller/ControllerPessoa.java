@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @RestController
 @RequestMapping("/pessoasX")
+@CrossOrigin(origins = "*")
 public class ControllerPessoa {
 
     private final ServicePessoa servicePessoa;
