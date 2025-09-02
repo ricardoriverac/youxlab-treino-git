@@ -1,18 +1,25 @@
-import { useState } from "react";
-import "./App.css";
-import Saudacao from "./Components/Saudacao";
-import SeuNome from "./Components/SeuNome";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Empresa from "./pages/Empresa";
+import Contato from "./pages/Contato";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/layouts/Footer";
 
 function App() {
-  const [nome, setNome] = useState();
   return (
-    <>
-      <div className="App">
-        <h1>State lift</h1>
-        <SeuNome setNome={setNome}/>
-        <Saudacao nome={nome} />
-      </div>
-    </>
+    <Router>
+
+      <Navbar/>
+
+      <Routes>                                    {/* Declara URLs e o que estão se referindo */}
+        <Route exact path="/" element ={<Home/>}/>
+        <Route path="/empresa" element ={<Empresa/>}/>
+        <Route path="/contato" element ={<Contato/>}/>              {/* Declara o caminho da função tal */}
+      </Routes>
+      <Footer/>
+
+    </Router>
+
   );
 }
 
