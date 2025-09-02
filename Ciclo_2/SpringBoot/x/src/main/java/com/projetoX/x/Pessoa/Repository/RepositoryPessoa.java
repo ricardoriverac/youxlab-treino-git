@@ -1,11 +1,10 @@
 package com.projetoX.x.Pessoa.Repository;
 
-import com.projetoX.x.Pessoa.Model.ModelPessoa;
-import com.projetoX.x.Produtos.Model.ModelProdutos;
+import org.apache.catalina.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.List;
+import java.util.Optional;
 
-public interface RepositoryPessoa extends JpaRepository<ModelPessoa, Integer> {
-    List<ModelPessoa> findByNome(String nomePessoa);
+public interface UserRepository extends JpaRepository<User, Long> {
+    Optional<User> findByEmail(String email);
 }
