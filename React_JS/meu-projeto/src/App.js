@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Empresa from "./pages/Empresa";
 import Contato from "./pages/Contato";
-import Navbar from "./Components/Navbar";
+import Navbar from "./Components/layouts/Navbar";
 import Footer from "./Components/layouts/Footer";
 
 function App() {
