@@ -1,0 +1,28 @@
+{
+  "tarefas": [
+    {
+      "id": "69fb",
+      "nome": "aaaaaaaEstudaraaa",
+      "categoria": "escola",
+      "dataEntrega": "2025-09-26",
+      "status": "concluida",
+      "dataCriacao": "2025-09-02T16:39:42.866Z"
+    },
+    {
+      "id": "9453",
+      "nome": "aulaaa",
+      "categoria": "escola",
+      "dataEntrega": "2025-09-03",
+      "status": "pendente",
+      "dataCriacao": "2025-09-02T16:45:45.099Z"
+    },
+    {
+      "id": "1439",
+      "nome": "sadkna",
+      "categoria": "trabalho",
+      "dataEntrega": "",
+      "status": "concluida",
+      "dataCriacao": "2025-09-02T17:26:39.609Z"
+    }
+  ]
+}
