@@ -43,13 +43,6 @@
       "status": "Em andamento"
     },
     {
-      "id": "63a8",
-      "tarefa": "cozinhar feijão",
-      "categoriaSelecionada": "Casa",
-      "data": "2025-08-07",
-      "status": "Concluido"
-    },
-    {
       "id": "b8a2",
       "tarefa": "lavar caneca",
       "categoriaSelecionada": "Trabalho",

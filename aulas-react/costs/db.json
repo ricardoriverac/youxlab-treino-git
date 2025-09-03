@@ -48,6 +48,17 @@
       "id": "9015",
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "e6d8",
+      "name": "redtfgh",
+      "budget": "46786543",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
