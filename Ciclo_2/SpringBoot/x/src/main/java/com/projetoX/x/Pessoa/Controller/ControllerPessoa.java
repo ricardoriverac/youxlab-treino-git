@@ -2,7 +2,9 @@ package com.projetoX.x.Pessoa.Controller;
 
 import com.projetoX.x.Pessoa.Model.ModelPessoa;
 import com.projetoX.x.Pessoa.Service.ServicePessoa;
+import com.projetoX.x.Pessoa.dto.PessoaDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 public class ControllerPessoa {
 
     private final ServicePessoa servicePessoa;
+    private ControllerPessoa ur;
 
     @PostMapping("/salvar")
     public ModelPessoa salvar(@RequestBody ModelPessoa modelPessoa){
@@ -33,6 +36,12 @@ public class ControllerPessoa {
     public void atualizarPessoa(@PathVariable("id") Integer id, @RequestBody ModelPessoa pessoa){
         pessoa.setId(id);
         servicePessoa.atualizarPessoa(pessoa);
-
     }
+
+    @PostMapping("/login")
+    public ResponseEntity<Boolean> loginUsuario(@RequestBody PessoaDto request) {
+        boolean autenticado = servicePessoa.login(request.getEmail(), request.getSenha());
+        return ResponseEntity.ok(autenticado);
+    }
+
 }
