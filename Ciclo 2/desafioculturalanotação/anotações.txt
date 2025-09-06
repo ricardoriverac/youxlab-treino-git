@@ -1,0 +1,92 @@
+Principais serviços e funcionalidades úteis do gov.br
+
+1. Criação e login na conta gov.br 📥
+
+Funcionalidade: conta única para acessar serviços públicos
+Níveis de segurança: Bronze, Prata e Ouro, com acesso progressivo a serviços mais sensíveis 
+
+Instruções:
+    Baixe o app (Android/iOS) ou acesse o site gov.br.
+    Clique em “Entrar com gov.br”, informe seu CPF.
+    Se não tiver conta, crie preenchendo dados solicitados e criando uma senha
+    Inicie no nível Bronze. Para subir:
+        Prata: reconhecimento facial via CNH/banco/SIGEPE;
+        Ouro: biometria do TSE, CI nacional ou certificado ICP‑Brasil
+
+
+
+        2. Carteira de documentos digitais 🪪
+Serviços incluídos:
+    CPF digital
+    CNH digital
+    Carteira de Trabalho Digital
+    Certificado militar e habilitação técnica
+
+    Instruções:
+    No app: vá em “Meus Documentos” para exibir e compartilhar os documentos.
+    Para Carteira de Trabalho, use “Buscar serviços” e clique em “Carteira de Trabalho”
+
+
+
+    3. A assinatura eletrônica ✍️
+    Disponível para contas Prata/Ouro.
+    Permite assinar documentos legalmente com validade jurídica
+
+
+
+    4. Prova de vida digital 🎥
+    Feita por reconhecimento facial via INSS e outros órgãos.
+    Elimina filas para beneficiários como aposentados
+
+
+
+    5. Serviços da Receita Federal e Imposto de Renda
+    Consulte situação do CPF, contracheque Darf, declaração IR, restituição, carnê-leão etc.
+    Acesso direto ao e‑CAC.
+
+
+
+    6. INSS (Meu INSS)
+    Simule aposentadoria, agende perícia, extrato CNIS, saque do FGTS, inscrição no INSS etc.
+
+
+
+    7. Saúde – Conecte SUS / Meu SUS Digital
+    Acesse histórico de vacinação (COVID‑19), agendamento, rede de atendimento
+
+
+
+    8. Educação e programas sociais
+    Inscrições no ENEM, Prouni, SISU, Fies
+    Acesso ao PIS/Pasep e abono salarial
+
+
+
+    9. Veículos e trânsito
+    Consulte CNH, multas, licenciamento, CRLV (Carteira Digital de Trânsito via app CDT)
+
+
+
+    10. Outros serviços
+    Saque de FGTS, consulta a dívidas/Pendências fiscais/ Certidões negativas .
+    Agendamento de passaporte, atendimento no INSS
+    Acompanhamento de processos jurídicos (e‑Saj, PJe)
+
+
+
+11. Segurança da conta
+    Verificação em duas etapas (2FA) por código gerado no app, sem push
+    Gestão de dispositivos: controle onde sua conta está ativa
+    Central de notificações e indiretas de uso e acesso .
+    Painel de privacidade: revogue dados compartilhados com serviços
+
+
+
+    ✅ Recomendações
+    Suba pelo menos para Prata (reconhecimento facial/banco) para acessar quase todos os serviços.
+    Ative 2FA e controle dispositivos conectados.
+    Atualize o app e use notificações para acompanhar alertas importantes.
+
+
+
+

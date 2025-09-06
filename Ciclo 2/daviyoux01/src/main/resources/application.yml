@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: daviyoux01
+  datasource:
+    url: jdbc:h2:mem:produtos
+    username: sa
+    password: password0101
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
