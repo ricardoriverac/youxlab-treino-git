@@ -13,3 +13,7 @@ spring:
         properties:
           hibernate:
             dialect: org.hibernate.dialect.PostgreSQLDialect
+app:
+  config:
+    variavel: valor x
+    valor1: 500

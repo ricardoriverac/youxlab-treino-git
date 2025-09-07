@@ -1,4 +1,4 @@
-package com.projetoX.x.Pessoa.dto;
+package com.projetoX.x.Pessoa.Controller.dto;
 
 import lombok.Getter;
 import lombok.Setter;

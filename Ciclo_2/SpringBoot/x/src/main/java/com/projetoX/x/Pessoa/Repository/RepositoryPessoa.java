@@ -12,4 +12,3 @@ public interface RepositoryPessoa extends JpaRepository<ModelPessoa, Integer> {
 
     Optional<ModelPessoa> findByEmail(String email);
 }
-

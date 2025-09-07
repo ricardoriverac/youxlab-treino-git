@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8310bcd9-e159-44f8-bcf5-e267a62a9973" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Controller/ControllerProdutos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Model/Enum/CategoriaProdutos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Model/ModelProdutos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Repository/RepositoryProdutos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Produtos/Service/ServiceProdutos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Secão 1/applicacaospring/src/main/java/com/youxlab/cursodespring/applicacaospring/Repository/ProdutoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Secão 1/applicacaospring/src/main/java/com/youxlab/cursodespring/applicacaospring/Repository/ProdutoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Seção 2/arquiteturaspring/src/main/java/io/garcia/arquiteturaspring/todos/TodoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Controller/dto/PessoaDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../x/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Controller/ControllerPessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Controller/ControllerPessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Model/ModelPessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Model/ModelPessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Repository/RepositoryPessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Repository/RepositoryPessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Service/ServicePessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/Service/ServicePessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../x/src/main/java/com/projetoX/x/Pessoa/dto/PessoaDto.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

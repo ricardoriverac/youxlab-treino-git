@@ -17,6 +17,7 @@ public class ServicePessoa {
 
     public ModelPessoa salvar(ModelPessoa novaPessoa) {
         novaPessoa.setSenha(passwordEncoder.encode(novaPessoa.getSenha()));
+
         return repository.save(novaPessoa);
     }
 
