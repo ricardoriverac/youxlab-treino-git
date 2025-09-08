@@ -31,7 +31,7 @@ function Tabela({ tarefas, editarTarefa, removerTarefa, alternarConclusao }) {
             <td>{tarefa.categoria}</td>
             <td>{tarefa.dataEntrega}</td>
             <td>{tarefa.status}</td>
-            <td className={styles.actions}>
+            <td className={styles.acoes}>
               <button onClick={() => editarTarefa(tarefa)}>Editar</button>
               <button onClick={() => removerTarefa(tarefa.id)}>Remover</button>
 

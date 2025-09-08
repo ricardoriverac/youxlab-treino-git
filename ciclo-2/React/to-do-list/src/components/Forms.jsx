@@ -1,5 +1,5 @@
 import Inputs from "./Inputs";
-
+import style from "./modules.css/Forms.module.css"
 function Forms({
   salvarTarefa,
   nome,
@@ -12,7 +12,7 @@ function Forms({
 }) {
   function handleSubmit(e) {
     e.preventDefault();
-
+2
     if (nome.trim().length < 3) {
       alert("O nome deve ter pelo menos 3 caracteres!");
       return;
@@ -34,7 +34,7 @@ function Forms({
       <Inputs label="Tarefa" value={nome} onChange={setNome} />
 
       <div>
-        <label>Categoria</label>
+        <label className={style.label}>Categoria</label>
         <select
           value={categoria}
           onChange={(e) => setCategoria(e.target.value)}
@@ -53,7 +53,7 @@ function Forms({
         onChange={setDataEntrega}
       />
 
-      <button type="submit">
+      <button  className= {style.btnAdd} type="submit">
         {isEditando ? "Salvar Alteração" : "Adicionar Tarefa"}
       </button>
     </form>

@@ -30,7 +30,7 @@
   color: #777;
 }
 
-.actions button {
+.acoes button {
   margin: 0 4px;
   padding: 4px 8px;
   border: none;
@@ -38,12 +38,12 @@
   cursor: pointer;
 }
 
-.actions button:first-child {
+.acoes button:first-child {
   background-color: #4caf50;
   color: white;
 }
 
-.actions button:last-child {
+.acoes button:last-child {
   background-color: #f44336;
   color: white;
 }
