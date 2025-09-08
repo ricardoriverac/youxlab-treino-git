@@ -1,0 +1,25 @@
+{
+  "cartegoria": [
+    {
+      "id": "6283",
+      "nome": "fff",
+      "data": "2025-08-31",
+      "cartegoria": "trabalho",
+      "prazo": "Concluído"
+    },
+    {
+      "id": "6db2",
+      "nome": "",
+      "data": "",
+      "cartegoria": "",
+      "prazo": "Pendente"
+    },
+    {
+      "id": "0d8b",
+      "nome": "",
+      "data": "2025-08-31",
+      "cartegoria": "",
+      "prazo": "atrasada"
+    }
+  ]
+}
