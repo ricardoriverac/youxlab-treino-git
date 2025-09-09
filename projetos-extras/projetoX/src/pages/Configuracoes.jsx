@@ -1,5 +1,9 @@
 function Configuracoes() {
-  return <h1>Configurações</h1>;
+  return (
+    <div>
+      <h1>olaaaaaaa</h1>
+    </div>
+  );
 }
 
 export default Configuracoes;

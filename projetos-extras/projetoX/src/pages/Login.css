@@ -5,13 +5,13 @@
 }
 
 body {
-  background: #f6f5f7;
+  background: #e5e4e6;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Montserrat", sans-serif;
-  height: 100vh;
+  height: 95vh;
   margin: -20px 0 50px;
 }
 
@@ -50,7 +50,7 @@ button {
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
-  padding: 12px 45px;
+  padding: 12px 22px;
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: transform 80ms ease-in;

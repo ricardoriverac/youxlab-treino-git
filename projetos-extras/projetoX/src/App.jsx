@@ -3,19 +3,20 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import Produtos from "./pages/Produtos";
 import Configuracoes from "./pages/Configuracoes";
-
-// import Navbar from './layout/Navbar'
+import Navbar from "./layout/Navbar";
+import Container from "./layout/Container";
 
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
-      <Routes>
-        <Route exact path="/" element={<Login />}></Route>
-        <Route path="/home" element={<Home />}></Route>
-        <Route path="/produtos" element={<Produtos />}></Route>
-        <Route path="/configuracoes" element={<Configuracoes />}></Route>
-      </Routes>
+      {/* <Container customClass='min-height'> */}
+        <Routes>
+          <Route exact path="/" element={<Login />}></Route>
+          <Route path="/home" element={<Navbar> <Home /> </Navbar>}></Route>
+          <Route path="/produtos" element={<Navbar> <Produtos /> </Navbar>}></Route>
+          <Route path="/Configurações" element={<Navbar> <Configuracoes /></Navbar>}></Route>
+        </Routes>
+      {/* </Container> */}
     </Router>
   );
 }

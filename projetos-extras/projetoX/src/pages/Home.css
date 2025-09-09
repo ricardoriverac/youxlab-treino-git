@@ -1,0 +1,15 @@
+.totalizador {
+  background-color: white;
+  width: 210px;
+  height: 100px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.divTotalizador {
+  display: flex;
+  padding: 10px;
+  gap: 15px;
+  flex-direction: row;
+  justify-content: space-around;
+}

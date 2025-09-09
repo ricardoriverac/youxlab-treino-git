@@ -1,5 +1,7 @@
+import Tabela from "../layout/Tabela";
+
 function Produtos() {
-  return <h1>Produtos</h1>
+  return <Tabela />;
 }
 
 export default Produtos;

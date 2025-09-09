@@ -1,6 +1,6 @@
 import { salvarNovaPessoa, verificarLogin } from "../services/api";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import "./Login.css";
 
@@ -21,11 +21,19 @@ function Login() {
       senha: senha,
     };
 
-    try {
-      await salvarNovaPessoa(pessoaCadastrada);
-      navigate("/home");
-    } catch (err) {
-      console.log("err :>> ", err);
+    if (
+      pessoaCadastrada.nome === "" ||
+      pessoaCadastrada.email === "" ||
+      pessoaCadastrada.senha === ""
+    ) {
+      alert("Preencha todos os dados!");
+    } else {
+      try {
+        await salvarNovaPessoa(pessoaCadastrada);
+        navigate("/home");
+      } catch (err) {
+        console.log("err :>> ", err);
+      }
     }
 
     setNome("");
@@ -133,6 +141,7 @@ function Login() {
           </div>
         </div>
       </div>
+      <Link to="/home">ir pra home</Link>
     </div>
   );
 }
