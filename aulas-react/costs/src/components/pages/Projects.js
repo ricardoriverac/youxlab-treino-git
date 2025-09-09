@@ -1,4 +1,4 @@
-import { data, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 
@@ -27,10 +27,11 @@ function Projects() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log(data);
+        console.log("data :>> ", data);
         setProjects(data);
+        console.log("projects :>> ", projects);
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log("err :>> ", err));
   }, []);
 
   return (
@@ -42,9 +43,15 @@ function Projects() {
       {message && <Message type="sucess" msg={message} />}
       <Container customClass="start">
         {projects.length > 0 &&
-          projects.map((project) => {
-            <ProjectCard name={project.name} />;
-          })}
+          projects.map((project) => (
+            <ProjectCard
+              id={project.id}
+              name={project.name}
+              budget={project.budget}
+              category={project.category.name}
+              key={project.id}
+            />
+          ))}
       </Container>
     </div>
   );
