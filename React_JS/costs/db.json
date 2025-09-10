@@ -1,21 +1,49 @@
 {
-    "projects": [],
-    "categories": [
-        {
-            "id":1,
-            "name": "Infra"
-        },
-        {
-            "id":2,
-            "name": "Desenvolvomento"
-        },
-        {
-            "id":3,
-            "name": "Design"
-        },
-                {
-            "id":4,
-            "name": "Planejamento"
-        }
-    ]
+  "projects": [
+    {
+      "id": "8ddd",
+      "cost": 0,
+      "servicer": []
+    },
+    {
+      "id": "19af",
+      "cost": 0,
+      "servicer": [],
+      "name": "abrobaa",
+      "budget": "567884",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      }
+    },
+    {
+      "id": "f664",
+      "name": "teste",
+      "budget": "22222",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
 }
