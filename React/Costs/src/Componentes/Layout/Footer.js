@@ -13,6 +13,9 @@ function Footer() {
                 <li>
                     <FaLinkedin />
                 </li>
+                <li>
+                    
+                </li>
             </ul>
         </Footer>
     )
