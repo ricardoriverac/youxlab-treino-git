@@ -12,9 +12,20 @@
       }
     },
     {
-      "id": "f664",
-      "name": "teste",
-      "budget": "22222",
+      "id": "0401",
+      "name": "Novo Projeto",
+      "budget": "12000",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "8155",
+      "name": "Teste Loading",
+      "budget": "400000",
       "category": {
         "id": "1",
         "name": "Infra"
@@ -23,42 +34,19 @@
       "services": []
     },
     {
-      "id": "8413",
-      "name": "teste",
-      "budget": "234567890",
+      "id": "e6ed",
+      "name": "New project",
+      "budget": "300",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "3",
+        "name": "Design"
       },
       "cost": 0,
       "services": []
     },
     {
-      "id": "2f71",
-      "name": "teste",
-      "budget": "1345",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "c114",
-      "name": "Sophia Del Santo de Carvalho",
-      "budget": "2000",
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "0401",
-      "name": "Novo Projeto",
-      "budget": "12000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
+      "id": "7c2a",
+      "name": "Loading",
       "cost": 0,
       "services": []
     }

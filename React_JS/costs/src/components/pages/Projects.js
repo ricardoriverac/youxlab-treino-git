@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 
 import Message from "../layout/Message";
 import Container from "../layout/Container";
+import Loading from "../layout/Loading";
 import LinkButton from "../layout/LinkButton";
 
 import styles from "./Projects.module.css";
@@ -10,6 +11,7 @@ import ProjectCard from "../project/ProjectCard";
 
 function Projects() {
   const [projects, setProjects] = useState([]);
+  const [removeLoading, setRemoveLoading] = useState(false);
 
   const location = useLocation();
   let message = "";
@@ -18,6 +20,7 @@ function Projects() {
   }
 
   useEffect(() => {
+    setTimeout(()=>{
     fetch("http://localhost:5001/projects", {
       method: "GET",
       headers: {
@@ -26,32 +29,37 @@ function Projects() {
     })
       .then((resp) => resp.json())
       .then((data) => {
-          setProjects(data);
-        })
-        .catch((err) => console.log(err));
-    }, []);
-    
-    return (
-        <div className={styles.project_container}>
+        setProjects(data);
+        setRemoveLoading(true);
+      })
+      .catch((err) => console.log(err));
+    }, 2000)
+  }, []);
+
+  return (
+    <div className={styles.project_container}>
       <div className={styles.title_container}>
         <h1>Meus Projetos</h1>
         <LinkButton to="/newproject" text="Criar Projeto" />
       </div>
-        {/* {console.log("projects ",projects.map((e)=>e.category?.name || "Sem categoria"))} */}
+      {/* {console.log("projects ",projects.map((e)=>e.category?.name || "Sem categoria"))} */}
       {message && <Message type="success" msg={message} />}
       <Container customClass="start">
         {projects.length > 0 &&
-            projects.map((project)=>(
-                <ProjectCard 
-                    id={project.id}
-                    name={project.name}
-                    budget={project.budget}
-                    category={project.category?.name || "Sem categoria"}
-                    key={project.id}
-                />
-            ))
-        }
-    </Container>
+          projects.map((project) => (
+            <ProjectCard
+              id={project.id}
+              name={project.name}
+              budget={project.budget}
+              category={project.category?.name || "Sem categoria"}
+              key={project.id}
+            />
+          ))}
+        {!removeLoading && <Loading />}
+        {removeLoading && projects.length === 0 &&(
+          <p>Não há projetos cadastrados!</p>
+        )}
+      </Container>
     </div>
   );
 }
