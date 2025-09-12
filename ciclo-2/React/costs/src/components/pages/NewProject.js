@@ -1,6 +1,5 @@
-function NewProject (){
-    return(
-    <h1>NewProject</h1>    )
+function NewProject () {
+    return <h1>Novo projeto</h1>
 }
 
 export default NewProject

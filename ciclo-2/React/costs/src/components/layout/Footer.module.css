@@ -1,0 +1,36 @@
+.footer{
+    background-color: #222;
+    color: #fff;
+    padding: 3em;
+    text-align: center;
+}
+
+.fas{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.si{
+    margin: 10px;
+    font-size: 15px;
+}
+
+.si :hover{
+    color: #ffbb33;
+}
+
+.fas svg{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.copyRigth{
+    margin-top: 2em;
+}
+
+.copyRigth span{
+    font-weight: bold;
+    color: #ffbb33;
+}
