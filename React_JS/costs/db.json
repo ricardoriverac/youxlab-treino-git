@@ -12,41 +12,13 @@
       }
     },
     {
-      "id": "0401",
-      "name": "Novo Projeto",
-      "budget": "12000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "8155",
-      "name": "Teste Loading",
-      "budget": "400000",
+      "id": "ffb0",
+      "name": "teste",
+      "budget": "14000",
       "category": {
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "e6ed",
-      "name": "New project",
-      "budget": "300",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": []
-    },
-    {
-      "id": "7c2a",
-      "name": "Loading",
       "cost": 0,
       "services": []
     }
