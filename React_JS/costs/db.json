@@ -21,6 +21,17 @@
       },
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "71e5",
+      "name": "New project",
+      "budget": "120000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
     }
   ],
   "categories": [
