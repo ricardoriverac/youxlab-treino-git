@@ -3,10 +3,10 @@
     {
       "id": "c209",
       "name": "projeto atualizado",
-      "budget": "74145",
+      "budget": "52455",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "4",
+        "name": "Planejamento"
       },
       "cost": 0,
       "services": []
