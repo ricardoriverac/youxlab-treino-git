@@ -25,7 +25,6 @@ function ProjectForm({ handleSubmit, btnText, projectData }) {
 
   const submit = (evento) => {
     evento.preventDefault();
-    // console.log(project);
     handleSubmit(project);
   };
 

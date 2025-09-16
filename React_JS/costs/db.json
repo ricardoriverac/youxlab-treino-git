@@ -4,23 +4,12 @@
       "id": "19af",
       "cost": 0,
       "servicer": [],
-      "name": "abrobaa",
-      "budget": "567884",
+      "name": "Projeto Editado",
+      "budget": "1000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "4",
+        "name": "Planejamento"
       }
-    },
-    {
-      "id": "ffb0",
-      "name": "teste",
-      "budget": "14000",
-      "category": {
-        "id": "1",
-        "name": "Infra"
-      },
-      "cost": 0,
-      "services": []
     },
     {
       "id": "71e5",
@@ -35,11 +24,22 @@
     },
     {
       "id": "0893",
-      "name": "Jade",
+      "name": "Fufu",
       "budget": "100000",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "066f",
+      "name": "Coca-Cola",
+      "budget": "47900",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": []
