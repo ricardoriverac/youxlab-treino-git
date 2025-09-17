@@ -19,8 +19,15 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": []
+      "cost": 89,
+      "services": [
+        {
+          "name": "teste",
+          "cost": "89",
+          "description": "Comprar caneca",
+          "id": "411dfdcf-4379-4d81-a9c6-b3a86a769d9f"
+        }
+      ]
     },
     {
       "id": "0893",
@@ -34,12 +41,12 @@
       "services": []
     },
     {
-      "id": "066f",
-      "name": "Coca-Cola",
-      "budget": "47900",
+      "id": "a727",
+      "name": "teste",
+      "budget": "1222",
       "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
+        "id": "1",
+        "name": "Infra"
       },
       "cost": 0,
       "services": []

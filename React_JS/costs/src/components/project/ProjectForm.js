@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Input from "../form/Input";
 import Select from "../form/Select";
 import SubmitButton from "../form/SubmitButton";
-import styles from "./ProjectFrom.module.css";
+import styles from "./ProjectForm.module.css";
 
 function ProjectForm({ handleSubmit, btnText, projectData }) {
   const [categories, setCategories] = useState([]);
