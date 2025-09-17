@@ -1,17 +1,6 @@
 {
   "projects": [
     {
-      "id": "19af",
-      "cost": 0,
-      "servicer": [],
-      "name": "Projeto Editado",
-      "budget": "1000",
-      "category": {
-        "id": "4",
-        "name": "Planejamento"
-      }
-    },
-    {
       "id": "71e5",
       "name": "New project",
       "budget": "120000",
@@ -37,8 +26,21 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 0,
-      "services": []
+      "cost": 700,
+      "services": [
+        {
+          "name": "Contratar veterinário",
+          "cost": "500",
+          "description": "Comprar dentinho ",
+          "id": "7d2e9a8b-eddd-496a-b696-b5c3a1ea27ab"
+        },
+        {
+          "name": "Contratar estilista",
+          "cost": "200",
+          "description": "Fazer uma roupinha para a Fufu",
+          "id": "a8d63746-83ec-4937-8d32-fa8f73bfe756"
+        }
+      ]
     },
     {
       "id": "a727",
