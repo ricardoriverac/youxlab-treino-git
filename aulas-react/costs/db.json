@@ -8,13 +8,19 @@
         "id": "4",
         "name": "Planejamento"
       },
-      "cost": 100,
+      "cost": 1000,
       "services": [
         {
           "name": "novo serviço",
           "cost": "100",
           "description": "isso ai",
           "id": "9e0408f5-cfb1-49a7-b776-86cd0dd5d023"
+        },
+        {
+          "name": "teste",
+          "cost": "900",
+          "description": "teste",
+          "id": "b12fdbcc-28c0-4808-bb6c-4c94a580955f"
         }
       ]
     },
