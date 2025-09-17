@@ -5,7 +5,8 @@ import {BsFillTrashFill} from "react-icons/bs"    // icon Lixeira
 function ServiceCard({id, name, cost, description, handleRemove}){
 
     const remove = (evento) => {
-
+        evento.preventDefault()
+        handleRemove(id, cost)
     }
 
     return(

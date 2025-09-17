@@ -26,19 +26,13 @@
         "id": "1",
         "name": "Infra"
       },
-      "cost": 700,
+      "cost": 500,
       "services": [
         {
           "name": "Contratar veterinário",
           "cost": "500",
           "description": "Comprar dentinho ",
           "id": "7d2e9a8b-eddd-496a-b696-b5c3a1ea27ab"
-        },
-        {
-          "name": "Contratar estilista",
-          "cost": "200",
-          "description": "Fazer uma roupinha para a Fufu",
-          "id": "a8d63746-83ec-4937-8d32-fa8f73bfe756"
         }
       ]
     },
