@@ -23,7 +23,7 @@ function NavBar() {
             <Link to="/company">Compania</Link>
           </li>
           <li className={styles.item}>
-            <Link to="/novoprojeto">Projeto</Link>
+            <Link to="/projeto">Projeto</Link>
           </li>
         </ul>
       </Container>

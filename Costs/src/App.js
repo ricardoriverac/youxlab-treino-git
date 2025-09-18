@@ -5,6 +5,7 @@ import Inicio from "./Componentes/Paginas/Inicio";
 import Company from "./Componentes/Paginas/Company";
 import NovoProjeto from "./Componentes/Paginas/NovoProjeto";
 import Contact from "./Componentes/Paginas/Contact";
+import Projeto from "./Componentes/Paginas/Projeto";
 
 //Layout
 import Container from "./Componentes/Layout/Container";
@@ -20,6 +21,7 @@ function App() {
             <Route exect path="/" element={<Inicio />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/company" element={<Company />}></Route>
+            <Route path="/projeto" element={<Projeto />}></Route>
             <Route path="/novoprojeto" element={<NovoProjeto />}></Route>
           </Routes>
         </Container>
