@@ -1,0 +1,40 @@
+{
+  "projects": [
+    {
+      "id": "7293",
+      "name": "logo da empresa",
+      "budget": "7450",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 1500,
+      "services": [
+        {
+          "name": "arrumar escritorio",
+          "cost": "1500",
+          "description": "reforma completa do escritorio",
+          "id": "a7c4f8da-35ca-4316-8818-d57ad850b9b9"
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}
