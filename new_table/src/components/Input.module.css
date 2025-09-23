@@ -1,0 +1,16 @@
+.form_control{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form_control label{
+    margin-bottom: .2em;
+    }
+
+.form_control input{
+    padding: .7em;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 270px;
+}

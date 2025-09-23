@@ -1,0 +1,6 @@
+{
+    "people": [
+        {"id":1, "name":"Sophia", "cpf": 70300089800, "dataNascimento": 28032009},
+        {"id":2, "name":"Sarah", "cpf": 70911189811, "dataNascimento": 31052014}
+    ]
+}

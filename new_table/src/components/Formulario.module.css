@@ -1,0 +1,18 @@
+.form {
+  margin: 2em 0;
+  margin-left: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnSalvar{
+    font-size: larger;
+    background-color: rgb(81, 179, 81);
+    color: white;
+    padding: .3em;
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    margin: 1.2em 0;
+    margin-right: 30px;
+}
