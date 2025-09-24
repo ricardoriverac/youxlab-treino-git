@@ -203,7 +203,7 @@ function TelasNavegacao({ children }) {
                 }
                 alt="Sobre" 
                 title="Sobre"
-                style={{
+                style={{ 
                   width: 38,
                   marginLeft: 20,
                 }}
