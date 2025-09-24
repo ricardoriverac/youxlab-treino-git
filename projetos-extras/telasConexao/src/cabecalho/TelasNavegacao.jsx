@@ -201,7 +201,7 @@ function TelasNavegacao({ children }) {
                     ? iconSobreSelecionado
                     : iconSobreNaoSelecionado
                 }
-                alt="Sobre"
+                alt="Sobre" 
                 title="Sobre"
                 style={{
                   width: 38,
