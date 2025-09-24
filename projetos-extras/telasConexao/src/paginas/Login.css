@@ -1,0 +1,120 @@
+.containerLogin {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.caixa_img {
+  width: 40vw;
+  height: 94vh;
+  margin-top: 3em;
+  display: flex;
+  justify-content: end;
+  border-top-left-radius: 2em;
+  border-top-right-radius: 2em;
+  background-color: var(--cor-roxoEscuro);
+}
+
+.caixa_img img {
+  width: 35vw;
+}
+
+.caixa_usuario {
+  width: 30vw;
+  margin-top: 6em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Inter";
+}
+
+.caixa_usuario img{
+  width: 35%;
+}
+
+.caixa_usuario > button {
+  width: 17vw;
+  height: 4.5vh;
+  margin: 1.5em;
+  font-size: 1.1em;
+  border-radius: 0.5em;
+  border: none;
+  color: var(--cor-branco);
+  background-color: var(--cor-roxoEscuro);
+  cursor: pointer;
+}
+
+.erro label,
+.caixa_input label {
+  font-size: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  display: flex;
+}
+
+.erro > input,
+.caixa_input > input {
+  width: 17vw;
+  height: 4vh;
+  border-radius: 0.5em;
+  border: 1px solid var(--cor-preto);
+}
+
+.erro_senha,
+.input_senha {
+  width: 17vw;
+  height: 4.3vh;
+  border-radius: 0.5em;
+  border: 1px solid var(--cor-preto);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.erro_senha button,
+.input_senha button {
+  width: 15%;
+  height: 100%;
+  border: none;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  background-color: transparent;
+}
+.erro_senha button img,
+.input_senha button img {
+  width: 80%;
+}
+
+.erro_senha input,
+.input_senha input {
+  width: 80%;
+  height: 85%;
+  border: none;
+}
+
+.erro_senha input:focus,
+.input_senha input:focus {
+  outline: none;
+}
+
+.erro > input {
+  border: 2px solid var(--cor-vermelho) !important;
+}
+
+.erro > input:focus{
+  outline: 1px solid var(--cor-vermelho);
+}
+
+.erro_senha {
+  border: 2px solid var(--cor-vermelho) !important;
+}
+
+.texto_erro {
+  color: var(--cor-vermelho);
+}
+
+.img_instituto p{
+  margin-top: 5em;
+}

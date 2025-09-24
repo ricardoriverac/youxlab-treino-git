@@ -1,0 +1,79 @@
+.container_livro {
+  height: 100%;
+  margin: 1.9em;
+}
+
+.caixa_livro {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.caixa_livro button {
+  width: 15%;
+  height: 2.4em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 0.5em;
+  color: var(--cor-branco);
+  background-color: var(--cor-roxoEscuro);
+  cursor: pointer;
+}
+
+.caixa_livro h1 {
+  font-family: "Roboto";
+  font-weight: normal;
+}
+
+.caixa_filtros {
+  width: 100%;
+  height: 3em;
+  margin-top: 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input_buscar {
+  width: 77%;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--cor-roxoInput);
+}
+
+.input_buscar input {
+  width: 90%;
+  margin-left: 1.5em;
+  font-size: 1em;
+  border: none;
+  background-color: transparent;
+}
+
+.input_buscar:hover {
+  background-color: var(--cor-roxoClaro);
+}
+
+.input_buscar input:focus {
+  outline: none;
+}
+
+.input_buscar button {
+  width: 10%;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.caixa_tabela {
+  height: 72%;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.caixa_tabela span {
+  font-family: "Roboto";
+  margin-top: 5% ;
+  font-size: large;
+  font-weight: 500;
+}

@@ -1,0 +1,82 @@
+.containerVisuAlunos{
+    height: 100%;
+    margin-left: 1.4em;
+    margin-right: 1.9em;
+}
+
+.topoInfo{
+  display: flex;
+  margin-top: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnVoltarAlunos{
+    border: none;
+    background-color:var(--cor-branco);
+    font-size: 1.5em;
+    font-weight: 400;
+    font-family: "Roboto";
+    cursor: pointer;
+}
+
+.iconVisuAlunos{
+  width: 10px;
+  margin-right: 10px;
+}
+
+.btnEditar {
+    width: 15%;
+    height: 40px;
+    color: var(--cor-roxoEscuro);
+    font-family: "Roboto";
+    display: flex;
+    font-size: 100%;
+    font-weight: 500;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-roxoPastel);
+    border: 1px solid var(--cor-roxoEscuro);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btnEditar:hover {
+  box-shadow: 1px 1px 3px var(--cor-roxoEscuro);
+}
+
+.containerInformacoesAlunos{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 98.8%;
+  height: 13vh;
+  margin-right: 10px;
+  border-radius: 12px;
+  background-color: var(--cor-roxoClaro);
+  border: none;
+  outline: none;
+  padding-left: 25px;
+  display: flex;
+  flex-direction: row;
+}
+
+.paragrafoNome{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.paragrafoTelefone{
+  margin-top: 20px;
+  padding-left: 30%;
+  display: flex;
+  flex-direction:column;
+}
+
+.nome{
+  font-weight: 500;
+}
+
+.telefone{
+  font-weight: 500;
+}

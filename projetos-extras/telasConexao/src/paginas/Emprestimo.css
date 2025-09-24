@@ -1,0 +1,106 @@
+.container_emprestimo {
+  margin: 1.9em;
+  height: 100%;
+}
+
+h1 {
+  font-weight: normal;
+  font-family: "Roboto";
+}
+
+.input_emprestimo {
+  margin-top: 1.5em;
+  background-color: var(--cor-roxoInput);
+  border: none;
+  width: 98.5%;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+.input_emprestimo::placeholder {
+  font-weight: 300;
+  font-family: inherit;
+  font-family: "Roboto";
+  font-weight: 400;
+}
+
+.input_emprestimo:focus {
+  outline: none;
+}
+
+.btn_pesquisar {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-25%);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 80px;
+}
+
+.btn_pesquisar:hover {
+  background-color: var(--cor-roxoClaro);
+}
+
+.input_emprestimo:hover {
+  background-color: var(--cor-roxoClaro);
+  
+}
+
+.caixa_buscar {
+  position: relative;
+}
+
+.input_emprestimo[type="text"] {
+  padding-left: 25px;
+}
+
+.div_tabela {
+  margin-top: 1.5em;
+  height: 72%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status_container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status_emDia {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--cor-verde);
+}
+
+.status_emAtraso {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--cor-vermelho);
+}
+
+.status_vazio{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(15, 115, 209);
+}
+
+.ENTREGUE{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(15, 115, 209);
+}
+
+.msg_dadoNaoEncontrado {
+  margin-top: 5%;
+  font-size: large;
+  font-weight: 500;
+}

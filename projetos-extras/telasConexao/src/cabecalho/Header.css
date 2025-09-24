@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+}
+
+.div_header {
+  background-color: #8e58bf;
+  color: aliceblue;
+  height: 65px;
+  font-family: "Roboto";
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tittle {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.div_header img {
+  width: 9em;
+}
+
+.hora_data {
+  margin-right: 2%;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+}

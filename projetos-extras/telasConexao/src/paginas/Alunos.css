@@ -1,0 +1,113 @@
+.containerAlunos {
+  height: 100%;
+  margin-left: 1.9em;
+  margin-right: 1.9em;
+}
+
+.topoAlunos {
+  display: flex;
+  margin-top: 1.5em;
+  height: 6vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topoAlunos h1 {
+  margin-left: 0.2em;
+  width: 9vw;
+  height: 7vh;
+  font-size: 2em;
+  font-family: "Roboto";
+  font-weight: 400;
+  color: black;
+}
+
+.cadastrarAluno {
+  width: auto;
+  height: 100%;
+  border-radius: 8px;
+  border: 1px var(--cor-roxoEscuro);
+  background-color: var(--cor-roxoEscuro);
+  font-size: 2.3vh;
+  font-weight: 500;
+  font-family: "Roboto";
+  color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 1em;
+  cursor: pointer;
+}
+
+.caixaBusca {
+  height: 6vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2em;
+  border-radius: 8px;
+  background-color: var(--cor-roxoInput);
+}
+
+.iconAddAluno{
+  height: 40%;
+}
+
+.inputBusca {
+  width: 95%;
+  height: 5vh;
+  margin-right: 10px;
+  border-radius: 8px;
+  background-color: var(--cor-roxoInput);
+  border: none;
+  outline: none;
+  padding-left: 25px;
+}
+
+.inputBusca:hover {
+  background-color: var(--cor-roxoClaro);
+}
+
+.inputBusca::placeholder {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.buttonBuscar {
+  margin-right: 20px;
+  padding: 0;
+  border: none;
+  background-color: var(--cor-roxoInput);
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  border-radius: 80px;
+}
+
+.buttonBuscar:hover {
+  background-color: var(--cor-roxoClaro);
+}
+
+.tabelaAlunos{
+  margin-top: 1.5em;
+  height: 72%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.status_emDia{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--cor-verde);
+}
+
+.status_emAtraso{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: var(--cor-vermelho);
+}

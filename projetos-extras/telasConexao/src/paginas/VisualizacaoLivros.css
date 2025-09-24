@@ -1,0 +1,103 @@
+.caixa_visualizarLivro {
+  height: 100%;
+  margin: 1.9em;
+}
+
+.caixa_btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.caixa_btn > button {
+  font-size: 1.5em;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.caixa_btn > button img {
+  margin-right: 0.5em;
+}
+
+.btn_modais {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn_modais button {
+  width: 45%;
+  height: 2.4em;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 0.5em;
+  color: var(--cor-branco);
+  background-color: var(--cor-roxoEscuro);
+  cursor: pointer;
+}
+
+.btn_editar {
+  color: var(--cor-roxoEscuro) !important;
+  background-color: var(--cor-roxoClaro) !important;
+  border: 2px solid var(--cor-roxoEscuro) !important;
+}
+
+.caixa_infoLivros {
+  height: 27%;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.caixa_infoLivros > div {
+  background-color: var(--cor-roxoInput);
+  border-radius: 0.5em;
+}
+
+.dados_livro {
+  width: 63%;
+  min-height: 29vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+.coluna1,
+.coluna2,
+.coluna3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.coluna1 > div,
+.coluna2 > div,
+.coluna3 > div {
+  margin: 0.5em;
+}
+
+.caixa_sinopse {
+  width: 35%;
+  overflow-y: auto;
+}
+
+.caixa_sinopse h4 {
+  position: sticky;
+  top: 0;
+  background: var(--cor-roxoInput);
+  padding: 0.5em;
+  font-weight: bold;
+}
+
+.caixa_sinopse > p {
+  margin: 0.5em;
+  text-align: justify;
+}
+
+.tabela_alunos_emprestimo {
+  height: 50%;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

@@ -1,0 +1,64 @@
+.div_menu {
+  display: flex;
+  flex-direction: column;
+  height: 620px;
+  width: 80px;
+  border-right: 1px solid var(--cor-cinzaMargin);
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.div_icones img {
+  width: 3em;
+  margin: 1em;
+}
+
+.div_icones {
+  background-color: #F5F0F9;
+  height: 100%;
+}
+
+.btn_sair img {
+  width: 2em;
+  cursor: pointer;
+  margin-bottom: 1.5em;
+}
+
+.sair {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.titulo {
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  left: 31%;
+}
+
+.botoesdaModal {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 4em;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btnSairDaModal {
+  left: 90%;
+  /* margin-bottom: 100%; */
+  display: flex;
+  position: absolute;
+  z-index: 100;
+}
