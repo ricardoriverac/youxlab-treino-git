@@ -19,11 +19,7 @@ export default function Sobre() {
         </span>
 
         <div>
-          <img
-            className="logo_instituto"
-            src={Group}
-            alt="Logo Instituto YouX"
-          />
+          <img src={Group} alt="Logo Instituto YouX" />
         </div>
       </div>
 
@@ -74,11 +70,11 @@ export default function Sobre() {
           dificuldades identificadas na gestão dos acervos literários nas
           bibliotecas de escolas públicas, os Labers criaram um sistema para
           facilitar a administração e o controle desses acervos. Em 2025, o
-          Conexão Literária ganhou novas funcionalidades para tornar a
+          <b> Conexão Literária ganhou novas funcionalidades </b> para tornar a
           experiência dos alunos ainda mais completa. Agora, cada estudante pode
-          acessar seu próprio perfil personalizado, acompanhar seu histórico de
-          leitura e explorar recomendações exclusivas. Além disso, o sistema
-          incorporou recursos de gamificação, permitindo que os alunos
+          acessar seu <b> próprio perfil personalizado </b>, acompanhar seu
+          histórico de leitura e explorar recomendações exclusivas. Além disso,
+          o sistema incorporou recursos de gamificação, permitindo que os alunos
           participem de desafios literários, conquistem pontos e desbloqueiem
           conquistas, transformando a leitura em uma jornada interativa e
           motivadora. Assim como em sua primeira versão, a evolução do Conexão

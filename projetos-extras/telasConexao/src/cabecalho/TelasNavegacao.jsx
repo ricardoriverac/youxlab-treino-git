@@ -78,7 +78,7 @@ function TelasNavegacao({ children }) {
             component="h2"
             sx={{ fontFamily: "Roboto" }}
             style={{
-              fontFamily: "Ubuntu",
+              fontFamily: "Roboto",
               fontWeight: 800,
               marginTop: 20,
             }}
@@ -124,7 +124,7 @@ function TelasNavegacao({ children }) {
                   fontSize: 15,
                   borderRadius: "0.5em",
                   width: 150,
-                  fontFamily: "Arial",
+                  fontFamily: "Roboto",
                 }}
               >
                 Sair
