@@ -1,0 +1,19 @@
+.project_container {
+  padding-top: 2em;
+  width: 100%;
+}
+
+.title_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto 2em auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.content {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+}

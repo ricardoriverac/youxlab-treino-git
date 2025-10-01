@@ -6,7 +6,7 @@ import Container from "./Container";
 
 function Navbar() {
   return (
-    <nav class={styles.navbar}>
+    <nav className={styles.navbar}>
       <Container>
         <Link to="/">
           <img src={logo} alt="Costs" />
@@ -18,11 +18,11 @@ function Navbar() {
           <li className={styles.links}>
             <Link to="/projects" class={styles.link1}>Projetos</Link>
           </li>
-          <li class={styles.links}>
+          <li className={styles.links}>
             <Link to="/empresa" class={styles.link1}>Empresa</Link>
           </li>
-          <li class={styles.links}>
-            <Link to="/contato" class={styles.link1}>Contato</Link>
+          <li className={styles.links}>
+            <Link to="/contato" className={styles.link1}>Contato</Link>
           </li>
         </ul>
       </Container>
