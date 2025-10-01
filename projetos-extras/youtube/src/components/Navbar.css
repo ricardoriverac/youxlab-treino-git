@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+}
+
+.container {
+  background-color: #0f0f0f;
+  height: 3.5em;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu_logo button {
+  cursor: pointer;
+  background-color: #0f0f0f;
+  border: none;
+  color: #fff;
+  padding: 8px;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+}
+
+.menu_logo img {
+  cursor: pointer;
+  /* padding: 18px 14px 18px 16px; */
+  flex-direction: row;
+}
+
+.pesquisar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pesquisar input {
+  position: relative;
+  align-items: center;
+  border: 1px solid;
+  border-color: #2e2e2e;
+  background-color: #121212;
+  border-radius: 40px;
+  padding: 7px;
+  width: 23em;
+}
+
+.input-com-icone {
+  background-image: url("../img/teclado.png");
+  background-repeat: no-repeat;
+  background-position: 21em center; /* Posiciona 21em da esquerda, centralizado verticalmente */
+  padding-left: 30px; /*Espaço para o ícone */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
