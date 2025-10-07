@@ -1,0 +1,69 @@
+{
+  "projects": [
+    {
+      "id": "71e5",
+      "name": "New project",
+      "budget": "120000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 89,
+      "services": [
+        {
+          "name": "teste",
+          "cost": "89",
+          "description": "Comprar caneca",
+          "id": "411dfdcf-4379-4d81-a9c6-b3a86a769d9f"
+        }
+      ]
+    },
+    {
+      "id": "0893",
+      "name": "Fufu",
+      "budget": "2000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 500,
+      "services": [
+        {
+          "name": "Contratar veterinário",
+          "cost": "500",
+          "description": "Comprar dentinho ",
+          "id": "7d2e9a8b-eddd-496a-b696-b5c3a1ea27ab"
+        }
+      ]
+    },
+    {
+      "id": "a727",
+      "name": "teste",
+      "budget": "1222",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Infra"
+    },
+    {
+      "id": "2",
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": "3",
+      "name": "Design"
+    },
+    {
+      "id": "4",
+      "name": "Planejamento"
+    }
+  ]
+}
