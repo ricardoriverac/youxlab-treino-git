@@ -1,0 +1,65 @@
+.tabela {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 320px;
+  table-layout: fixed;
+  min-width: 1000px;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.btnDeletar {
+  border-radius: 5px;
+  border: none;
+  background-color: #d43f3a;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  padding: 6px;
+  width: 70px;
+  margin-left: 50px;
+}
+
+.btnEditar {
+  border-radius: 5px;
+  border: none;
+  background-color: #66a968;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 70px;
+  margin-left: 50px;
+}
+
+td {
+  padding: 8px;
+  width: 30px;
+  text-align: center;
+}
+th {
+  color: white;
+  background-color: lightslategray;
+  padding: 12px;
+  width: 30px;
+}
+tr {
+  background-color: lightgray;
+  align-items: center;
+}
+
+tr:nth-child(odd) {
+  background: rgb(255, 255, 255);
+}

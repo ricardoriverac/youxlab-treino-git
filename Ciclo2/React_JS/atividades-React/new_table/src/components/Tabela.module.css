@@ -1,0 +1,54 @@
+.tabela {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 95%;
+}
+
+.btnDeletar {
+  border-radius: 5px;
+  border: none;
+  background-color: #d43f3a;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  height: 25px;
+  width: 70px;
+}
+
+.btnEditar {
+  border-radius: 5px;
+  border: none;
+  background-color: #66a968;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  height: 25px;
+  width: 70px;
+}
+
+td {
+  padding: 8px;
+  width: 30px;
+  text-align: center;
+  vertical-align: middle;
+}
+th {
+  color: white;
+  background-color: rgb(134, 142, 150);
+  padding: 10px;
+  width: 20px;
+}
+tr {
+  background-color: lightgray;
+
+}
+
+tr:nth-child(odd) {
+  background: rgb(255, 255, 255);
+}

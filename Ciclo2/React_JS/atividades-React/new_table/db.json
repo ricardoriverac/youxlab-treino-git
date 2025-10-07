@@ -1,0 +1,40 @@
+{
+  "people": [
+    {
+      "id": "2941",
+      "name": "Aléxia",
+      "cpf": "12345",
+      "dataNascimento": "2025-10-03"
+    },
+    {
+      "id": "019a",
+      "name": "Elena",
+      "cpf": "567890",
+      "dataNascimento": "2025-10-09"
+    },
+    {
+      "id": "cb51",
+      "name": "Sarah",
+      "cpf": "1234",
+      "dataNascimento": "8888-09-08"
+    },
+    {
+      "id": "66e3",
+      "name": "Lucas Paim",
+      "cpf": "12345",
+      "dataNascimento": "2025-10-03"
+    },
+    {
+      "id": "69c5",
+      "name": "Sophia",
+      "cpf": "68888",
+      "dataNascimento": "2025-10-17"
+    },
+    {
+      "id": "4305",
+      "name": "Tayla",
+      "cpf": "110899",
+      "dataNascimento": "2025-10-09"
+    }
+  ]
+}
