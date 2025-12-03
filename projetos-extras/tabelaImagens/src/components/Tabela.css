@@ -1,0 +1,68 @@
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tabela td,
+th {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.tabela th {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #efefef;
+  color: black;
+}
+
+.input {
+  flex: 0.4;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn {
+  background: blueviolet;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(90, 34, 143);
+  transition: 0.3s;
+  transform: scale(1.1);
+  font: bold;
+}
+
+.form {
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btnDeletar {
+  background-color: #d43f3a;
+  color: white;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btnDeletar:hover {
+  background: rgb(158, 33, 33);
+  transition: 0.3s;
+  transform: scale(1.1);
+  font: bold;
+}
